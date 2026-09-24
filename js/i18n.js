@@ -29,6 +29,8 @@ const TEXT = {
     "about.p4":"Was mich heute antreibt, ist das Zusammenspiel dieser Perspektiven: <b>Kreativität, Nutzerverständnis, Daten und Product Thinking.</b> Ich lerne ständig dazu und schärfe meinen Blick weiter. Am Ende möchte ich Produkte gestalten, die nicht nur gut aussehen, sondern Sinn ergeben und <b>echte Probleme lösen.</b>",
     "about.fashion":"Hier geht’s zu meinem Fashion-Portfolio",
     "about.portrait":"Porträt von Susann Gebert",
+    /* Case Studies */
+    "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen",
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
@@ -57,6 +59,8 @@ const TEXT = {
     "about.p4":"What motivates me today is bringing these perspectives together: <b>creativity, user understanding, data and product thinking.</b> I’m constantly learning and refining my perspective. Ultimately, I want to create products that not only look good, but make sense and <b>solve real problems.</b>",
     "about.fashion":"See my fashion portfolio here",
     "about.portrait":"Portrait of Susann Gebert",
+    /* Case studies */
+    "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after",
   }
 };
 

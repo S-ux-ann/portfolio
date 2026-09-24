@@ -1,5 +1,5 @@
-/* Satoshi – variable Schrift, deckt alle Stärken 300–900 ab */
-@font-face{font-family:'Satoshi';src:url('../fonts/Satoshi-Variable.woff2') format('woff2');font-weight:300 900;font-style:normal;font-display:swap}
+/* Plus Jakarta Sans – variable Schrift, deckt die Stärken 200–800 ab (SIL Open Font License, siehe fonts/PlusJakartaSans-OFL.txt) */
+@font-face{font-family:'Plus Jakarta Sans';src:url('../fonts/PlusJakartaSans-Variable.woff2') format('woff2'),url('../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');font-weight:200 800;font-style:normal;font-display:swap}
 /* =========================================================
    DESIGN TOKENS – hier änderst du Farben, Schrift & Maße
    ========================================================= */
@@ -14,7 +14,7 @@
   --white:#FFFFFF;
   --olive:#4A4829;           /* Kreis hinter "me" */
 
-  --font:'Satoshi',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
 
   --hero-w:90%;              /* Breite Hero-Bereich */
   --content-w:75%;           /* Breite Inhalt ab "Projekte" */

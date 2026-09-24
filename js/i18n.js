@@ -3,7 +3,7 @@
    ========================================================= */
 const TEXT = {
   de: {
-    "nav.contact":"Kontakt","nav.close":"Schliessen","nav.open":"Menü öffnen",
+    "nav.contact":"Kontakt","nav.close":"Schließen","nav.open":"Menü öffnen",
     "menu.home":"Home","menu.work":"Projekte","menu.about":"Über mich","menu.contact":"Kontakt",
     "hero.intro":"Ich bin Susann,",
     "hero.desc":"Ich verwandle Nutzerbedürfnisse, Research und Daten in spürbare Verbesserungen für digitale Produkte und Customer Journeys.",
@@ -49,13 +49,13 @@ const TEXT = {
     "about.head":"Designing products starts with understanding people.",
     "about.desc":"My path into design has taken me through graphic design, fashion, branding and digital products. What has stayed constant is my curiosity about people and the way they interact with the things we create. Today, I bring this perspective into UX and product work — combining user insights, design thinking and data to improve digital experiences.",
     "cta.view":"View","cta.explore":"Explore","cta.more":"More","cta.about":"About me",
-    "footer.mail":"send me a mail",
+    "footer.mail":"Send me an email",
     /* About page */
     "about.p1":"I’m a Berlin-based <b>UX and Product Specialist</b> with a background in graphic design, marketing and digital product design. My path into design started early. Inspired by my grandfather’s passion for graphics, I began my career as a graphic designer before expanding into fashion design, branding and digital experiences. What connects these different fields for me is a genuine <b>interest in people</b>: how they perceive, interact with and experience products.",
     "about.p2":"Over time, my focus shifted increasingly towards <b>UX and digital product development</b>. Today, I work at the intersection of <b>user research, UX quality and product insights</b>. I use qualitative observations, usability testing and data to identify friction, understand user needs and turn insights into concrete improvements along the customer journey.",
     "about.p3":"My design background still shapes the way I work, combining analytical thinking with a strong sense for visual communication, brand consistency and the overall product experience. I like looking beyond individual screens to understand how touchpoints connect and where there is room for improvement. My approach is thoughtful, observant and adaptable. I value clear communication, different perspectives and collaborative ways of working.",
     "about.p4":"What motivates me today is bringing these perspectives together: <b>creativity, user understanding, data and product thinking.</b> I’m constantly learning and refining my perspective. Ultimately, I want to create products that not only look good, but make sense and <b>solve real problems.</b>",
-    "about.fashion":"See here my fashion portfolio",
+    "about.fashion":"See my fashion portfolio here",
     "about.portrait":"Portrait of Susann Gebert",
   }
 };

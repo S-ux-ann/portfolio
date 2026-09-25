@@ -268,19 +268,27 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-img{width:100%;height:auto;border-radius:var(--radius);margin:clamp(20px,2.4vw,36px) 0}
 
 /* Kopf */
-.cs-hero{display:grid;grid-template-columns:clamp(48px,9vw,140px) minmax(0,1fr);grid-template-areas:". img" "tri text";padding-top:clamp(24px,3vw,48px)}
-.cs-hero-img{grid-area:img;margin:0}
-.cs-hero-tri{grid-area:tri;width:clamp(36px,5vw,72px);height:clamp(32px,4.3vw,62px);margin-top:clamp(28px,4vw,64px)}
-.cs-hero-text{grid-area:text;padding-top:clamp(20px,2.4vw,36px)}
-.cs-title{font-weight:700;font-size:clamp(24px,2.5vw,36px);line-height:1.25;max-width:32ch}
-.cs-lead{font-size:clamp(16px,1.4vw,21px);margin-top:clamp(10px,1vw,16px);max-width:60ch}
+.cs-hero{--hero-gap:clamp(20px,2.4vw,36px);padding-top:clamp(24px,3vw,48px)}
+.cs-hero-img{margin:0}
+.cs-hero-head{position:relative}
+/* linker Abstand = Innenabstand der Topbar → bündig mit dem Logo */
+.cs-hero-tri{position:absolute;left:clamp(16px,3vw,40px);top:var(--hero-gap);width:clamp(36px,5vw,72px);height:clamp(32px,4.3vw,62px)}
+.cs-hero-text{padding-top:var(--hero-gap)}
+.cs-title{font-weight:700;font-size:clamp(24px,2.5vw,36px);line-height:1.25}
+.cs-lead{font-size:clamp(16px,1.4vw,21px);margin-top:clamp(10px,1vw,16px)}
 .cs-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,32px);margin-top:clamp(24px,2.6vw,40px)}
 .cs-facts dt{font-weight:700;font-size:clamp(15px,1.2vw,18px);margin-bottom:4px}
 .cs-facts dd{font-size:clamp(14px,1.05vw,16px);line-height:1.5}
-.cs-challenge{background:var(--light-black);color:var(--white);border-radius:var(--radius);padding:clamp(20px,2.4vw,36px);margin-top:clamp(28px,3vw,48px)}
+/* Challenge-Box: großzügiges Padding, damit die Kontur nach innen Platz hat */
+.cs-challenge{--ring:8px;--ring-1:var(--bright-yellow);--ring-2:rgba(232,225,84,.7);background:var(--light-black);color:var(--white);border-radius:var(--radius);padding:clamp(32px,4vw,56px) clamp(32px,7vw,96px);margin-top:clamp(28px,3vw,48px);box-shadow:inset 0 0 0 0 var(--ring-1),inset 0 0 0 0 var(--ring-2);transition:box-shadow .25s ease}
+/* Hover: Kontur in zwei Stufen nach innen – außen Bright-Yellow, innen Bright-Yellow mit 70 % Deckkraft (je 8px) */
+.cs-challenge:hover{box-shadow:inset 0 0 0 var(--ring) var(--ring-1),inset 0 0 0 calc(var(--ring) * 2) var(--ring-2)}
 .cs-challenge h2{font-weight:700;font-size:clamp(18px,1.7vw,25px);margin-bottom:clamp(12px,1.2vw,18px)}
 .cs-challenge p{font-size:clamp(15px,1.2vw,18px);line-height:1.55}
 .cs-challenge p+p{margin-top:1em}
+
+/* Abstand Challenge-Box → "Inhalt" (Handy: siehe Breakpoint unten) */
+.sec-head.cs-content-head{margin-top:150px}
 
 /* Abschnitte */
 .cs-sec{padding:clamp(32px,4vw,64px) 0 0}
@@ -292,10 +300,14 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-list{padding-left:1.3em;margin:.4em 0 1em;font-size:clamp(15px,1.2vw,18px);line-height:1.6}
 .cs-list li::marker{color:var(--dark-yellow)}
 
-/* Drei Research-Themen */
-.cs-themes{display:flex;flex-direction:column;gap:clamp(12px,1.4vw,20px);margin-top:clamp(20px,2.4vw,36px)}
+/* Zwei Bilder nebeneinander (Desktop) */
+.cs-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,1.6vw,24px);margin:clamp(20px,2.4vw,36px) 0}
+.cs-pair>.cs-ph,.cs-pair>.cs-img{margin:0}
+
+/* Drei Research-Themen: Desktop nebeneinander, darunter untereinander */
+.cs-themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);margin-top:clamp(20px,2.4vw,36px)}
 .cs-theme{border-radius:var(--radius);padding:clamp(18px,2vw,28px);color:var(--light-black)}
-.cs-theme h3{font-weight:700;font-size:clamp(18px,1.7vw,25px);margin-bottom:8px}
+.cs-theme h3{font-weight:700;font-size:24px;margin-bottom:8px}
 .cs-theme p{font-size:clamp(14px,1.1vw,17px)}
 .cs-theme-yellow{background:var(--bright-yellow)}
 .cs-theme-orange{background:var(--orange)}
@@ -333,10 +345,11 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-outcome-wrap{padding-top:clamp(40px,5vw,80px)}
 .cs-outcome{background:var(--light-black);color:var(--white);border-radius:var(--radius);padding:clamp(14px,1.6vw,24px)}
 .cs-outcome .cs-ph{margin:0}
+.cs-outcome-img{aspect-ratio:4/3}
 .cs-outcome-txt{padding:clamp(18px,2.4vw,36px) clamp(8px,2vw,32px) clamp(8px,1vw,16px)}
 .cs-outcome h2{font-weight:700;font-size:clamp(20px,1.9vw,28px);margin-bottom:10px}
 .cs-outcome .cs-list li::marker{color:var(--bright-yellow)}
-.cs-proto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-top:clamp(16px,2vw,28px);font-size:clamp(15px,1.2vw,18px)}
+.cs-proto{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:clamp(16px,2vw,28px);font-size:clamp(15px,1.2vw,18px)}
 .cs-pill{display:inline-block;background:var(--bright-yellow);color:var(--light-black);font-weight:700;text-decoration:none;border-radius:999px;padding:.35em 1.1em;transition:transform .2s ease}
 .cs-pill:hover{transform:translateY(-2px)}
 
@@ -370,18 +383,24 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-next-title{font-weight:700;font-size:clamp(18px,1.9vw,28px);line-height:1.3;margin-bottom:clamp(14px,1.6vw,24px)}
 .cs .btn-view{color:var(--light-black)}
 
+/* Ergebnis-Karte ab Tablet-Querformat zweispaltig: Bild links, Text rechts */
+@media (min-width:901px){
+  .cs-outcome{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(8px,1vw,16px)}
+  .cs-outcome-txt{padding:clamp(12px,1.6vw,24px) clamp(12px,1.8vw,28px)}
+}
 @media (max-width:1100px){
   .cs-dots{display:none}
 }
 @media (max-width:900px){
+  .cs-pair,.cs-themes{grid-template-columns:minmax(0,1fr)}
   .cs-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cs-lines{display:none}
   .cs-slide{flex-basis:84%}
   .cs-track{padding-inline:8%}
 }
 @media (max-width:560px){
-  .cs-hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"img" "text" "tri"}
-  .cs-hero-tri{display:none}
+  .cs-hero-tri{display:none}   /* mobil kein Platz neben dem Titel */
+  .sec-head.cs-content-head{margin-top:50px}
   .cs-col{width:90%}
   .cs-slide{flex-basis:88%}
   .cs-track{padding-inline:6%}

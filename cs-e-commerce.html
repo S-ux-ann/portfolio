@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nebulite E-Commerce – Susann Gebert</title>
 <meta name="description" content="Case Study: Ein research-basiertes Redesign für den Onlineshop von Nebulite – mit klarerer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
 
@@ -37,11 +37,16 @@
 
 <main class="cs">
   <!-- ================= KOPF ================= -->
-  <section class="wrap wrap-hero cs-hero">
-    <div class="cs-ph cs-ph-dark cs-hero-img" style="aspect-ratio:3/1">Bild: Nebulite Collection (Hero)<small>2000 × 664</small></div>
-    <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+  <section class="cs-hero">
+    <!-- Herobild: 75 % der Fensterbreite, wie der Text darunter -->
+    <div class="wrap">
+      <img class="cs-img cs-hero-img" src="images/nebulite-hero.webp" width="2400" height="773" alt="Nebulite Collection: leuchtende Taschen aus Glasfasergewebe vor dunklem Hintergrund" data-i18n-alt="cs.neb.hero">
+    </div>
 
-    <div class="cs-hero-text">
+    <!-- Titel, Intro, Fakten & Challenge: 75 % – Pfeil sitzt absolut, bündig mit dem Logo "SUSANN" -->
+    <div class="cs-hero-head">
+    <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+    <div class="wrap cs-hero-text">
       <h1 class="cs-title">
         <span data-only="de">Eine E-Commerce-Experience durch Research und Usability-Tests verbessern</span>
         <span data-only="en">Improving an E-Commerce Experience Through Research and Usability Testing</span>
@@ -77,10 +82,11 @@
         <p data-only="en">A stakeholder interview and early research highlighted issues around product visibility, information overload, trust and website performance. Our goal was to create a clearer shopping experience while preserving the brand’s distinctive festival identity.</p>
       </div>
     </div>
+    </div>
   </section>
 
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head cs-content-head">
       <h2><span data-only="de">Inhalt</span><span data-only="en">content</span></h2>
       <span class="tri-down" aria-hidden="true"></span>
     </div>
@@ -95,8 +101,10 @@
       <p data-only="de">Aus der Research ergaben sich drei wiederkehrende Themen:</p>
       <p data-only="en">The research revealed three recurring themes:</p>
 
-      <div class="cs-ph" style="aspect-ratio:2/1">Bild: User-Zitate (positiv)<small>1560 × 764</small></div>
-      <div class="cs-ph" style="aspect-ratio:2/1">Bild: User-Zitate (Probleme)<small>1560 × 796</small></div>
+      <div class="cs-pair">
+        <img class="cs-img" src="images/nebulite-quotes-positive.webp?v=2" width="1400" height="700" alt="Positive Zitate aus den User Interviews: „a friend has shoes that shine in all kinds of colors, that’s really cool“ und „I have soooo many outfits, almost more than regular clothes. I love to dress up.“" data-i18n-alt="cs.neb.quotesPos">
+        <img class="cs-img" src="images/nebulite-quotes-problems.webp?v=2" width="1400" height="700" alt="Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“" data-i18n-alt="cs.neb.quotesNeg">
+      </div>
 
       <div class="cs-themes">
         <div class="cs-theme cs-theme-yellow">
@@ -217,7 +225,7 @@
   <!-- ================= ERGEBNIS ================= -->
   <section class="wrap cs-outcome-wrap">
     <div class="cs-outcome">
-      <div class="cs-ph cs-ph-dark" style="aspect-ratio:3/1">Bild: Mockups Laptop, Tablet &amp; Smartphone<small>2130 × 664</small></div>
+      <div class="cs-ph cs-ph-dark cs-outcome-img">Bild: Mockups Laptop, Tablet &amp; Smartphone<small>1200 × 900</small></div>
       <div class="cs-outcome-txt">
         <h2><span data-only="de">Ergebnis auf einen Blick</span><span data-only="en">Outcome at a glance</span></h2>
         <ul class="cs-list" data-only="de">
@@ -383,8 +391,8 @@
   </nav>
 </div>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
-<script src="js/case.js"></script>
+<script src="js/i18n.js?v=11"></script>
+<script src="js/main.js?v=11"></script>
+<script src="js/case.js?v=11"></script>
 </body>
 </html>

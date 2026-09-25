@@ -30,7 +30,7 @@ const TEXT = {
     "about.fashion":"Hier geht’s zu meinem Fashion-Portfolio",
     "about.portrait":"Porträt von Susann Gebert",
     /* Case Studies */
-    "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen",
+    "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen","cs.progress":"Abschnitte der Seite",
     "cs.neb.hero":"Nebulite Collection: leuchtende Taschen aus Glasfasergewebe vor dunklem Hintergrund",
     "cs.neb.quotesPos":"Positive Zitate aus den User Interviews: „a friend has shoes that shine in all kinds of colors, that’s really cool“ und „I have soooo many outfits, almost more than regular clothes. I love to dress up.“",
     "cs.neb.quotesNeg":"Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“",
@@ -43,7 +43,7 @@ const TEXT = {
     "hero.intro":"I am Susann, a",
     "hero.desc":"I turn user needs, research and data into meaningful improvements across digital products and customer journeys.",
     "projects.title":"projects",
-    "p1.title":"Improving an e-commerce experience through research and usability testing",
+    "p1.title":"Improving an E-Commerce Experience Through Research and Usability Testing",
     "p1.desc":"A research-led redesign for Nebulite, focused on clearer product discovery, stronger value communication and a more intuitive shopping experience.",
     "p2.desc":"I helped evolve ecomex’s digital brand experience across website, marketing and communication. From user flows and responsive page concepts to corporate design, UI kits and campaign assets, I worked across multiple touchpoints to create a more consistent and user-focused experience.",
     "p3.title":"Designing a Clearer Earnings Experience for Airbnb Hosts",
@@ -65,7 +65,7 @@ const TEXT = {
     "about.fashion":"See my fashion portfolio here",
     "about.portrait":"Portrait of Susann Gebert",
     /* Case studies */
-    "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after",
+    "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after","cs.progress":"Page sections",
     "cs.neb.hero":"Nebulite Collection: glowing fiber-optic bags against a dark background",
     "cs.neb.quotesPos":"Positive quotes from the user interviews: “a friend has shoes that shine in all kinds of colors, that’s really cool” and “I have soooo many outfits, almost more than regular clothes. I love to dress up.”",
     "cs.neb.quotesNeg":"Critical quotes from the user interviews: “slow website loading times and lack of the festival atmosphere” and “product visibility and overview is confusing, too many informations at once”",

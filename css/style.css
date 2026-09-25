@@ -470,3 +470,16 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
   .cs-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cs-facts-3{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* ---------- Fortschrittsanzeige (rechts, ein Punkt pro Abschnitt) ---------- */
+.cs-progress{position:fixed;right:clamp(12px,1.6vw,28px);top:50%;z-index:40;display:flex;flex-direction:column;align-items:center;gap:12px;padding:20px 12px;border-radius:999px;background:var(--light-black);transform:translateY(-50%);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s}
+.cs-progress.show{opacity:1;visibility:visible}
+.cs-progress-dot{position:relative;display:block;width:8px;height:8px;border-radius:999px;background:#7A7A7A;transition:height .25s ease,background .25s ease}
+.cs-progress-dot::before{content:"";position:absolute;inset:-6px -10px}   /* größere Klickfläche */
+.cs-progress-dot:hover{background:var(--white)}
+.cs-progress-dot[aria-current]{height:28px;background:var(--bright-yellow)}
+.cs-progress-tip{position:absolute;right:calc(100% + 22px);top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--light-black);color:var(--white);font-size:13px;font-weight:700;line-height:1.3;padding:5px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.cs-progress-dot:hover .cs-progress-tip,.cs-progress-dot:focus-visible .cs-progress-tip{opacity:1}
+@media (max-width:560px){
+  .cs-progress{display:none}   /* mobil kein Platz am Rand */
+}

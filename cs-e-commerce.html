@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nebulite E-Commerce – Susann Gebert</title>
+<meta name="description" content="Case Study: Ein research-basiertes Redesign für den Onlineshop von Nebulite – mit klarerer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">SUSANN</a>
+    <div class="meta">
+      <div class="lang" role="group" aria-label="Sprache / Language" data-active="de">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="meta-link" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!--
+  Texte: Jeder Absatz steht zweimal im Code – einmal mit data-only="de", einmal mit data-only="en".
+  Es wird immer nur die Version der gewählten Sprache angezeigt.
+
+  Bilder: Die grauen Kästen (class="cs-ph") sind Platzhalter. Ersetze sie später durch
+  <img class="cs-img" src="images/…" width="…" height="…" alt="…">
+  Die Zahl im Platzhalter ist die empfohlene Bildgröße in Pixeln.
+-->
+
+<main class="cs">
+  <!-- ================= KOPF ================= -->
+  <section class="wrap wrap-hero cs-hero">
+    <div class="cs-ph cs-ph-dark cs-hero-img" style="aspect-ratio:3/1">Bild: Nebulite Collection (Hero)<small>2000 × 664</small></div>
+    <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+
+    <div class="cs-hero-text">
+      <h1 class="cs-title">
+        <span data-only="de">Eine E-Commerce-Experience durch Research und Usability-Tests verbessern</span>
+        <span data-only="en">Improving an E-Commerce Experience Through Research and Usability Testing</span>
+      </h1>
+      <p class="cs-lead" data-only="de">Ein research-basiertes Redesign für Nebulite – mit klarerer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.</p>
+      <p class="cs-lead" data-only="en">A research-led redesign for Nebulite, focused on clearer product discovery, stronger value communication and a more intuitive shopping experience.</p>
+
+      <dl class="cs-facts">
+        <div>
+          <dt><span data-only="de">Rolle</span><span data-only="en">Role</span></dt>
+          <dd><span data-only="de">UX/UI Designerin &amp; Concept Testerin in einem 4-köpfigen Team</span><span data-only="en">UX/UI Designer &amp; Concept Tester in a 4-person team</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Methoden</span><span data-only="en">Methods</span></dt>
+          <dd><span data-only="de">Stakeholder-Interview · User Interviews · Card Sorting · Usability-Tests · Prototyping</span><span data-only="en">Stakeholder Interview · User Interviews · Card Sorting · Usability Testing · Prototyping</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Zeitraum</span><span data-only="en">Timeline</span></dt>
+          <dd><span data-only="de">2 Wochen</span><span data-only="en">2 Weeks</span></dd>
+        </div>
+        <div>
+          <dt>Tools</dt>
+          <dd>Figma · FigJam</dd>
+        </div>
+      </dl>
+
+      <div class="cs-challenge">
+        <h2 data-only="de">Die Herausforderung</h2>
+        <h2 data-only="en">The Challenge</h2>
+        <p data-only="de">Nebulite ist ein Berliner Label für Mode aus Glasfasergewebe und bietet Premium-Festivalkleidung und Accessoires an. Die Produkte stechen durch Features wie Lichteffekte und interaktive Elemente heraus – doch im bestehenden Shop fiel es Nutzern schwer, das Sortiment zu verstehen und den Wert hinter den Preisen zu erkennen.</p>
+        <p data-only="en">Nebulite is a Berlin-based fiber-optic fashion brand offering premium festival clothing and accessories. While the products stood out through features such as light effects and interactive elements, the existing shop made it difficult for users to understand the product range and recognize the value behind the pricing.</p>
+        <p data-only="de">Ein Stakeholder-Interview und erste Recherchen zeigten Probleme bei der Sichtbarkeit der Produkte, zu viele Informationen auf einmal, fehlendes Vertrauen und eine schwache Website-Performance. Unser Ziel war ein klareres Einkaufserlebnis, das die unverwechselbare Festival-Identität der Marke bewahrt.</p>
+        <p data-only="en">A stakeholder interview and early research highlighted issues around product visibility, information overload, trust and website performance. Our goal was to create a clearer shopping experience while preserving the brand’s distinctive festival identity.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span data-only="de">Inhalt</span><span data-only="en">content</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <!-- ================= RESEARCH ================= -->
+    <section class="cs-sec">
+      <h2>Research</h2>
+      <p data-only="de">Wir starteten mit einem Stakeholder-Interview, um die Geschäftsziele und Herausforderungen von Nebulite zu verstehen. Anschließend führten wir 6 User Interviews, um Einkaufsverhalten, Erwartungen und die Wahrnehmung des bestehenden Shops zu erkunden.</p>
+      <p data-only="en">We started with a stakeholder interview to understand Nebulite’s business goals and challenges, followed by 6 user interviews to explore shopping behavior, expectations and perceptions of the existing shop.</p>
+      <p data-only="de">Aus der Research ergaben sich drei wiederkehrende Themen:</p>
+      <p data-only="en">The research revealed three recurring themes:</p>
+
+      <div class="cs-ph" style="aspect-ratio:2/1">Bild: User-Zitate (positiv)<small>1560 × 764</small></div>
+      <div class="cs-ph" style="aspect-ratio:2/1">Bild: User-Zitate (Probleme)<small>1560 × 796</small></div>
+
+      <div class="cs-themes">
+        <div class="cs-theme cs-theme-yellow">
+          <h3><span data-only="de">Produktsuche</span><span data-only="en">Product discovery</span></h3>
+          <p data-only="de">Nutzer hatten Mühe zu verstehen, wo sich Produkte befanden, und ihnen fehlte ein klarer Überblick über das Sortiment.</p>
+          <p data-only="en">Users struggled to understand where products were located and lacked a clear overview of the assortment.</p>
+        </div>
+        <div class="cs-theme cs-theme-orange">
+          <h3><span data-only="de">Wertwahrnehmung</span><span data-only="en">Value perception</span></h3>
+          <p data-only="de">Die Website vermittelte die besonderen Features der Produkte nicht stark genug, um die Premium-Preise zu rechtfertigen.</p>
+          <p data-only="en">The website did not communicate the products’ unique features strongly enough to justify the premium pricing.</p>
+        </div>
+        <div class="cs-theme cs-theme-gold">
+          <h3><span data-only="de">Information &amp; Vertrauen</span><span data-only="en">Information &amp; trust</span></h3>
+          <p data-only="de">Große Bilder, dichte Inhalte und Performance-Probleme machten die Navigation mühsamer und die Seite weniger vertrauenswürdig.</p>
+          <p data-only="en">Large visuals, dense content and performance issues made the experience feel harder to navigate and less trustworthy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SYNTHESE ================= -->
+    <section class="cs-sec">
+      <h2><span data-only="de">Nutzerbedürfnisse zusammenführen</span><span data-only="en">Synthesizing User Needs</span></h2>
+      <p data-only="de">Wir haben die Erkenntnisse aus den Interviews in einem Affinity Diagram geclustert und wiederkehrende Muster in eine schlanke Persona und eine User Journey übersetzt.</p>
+      <p data-only="en">We clustered the interview findings in an affinity diagram and translated recurring patterns into a lightweight persona and user journey.</p>
+      <p data-only="de">Das zentrale Bedürfnis war klar: Nutzer wollten Inspiration und visuelle Wirkung – aber auch einen kurzen, verständlichen Weg zu passenden Produkten und genug Informationen, um deren Wert einschätzen zu können.</p>
+      <p data-only="en">The central need was clear: users wanted inspiration and visual impact, but also a short, understandable path to relevant products and enough information to evaluate their value.</p>
+      <p data-only="de">Die User Journey führte uns zum <b>Problem Statement</b>:</p>
+      <p data-only="en">Following the User Journey led us to the <b>Problem Statement</b>:</p>
+      <blockquote class="cs-quote">
+        <p data-only="de">„Wie können wir Festival-Shoppern helfen, passende Produkte schneller zu finden und den Wert der Premium-Features von Nebulite zu verstehen – ohne den expressiven Nightlife-Charakter der Marke zu verlieren?“</p>
+        <p data-only="en">“How might we help festival shoppers discover relevant products faster and understand the value of Nebulite’s premium features without losing the brand’s expressive nightlife character?”</p>
+      </blockquote>
+    </section>
+
+    <!-- ================= DESIGN-FOKUS (Karussell) ================= -->
+    <section class="cs-sec cs-focus">
+      <span class="cs-dots" aria-hidden="true"></span>
+      <h2><span data-only="de">Design-Fokus</span><span data-only="en">Design Focus</span></h2>
+      <div class="cs-carousel">
+        <button class="cs-arrow cs-arrow-prev" type="button" data-i18n-aria="cs.prev" aria-label="Vorherige Karte"></button>
+        <ul class="cs-track">
+          <li class="cs-slide">
+            <h3><span data-only="de">Klarere Hierarchie:</span><span data-only="en">Clearer hierarchy:</span></h3>
+            <p data-only="de">Kategorien, Benennungen und Produktinformationen leichter erfassbar und verständlich machen.</p>
+            <p data-only="en">Make categories, naming and product information easier to scan and understand.</p>
+          </li>
+          <li class="cs-slide">
+            <h3><span data-only="de">Stärkere Nutzenkommunikation:</span><span data-only="en">Stronger value communication:</span></h3>
+            <p data-only="de">Besondere Features wie Sound-Interaktion und Wasserbeständigkeit deutlicher hervorheben.</p>
+            <p data-only="en">Surface unique features such as sound interaction and water resistance more clearly.</p>
+          </li>
+          <li class="cs-slide">
+            <h3><span data-only="de">Ansprechendere Interaktion:</span><span data-only="en">More engaging interaction:</span></h3>
+            <p data-only="de">Gezielte Interaktionen einsetzen, die das Produktverständnis fördern und den Festival-Charakter der Marke bewahren.</p>
+            <p data-only="en">Use purposeful interactions to support product understanding and preserve the brand’s festival character.</p>
+          </li>
+        </ul>
+        <button class="cs-arrow cs-arrow-next" type="button" data-i18n-aria="cs.next" aria-label="Nächste Karte"></button>
+      </div>
+      <div class="cs-pager" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+  </div>
+
+  <div class="cs-band">
+    <div class="cs-col">
+      <!-- ================= PRODUKTSUCHE ================= -->
+      <section class="cs-sec">
+        <h2><span data-only="de">Produktsuche neu strukturieren</span><span data-only="en">Restructuring Product Discovery</span></h2>
+        <p data-only="de">Um zu verstehen, wie Nutzer das Sortiment intuitiv ordnen, haben wir 3 offene Card-Sorting-Sessions durchgeführt.</p>
+        <p data-only="en">To understand how users naturally organize the product range, we conducted 3 open card-sorting sessions.</p>
+
+        <div class="cs-ph" style="aspect-ratio:3.2/1">Bild: Card Sorting<small>1720 × 534</small></div>
+
+        <p class="cs-listhead" data-only="de">Die Ergebnisse halfen uns dabei:</p>
+        <p class="cs-listhead" data-only="en">The results helped us:</p>
+        <ul class="cs-list" data-only="de">
+          <li>intuitive Kategorienamen zu finden</li>
+          <li>die Navigation zu vereinfachen</li>
+          <li>eine klarere Sitemap und einen klareren Kaufprozess aufzubauen</li>
+        </ul>
+        <ul class="cs-list" data-only="en">
+          <li>identify intuitive category labels</li>
+          <li>simplify the navigation</li>
+          <li>build a clearer site map and purchase flow</li>
+        </ul>
+
+        <div class="cs-decision">
+          <h3><span data-only="de">Design-Entscheidung</span><span data-only="en">Design decision</span></h3>
+          <p data-only="de">Die wichtigsten Produktkategorien wanderten auf die erste Navigationsebene.</p>
+          <p data-only="en">Key product categories moved to the first navigation level.</p>
+        </div>
+
+        <p data-only="de">So wurde aus einer Produktstruktur, die Nutzer erst entschlüsseln mussten, eine, die sie auf einen Blick verstehen.</p>
+        <p data-only="en">This turned the product structure from something users had to decode into something they could understand at a glance.</p>
+
+        <div class="cs-ph cs-ph-white" style="aspect-ratio:4/3">Bild: Sitemap<small>1720 × 1288</small></div>
+      </section>
+
+      <!-- ================= TESTS ================= -->
+      <section class="cs-sec">
+        <h2><span data-only="de">Die Richtung testen</span><span data-only="en">Testing the Direction</span></h2>
+        <p data-only="de">Wir haben zwei Mid-Fidelity-Konzepte erstellt und mit 5 Nutzern getestet.</p>
+        <p data-only="en">We created two mid-fidelity concepts and tested them with 5 users.</p>
+        <p data-only="de">Die Tests zeigten, dass Nutzer unterschiedliche Elemente aus beiden Konzepten bevorzugten. Statt eine Variante komplett zu übernehmen, <b>haben wir die stärksten Elemente beider Konzepte kombiniert</b> und damit Navigation, Bedienelemente und Produktdarstellung verfeinert, bevor wir ins High-Fidelity-Design gingen.</p>
+        <p data-only="en">Rather than selecting one version entirely, the tests showed that users preferred different elements from both concepts. <b>We combined the strongest elements from both tested concepts</b> to refine navigation, controls and product presentation before moving into high-fidelity design.</p>
+
+        <div class="cs-ph" style="aspect-ratio:2.55/1">Bild: Mid-Fidelity-Konzepte<small>1720 × 674</small></div>
+
+        <p data-only="de">Eine Moodboard-Umfrage half uns, die angestrebte visuelle Richtung rund um Innovation, Exklusivität, Stil und Spaß zu validieren. Daraus haben wir eine gemeinsame Figma-Style- und Komponentenbibliothek entwickelt, um Konsistenz im gesamten finalen Prototyp sicherzustellen.</p>
+        <p data-only="en">A mood-board survey helped validate the intended visual direction around innovation, exclusivity, style and fun. We then translated this into a shared Figma style and component library to ensure consistency across the final prototype.</p>
+
+        <div class="cs-ph" style="aspect-ratio:2.55/1">Bild: Moodboard &amp; Styleguide<small>1720 × 676</small></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ================= ERGEBNIS ================= -->
+  <section class="wrap cs-outcome-wrap">
+    <div class="cs-outcome">
+      <div class="cs-ph cs-ph-dark" style="aspect-ratio:3/1">Bild: Mockups Laptop, Tablet &amp; Smartphone<small>2130 × 664</small></div>
+      <div class="cs-outcome-txt">
+        <h2><span data-only="de">Ergebnis auf einen Blick</span><span data-only="en">Outcome at a glance</span></h2>
+        <ul class="cs-list" data-only="de">
+          <li>klarere Produkthierarchie</li>
+          <li>stärkere Kommunikation der Premium-Features</li>
+          <li>vereinfachte Produktkonfiguration</li>
+          <li>getestete Designrichtung</li>
+        </ul>
+        <ul class="cs-list" data-only="en">
+          <li>clearer product hierarchy</li>
+          <li>stronger communication of premium features</li>
+          <li>simplified product configuration</li>
+          <li>tested design direction</li>
+        </ul>
+        <div class="cs-proto">
+          <p><span data-only="de">Hier geht’s zum validierten High-Fidelity-Prototyp:</span><span data-only="en">Explore the validated high-fidelity prototype:</span></p>
+          <a class="cs-pill" href="https://www.figma.com/proto/lCcpBgvtbMaFKS2MJJSr9v/3.-Project%3A-Wireframing-Nebulite-E-Commerce?page-id=58%3A1123&amp;type=design&amp;node-id=2001-9673&amp;viewport=-112%2C-753%2C0.12&amp;t=xS6OcRnx2P9wZxek-1&amp;scaling=scale-down&amp;starting-point-node-id=2001%3A9673&amp;show-proto-sidebar=1&amp;mode=design" target="_blank" rel="noopener"><span data-only="de">auf Figma</span><span data-only="en">on Figma</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-col cs-final">
+    <span class="cs-lines" aria-hidden="true"></span>
+    <!-- ================= FINALES KONZEPT ================= -->
+    <section class="cs-sec">
+      <h2><span data-only="de">Finales Konzept</span><span data-only="en">Final Concept</span></h2>
+      <p class="cs-listhead" data-only="de">Das finale Konzept vereinte:</p>
+      <p class="cs-listhead" data-only="en">The final concept combined:</p>
+      <ul class="cs-list" data-only="de">
+        <li>klarere Navigation und Produkthierarchie</li>
+        <li>bessere Sichtbarkeit der wichtigsten Produkt-Features</li>
+        <li>strukturiertere Produktseiten</li>
+        <li>interaktive Elemente wie Tag-/Nachtansicht und konfigurierbare Produktoptionen</li>
+        <li>ein ausgereifteres visuelles System, das die Festival-Identität von Nebulite bewahrt</li>
+      </ul>
+      <ul class="cs-list" data-only="en">
+        <li>clearer navigation and product hierarchy</li>
+        <li>stronger visibility of key product features</li>
+        <li>more structured product pages</li>
+        <li>interactive elements such as day/night views and configurable product options</li>
+        <li>a more polished visual system that preserved Nebulite’s festival identity</li>
+      </ul>
+      <p data-only="de">Das Konzept wurde im Designprozess durch Usability-Tests validiert, ging aber nicht live – daher liegen keine Conversion-Daten nach dem Launch vor.</p>
+      <p data-only="en">The concept was validated through usability testing during the design process, but it was not launched to production, so no post-launch conversion data is available.</p>
+
+      <!-- Video: Link statt YouTube-Einbettung – so werden erst Daten an YouTube übertragen, wenn jemand klickt -->
+      <a class="cs-ph cs-ph-dark cs-video" style="aspect-ratio:2.5/1" href="https://www.youtube.com/watch?v=aOJGKHT2B9U" target="_blank" rel="noopener">
+        <span class="cs-play" aria-hidden="true"></span>
+        <span data-only="de">Video: Prototyp-Walkthrough auf YouTube ansehen</span>
+        <span data-only="en">Video: watch the prototype walkthrough on YouTube</span>
+      </a>
+
+      <!-- Vorher/Nachher-Vergleich -->
+      <figure class="cs-compare-fig">
+        <div class="cs-compare" style="--pos:50%">
+          <div class="cs-ph cs-ph-dark cs-compare-after">Bild: Nachher (neues Konzept)<small>1720 × 796</small></div>
+          <div class="cs-ph cs-compare-before">Bild: Vorher (alter Shop)<small>1720 × 796</small></div>
+          <span class="cs-tag cs-tag-before"><span data-only="de">Vorher</span><span data-only="en">Before</span></span>
+          <span class="cs-tag cs-tag-after"><span data-only="de">Nachher</span><span data-only="en">After</span></span>
+          <span class="cs-handle" aria-hidden="true"></span>
+          <input class="cs-range" type="range" min="0" max="100" value="50" data-i18n-aria="cs.compare" aria-label="Vorher/Nachher vergleichen">
+        </div>
+        <figcaption><span data-only="de">Schieb den Regler, um die Änderungen zu sehen.</span><span data-only="en">Slide in the image to see changes.</span></figcaption>
+      </figure>
+
+      <p data-only="de">Wir haben die Website einfacher nutzbar gemacht – mit einer klaren Struktur und einem aufgeräumten Menü für eine einfache Navigation. Eine durchdachte Content-Hierarchie sorgt dafür, dass <b>wichtige Informationen leicht zugänglich</b> sind. Visuelle Elemente wie Icons und kurze Videos <b>verbessern das Verständnis</b> und machen Spaß. Zusätzlich können Nutzer per Toggle zwischen Tag- und Nachtansicht des Produkts wechseln – das macht das Erlebnis <b>persönlicher und unterhaltsamer für alle</b>.</p>
+      <p data-only="en">We made the website easier to use by creating a clear structure with a tidy menu for easy navigation. A content hierarchy ensures <b>important information is accessible</b>. Visual elements, including icons and short movies, <b>improve understanding</b> and add joy. Additionally, a toggle for interactions allows users to change how the product looks between day and night modes, making it <b>more personal and enjoyable for everyone</b>.</p>
+
+      <div class="cs-ph" style="aspect-ratio:3/2">Bild: Produktseite Tag-/Nachtansicht<small>1720 × 1134</small></div>
+    </section>
+
+    <!-- ================= NÄCHSTE SCHRITTE ================= -->
+    <section class="cs-sec">
+      <h2><span data-only="de">Nächste Schritte</span><span data-only="en">Next Steps</span></h2>
+      <p class="cs-listhead" data-only="de">Wäre das Konzept umgesetzt worden, wären meine nächsten Schritte:</p>
+      <p class="cs-listhead" data-only="en">If the concept moved into production, I would next:</p>
+      <ul class="cs-list" data-only="de">
+        <li>den High-Fidelity-Prototyp in einer weiteren Usability-Test-Runde validieren</li>
+        <li>Conversion, Produkt-Engagement und Absprungpunkte nach dem Launch messen</li>
+        <li>auf Basis von quantitativem und qualitativem Feedback iterieren</li>
+      </ul>
+      <ul class="cs-list" data-only="en">
+        <li>Validate the high-fidelity prototype with another usability-test round</li>
+        <li>Track conversion, product engagement and drop-off points after launch</li>
+        <li>Iterate based on quantitative and qualitative feedback</li>
+      </ul>
+      <p data-only="de">Die ganze Case Study gibt’s auf <a href="https://medium.com/@susann.gebert/optimizing-the-user-experience-for-an-e-commerce-website-of-a-local-business-5c6129284d43" target="_blank" rel="noopener">Medium</a> (auf Englisch).</p>
+      <p data-only="en">Read the whole Case Study on <a href="https://medium.com/@susann.gebert/optimizing-the-user-experience-for-an-e-commerce-website-of-a-local-business-5c6129284d43" target="_blank" rel="noopener">Medium</a>.</p>
+    </section>
+  </div>
+
+  <!-- ================= NÄCHSTES PROJEKT ================= -->
+  <section class="wrap cs-next">
+    <div class="sec-head">
+      <h2><span data-only="de">nächstes Projekt</span><span data-only="en">next project</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+    <div class="cs-col">
+      <h3 class="cs-next-title"><span data-only="de">ecomex Business Academy: Markenentwicklung, UX/UI-Design &amp; Digital Experience</span><span data-only="en">ecomex Business Academy: Brand evolution, UX/UI design &amp; digital experience</span></h3>
+      <a class="btn-view" href="ecomex.html" data-i18n="cta.view">Ansehen</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="name">SUSANN</div>
+      <div class="role">UX & Product Specialist</div>
+      <a class="small" href="mailto:susann.gebert@gmx.de" data-i18n="footer.mail">Schreib mir eine Mail</a>
+      <div class="social">
+        <a href="https://medium.com/@susann.gebert" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5h3.6l6.4 12.2L17.9 5.5H22v1.2l-1.6 1.5v9.6l1.6 1.5v1.2h-6.4v-1.2l1.6-1.5V9.9l-5 10.1h-.8L6 9.4v7.9l2 2.2v1.2H2v-1.2l2-2.2V8.3L2 6.7z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/susann-gebert-11679b240" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.2 7.3v7.5h2.4v-7.5zm1.2-3.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zm3.1 3.8v7.5h2.4v-3.9c0-1 .2-2 1.5-2s1.3 1.2 1.3 2.1v3.8H19v-4.3c0-2.1-.5-3.7-2.9-3.7-1.2 0-2 .6-2.3 1.2v-1z" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="projects.title">Projekte</h4>
+      <ul class="small">
+        <li><a href="ecomex.html">ecomex Business Academy</a></li>
+        <li><a href="cs-e-commerce.html" aria-current="page">E-Commerce Website</a></li>
+        <li><a href="cs-dashboard.html">Dashboard Airbnb</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BURGER-MENÜ ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <svg class="menu-deco" viewBox="0 0 1280 728" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3">
+      <circle cx="205" cy="200" r="580"/>
+      <circle cx="165" cy="284" r="110"/>
+      <polygon points="1090,442 988,500 1090,558"/>
+      <polygon points="876,622 928,622 902,666"/>
+    </g>
+    <circle cx="218" cy="315" r="20" fill="rgba(255,255,255,.35)"/>
+    <defs>
+      <pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="6" fill="rgba(255,255,255,.35)"/>
+      </pattern>
+    </defs>
+    <rect x="998" y="93" width="288" height="288" fill="url(#dotp)"/>
+    <rect x="0" y="433" width="144" height="236" fill="url(#dotp)"/>
+  </svg>
+  <div class="menu-top">
+    <a class="menu-logo" href="index.html">SUSANN</a>
+    <button class="menu-close" type="button">
+      <span data-i18n="nav.close">Schließen</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 4l32 32M36 4L4 36" stroke="#1D1D1D" stroke-width="3.5"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html" data-i18n="menu.home">Home</a>
+    <a href="all-projects.html" data-i18n="menu.work">Projekte</a>
+    <a href="about.html" data-i18n="menu.about">Über mich</a>
+    <a href="contact.html" data-i18n="menu.contact">Kontakt</a>
+  </nav>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/case.js"></script>
+</body>
+</html>

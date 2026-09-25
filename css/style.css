@@ -307,7 +307,7 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 /* Drei Research-Themen: Desktop nebeneinander, darunter untereinander */
 .cs-themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);margin-top:clamp(20px,2.4vw,36px)}
 .cs-theme{border-radius:var(--radius);padding:clamp(18px,2vw,28px);color:var(--light-black)}
-.cs-theme h3{font-weight:700;font-size:clamp(18px,1.7vw,25px);margin-bottom:8px}
+.cs-theme h3{font-weight:700;font-size:24px;margin-bottom:8px}
 .cs-theme p{font-size:clamp(14px,1.1vw,17px)}
 .cs-theme-yellow{background:var(--bright-yellow)}
 .cs-theme-orange{background:var(--orange)}

@@ -286,8 +286,8 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-challenge p{font-size:clamp(15px,1.2vw,18px);line-height:1.55}
 .cs-challenge p+p{margin-top:1em}
 
-/* Abstand Challenge-Box → "Inhalt" */
-.sec-head.cs-content-head{margin-top:100px}
+/* Abstand Challenge-Box → "Inhalt" (Handy: siehe Breakpoint unten) */
+.sec-head.cs-content-head{margin-top:150px}
 
 /* Abschnitte */
 .cs-sec{padding:clamp(32px,4vw,64px) 0 0}

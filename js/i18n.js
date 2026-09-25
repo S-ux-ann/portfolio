@@ -31,6 +31,7 @@ const TEXT = {
     "about.portrait":"Porträt von Susann Gebert",
     /* Case Studies */
     "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen",
+    "cs.neb.hero":"Nebulite Collection: leuchtende Taschen aus Glasfasergewebe vor dunklem Hintergrund",
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
@@ -61,6 +62,7 @@ const TEXT = {
     "about.portrait":"Portrait of Susann Gebert",
     /* Case studies */
     "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after",
+    "cs.neb.hero":"Nebulite Collection: glowing fiber-optic bags against a dark background",
   }
 };
 

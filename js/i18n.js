@@ -34,6 +34,7 @@ const TEXT = {
     "cs.neb.hero":"Nebulite Collection: leuchtende Taschen aus Glasfasergewebe vor dunklem Hintergrund",
     "cs.neb.quotesPos":"Positive Zitate aus den User Interviews: „a friend has shoes that shine in all kinds of colors, that’s really cool“ und „I have soooo many outfits, almost more than regular clothes. I love to dress up.“",
     "cs.neb.quotesNeg":"Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“",
+    "ex.hero":"ecomex Website auf Laptop und Smartphone",
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
@@ -67,6 +68,7 @@ const TEXT = {
     "cs.neb.hero":"Nebulite Collection: glowing fiber-optic bags against a dark background",
     "cs.neb.quotesPos":"Positive quotes from the user interviews: “a friend has shoes that shine in all kinds of colors, that’s really cool” and “I have soooo many outfits, almost more than regular clothes. I love to dress up.”",
     "cs.neb.quotesNeg":"Critical quotes from the user interviews: “slow website loading times and lack of the festival atmosphere” and “product visibility and overview is confusing, too many informations at once”",
+    "ex.hero":"ecomex website on laptop and smartphone",
   }
 };
 

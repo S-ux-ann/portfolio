@@ -42,7 +42,8 @@ document.querySelectorAll(".cs-compare").forEach(box => {
 
 /* ---------- Fortschrittsanzeige (rechts, ein Punkt pro Abschnitt) ---------- */
 (function(){
-  const sections = [...document.querySelectorAll("main .cs-challenge, main .cs-sec, main .cs-outcome, main .cs-darkbox")];
+  const sections = [...document.querySelectorAll("main .cs-challenge, main .cs-sec, main .cs-outcome, main .cs-darkbox")]
+    .filter(s => !s.parentElement.closest(".cs-challenge, .cs-sec, .cs-outcome, .cs-darkbox"));   /* nur oberste Ebene */
   if (sections.length < 2) return;
 
   const nav = document.createElement("nav");

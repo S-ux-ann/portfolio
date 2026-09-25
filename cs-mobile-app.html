@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GasolinaToday Mobile App – Susann Gebert</title>
+<meta name="description" content="Case Study: GasolinaToday – ein App-Konzept, das Autofahrern in Venezuela hilft, verfügbaren Treibstoff zu finden, Warteschlangen einzuschätzen und Fahrten sicherer zu planen.">
+<link rel="stylesheet" href="css/style.css?v=27">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">SUSANN</a>
+    <div class="meta">
+      <div class="lang" role="group" aria-label="Sprache / Language" data-active="de">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="meta-link" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!--
+  Texte: Jeder Absatz steht zweimal im Code – einmal mit data-only="de", einmal mit data-only="en".
+  Es wird immer nur die Version der gewählten Sprache angezeigt.
+
+  Bilder: Die grauen Kästen (class="cs-ph") sind Platzhalter. Ersetze sie später durch
+  <img class="cs-img" src="images/…" width="…" height="…" alt="…">
+  Die Zahl im Platzhalter ist die empfohlene Bildgröße in Pixeln.
+-->
+
+<main class="cs">
+  <!-- ================= KOPF ================= -->
+  <section class="cs-hero">
+    <!-- Herobild: 75 % der Fensterbreite – Platzhalter, später durch <img class="cs-img cs-hero-img" …> ersetzen -->
+    <div class="wrap">
+      <div class="cs-ph cs-ph-dark cs-hero-img">Bild: GasolinaToday App (Hero)<small>2400 × 773</small></div>
+    </div>
+
+    <!-- Titel, Intro & Fakten: 75 % – Pfeil sitzt absolut, bündig mit dem Logo "SUSANN" -->
+    <div class="cs-hero-head">
+    <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+    <div class="wrap cs-hero-text">
+      <p class="cs-eyebrow">Mobile App · UX/UI Case Study</p>
+      <h1 class="cs-title">
+        <span data-only="de">GasolinaToday: Mit mehr Sicherheit durch die Treibstoffknappheit</span>
+        <span data-only="en">GasolinaToday: Navigating Fuel Shortages with Greater Confidence</span>
+      </h1>
+      <p class="cs-lead" data-only="de">GasolinaToday ist ein App-Konzept, das Autofahrern in Venezuela hilft, verfügbaren Treibstoff zu finden, die Lage in den Warteschlangen einzuschätzen und ihre Fahrten mit mehr Sicherheit zu planen.</p>
+      <p class="cs-lead" data-only="en">GasolinaToday is a mobile app concept designed to help drivers in Venezuela locate available fuel, assess queue conditions and plan their journeys with greater confidence.</p>
+      <p class="cs-lead" data-only="de">In einem zweiwöchigen Ironhack-Projekt hat unser Team lokale Research in ein getestetes mobiles Erlebnis übersetzt, das GPS-basierte Tankstellensuche mit Echtzeit-Updates aus der Community verbindet.</p>
+      <p class="cs-lead" data-only="en">During a two-week Ironhack project, our team translated local research into a tested mobile experience combining GPS-based station discovery with community-provided real-time updates.</p>
+
+      <dl class="cs-facts">
+        <div>
+          <dt><span data-only="de">Rolle</span><span data-only="en">Role</span></dt>
+          <dd><span data-only="de">UX/UI-Designerin</span><span data-only="en">UX/UI Designer</span></dd>
+        </div>
+        <div>
+          <dt>Team</dt>
+          <dd><span data-only="de">2 UX/UI Designer · 2 Projektinitiatoren aus Venezuela</span><span data-only="en">2 UX/UI Designers · 2 Venezuelan Project Initiators</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Zeitraum</span><span data-only="en">Duration</span></dt>
+          <dd><span data-only="de">2 Wochen</span><span data-only="en">2 Weeks</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Fokus</span><span data-only="en">Focus</span></dt>
+          <dd><span data-only="de">Research-Synthese · Informationsarchitektur · Prototyping · Usability-Tests · Visual Design</span><span data-only="en">Research Synthesis · Information Architecture · Prototyping · Usability Testing · Visual Design</span></dd>
+        </div>
+      </dl>
+    </div>
+    </div>
+  </section>
+
+  <!-- ================= MEIN BEITRAG ================= -->
+  <div class="wrap">
+    <div class="sec-head cs-content-head">
+      <h2><span data-only="de">Inhalt</span><span data-only="en">content</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+
+    <div class="cs-challenge">
+      <h3><span data-only="de">Mein Beitrag</span><span data-only="en">My contribution</span></h3>
+      <p data-only="de">Die Fragen für die Umfrage habe ich mitentwickelt, rund 100 Antworten ausgewertet und die User Interviews zusammen mit dem zweiten Mitglied unseres UX/UI-Teams geführt. Persona, Journey Map, Prototypen und Usability-Tests haben wir gemeinsam erarbeitet.</p>
+      <p data-only="en">I co-developed the survey questions, synthesized around 100 responses and conducted user interviews together with my UX/UI design partner. We jointly created the persona, journey map, prototypes and usability tests.</p>
+      <p data-only="de">Die Informationsarchitektur habe ich eigenständig entwickelt und das Visual Design sowie das Designsystem verantwortet. Ideenfindung und Priorisierung der Features hat das gesamte Team gemeinsam übernommen.</p>
+      <p data-only="en">I independently developed the information architecture and led the visual design and design system. Ideation and feature prioritization were carried out collaboratively by the full team.</p>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <!-- ================= HERAUSFORDERUNG ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Die Herausforderung</span><span data-only="en">The challenge</span></p>
+      <h2><span data-only="de">Unsicherheit vor und während der Fahrt verringern</span><span data-only="en">Reducing uncertainty before and during the journey</span></h2>
+      <p data-only="de">Treibstoffknappheit und unvorhersehbare Warteschlangen können den alltäglichen Weg zur Tankstelle stressig und zeitraubend machen. Autofahrer kommen womöglich an, ohne zu wissen, ob es Treibstoff gibt, wie lang die Schlange ist oder ob sie ihren nächsten Termin noch pünktlich erreichen.</p>
+      <p data-only="en">Fuel shortages and unpredictable queues can turn an everyday trip to a gas station into a stressful and time-consuming experience. Drivers may arrive without knowing whether fuel is available, how long the queue will be or whether they will reach their next appointment on time.</p>
+      <p data-only="de">Die beiden venezolanischen Projektinitiatoren brachten die ursprüngliche Idee und Wissen aus erster Hand über den lokalen Kontext mit. Unsere Aufgabe war, diesen Kontext in ein mobiles Konzept zu übersetzen, das Autofahrern hilft, vor dem Losfahren fundiertere Entscheidungen zu treffen.</p>
+      <p data-only="en">Two Venezuelan project initiators brought the initial idea and first-hand knowledge of the local context. Our challenge was to translate this context into a mobile concept that could help drivers make more informed decisions before setting out.</p>
+      <p data-only="de">Ziel war nicht einfach, Wartezeiten zu verkürzen, sondern Unsicherheit zu verringern, indem relevante Informationen zu Tankstellen und Warteschlangen leichter zugänglich werden.</p>
+      <p data-only="en">The goal was not simply to shorten waiting times, but to reduce uncertainty by making relevant station and queue information easier to access.</p>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section class="cs-sec">
+      <span class="cs-dots" aria-hidden="true"></span>
+      <p class="cs-eyebrow">Research</p>
+      <h2><span data-only="de">Die Unsicherheit hinter der Warteschlange verstehen</span><span data-only="en">Understanding the uncertainty behind the queue</span></h2>
+      <p data-only="de">Die venezolanischen Projektinitiatoren hatten schon vor Projektbeginn erste Vorarbeit geleistet. Darauf aufbauend haben wir die Fragen für die Umfrage gemeinsam entwickelt, und die Initiatoren haben die Umfrage über ihr Netzwerk in Venezuela verbreitet.</p>
+      <p data-only="en">The Venezuelan project initiators had already completed initial groundwork before the project began. Building on this, we developed the survey questions collaboratively, and they distributed the survey through their network in Venezuela.</p>
+      <p data-only="de">Rund 100 Menschen, die in Venezuela leben, haben teilgenommen. Im UX/UI-Team haben wir die Antworten ausgewertet, drei User Interviews geführt und ein erstes Stakeholder-Interview gehalten, gefolgt von regelmäßigem Austausch während des gesamten Projekts.</p>
+      <p data-only="en">Around 100 people living in Venezuela participated. My UX/UI design partner and I synthesized the responses, conducted three user interviews and held an initial stakeholder interview followed by regular exchanges throughout the project.</p>
+      <p data-only="de">Diese Kombination lieferte uns quantitative Hinweise auf wiederkehrende Herausforderungen und qualitative Einblicke, wie die Treibstoffknappheit Alltag, Entscheidungen und Stresslevel der Menschen beeinflusste.</p>
+      <p data-only="en">This combination gave us quantitative indications of recurring challenges and qualitative insight into how fuel shortages affected people’s routines, decisions and stress levels.</p>
+
+      <div class="cs-darkbox cs-inputs">
+        <p class="cs-eyebrow"><span data-only="de">Wichtigste Research-Grundlagen</span><span data-only="en">Key research inputs</span></p>
+        <dl class="cs-stats cs-stats-3">
+          <div><dt>~100</dt><dd><span data-only="de">rund 100 Antworten aus der Umfrage unter Menschen in Venezuela</span><span data-only="en">Survey responses from people living in Venezuela</span></dd></div>
+          <div><dt>3</dt><dd>User Interviews</dd></div>
+          <div><dt>1</dt><dd><span data-only="de">erstes Stakeholder-Interview plus laufender Austausch</span><span data-only="en">Initial stakeholder interview plus ongoing exchanges</span></dd></div>
+        </dl>
+      </div>
+
+      <p class="cs-listhead" data-only="de">Was die Research gezeigt hat</p>
+      <p class="cs-listhead" data-only="en">What emerged from the research</p>
+      <ul class="cs-list" data-only="de">
+        <li>Autofahrer mussten wissen, ob eine Tankstelle geöffnet ist und Treibstoff hat, bevor sie hinfahren.</li>
+        <li>Unvorhersehbare Warteschlangen sorgten für Frust und machten die Tagesplanung schwierig.</li>
+        <li>Informationen zu Wartezeiten und zur Lage an den Tankstellen mussten aktuell und leicht verständlich sein.</li>
+        <li>Informationen aus der Community konnten nützlich sein – entscheidend wären aber Vertrauen, Datenschutz und verlässliche Daten.</li>
+        <li>Das Erlebnis sollte schnelle Entscheidungen unterstützen, ohne zusätzliche Hürden zu schaffen.</li>
+      </ul>
+      <ul class="cs-list" data-only="en">
+        <li>Drivers needed to know whether a station was open and had fuel before travelling there.</li>
+        <li>Unpredictable queues caused frustration and made everyday schedules difficult to plan.</li>
+        <li>Information about waiting times and station conditions needed to be current and easy to understand.</li>
+        <li>Community-generated information could be useful, but trust, privacy and data reliability would be essential.</li>
+        <li>The experience needed to support quick decisions without creating additional friction.</li>
+      </ul>
+
+      <figure class="cs-fig">
+        <div class="cs-ph" style="aspect-ratio:16/9">Bild: Umfrage &amp; Research-Synthese<small>1720 × 968</small></div>
+        <figcaption><span data-only="de">Research-Synthese auf Basis von rund 100 Antworten aus der Umfrage, drei User Interviews und laufendem Austausch mit den Stakeholdern.</span><span data-only="en">Research synthesis based on around 100 survey responses, three user interviews and ongoing stakeholder exchange.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= PROBLEM ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Das Problem definieren</span><span data-only="en">Defining the problem</span></p>
+      <h2><span data-only="de">Research in eine klare Produktrichtung übersetzen</span><span data-only="en">Turning research into a focused product direction</span></h2>
+      <p data-only="de">Wir haben die Erkenntnisse in einer Persona verdichtet, die die in der Research erkannten Verhaltensweisen, Bedürfnisse und Einschränkungen abbildet. Die Persona half uns, das Konzept im Alltag der von Treibstoffknappheit betroffenen Autofahrer zu verankern.</p>
+      <p data-only="en">We consolidated the findings into a persona representing the behaviours, needs and constraints identified during the research. The persona helped us keep the concept grounded in the everyday reality of drivers affected by fuel shortages.</p>
+      <p data-only="de">Die Journey Map zeigte, wo Unsicherheit und Frust besonders groß waren: bei der Suche nach einer Tankstelle mit Treibstoff, bei unerwarteten Warteschlangen und bei der Sorge, sich für anstehende Termine zu verspäten.</p>
+      <p data-only="en">The journey map showed where uncertainty and frustration were particularly high: searching for an available station, encountering unexpected queues and worrying about delays to upcoming appointments.</p>
+
+      <p class="cs-listhead">Problem Statement</p>
+      <blockquote class="cs-quote">
+        <p data-only="de">„Autofahrer in Venezuela brauchen eine verlässliche Möglichkeit, die Verfügbarkeit von Treibstoff und die Lage an den Warteschlangen in ihrer Nähe einzuschätzen, bevor sie losfahren – denn unvollständige Informationen machen alltägliche Fahrten schwer planbar und erhöhen den Stress.“</p>
+        <p data-only="en">“Drivers in Venezuela need a reliable way to assess nearby fuel availability and queue conditions before setting out, because incomplete information makes everyday journeys difficult to plan and increases stress.”</p>
+      </blockquote>
+
+      <figure class="cs-fig">
+        <div class="cs-ph" style="aspect-ratio:16/9">Bild: Persona<small>1720 × 968</small></div>
+        <figcaption><span data-only="de">Eine auf Research basierende Persona, die wiederkehrende Verhaltensweisen, Bedürfnisse und Frustrationen bündelt.</span><span data-only="en">A research-based persona used to consolidate recurring behaviours, needs and frustrations.</span></figcaption>
+      </figure>
+      <figure class="cs-fig">
+        <div class="cs-ph" style="aspect-ratio:16/9">Bild: Journey Map<small>1720 × 968</small></div>
+        <figcaption><span data-only="de">Die Journey Map zeigt die Momente, in denen fehlende Informationen, unerwartete Warteschlangen und Zeitdruck die größte Unsicherheit erzeugen.</span><span data-only="en">The journey map highlights the moments in which missing information, unexpected queues and time pressure create the greatest uncertainty.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= IDEENFINDUNG ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Ideenfindung und Priorisierung</span><span data-only="en">Ideation and prioritization</span></p>
+      <h2><span data-only="de">Lösungen rund um Information, Orientierung und Vertrauen erkunden</span><span data-only="en">Exploring solutions around information, orientation and trust</span></h2>
+      <p data-only="de">Mit How-Might-We-Fragen, Crazy 8s und Reverse Brainstorming hat das gesamte Team die erkannten Herausforderungen in mögliche Produktfeatures übersetzt.</p>
+      <p data-only="en">The full team used How Might We questions, Crazy 8s and reverse brainstorming to turn the identified challenges into possible product features.</p>
+      <p data-only="de">Die Ideen reichten von praktischen Tankstelleninformationen und Routenplanung über Community-Updates und Treibstoffrechner bis zu Unterhaltung während langer Wartezeiten. Um dem Konzept eine klare Richtung zu geben, haben wir die zentrale Journey von unterstützenden und explorativen Features getrennt.</p>
+      <p data-only="en">The ideas ranged from practical station information and route planning to community updates, fuel calculations and entertainment during long waits. To give the concept a clear direction, we separated the primary journey from supporting and exploratory features.</p>
+
+      <div class="cs-themes cs-themes-2">
+        <div class="cs-theme cs-theme-yellow">
+          <h3><span data-only="de">Kernerlebnis</span><span data-only="en">Core experience</span></h3>
+          <ul class="cs-list" data-only="de">
+            <li>Tankstellen in der Nähe über den aktuellen Standort finden</li>
+            <li>Gemeldete Verfügbarkeit von Treibstoff und Lage an den Warteschlangen prüfen</li>
+            <li>Tankstelleninformationen vor der Wahl des Ziels ansehen</li>
+            <li>Zu einer ausgewählten Tankstelle navigieren</li>
+            <li>Echtzeit-Updates aus der Community teilen oder abrufen</li>
+          </ul>
+          <ul class="cs-list" data-only="en">
+            <li>Discover nearby gas stations using the current location</li>
+            <li>Check reported fuel availability and queue conditions</li>
+            <li>Review station information before choosing a destination</li>
+            <li>Navigate to a selected gas station</li>
+            <li>Share or access community-provided real-time updates</li>
+          </ul>
+        </div>
+        <div class="cs-theme cs-theme-orange">
+          <h3><span data-only="de">Unterstützende und explorative Features</span><span data-only="en">Supporting and exploratory features</span></h3>
+          <ul class="cs-list" data-only="de">
+            <li>Ein Profil mit Avatar und Vertrauenspunkten</li>
+            <li>Ein Rechner für Treibstoffpreise und Verbrauch</li>
+            <li>Artikel, News, Tipps und Spiele für die Wartezeit</li>
+          </ul>
+          <ul class="cs-list" data-only="en">
+            <li>A profile with an avatar and trust points</li>
+            <li>A calculator for fuel prices and consumption</li>
+            <li>Articles, news, tips and games for time spent waiting</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="cs-keyline" data-only="de">Das Kernerlebnis sollte vor allem eine dringende Frage beantworten: Welche Tankstelle in der Nähe ist gerade die beste Wahl?</p>
+      <p class="cs-keyline" data-only="en">The primary experience centred on helping users answer one urgent question: Which nearby station is currently the most suitable option?</p>
+    </section>
+
+    <!-- ================= INFORMATIONSARCHITEKTUR ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Informationsarchitektur</span><span data-only="en">Information architecture</span></p>
+      <h2><span data-only="de">Das Erlebnis entlang von vier Aufgabenbereichen strukturieren</span><span data-only="en">Structuring the experience around four task streams</span></h2>
+      <p data-only="de">Ich habe die Informationsarchitektur entwickelt, um den breiten Funktionsumfang in eine navigierbare mobile Struktur zu übersetzen.</p>
+      <p data-only="en">I developed the information architecture to translate the broad feature set into a navigable mobile structure.</p>
+      <p class="cs-listhead" data-only="de">Das Konzept gliederte sich in vier zentrale Aufgabenbereiche:</p>
+      <p class="cs-listhead" data-only="en">The concept was organized around four main task streams:</p>
+      <ol class="cs-list" data-only="de">
+        <li>Registrierung und Onboarding</li>
+        <li>Tankstellensuche und Routenführung</li>
+        <li>Ein Live-Feed mit Updates aus der Community</li>
+        <li>Ein Unterhaltungsbereich mit Artikeln, News und Spielen</li>
+      </ol>
+      <ol class="cs-list" data-only="en">
+        <li>Account creation and onboarding</li>
+        <li>Station discovery and routing</li>
+        <li>A live feed with community updates</li>
+        <li>An entertainment area with articles, news and games</li>
+      </ol>
+      <p data-only="de">Die Architektur schuf eine gemeinsame Grundlage für die Prototypen und half dem Team, die zentrale Tankstellensuche von nachrangigen Features zu unterscheiden.</p>
+      <p data-only="en">The architecture created a shared foundation for the prototypes and helped the team distinguish the main station-finding journey from secondary features.</p>
+
+      <figure class="cs-fig">
+        <div class="cs-ph cs-ph-white" style="aspect-ratio:16/10">Bild: Informationsarchitektur<small>1720 × 1075</small></div>
+        <figcaption><span data-only="de">Die Informationsarchitektur verbindet Onboarding, Tankstellensuche, Community-Updates und ergänzende Inhalte in einem mobilen Erlebnis.</span><span data-only="en">The information architecture connects onboarding, station discovery, community updates and supporting content within one mobile experience.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= PROTOTYPING ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow">Prototyping</p>
+      <h2><span data-only="de">Das Interaktionsmodell über verschiedene Fidelity-Stufen erkunden</span><span data-only="en">Exploring the interaction model across different fidelity levels</span></h2>
+      <p data-only="de">Im UX/UI-Team haben wir mehrere Low-Fidelity-Varianten erstellt und gemeinsam durchgespielt, um Screen-Strukturen, Navigationsmuster und gängige mobile Interaktionen zu vergleichen.</p>
+      <p data-only="en">My UX/UI design partner and I created several low-fidelity alternatives and worked through them together to compare screen structures, navigation patterns and common mobile interactions.</p>
+      <p data-only="de">Diese frühen Konzepte dienten der internen Erkundung, nicht formalen Usability-Tests. So konnten wir vielversprechende Richtungen erkennen, bevor wir Zeit in detailliertere Screens investierten.</p>
+      <p data-only="en">These early concepts were used for internal exploration rather than formal usability testing. They allowed us to identify promising directions before investing in more detailed screens.</p>
+      <p data-only="de">Den gewählten Ansatz haben wir anschließend in einen Mid-Fidelity-Prototyp übersetzt und mit drei Teilnehmenden getestet.</p>
+      <p data-only="en">We then translated the selected approach into a mid-fidelity prototype and tested it with three participants.</p>
+
+      <p class="cs-listhead" data-only="de">Getestete Aufgaben</p>
+      <p class="cs-listhead" data-only="en">Tasks tested</p>
+      <ul class="cs-list" data-only="de">
+        <li>Das Onboarding abschließen</li>
+        <li>Die nächstgelegene Tankstelle mit verfügbarem Treibstoff finden</li>
+      </ul>
+      <ul class="cs-list" data-only="en">
+        <li>Complete the onboarding process</li>
+        <li>Find the nearest gas station with available fuel</li>
+      </ul>
+      <p data-only="de">In den Sessions konnten wir prüfen, ob die Teilnehmenden die Navigation verstanden, interaktive Elemente erkannten und sich durch die zentrale Tankstellensuche bewegen konnten. Die Beobachtungen flossen in Verbesserungen an Navigationswegen, Icons und visueller Hierarchie ein, bevor wir die High-Fidelity-Version entwickelten.</p>
+      <p data-only="en">The sessions helped us evaluate whether participants could understand the navigation, identify interactive elements and move through the central station-finding journey. The observations informed refinements to the navigation paths, iconography and visual hierarchy before we developed the high-fidelity version.</p>
+
+      <div class="cs-pair">
+        <figure class="cs-fig">
+          <div class="cs-ph" style="aspect-ratio:4/3">Bild: Low-Fidelity-Varianten<small>1000 × 750</small></div>
+          <figcaption><span data-only="de">Low-Fidelity-Varianten, intern genutzt, um Navigation und Screen-Strukturen zu vergleichen.</span><span data-only="en">Low-fidelity alternatives used internally to compare navigation and screen structures.</span></figcaption>
+        </figure>
+        <figure class="cs-fig">
+          <div class="cs-ph" style="aspect-ratio:4/3">Bild: Mid-Fidelity-Screens<small>1000 × 750</small></div>
+          <figcaption><span data-only="de">Mid-Fidelity-Screens, mit denen wir Onboarding und Tankstellensuche mit drei Teilnehmenden getestet haben.</span><span data-only="en">Mid-fidelity screens used to test onboarding and station discovery with three participants.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= HIGH-FIDELITY (graues Band) ================= -->
+  <div class="cs-band">
+    <div class="cs-col">
+      <section class="cs-sec">
+        <p class="cs-eyebrow"><span data-only="de">High-Fidelity-Test</span><span data-only="en">High-fidelity testing</span></p>
+        <h2><span data-only="de">Ein realistischeres Produkterlebnis testen</span><span data-only="en">Testing a more realistic product experience</span></h2>
+        <p data-only="de">Den High-Fidelity-Prototyp haben wir mit drei Teilnehmenden und denselben beiden Kernaufgaben getestet: das Onboarding abschließen und die nächstgelegene Tankstelle mit verfügbarem Treibstoff finden.</p>
+        <p data-only="en">We tested the high-fidelity prototype with three participants using the same two core tasks: completing onboarding and finding the nearest station with available fuel.</p>
+        <p data-only="de">Die Teilnehmenden konnten das Onboarding abschließen – das realistischere Interface brachte aber auch Bedenken ans Licht, die in früheren Phasen weniger sichtbar gewesen waren.</p>
+        <p data-only="en">Participants were able to complete the onboarding process, but the more realistic interface also surfaced concerns that had not been as visible at earlier stages.</p>
+        <p data-only="de">Sicherheit, Datenschutz, das Zurücksetzen des Passworts und die Vertrauenswürdigkeit des Dienstes wurden zu wichtigen Themen. Außerdem äußerten die Teilnehmenden ein neues Bedürfnis: das Preis-Leistungs-Verhältnis verschiedener Tankstellen vergleichen zu können, um beim Tanken fundiertere Entscheidungen zu treffen.</p>
+        <p data-only="en">Security, privacy, password recovery and the trustworthiness of the service became important topics. Participants also expressed a new need: being able to compare the value offered by different gas stations to make more informed decisions about fuel purchases.</p>
+        <p data-only="de">Diese Erkenntnisse haben wir als Prioritäten für eine künftige Iteration dokumentiert. Da das zweiwöchige Projekt nach den Tests endete, flossen sie nicht mehr in eine weitere Prototyp-Version ein.</p>
+        <p data-only="en">These findings were documented as priorities for a future iteration. Because the two-week project ended after testing, they were not incorporated into another prototype version.</p>
+
+        <figure class="cs-fig">
+          <div class="cs-ph" style="aspect-ratio:16/9">Bild: High-Fidelity-Screens<small>1720 × 968</small></div>
+          <figcaption><span data-only="de">Mit dem High-Fidelity-Prototyp haben wir Onboarding und Tankstellensuche in einem realistischeren Interface getestet.</span><span data-only="en">The high-fidelity prototype tested the core onboarding and station-finding journey in a more realistic interface.</span></figcaption>
+        </figure>
+
+        <div class="cs-proto">
+          <p><span data-only="de">Klickbaren Prototyp in Figma ansehen:</span><span data-only="en">Explore the clickable prototype in Figma:</span></p>
+          <a class="cs-pill" href="https://www.figma.com/proto/gOOfsvv3aLZcBhmG52R3mO/Gasolina.today-Prototype?page-id=107%3A508&amp;node-id=2130-2633&amp;viewport=-153%2C328%2C0.24&amp;t=xTrhcWeYDHeig4hg-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=2130%3A2633&amp;share=1" target="_blank" rel="noopener"><span data-only="de">auf Figma</span><span data-only="en">on Figma</span></a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <!-- ================= VISUAL DESIGN ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow">Visual Design</p>
+      <h2><span data-only="de">Ein stimmiges mobiles Designsystem gestalten</span><span data-only="en">Creating a coherent mobile design system</span></h2>
+      <p data-only="de">Ich habe die visuelle Richtung und das Designsystem für GasolinaToday entwickelt und den Fokus des Produkts auf Orientierung und verlässliche Informationen in ein konsistentes Interface übersetzt.</p>
+      <p data-only="en">I developed the visual direction and design system for GasolinaToday, translating the product’s focus on orientation and reliable information into a consistent interface.</p>
+      <p data-only="de">Eine blaugrüne Farbpalette sollte Klarheit und Verlässlichkeit vermitteln. Die Schrift Sen bot eine zeitgemäße, gut lesbare Grundlage, während eindeutige Icons und klare Button-Stile halfen, wichtige Aktionen schnell zu erkennen.</p>
+      <p data-only="en">A blue-green colour palette was chosen to communicate clarity and reliability. The Sen typeface provided a contemporary and readable foundation, while distinct icons and straightforward button styles supported quick recognition of important actions.</p>
+
+      <figure class="cs-fig">
+        <div class="cs-ph" style="aspect-ratio:16/9">Bild: Farben &amp; Typografie<small>1720 × 968</small></div>
+        <figcaption><span data-only="de">Die visuelle Grundlage verbindet eine blaugrüne Farbpalette mit der Schrift Sen zu einem klaren, zeitgemäßen Interface.</span><span data-only="en">The visual foundation combines a blue-green colour palette with the Sen typeface to create a clear and contemporary interface.</span></figcaption>
+      </figure>
+
+      <p data-only="de">Das System deckte die zentralen Grundlagen für den Prototyp ab – Typografie, Farben, Icons, Buttons, Navigationsmuster und wiederkehrende Interface-Komponenten. So entstand Konsistenz über alle Screens und eine wiederverwendbare Basis für die weitere Produktentwicklung.</p>
+      <p data-only="en">The system covered the central foundations required for the prototype, including typography, colours, icons, buttons, navigation patterns and recurring interface components. This created consistency across the screens and provided a reusable basis for future product development.</p>
+
+      <div class="cs-pair">
+        <figure class="cs-fig">
+          <div class="cs-ph" style="aspect-ratio:4/3">Bild: Icons<small>1000 × 750</small></div>
+          <figcaption><span data-only="de">Ein einheitliches Icon-Set unterstützt die Wiedererkennung in Navigation, Tankstelleninformationen und Community-Features.</span><span data-only="en">A consistent icon set supports recognition across navigation, station information and community features.</span></figcaption>
+        </figure>
+        <figure class="cs-fig">
+          <div class="cs-ph" style="aspect-ratio:4/3">Bild: Komponenten<small>1000 × 750</small></div>
+          <figcaption><span data-only="de">Wiederverwendbare Buttons, Navigationsmuster und Interface-Komponenten sorgen für Konsistenz im gesamten mobilen Erlebnis.</span><span data-only="en">Reusable buttons, navigation patterns and interface components create consistency across the mobile experience.</span></figcaption>
+        </figure>
+      </div>
+
+      <p data-only="de">Die Barrierefreiheit müsste noch genauer geprüft werden – insbesondere Farbkontraste, Textbeschriftungen, Touch-Flächen und die Darstellung von Komponentenzuständen.</p>
+      <p data-only="en">Accessibility would require further validation, particularly regarding colour contrast, text labels, touch targets and the communication of component states.</p>
+    </section>
+  </div>
+
+  <!-- ================= ERGEBNIS ================= -->
+  <section class="wrap cs-outcome-wrap">
+    <div class="cs-darkbox">
+      <p class="cs-eyebrow"><span data-only="de">Ergebnis</span><span data-only="en">Outcome</span></p>
+      <h2><span data-only="de">Von lokalem Wissen zu einem getesteten Produktkonzept</span><span data-only="en">From local insight to a tested product concept</span></h2>
+      <p data-only="de">Das Projekt mündete in ein research-basiertes High-Fidelity-App-Konzept, gestützt auf eine strukturierte Informationsarchitektur und ein wiederverwendbares visuelles System.</p>
+      <p data-only="en">The project resulted in a research-based, high-fidelity mobile concept supported by a structured information architecture and a reusable visual system.</p>
+      <p class="cs-listhead" data-only="de">Innerhalb von zwei Wochen hat das Team:</p>
+      <p class="cs-listhead" data-only="en">Within two weeks, the team:</p>
+      <ul class="cs-list" data-only="de">
+        <li>rund 100 Antworten aus der Umfrage und drei User Interviews ausgewertet</li>
+        <li>eine Persona, eine Journey Map und ein Problem Statement definiert</li>
+        <li>das Produkt entlang von vier zentralen Aufgabenbereichen strukturiert</li>
+        <li>die Kern-Journey in Mid- und High-Fidelity mit jeweils drei Teilnehmenden getestet</li>
+        <li>einen klickbaren High-Fidelity-Prototyp erstellt</li>
+        <li>ein konsistentes visuelles Designsystem aufgebaut</li>
+        <li>Vertrauen, Datenschutz und verlässliche Informationen als entscheidende Anforderungen für die Weiterentwicklung erkannt</li>
+      </ul>
+      <ul class="cs-list" data-only="en">
+        <li>Synthesized around 100 survey responses and three user interviews</li>
+        <li>Defined a persona, journey map and problem statement</li>
+        <li>Structured the product around four central task streams</li>
+        <li>Tested the core journey at mid- and high-fidelity with three participants at each stage</li>
+        <li>Created a clickable high-fidelity prototype</li>
+        <li>Established a consistent visual design system</li>
+        <li>Identified trust, privacy and information reliability as critical requirements for future development</li>
+      </ul>
+      <p data-only="de">Das Konzept wurde nach dem Projekt nicht weiterentwickelt oder veröffentlicht, da den Projektinitiatoren die nötigen Kapazitäten und Ressourcen für eine Umsetzung fehlten. Das Ergebnis ist daher als getestetes Produktkonzept zu verstehen, nicht als Live-Produkt mit messbarem Geschäftserfolg.</p>
+      <p data-only="en">The concept was not developed or launched after the project, as the project initiators did not have the capacity and resources required for implementation. The outcome should therefore be understood as a tested product concept rather than a live product with measurable business impact.</p>
+    </div>
+  </section>
+
+  <div class="cs-col cs-final">
+    <span class="cs-lines" aria-hidden="true"></span>
+    <!-- ================= NÄCHSTE SCHRITTE ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Nächste Schritte</span><span data-only="en">Next steps</span></p>
+      <h2><span data-only="de">Was ich als Nächstes validieren würde</span><span data-only="en">What I would validate next</span></h2>
+      <div class="cs-themes cs-themes-2">
+        <div class="cs-theme cs-theme-yellow">
+          <h3><span data-only="de">Das Echtzeit-Informationsmodell prüfen</span><span data-only="en">Verify the real-time information model</span></h3>
+          <p data-only="de">Festlegen, wie Meldungen aus der Community überprüft werden, wie veraltete Informationen erkannt werden und wie Nutzer die Verlässlichkeit jedes Updates einschätzen können.</p>
+          <p data-only="en">Define how community reports would be verified, how outdated information would be identified and how users could assess the reliability of each update.</p>
+        </div>
+        <div class="cs-theme cs-theme-orange">
+          <h3><span data-only="de">Vertrauen und Kontosicherheit stärken</span><span data-only="en">Strengthen trust and account security</span></h3>
+          <p data-only="de">Datenschutzrichtlinien klären, das Zurücksetzen des Passworts verbessern und testen, wie Sicherheitsinformationen im Onboarding vermittelt werden sollten.</p>
+          <p data-only="en">Clarify privacy policies, improve password recovery and test how security information should be communicated during onboarding.</p>
+        </div>
+        <div class="cs-theme cs-theme-gold">
+          <h3><span data-only="de">Den Produktumfang priorisieren</span><span data-only="en">Prioritize the product scope</span></h3>
+          <p data-only="de">Die zentrale Tankstellensuche von unterstützenden Features wie Unterhaltung, Treibstoffrechner und erweitertem Profil trennen.</p>
+          <p data-only="en">Separate the essential station-finding journey from supporting features such as entertainment, fuel calculations and extended profile functionality.</p>
+        </div>
+        <div class="cs-theme cs-theme-yellow">
+          <h3><span data-only="de">Tankstellen nach Preis-Leistung vergleichen</span><span data-only="en">Explore station value comparison</span></h3>
+          <p data-only="de">Untersuchen, was „Preis-Leistung“ für Nutzer bedeutet, und herausfinden, welche Informationen beim Vergleich von Tankstellen helfen, ohne das Interface zu überladen.</p>
+          <p data-only="en">Investigate what “value” means to users and determine which information would help them compare stations without overloading the interface.</p>
+        </div>
+        <div class="cs-theme cs-theme-orange">
+          <h3><span data-only="de">Unter realistischen Bedingungen testen</span><span data-only="en">Test under realistic conditions</span></h3>
+          <p data-only="de">Weitere Research mit einer größeren Gruppe von Autofahrern in Venezuela durchführen und das Erlebnis in realistischen mobilen Situationen testen – auch unter Stress und bei schwankender Verbindungsqualität.</p>
+          <p data-only="en">Conduct further research with a broader group of drivers in Venezuela and test the experience in realistic mobile contexts, including stressful situations and varying connection quality.</p>
+        </div>
+        <div class="cs-theme cs-theme-gold">
+          <h3><span data-only="de">Barrierefreiheit prüfen</span><span data-only="en">Validate accessibility</span></h3>
+          <p data-only="de">Farbkontraste, Beschriftungen, Komponentenzustände und Größe der Touch-Flächen prüfen, bevor es in die Entwicklung geht.</p>
+          <p data-only="en">Review colour contrast, labels, component states and touch-target sizes before moving towards development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REFLEXION ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Reflexion</span><span data-only="en">Reflection</span></p>
+      <h2><span data-only="de">Was ich gelernt habe</span><span data-only="en">What I learned</span></h2>
+      <p data-only="de">Die direkte Zusammenarbeit mit den venezolanischen Projektinitiatoren half uns, das Produktkonzept mit einem konkreten lokalen Kontext zu verbinden, statt das Problem nur von außen zu betrachten.</p>
+      <p data-only="en">Working directly with Venezuelan project initiators helped us connect the product concept to a specific local context rather than approaching the problem only from an outside perspective.</p>
+      <p data-only="de">Das Projekt hat außerdem gezeigt, wie die Fidelity eines Prototyps die Art des Nutzerfeedbacks verändert. Sobald das Erlebnis aussah und sich verhielt wie ein echtes Produkt, rückten Fragen zu Sicherheit, Datenschutz und Vertrauen deutlich in den Vordergrund.</p>
+      <p data-only="en">The project also showed how the fidelity of a prototype changes the nature of user feedback. Once the experience looked and behaved more like a real product, questions about security, privacy and trust became much more prominent.</p>
+      <p data-only="de">Vor allem habe ich gelernt, dass visuelle Klarheit allein kein Vertrauen schafft. Bei einem Community-basierten Dienst müssen die Verlässlichkeit der Informationen und die Transparenz des dahinterliegenden Systems als zentrale Teile des Nutzererlebnisses behandelt werden.</p>
+      <p data-only="en">Most importantly, I learned that visual clarity alone cannot create trust. For a community-based service, the reliability of the information and the transparency of the underlying system must be treated as core parts of the user experience.</p>
+    </section>
+  </div>
+
+  <!-- ================= NÄCHSTES PROJEKT ================= -->
+  <section class="wrap cs-next">
+    <div class="sec-head">
+      <h2><span data-only="de">nächstes Projekt</span><span data-only="en">next project</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+    <div class="cs-col">
+      <h3 class="cs-next-title"><span data-only="de">Das Interface der Urban Sports Club App neu gestalten</span><span data-only="en">Redesigning the Interface of the Urban Sports Club App</span></h3>
+      <a class="btn-view" href="cs-redesign-app.html" data-i18n="cta.view">Ansehen</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="name">SUSANN</div>
+      <div class="role">UX & Product Specialist</div>
+      <a class="small" href="mailto:susann.gebert@gmx.de" data-i18n="footer.mail">Schreib mir eine Mail</a>
+      <div class="social">
+        <a href="https://medium.com/@susann.gebert" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5h3.6l6.4 12.2L17.9 5.5H22v1.2l-1.6 1.5v9.6l1.6 1.5v1.2h-6.4v-1.2l1.6-1.5V9.9l-5 10.1h-.8L6 9.4v7.9l2 2.2v1.2H2v-1.2l2-2.2V8.3L2 6.7z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/susann-gebert-11679b240" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.2 7.3v7.5h2.4v-7.5zm1.2-3.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zm3.1 3.8v7.5h2.4v-3.9c0-1 .2-2 1.5-2s1.3 1.2 1.3 2.1v3.8H19v-4.3c0-2.1-.5-3.7-2.9-3.7-1.2 0-2 .6-2.3 1.2v-1z" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="projects.title">Projekte</h4>
+      <ul class="small">
+        <li><a href="ecomex.html">ecomex Business Academy</a></li>
+        <li><a href="cs-e-commerce.html">E-Commerce Website</a></li>
+        <li><a href="cs-dashboard.html">Dashboard Airbnb</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BURGER-MENÜ ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <svg class="menu-deco" viewBox="0 0 1280 728" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3">
+      <circle cx="205" cy="200" r="580"/>
+      <circle cx="165" cy="284" r="110"/>
+      <polygon points="1090,442 988,500 1090,558"/>
+      <polygon points="876,622 928,622 902,666"/>
+    </g>
+    <circle cx="218" cy="315" r="20" fill="rgba(255,255,255,.35)"/>
+    <defs>
+      <pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="6" fill="rgba(255,255,255,.35)"/>
+      </pattern>
+    </defs>
+    <rect x="998" y="93" width="288" height="288" fill="url(#dotp)"/>
+    <rect x="0" y="433" width="144" height="236" fill="url(#dotp)"/>
+  </svg>
+  <div class="menu-top">
+    <a class="menu-logo" href="index.html">SUSANN</a>
+    <button class="menu-close" type="button">
+      <span data-i18n="nav.close">Schließen</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 4l32 32M36 4L4 36" stroke="#1D1D1D" stroke-width="3.5"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html" data-i18n="menu.home">Home</a>
+    <a href="all-projects.html" data-i18n="menu.work">Projekte</a>
+    <a href="about.html" data-i18n="menu.about">Über mich</a>
+    <a href="contact.html" data-i18n="menu.contact">Kontakt</a>
+  </nav>
+</div>
+
+<script src="js/i18n.js?v=27"></script>
+<script src="js/main.js?v=27"></script>
+<script src="js/case.js?v=27"></script>
+</body>
+</html>

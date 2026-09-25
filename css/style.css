@@ -483,3 +483,42 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 @media (max-width:560px){
   .cs-progress{display:none}   /* mobil kein Platz am Rand */
 }
+
+/* =========================================================
+   PROJEKTÜBERSICHT (all-projects.html)
+   ========================================================= */
+.ap-head{position:relative;overflow:hidden;background:var(--light-black);color:var(--white)}
+/* Titel mittig, Dreieck links bündig mit dem Logo, Kreis am rechten Bildschirmrand */
+.ap-head-inner{position:relative;display:flex;justify-content:center;align-items:center;padding:clamp(28px,4vw,56px) clamp(16px,3vw,40px)}
+.ap-tri{position:absolute;left:clamp(16px,3vw,40px);top:50%;transform:translateY(-50%);width:clamp(36px,5vw,72px);height:clamp(32px,4.3vw,62px)}
+.ap-head h1{position:relative;font-weight:500;font-size:clamp(32px,4.2vw,60px);line-height:1}
+.ap-ring{position:absolute;right:calc(-1 * clamp(70px,9vw,150px));top:-30%;width:clamp(150px,20vw,320px);aspect-ratio:1;border:2px solid var(--bright-yellow);border-radius:50%}   /* Deko-Kreis, rechts angeschnitten */
+
+.ap-list{padding:clamp(28px,4vw,56px) 0 clamp(40px,5vw,80px)}
+.ap .projects{gap:clamp(20px,2.4vw,32px)}
+
+/* Bilder & Platzhalter in den Karten: einheitlich 16:10 */
+.ap .pic-box,.ap .card .ph{aspect-ratio:16/10}
+.ap .pic-box .pic{position:static;transform:none;width:100%;height:100%;max-width:100%;object-fit:cover}
+.ap .pic-box.white .pic{object-fit:contain}
+.ap .card .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.ap .card .ph small{font-size:.85em;opacity:.75}
+.ap .card .ap-ph-rose{background:#E6D2D5;color:#7D6166}
+.ap .card .ap-ph-sand{background:#EDE3D0;color:#7A6E58}
+
+/* Kennzahlen-Liste in der Karte */
+.card-facts{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:clamp(14px,1.1vw,16px)}
+.card-facts li{position:relative;padding-left:18px}
+.card-facts li::before{content:"";position:absolute;left:0;top:.45em;width:8px;height:8px;border-radius:50%;background:var(--bright-yellow)}
+.btn-view.is-soon{cursor:default}
+
+/* Karte mit Text links, Bild rechts (nur Desktop) */
+@media (min-width:901px){
+  .card-feature-rev .txt{order:-1}
+}
+
+/* Nach oben */
+.ap-top{background:var(--light-black);display:flex;justify-content:flex-end;padding:clamp(18px,2.4vw,32px) clamp(40px,14vw,220px)}
+.ap-top-link{display:block;padding:6px}
+.tri-up{display:block;width:clamp(30px,3.2vw,46px);height:clamp(26px,2.8vw,40px);background:var(--bright-yellow);clip-path:polygon(50% 0,100% 100%,0 100%);transition:transform .2s ease}
+.ap-top-link:hover .tri-up{transform:translateY(-4px)}

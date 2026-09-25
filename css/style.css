@@ -488,10 +488,11 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
    PROJEKTÜBERSICHT (all-projects.html)
    ========================================================= */
 .ap-head{position:relative;overflow:hidden;background:var(--light-black);color:var(--white)}
-.ap-head-inner{position:relative;display:flex;align-items:center;gap:clamp(16px,3vw,48px);padding:clamp(28px,4vw,56px) clamp(16px,3vw,40px)}
-.ap-tri{width:clamp(36px,5vw,72px);height:clamp(32px,4.3vw,62px)}
-.ap-head h1{font-weight:500;font-size:clamp(32px,4.2vw,60px);line-height:1}
-.ap-ring{position:absolute;right:calc(-1 * clamp(70px,9vw,150px));top:-30%;width:clamp(150px,20vw,320px);aspect-ratio:1;border:2px solid var(--bright-yellow);border-radius:50%}   /* Deko-Kreis rechts */
+/* Titel mittig, Dreieck links bündig mit dem Logo, Kreis am rechten Bildschirmrand */
+.ap-head-inner{position:relative;display:flex;justify-content:center;align-items:center;padding:clamp(28px,4vw,56px) clamp(16px,3vw,40px)}
+.ap-tri{position:absolute;left:clamp(16px,3vw,40px);top:50%;transform:translateY(-50%);width:clamp(36px,5vw,72px);height:clamp(32px,4.3vw,62px)}
+.ap-head h1{position:relative;font-weight:500;font-size:clamp(32px,4.2vw,60px);line-height:1}
+.ap-ring{position:absolute;right:calc(-1 * clamp(70px,9vw,150px));top:-30%;width:clamp(150px,20vw,320px);aspect-ratio:1;border:2px solid var(--bright-yellow);border-radius:50%}   /* Deko-Kreis, rechts angeschnitten */
 
 .ap-list{padding:clamp(28px,4vw,56px) 0 clamp(40px,5vw,80px)}
 .ap .projects{gap:clamp(20px,2.4vw,32px)}

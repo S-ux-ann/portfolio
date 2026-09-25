@@ -279,9 +279,10 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,32px);margin-top:clamp(24px,2.6vw,40px)}
 .cs-facts dt{font-weight:700;font-size:clamp(15px,1.2vw,18px);margin-bottom:4px}
 .cs-facts dd{font-size:clamp(14px,1.05vw,16px);line-height:1.5}
-.cs-challenge{background:var(--light-black);color:var(--white);border-radius:var(--radius);padding:clamp(20px,2.4vw,36px);margin-top:clamp(28px,3vw,48px);transition:box-shadow .2s ease}
-/* Hover: gelbe Kontur (8px, nach außen) */
-.cs-challenge:hover{box-shadow:0 0 0 8px var(--bright-yellow)}
+/* Challenge-Box: großzügiges Padding, damit die Kontur nach innen Platz hat */
+.cs-challenge{--ring:8px;--ring-1:var(--bright-yellow);--ring-2:rgba(232,225,84,.7);background:var(--light-black);color:var(--white);border-radius:var(--radius);padding:clamp(32px,4vw,56px) clamp(32px,7vw,96px);margin-top:clamp(28px,3vw,48px);box-shadow:inset 0 0 0 0 var(--ring-1),inset 0 0 0 0 var(--ring-2);transition:box-shadow .25s ease}
+/* Hover: Kontur in zwei Stufen nach innen – außen Bright-Yellow, innen Bright-Yellow mit 70 % Deckkraft (je 8px) */
+.cs-challenge:hover{box-shadow:inset 0 0 0 var(--ring) var(--ring-1),inset 0 0 0 calc(var(--ring) * 2) var(--ring-2)}
 .cs-challenge h2{font-weight:700;font-size:clamp(18px,1.7vw,25px);margin-bottom:clamp(12px,1.2vw,18px)}
 .cs-challenge p{font-size:clamp(15px,1.2vw,18px);line-height:1.55}
 .cs-challenge p+p{margin-top:1em}

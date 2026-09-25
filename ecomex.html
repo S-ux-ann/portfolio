@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ecomex Business Academy – Susann Gebert</title>
+<meta name="description" content="ecomex Business Academy: Weiterentwicklung von Website, Markenidentität und Marketing-Touchpoints – UX/UI-Design, responsives Webdesign und wiederverwendbare Design-Assets.">
+<link rel="stylesheet" href="css/style.css?v=14">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">SUSANN</a>
+    <div class="meta">
+      <div class="lang" role="group" aria-label="Sprache / Language" data-active="de">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="meta-link" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!--
+  Texte: Jeder Absatz steht zweimal im Code – einmal mit data-only="de", einmal mit data-only="en".
+  Es wird immer nur die Version der gewählten Sprache angezeigt.
+
+  Bilder: Die grauen Kästen (class="cs-ph") sind Platzhalter. Ersetze sie später durch
+  <img class="cs-img" src="images/…" width="…" height="…" alt="…">
+  Die Zahl im Platzhalter ist die empfohlene Bildgröße in Pixeln.
+-->
+
+<main class="cs">
+  <!-- ================= KOPF ================= -->
+  <section class="cs-hero">
+    <!-- Herobild: 75 % der Fensterbreite, wie der Text darunter -->
+    <div class="wrap">
+      <img class="cs-img cs-hero-img" src="images/ecomex.webp?v=1" width="1400" height="630" alt="ecomex Website auf Laptop und Smartphone" data-i18n-alt="ex.hero">
+    </div>
+
+    <!-- Titel, Intro & Fakten: 75 % – Pfeil sitzt absolut, bündig mit dem Logo "SUSANN" -->
+    <div class="cs-hero-head">
+    <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+    <div class="wrap cs-hero-text">
+      <h1 class="cs-title">
+        <span data-only="de">ecomex Business Academy: Markenentwicklung, UX/UI-Design &amp; Digital Experience</span>
+        <span data-only="en">ecomex Business Academy: Brand evolution, UX/UI design &amp; digital experience</span>
+      </h1>
+      <p class="cs-lead" data-only="de">Ich habe den digitalen und visuellen Auftritt von ecomex über Website, Marke und Marketing-Touchpoints hinweg weiterentwickelt. Von der Neustrukturierung der Website und dem Design responsiver Interfaces bis zur Weiterentwicklung der Markenidentität und wiederverwendbarer Design-Assets – das Ziel war ein klareres, konsistenteres und skalierbares Erlebnis.</p>
+      <p class="cs-lead" data-only="en">I helped evolve ecomex’s digital and visual presence across web, brand and marketing touchpoints. From restructuring the website and designing responsive interfaces to refining the brand identity and creating reusable design assets, the goal was to build a clearer, more consistent and scalable experience.</p>
+
+      <dl class="cs-facts cs-facts-3">
+        <div>
+          <dt><span data-only="de">Rolle</span><span data-only="en">Role</span></dt>
+          <dd><span data-only="de">Grafik- / UI-Designerin</span><span data-only="en">Graphic / UI Designer</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Fokus</span><span data-only="en">Focus</span></dt>
+          <dd><span data-only="de">UX/UI-Design · Responsive Webdesign · Markendesign · WordPress · Kampagnendesign</span><span data-only="en">UX/UI Design · Responsive Web Design · Brand Design · WordPress · Campaign Design</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Zusammenarbeit</span><span data-only="en">Collaboration</span></dt>
+          <dd><span data-only="de">Marketing · Management · externer Entwickler</span><span data-only="en">Marketing · Management · External Developer</span></dd>
+        </div>
+      </dl>
+    </div>
+    </div>
+  </section>
+
+  <!-- ================= CHALLENGE ================= -->
+  <div class="wrap">
+    <div class="sec-head cs-content-head">
+      <h2>Challenge</h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+
+    <div class="cs-challenge">
+      <h3 data-only="de">Aus einem fragmentierten Auftritt ein konsistentes Erlebnis machen</h3>
+      <h3 data-only="en">Turning a fragmented presence into a consistent experience</h3>
+      <p data-only="de">Mit der Zeit hatte ecomex ein breites Leistungsportfolio aufgebaut – von beruflicher Weiterbildung und Coaching bis zu digitalen Bildungsprogrammen. Website und visuelle Kommunikation waren mit dem Unternehmen gewachsen, doch das Gesamterlebnis brauchte mehr Klarheit, Konsistenz und einen zeitgemäßen Look.</p>
+      <p data-only="en">Over time, ecomex had developed a broad portfolio of services, ranging from professional training and coaching to digital education programs. The existing website and visual communication had grown alongside the business, but the overall experience needed more clarity, consistency and a contemporary look.</p>
+      <p data-only="de">Das Redesign ging deshalb mehrere Herausforderungen zugleich an: die Struktur der verschiedenen Angebote vereinfachen, die visuelle Identität modernisieren, das responsive Erlebnis verbessern und ein Designsystem schaffen, das sich für künftige Seiten und Marketing-Touchpoints wiederverwenden lässt.</p>
+      <p data-only="en">The redesign therefore addressed several challenges at once: simplifying the structure of the different offers, modernizing the visual identity, improving the responsive experience and creating a design system that could be reused across future pages and marketing touchpoints.</p>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <!-- ================= WEBSITE ================= -->
+    <section class="cs-sec">
+      <h2><span data-only="de">Eine klarere und skalierbare Website gestalten</span><span data-only="en">Designing a clearer and more scalable website</span></h2>
+      <p data-only="de">Ich habe die Website von der Struktur bis zum Interface neu gestaltet – mit Fokus auf eine klarere Navigation, eine stärkere visuelle Hierarchie und eine einheitlichere Darstellung der verschiedenen Leistungen.</p>
+      <p data-only="en">I redesigned the website from structure to interface, focusing on clearer navigation, stronger visual hierarchy and a more consistent presentation of the different services.</p>
+
+      <div class="cs-ph" style="aspect-ratio:1.68/1">Bild: Alte vs. neue Website<small>1720 × 1024</small></div>
+
+      <p data-only="de">Statt einzelne Seiten isoliert zu gestalten, habe ich auf einen modularen Ansatz hingearbeitet, der künftige Inhalte und neue Angebote tragen kann. Dabei habe ich eng mit einem externen Entwickler zusammengearbeitet, um das Design mit der technischen Umsetzbarkeit abzustimmen und die Layouts in wiederverwendbare WordPress-Komponenten zu übersetzen.</p>
+      <p data-only="en">Instead of designing isolated pages, I worked towards a modular approach that could support future content and new offers. Throughout the process, I collaborated closely with an external developer to align the design with technical feasibility and translate the layouts into reusable WordPress components.</p>
+
+      <div class="cs-ph" style="aspect-ratio:2.54/1">Bild: Seitenstruktur &amp; Komponenten<small>1720 × 677</small></div>
+
+      <p data-only="de">Nach dem Launch habe ich die Website mit dem neuen Komponentensystem in WordPress weiter gepflegt und ausgebaut.</p>
+      <p data-only="en">After implementation, I continued maintaining and expanding the website in WordPress using the newly created component system.</p>
+    </section>
+
+    <section class="cs-sec">
+      <span class="cs-dots" aria-hidden="true"></span>
+      <h2><span data-only="de">Über den Desktop hinaus gestalten</span><span data-only="en">Designing beyond desktop</span></h2>
+      <p data-only="de">Responsives Verhalten war von Anfang an mitgedacht und wurde nicht erst nachträglich angepasst. Wichtige Seiten und conversion-orientierte Flows habe ich für verschiedene Bildschirmgrößen gestaltet, damit Informationen, Interaktionsmuster und Calls to Action auf allen Geräten klar bleiben.</p>
+      <p data-only="en">Responsive behavior was considered from the beginning rather than treated as an adaptation afterwards. Key pages and conversion-oriented flows were designed for different screen sizes to ensure that information, interaction patterns and calls to action remained clear across devices.</p>
+
+      <div class="cs-ph" style="aspect-ratio:1.79/1">Bild: Website auf Laptop &amp; Smartphone<small>1720 × 960</small></div>
+
+      <figure class="cs-fig">
+        <div class="cs-ph cs-ph-yellow" style="aspect-ratio:2.23/1">Bild: Responsiver Anmelde-Flow (Adobe XD)<small>1720 × 772</small></div>
+        <figcaption><span data-only="de">Beispiel: responsiver Anmelde-Flow, gestaltet in Adobe XD</span><span data-only="en">Example: responsive application flow designed in Adobe XD</span></figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <!-- ================= BRAND EVOLUTION ================= -->
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Brand Evolution</h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <section class="cs-sec">
+      <h2><span data-only="de">Die visuelle Identität weiterentwickeln</span><span data-only="en">Evolving the visual identity</span></h2>
+      <p data-only="de">Parallel zum Website-Redesign habe ich die bestehende Markenidentität von ecomex verfeinert. Ziel war nicht, die etablierte Marke zu ersetzen, sondern sie zu modernisieren und eine visuelle Sprache zu schaffen, die an digitalen und physischen Touchpoints konsistenter funktioniert.</p>
+      <p data-only="en">Alongside the website redesign, I refined the existing ecomex brand identity. The goal was not to replace the established brand, but to modernize it and create a visual language that could work more consistently across digital and physical touchpoints.</p>
+      <p data-only="de">Dazu gehörten Anpassungen an Logo, Farben, grafischen Elementen, Bildsprache und wiederverwendbaren Design-Assets.</p>
+      <p data-only="en">This included adjustments to the existing logo, colors, graphic elements, imagery and reusable design assets.</p>
+
+      <div class="cs-ph" style="aspect-ratio:1.84/1">Bild: Logo, Farben &amp; Markenelemente<small>1720 × 935</small></div>
+    </section>
+
+    <section class="cs-sec">
+      <h2><span data-only="de">Wiederverwendbare visuelle Assets gestalten</span><span data-only="en">Creating reusable visual assets</span></h2>
+      <p data-only="de">Um die Kommunikation einheitlicher und effizienter zu machen, habe ich wiederverwendbare Grafikelemente und Icon-Systeme entwickelt, die sich in Präsentationen, internen Dokumenten und Marketingmaterialien einsetzen lassen.</p>
+      <p data-only="en">To make communication more consistent and efficient, I created reusable graphic elements and icon systems that could be applied across presentations, internal documents and marketing materials.</p>
+      <p data-only="de">Statt jedes Kommunikationsmittel neu zu gestalten, sorgten wiederkehrende visuelle Muster für Wiedererkennung und beschleunigten die Produktion.</p>
+      <p data-only="en">Instead of designing every communication piece from scratch, recurring visual patterns helped create recognition while speeding up production.</p>
+
+      <div class="cs-ph" style="aspect-ratio:1.8/1">Bild: Grafikelemente<small>1720 × 953</small></div>
+      <div class="cs-ph" style="aspect-ratio:1.8/1">Bild: Icon-System<small>1720 × 953</small></div>
+    </section>
+
+    <section class="cs-sec">
+      <h2><span data-only="de">Die Marke auf Marketing und Touchpoints übertragen</span><span data-only="en">Extending the brand across Marketing and touchpoints</span></h2>
+      <p data-only="de">Das visuelle System reichte weit über die Website hinaus. Ich habe Kommunikationsmittel für digitale Kampagnen, Newsletter, Social Media, Events und physische Markenräume gestaltet und dieselbe Identität in ganz unterschiedliche Formate und Kontexte übersetzt.</p>
+      <p data-only="en">The visual system extended far beyond the website. I designed communication assets for digital campaigns, newsletters, social media, events and physical brand environments, translating the same identity into very different formats and contexts.</p>
+
+      <div class="cs-ph" style="aspect-ratio:1.84/1">Bild: Marketing-Assets<small>1720 × 935</small></div>
+    </section>
+  </div>
+
+  <!-- ================= DIGITEACH (dunkle Box) ================= -->
+  <section class="wrap cs-outcome-wrap">
+    <div class="cs-darkbox">
+      <h2><span data-only="de">Die Digiteach-Website von Grund auf gestalten</span><span data-only="en">Designing the Digiteach website from scratch</span></h2>
+      <p data-only="de">Als Teil der ecomex-Markenwelt habe ich die Website von Digiteach komplett neu gestaltet. Seitenstruktur, User Flows und das responsive Interface habe ich in Adobe XD entwickelt und die finalen Designs anschließend an einen externen Entwickler zur Umsetzung übergeben.</p>
+      <p data-only="en">As part of the ecomex brand environment, I designed the Digiteach website from scratch. I developed the page structure, user flows and responsive interface in Adobe XD, then handed the final designs over to an external developer for implementation.</p>
+      <p data-only="de">Ziel war ein klarer und zugänglicher digitaler Auftritt für eine Submarke mit Fokus auf berufliche Weiterbildung und Coaching – mit einer starken visuellen Verbindung zum ecomex-Ökosystem.</p>
+      <p data-only="en">The goal was to create a clear and accessible digital presence for a sub-brand focused on professional training and coaching, while maintaining a strong visual connection to the wider ecomex ecosystem.</p>
+
+      <div class="cs-pair">
+        <div class="cs-ph cs-ph-dark" style="aspect-ratio:1.8/1">Bild: Digiteach-Website auf Monitor, Laptop &amp; Smartphone<small>1000 × 555</small></div>
+        <div class="cs-ph cs-ph-dark" style="aspect-ratio:1.8/1">Bild: Digiteach-Seitenübersicht &amp; Logo<small>1000 × 555</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-col cs-final">
+    <span class="cs-lines" aria-hidden="true"></span>
+    <!-- ================= ZUSAMMENARBEIT ================= -->
+    <section class="cs-sec">
+      <h2><span data-only="de">Vom visuellen Design zur gemeinsamen Problemlösung</span><span data-only="en">From visual design to collaborative problem solving</span></h2>
+      <p data-only="de">Meine Rolle ging zunehmend über die visuelle Umsetzung hinaus. Ich habe an Workshops teilgenommen, an der Konzeptentwicklung mitgewirkt und eng mit verschiedenen Stakeholdern zusammengearbeitet, um geschäftliche Anforderungen in praktische Designlösungen zu übersetzen.</p>
+      <p data-only="en">My role increasingly went beyond visual execution. I participated in workshops, contributed to concept development and worked closely with different stakeholders to translate business requirements into practical design solutions.</p>
+
+      <div class="cs-ph" style="aspect-ratio:1.51/1">Bild: Workshop-Foto<small>1720 × 1136</small></div>
+    </section>
+
+    <!-- ================= ERGEBNIS ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Ergebnis</span><span data-only="en">Outcome</span></p>
+      <h2><span data-only="de">Von einzelnen Assets zu einem vernetzten Markenerlebnis</span><span data-only="en">From individual assets to a connected brand experience</span></h2>
+      <p data-only="de">Das Projekt hat eine Sammlung einzelner Kommunikations-Touchpoints schrittweise in ein zusammenhängendes visuelles und digitales System verwandelt.</p>
+      <p data-only="en">The project gradually transformed a collection of individual communication touchpoints into a more cohesive visual and digital system.</p>
+      <p data-only="de">Die neu gestaltete Website gab den Leistungen von ecomex eine klarere Struktur, wiederverwendbare WordPress-Komponenten machten künftige Seiten einfacher zu bauen und zu pflegen, und die aktualisierte visuelle Identität sorgte für mehr Konsistenz über Web, E-Mail, Marketing und physische Markenanwendungen hinweg.</p>
+      <p data-only="en">The redesigned website provided a clearer structure for ecomex’s services, reusable WordPress components made future pages easier to build and maintain, and the updated visual identity created greater consistency across web, email, marketing and physical brand applications.</p>
+
+      <div class="cs-themes cs-themes-2">
+        <div class="cs-theme cs-theme-yellow">
+          <h3><span data-only="de">Klarere Struktur</span><span data-only="en">Clearer structure</span></h3>
+          <p data-only="de">Verständlichere Darstellung der Leistungen</p>
+          <p data-only="en">More understandable presentation of services</p>
+        </div>
+        <div class="cs-theme cs-theme-orange">
+          <h3><span data-only="de">Responsives Erlebnis</span><span data-only="en">Responsive experience</span></h3>
+          <p data-only="de">Einheitliches Erlebnis auf allen Geräten</p>
+          <p data-only="en">Consistent experience across devices</p>
+        </div>
+        <div class="cs-theme cs-theme-gold">
+          <h3><span data-only="de">Wiederverwendbares System</span><span data-only="en">Reusable system</span></h3>
+          <p data-only="de">Modulare Komponenten für künftige Inhalte</p>
+          <p data-only="en">Modular components for future content</p>
+        </div>
+        <div class="cs-theme cs-theme-yellow">
+          <h3><span data-only="de">Konsistente Marke</span><span data-only="en">Consistent brand</span></h3>
+          <p data-only="de">Einheitliche visuelle Sprache an allen Touchpoints</p>
+          <p data-only="en">Unified visual language across touchpoints</p>
+        </div>
+      </div>
+
+      <p class="cs-closing" data-only="de">Dieses Projekt markierte einen wichtigen Wendepunkt in meiner Arbeit: weg vom überwiegend visuellen Design, hin zu digitalen Erlebnissen, Systemen und nutzerzentriertem Product Thinking.</p>
+      <p class="cs-closing" data-only="en">This project marked an important shift in my work from primarily visual design towards digital experiences, systems and user-centered product thinking.</p>
+    </section>
+  </div>
+
+  <!-- ================= NÄCHSTES PROJEKT ================= -->
+  <section class="wrap cs-next">
+    <div class="sec-head">
+      <h2><span data-only="de">nächstes Projekt</span><span data-only="en">next project</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+    <div class="cs-col">
+      <h3 class="cs-next-title"><span data-only="de">Airbnb-Umsatzprognose mit integriertem Dashboard für Gastgeber</span><span data-only="en">Airbnb Earnings Prediction with Integrated Dashboard for Hosts</span></h3>
+      <a class="btn-view" href="cs-dashboard.html" data-i18n="cta.view">Ansehen</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="name">SUSANN</div>
+      <div class="role">UX & Product Specialist</div>
+      <a class="small" href="mailto:susann.gebert@gmx.de" data-i18n="footer.mail">Schreib mir eine Mail</a>
+      <div class="social">
+        <a href="https://medium.com/@susann.gebert" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5h3.6l6.4 12.2L17.9 5.5H22v1.2l-1.6 1.5v9.6l1.6 1.5v1.2h-6.4v-1.2l1.6-1.5V9.9l-5 10.1h-.8L6 9.4v7.9l2 2.2v1.2H2v-1.2l2-2.2V8.3L2 6.7z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/susann-gebert-11679b240" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.2 7.3v7.5h2.4v-7.5zm1.2-3.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zm3.1 3.8v7.5h2.4v-3.9c0-1 .2-2 1.5-2s1.3 1.2 1.3 2.1v3.8H19v-4.3c0-2.1-.5-3.7-2.9-3.7-1.2 0-2 .6-2.3 1.2v-1z" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="projects.title">Projekte</h4>
+      <ul class="small">
+        <li><a href="ecomex.html" aria-current="page">ecomex Business Academy</a></li>
+        <li><a href="cs-e-commerce.html">E-Commerce Website</a></li>
+        <li><a href="cs-dashboard.html">Dashboard Airbnb</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BURGER-MENÜ ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <svg class="menu-deco" viewBox="0 0 1280 728" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3">
+      <circle cx="205" cy="200" r="580"/>
+      <circle cx="165" cy="284" r="110"/>
+      <polygon points="1090,442 988,500 1090,558"/>
+      <polygon points="876,622 928,622 902,666"/>
+    </g>
+    <circle cx="218" cy="315" r="20" fill="rgba(255,255,255,.35)"/>
+    <defs>
+      <pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="6" fill="rgba(255,255,255,.35)"/>
+      </pattern>
+    </defs>
+    <rect x="998" y="93" width="288" height="288" fill="url(#dotp)"/>
+    <rect x="0" y="433" width="144" height="236" fill="url(#dotp)"/>
+  </svg>
+  <div class="menu-top">
+    <a class="menu-logo" href="index.html">SUSANN</a>
+    <button class="menu-close" type="button">
+      <span data-i18n="nav.close">Schließen</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 4l32 32M36 4L4 36" stroke="#1D1D1D" stroke-width="3.5"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html" data-i18n="menu.home">Home</a>
+    <a href="all-projects.html" data-i18n="menu.work">Projekte</a>
+    <a href="about.html" data-i18n="menu.about">Über mich</a>
+    <a href="contact.html" data-i18n="menu.contact">Kontakt</a>
+  </nav>
+</div>
+
+<script src="js/i18n.js?v=14"></script>
+<script src="js/main.js?v=14"></script>
+</body>
+</html>

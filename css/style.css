@@ -300,8 +300,12 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-list{padding-left:1.3em;margin:.4em 0 1em;font-size:clamp(15px,1.2vw,18px);line-height:1.6}
 .cs-list li::marker{color:var(--dark-yellow)}
 
-/* Drei Research-Themen */
-.cs-themes{display:flex;flex-direction:column;gap:clamp(12px,1.4vw,20px);margin-top:clamp(20px,2.4vw,36px)}
+/* Zwei Bilder nebeneinander (Desktop) */
+.cs-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,1.6vw,24px);margin:clamp(20px,2.4vw,36px) 0}
+.cs-pair>.cs-ph,.cs-pair>.cs-img{margin:0}
+
+/* Drei Research-Themen: Desktop nebeneinander, darunter untereinander */
+.cs-themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);margin-top:clamp(20px,2.4vw,36px)}
 .cs-theme{border-radius:var(--radius);padding:clamp(18px,2vw,28px);color:var(--light-black)}
 .cs-theme h3{font-weight:700;font-size:clamp(18px,1.7vw,25px);margin-bottom:8px}
 .cs-theme p{font-size:clamp(14px,1.1vw,17px)}
@@ -388,6 +392,7 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
   .cs-dots{display:none}
 }
 @media (max-width:900px){
+  .cs-pair,.cs-themes{grid-template-columns:minmax(0,1fr)}
   .cs-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cs-lines{display:none}
   .cs-slide{flex-basis:84%}

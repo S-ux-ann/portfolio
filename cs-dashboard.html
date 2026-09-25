@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Airbnb Earnings Dashboard – Susann Gebert</title>
+<meta name="description" content="Case Study: Ein integriertes Dashboard-Konzept, mit dem Airbnb-Gastgeber ihre Einnahmen abschätzen, Kosten verstehen und Performance-Daten auf einen Blick abrufen können.">
+<link rel="stylesheet" href="css/style.css?v=23">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">SUSANN</a>
+    <div class="meta">
+      <div class="lang" role="group" aria-label="Sprache / Language" data-active="de">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="meta-link" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!--
+  Texte: Jeder Absatz steht zweimal im Code – einmal mit data-only="de", einmal mit data-only="en".
+  Es wird immer nur die Version der gewählten Sprache angezeigt.
+
+  Bilder: Die grauen Kästen (class="cs-ph") sind Platzhalter. Ersetze sie später durch
+  <img class="cs-img" src="images/…" width="…" height="…" alt="…">
+  Die Zahl im Platzhalter ist die empfohlene Bildgröße in Pixeln.
+-->
+
+<main class="cs">
+  <!-- ================= KOPF ================= -->
+  <section class="cs-hero">
+    <!-- Herobild: 75 % der Fensterbreite, wie der Text darunter -->
+    <div class="wrap">
+      <img class="cs-img cs-hero-img" src="images/airbnb-dashboard.webp?v=1" width="1400" height="588" alt="Airbnb Earnings Dashboard auf einem Monitor mit Styleguide" data-i18n-alt="db.hero">
+    </div>
+
+    <!-- Titel, Intro & Fakten: 75 % – Pfeil sitzt absolut, bündig mit dem Logo "SUSANN" -->
+    <div class="cs-hero-head">
+    <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+    <div class="wrap cs-hero-text">
+      <h1 class="cs-title">
+        <span data-only="de">Ein klareres Umsatz-Erlebnis für Airbnb-Gastgeber gestalten</span>
+        <span data-only="en">Designing a Clearer Earnings Experience for Airbnb Hosts</span>
+      </h1>
+      <p class="cs-lead" data-only="de">Ein integriertes Dashboard-Konzept, mit dem Gastgeber ihre Einnahmen abschätzen, Kosten verstehen und relevante Performance-Daten auf einen Blick abrufen können.</p>
+      <p class="cs-lead" data-only="en">An integrated dashboard concept that helps hosts estimate their earnings, understand costs and access relevant performance data at a glance.</p>
+
+      <dl class="cs-facts">
+        <div>
+          <dt><span data-only="de">Meine Rolle</span><span data-only="en">My Role</span></dt>
+          <dd>UX/UI Design · User Interviews · Visual Design · Prototyping</dd>
+        </div>
+        <div>
+          <dt>Team</dt>
+          <dd>2 UX/UI Designer · 2 Data Analysts</dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Methoden</span><span data-only="en">Methods</span></dt>
+          <dd><span data-only="de">Interviews · Research-Synthese · Ideenfindung · Prototyping · Usability-Tests</span><span data-only="en">Interviews · Research Synthesis · Ideation · Prototyping · Usability Testing</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Kontext</span><span data-only="en">Context</span></dt>
+          <dd><span data-only="de">Interdisziplinäres Ironhack-Projekt</span><span data-only="en">Interdisciplinary Ironhack project</span></dd>
+        </div>
+      </dl>
+    </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJEKTKONTEXT ================= -->
+  <div class="wrap">
+    <div class="sec-head cs-content-head">
+      <h2><span data-only="de">Inhalt</span><span data-only="en">content</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+
+    <div class="cs-challenge">
+      <p class="cs-eyebrow"><span data-only="de">Projektkontext</span><span data-only="en">Project Context</span></p>
+      <h3><span data-only="de">Daten in ein nützliches Produkterlebnis übersetzen</span><span data-only="en">Translating data into a useful product experience</span></h3>
+      <p data-only="de">In einem interdisziplinären Projekt bei Ironhack haben zwei UX/UI Designer mit zwei Data Analysts untersucht, wie Airbnb-Gastgeber ihre Einnahmen besser verstehen und vorhersagen können.</p>
+      <p data-only="en">In an interdisciplinary project at Ironhack, two UX/UI designers collaborated with two Data Analysts to explore how Airbnb hosts could better understand and predict their earnings.</p>
+      <p data-only="de">Unser UX/UI-Team hat die Bedürfnisse von Airbnb-Gastgebern erforscht und die Erkenntnisse in ein interaktives Dashboard-Konzept übersetzt. Die Data Analysts nutzten das Konzept anschließend, um ihre Daten zu visualisieren und zu integrieren.</p>
+      <p data-only="en">Our UX/UI team researched the needs of Airbnb hosts and translated the findings into an interactive dashboard concept. The Data Analysts subsequently used the concept to visualize and integrate their data.</p>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <!-- ================= MEIN BEITRAG ================= -->
+    <section class="cs-sec">
+      <h2><span data-only="de">Mein Beitrag</span><span data-only="en">My contribution</span></h2>
+      <p data-only="de">Die User Interviews habe ich zusammen mit dem zweiten Mitglied unseres UX/UI-Teams geführt. Gemeinsam haben wir Beobachtungen geclustert, Muster identifiziert und Hypothesen entwickelt.</p>
+      <p data-only="en">I conducted user interviews together with my UX/UI design partner and collaborated on clustering observations, identifying patterns and developing hypotheses.</p>
+      <p data-only="de">Während sich das andere Teammitglied stärker auf die Research konzentrierte, lag die visuelle Umsetzung hauptsächlich bei mir – ebenso das Figma-Komponentensystem und die konsistente Übertragung unserer Ideen ins User Interface.</p>
+      <p data-only="en">While my design partner focused more strongly on research, I took primary responsibility for the visual execution, the Figma component system and the consistent translation of our ideas into the user interface.</p>
+    </section>
+
+    <!-- ================= HERAUSFORDERUNG ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Die Herausforderung</span><span data-only="en">The Challenge</span></p>
+      <h2><span data-only="de">Umsatzprognosen waren mit zu viel Handarbeit verbunden</span><span data-only="en">Earnings predictions required too much manual effort</span></h2>
+      <p data-only="de">Airbnb-Gastgeber treffen immer wieder Entscheidungen über Verfügbarkeit, Preise und erwartete Einnahmen. Unsere erste Research zeigte, dass relevante Informationen verstreut waren und zusätzliche Kosten es schwer machten, die tatsächlichen Einnahmen genau abzuschätzen.</p>
+      <p data-only="en">Airbnb hosts make recurring decisions about availability, pricing and expected income. Our initial research indicated that relevant information was fragmented and that additional costs made it difficult to estimate actual earnings accurately.</p>
+      <p data-only="de">Die Herausforderung bestand darin, komplexe Finanz- und Marktinformationen in ein Erlebnis zu verwandeln, das sich klar, nützlich und zugänglich anfühlt.</p>
+      <p data-only="en">The challenge was to transform complex financial and market information into an experience that felt clear, useful and approachable.</p>
+      <blockquote class="cs-quote">
+        <p data-only="de">„Wie können wir Airbnb-Gastgebern helfen, ihre Einnahmen leichter abzuschätzen und fundierte Preisentscheidungen zu treffen?“</p>
+        <p data-only="en">“How might we help Airbnb hosts estimate their earnings more easily and make informed pricing decisions?”</p>
+      </blockquote>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section class="cs-sec">
+      <span class="cs-dots" aria-hidden="true"></span>
+      <p class="cs-eyebrow">Research &amp; Evidence</p>
+      <h2><span data-only="de">Verstehen, wie Gastgeber ihre Einnahmen managen</span><span data-only="en">Understanding how hosts manage earnings</span></h2>
+      <p data-only="de">Wir haben fünf Airbnb-Gastgeber zwischen 25 und 38 Jahren aus Berlin, Poznań, Querétaro, Bogotá und Dublin interviewt.</p>
+      <p data-only="en">We interviewed five Airbnb hosts between the ages of 25 and 38 from Berlin, Poznań, Querétaro, Bogotá and Dublin.</p>
+      <p data-only="de">In den Interviews ging es darum, wie Gastgeber ihre Preise festlegen, ihre Einnahmen abschätzen und die bestehende Airbnb-Oberfläche nutzen. Außerdem haben wir untersucht, welche Informationen ihnen bei der Verwaltung ihrer Inserate am wichtigsten sind.</p>
+      <p data-only="en">The interviews explored how hosts set prices, estimate their income and use Airbnb’s existing interface. We also investigated which information they considered most valuable when managing their listings.</p>
+      <p data-only="de">Nach jedem Interview haben wir unsere Beobachtungen gemeinsam dokumentiert und geclustert. Diese gemeinsame Synthese half uns, wiederkehrende Muster zu erkennen und in erste Produkthypothesen zu übersetzen.</p>
+      <p data-only="en">After each interview, we documented and clustered our observations together. This collaborative synthesis helped us identify recurring patterns and translate them into initial product hypotheses.</p>
+
+      <div class="cs-ph" style="aspect-ratio:16/9">Bild: Affinity Diagram / Post-its<small>1720 × 968</small></div>
+    </section>
+
+    <!-- ================= KEY INSIGHTS ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow">Key Insights</p>
+      <h2><span data-only="de">Was Gastgeber von einem Umsatz-Dashboard brauchten</span><span data-only="en">What hosts needed from an earnings dashboard</span></h2>
+      <div class="cs-themes">
+        <div class="cs-theme cs-theme-yellow">
+          <h3><span data-only="de">Transparente Einnahmen</span><span data-only="en">Earnings transparency</span></h3>
+          <p data-only="de">Zusätzliche und unklare Kosten sorgten für Unsicherheit darüber, wie viel Gastgeber mit einer Buchung tatsächlich verdienen.</p>
+          <p data-only="en">Additional and unclear costs created uncertainty about the amount hosts would actually earn from a booking.</p>
+        </div>
+        <div class="cs-theme cs-theme-orange">
+          <h3><span data-only="de">Preiskontext</span><span data-only="en">Pricing context</span></h3>
+          <p data-only="de">Gastgeber wollten Preise vergleichen und saisonale Schwankungen verstehen, um fundiertere Preisentscheidungen zu treffen.</p>
+          <p data-only="en">Hosts wanted to compare prices and understand seasonal changes to make more informed pricing decisions.</p>
+        </div>
+        <div class="cs-theme cs-theme-gold">
+          <h3><span data-only="de">Zugängliche Datenvisualisierung</span><span data-only="en">Accessible data visualization</span></h3>
+          <p data-only="de">Gastgeber schätzten visuelle Zusammenfassungen, die relevante Informationen schnell verständlich machen. Welche Darstellung sie bevorzugten, hing jedoch von der Art der Daten ab.</p>
+          <p data-only="en">Hosts valued visual summaries that helped them understand relevant information quickly. However, preferences differed depending on the type of data being evaluated.</p>
+        </div>
+      </div>
+      <p class="cs-keyline" data-only="de">Gastgeber brauchten einen schnelleren und transparenteren Weg, ihre möglichen Einnahmen zu verstehen – ohne zeitaufwendige Berechnungen von Hand.</p>
+      <p class="cs-keyline" data-only="en">Hosts needed a faster and more transparent way to understand potential earnings without relying on time-consuming manual calculations.</p>
+    </section>
+
+    <!-- ================= INSIGHTS → ENTSCHEIDUNGEN ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Von Insights zu Produktentscheidungen</span><span data-only="en">From Insights to Product Decisions</span></p>
+      <h2><span data-only="de">Research in Anforderungen an das Dashboard übersetzen</span><span data-only="en">Turning research into dashboard requirements</span></h2>
+      <p data-only="de">Die Research legte nicht nur fest, welche Informationen das Dashboard enthalten sollte. Sie beeinflusste auch, wie diese Informationen strukturiert und dargestellt werden mussten.</p>
+      <p data-only="en">The research did not only define what information the dashboard should contain. It also influenced how that information needed to be structured and presented.</p>
+
+      <table class="cs-table" data-only="de">
+        <thead><tr><th scope="col">Research-Insight</th><th scope="col">Produktentscheidung</th></tr></thead>
+        <tbody>
+          <tr><td>Die tatsächlichen Einnahmen waren schwer zu berechnen</td><td>Einen klareren Überblick über prognostizierte Einnahmen und zugehörige Kosten bieten</td></tr>
+          <tr><td>Preisentscheidungen fehlte der Kontext</td><td>Preise der Konkurrenz und saisonale Entwicklungen einbeziehen</td></tr>
+          <tr><td>Je nach Situation waren andere Informationen relevant</td><td>Ein modulares, kartenbasiertes Dashboard nutzen</td></tr>
+          <tr><td>Finanzdaten konnten komplex wirken</td><td>Visuelle Zusammenfassungen und eine klare Informationshierarchie priorisieren</td></tr>
+        </tbody>
+      </table>
+      <table class="cs-table" data-only="en">
+        <thead><tr><th scope="col">Research insight</th><th scope="col">Product decision</th></tr></thead>
+        <tbody>
+          <tr><td>Actual earnings were difficult to calculate</td><td>Provide a clearer overview of predicted earnings and related costs</td></tr>
+          <tr><td>Pricing decisions lacked context</td><td>Include competitor pricing and seasonal developments</td></tr>
+          <tr><td>Different information was relevant in different situations</td><td>Use a modular card-based dashboard</td></tr>
+          <tr><td>Financial data could feel complex</td><td>Prioritize visual summaries and clear information hierarchy</td></tr>
+        </tbody>
+      </table>
+
+      <p data-only="de">So entstand eine direkte Verbindung zwischen den Bedürfnissen der Gastgeber und der Struktur des Dashboards.</p>
+      <p data-only="en">This created a direct connection between the hosts’ needs and the structure of the dashboard.</p>
+    </section>
+
+    <!-- ================= KONZEPT ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Konzeptentwicklung</span><span data-only="en">Concept Development</span></p>
+      <h2><span data-only="de">Die richtigen Features priorisieren</span><span data-only="en">Prioritizing the right features</span></h2>
+      <p data-only="de">Mit Crazy 8s haben wir verschiedene Ansätze erkundet und die entstandenen Ideen anschließend mit der MoSCoW-Methode priorisiert.</p>
+      <p data-only="en">We used Crazy 8s to explore different approaches and applied the MoSCoW method to prioritize the resulting ideas.</p>
+      <p data-only="de">Ein modulares Layout im Bento-Stil wurde zu einem zentralen Teil des Konzepts. Es erlaubte, verschiedene Arten von Informationen in klare Karten zu trennen und trotzdem einen stimmigen Überblick zu bieten.</p>
+      <p data-only="en">A modular Bento-style layout became a central part of the concept. It allowed different types of information to be separated into clear cards while still providing a coherent overview.</p>
+
+      <div class="cs-ph" style="aspect-ratio:16/9">Bild: Crazy 8s &amp; MoSCoW<small>1720 × 968</small></div>
+
+      <p class="cs-listhead" data-only="de">Priorisiert haben wir:</p>
+      <p class="cs-listhead" data-only="en">We prioritized:</p>
+      <ul class="cs-list" data-only="de">
+        <li>einen Überblick über die prognostizierten Einnahmen</li>
+        <li>mehr Transparenz bei den Kosten</li>
+        <li>Informationen zu Konkurrenz und Markt</li>
+        <li>Visualisierungen saisonaler Daten</li>
+        <li>flexible Dashboard-Karten</li>
+      </ul>
+      <ul class="cs-list" data-only="en">
+        <li>an overview of predicted earnings</li>
+        <li>greater transparency around costs</li>
+        <li>competitor and market information</li>
+        <li>seasonal data visualizations</li>
+        <li>flexible dashboard cards</li>
+      </ul>
+      <p data-only="de">Ein Tutorial oder ein KI-gestütztes Onboarding haben wir als mögliche spätere Ergänzung betrachtet, nicht als Kernfunktion des ersten Konzepts.</p>
+      <p data-only="en">A tutorial or AI-supported onboarding experience was considered as a possible future addition rather than a core feature of the initial concept.</p>
+    </section>
+
+    <!-- ================= TESTS ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Die Richtung testen</span><span data-only="en">Testing the Direction</span></p>
+      <h2><span data-only="de">Die Informationsstruktur früh testen</span><span data-only="en">Testing the information structure early</span></h2>
+      <p data-only="de">Bevor wir ins detaillierte Interface-Design gingen, haben wir unsere Low-Fidelity-Papierprototypen mit vier Airbnb-Gastgebern getestet.</p>
+      <p data-only="en">We tested our low-fidelity paper prototypes with four Airbnb hosts before moving into detailed interface design.</p>
+      <p data-only="de">Die modulare Darstellung der Informationen kam gut an. Die Gesten und Interaktionen der Teilnehmenden zu beobachten, half uns außerdem zu verstehen, welche Bereiche klickbar wirkten, wie sich die Karten ihrer Erwartung nach verhalten sollten und wo sie nach bestimmten Informationen suchten.</p>
+      <p data-only="en">The modular presentation of information was received positively. Observing participants’ gestures and interactions also helped us understand which areas appeared clickable, how they expected cards to behave and where they looked for specific information.</p>
+
+      <div class="cs-ph" style="aspect-ratio:16/9">Bild: Test mit Papierprototyp<small>1720 × 968</small></div>
+
+      <p data-only="de">Ihr Feedback führte dazu, dass wir Dashboard-Struktur, Interaktionsmuster und Informationshierarchie verfeinert haben, bevor wir den High-Fidelity-Prototyp entwickelten.</p>
+      <p data-only="en">Their feedback led us to refine the dashboard structure, interaction patterns and information hierarchy before developing the high-fidelity prototype.</p>
+    </section>
+
+    <!-- ================= VISUAL SYSTEM ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow">Visual System</p>
+      <h2><span data-only="de">Ein konsistentes und skalierbares Interface gestalten</span><span data-only="en">Creating a consistent and scalable interface</span></h2>
+      <p data-only="de">Da das Dashboard als Erweiterung des bestehenden Airbnb-Produkterlebnisses gedacht war, haben wir uns bei der Gestaltung des Interfaces an der visuellen Identität von Airbnb orientiert.</p>
+      <p data-only="en">Since the dashboard was conceived as an extension of Airbnb’s existing product experience, we used Airbnb’s visual identity as a reference while developing the interface.</p>
+      <p data-only="de">Ich habe mich vor allem auf die visuelle Umsetzung konzentriert und das Komponentensystem in Figma aufgebaut. So blieben Karten, Diagramme, Navigationselemente und interaktive Zustände konsistent, während wir den Prototyp weiterentwickelten.</p>
+      <p data-only="en">I focused primarily on the visual execution and created the component system in Figma. This helped us maintain consistency across cards, charts, navigation elements and interactive states while iterating on the prototype.</p>
+
+      <div class="cs-pair">
+        <div class="cs-ph" style="aspect-ratio:4/3">Bild: Style Tile<small>1000 × 750</small></div>
+        <div class="cs-ph" style="aspect-ratio:4/3">Bild: Ausschnitt Component System<small>1000 × 750</small></div>
+      </div>
+
+      <p data-only="de">Kontrastreiche Farben unterstützten die Unterscheidung verschiedener Datenkategorien und halfen, relevante Informationen schneller zu erkennen.</p>
+      <p data-only="en">Contrasting colors supported the distinction between different data categories and helped users identify relevant information more quickly.</p>
+    </section>
+  </div>
+
+  <!-- ================= DESIGN-LÖSUNG ================= -->
+  <div class="cs-band">
+    <div class="cs-col">
+      <section class="cs-sec">
+        <p class="cs-eyebrow"><span data-only="de">Die Design-Lösung</span><span data-only="en">The Design Solution</span></p>
+        <h2><span data-only="de">Ein modulares Dashboard für fundierte Entscheidungen</span><span data-only="en">A modular dashboard for informed decisions</span></h2>
+        <p data-only="de">Das finale Konzept vereint Umsatzprognosen, Kosteninformationen und Marktkontext in einem modularen Dashboard.</p>
+        <p data-only="en">The final concept combines earnings predictions, cost information and market context within a modular dashboard.</p>
+
+        <div class="cs-ph" style="aspect-ratio:16/10">Bild: Finales Dashboard<small>1720 × 1075</small></div>
+
+        <div class="cs-themes cs-themes-2">
+          <div class="cs-theme cs-theme-yellow">
+            <h3><span data-only="de">Einnahmen auf einen Blick</span><span data-only="en">Earnings at a glance</span></h3>
+            <p data-only="de">Eine visuelle Übersicht zeigt Gastgebern ihr mögliches Einkommen, ohne dass sie jeden Wert selbst berechnen müssen.</p>
+            <p data-only="en">A visual overview helps hosts understand potential income without calculating every value manually.</p>
+          </div>
+          <div class="cs-theme cs-theme-orange">
+            <h3><span data-only="de">Mehr Kostentransparenz</span><span data-only="en">Greater cost transparency</span></h3>
+            <p data-only="de">Relevante Ausgaben sind in das Erlebnis eingebunden und sorgen für ein realistischeres Bild der erwarteten Einnahmen.</p>
+            <p data-only="en">Relevant expenses are incorporated into the experience to create a more realistic view of expected earnings.</p>
+          </div>
+          <div class="cs-theme cs-theme-gold">
+            <h3><span data-only="de">Preis- und Saisonkontext</span><span data-only="en">Pricing and seasonal context</span></h3>
+            <p data-only="de">Preise der Konkurrenz und saisonale Entwicklungen liefern zusätzlichen Kontext für Preisentscheidungen.</p>
+            <p data-only="en">Competitor prices and seasonal developments provide additional context for pricing decisions.</p>
+          </div>
+          <div class="cs-theme cs-theme-yellow">
+            <h3><span data-only="de">Personalisierte Übersicht</span><span data-only="en">Personalized overview</span></h3>
+            <p data-only="de">Durch die kartenbasierte Struktur lassen sich verschiedene Informationen unabhängig voneinander darstellen – bei einer klaren Gesamthierarchie.</p>
+            <p data-only="en">The card-based structure allows different types of information to be presented independently while maintaining a clear overall hierarchy.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= VALIDIERUNG ================= -->
+      <section class="cs-sec">
+        <p class="cs-eyebrow"><span data-only="de">Das finale Konzept validieren</span><span data-only="en">Validating the Final Concept</span></p>
+        <h2><span data-only="de">Den High-Fidelity-Prototyp testen</span><span data-only="en">Testing the high-fidelity prototype</span></h2>
+        <p data-only="de">Wir haben den High-Fidelity-Prototyp mit drei Airbnb-Gastgebern getestet – anhand von Szenarien, die auf typischen Gastgeber-Aufgaben basierten.</p>
+        <p data-only="en">We tested the high-fidelity prototype with three Airbnb hosts using scenarios based on typical hosting tasks.</p>
+        <p data-only="de">In den Sessions konnten wir beobachten, wie die Teilnehmenden durch das Dashboard navigierten, die Visualisierungen interpretierten und mit den einzelnen Karten interagierten. Ihr Feedback half uns, das Interface weiter zu verfeinern und die Gesamtrichtung des Konzepts zu bestätigen.</p>
+        <p data-only="en">The sessions allowed us to observe how participants navigated the dashboard, interpreted the visualizations and interacted with the individual cards. Their feedback helped us further refine the interface and confirm the overall direction of the concept.</p>
+        <div class="cs-proto">
+          <p><span data-only="de">Klickbarer Prototyp auf Figma:</span><span data-only="en">Clickable prototype available in Figma:</span></p>
+          <a class="cs-pill" href="https://www.figma.com/proto/kjJEuRxw74IpfaNs98P0hd/Dashboard-Airbnb-Prototype?page-id=5%3A44&amp;type=design&amp;node-id=2001-74492&amp;viewport=-121%2C-651%2C0.09&amp;t=YMg5tKVr3YtbiKHR-1&amp;scaling=scale-down&amp;starting-point-node-id=2001%3A74492&amp;mode=design" target="_blank" rel="noopener"><span data-only="de">auf Figma</span><span data-only="en">on Figma</span></a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ================= ERGEBNIS ================= -->
+  <section class="wrap cs-outcome-wrap">
+    <div class="cs-darkbox">
+      <p class="cs-eyebrow"><span data-only="de">Ergebnis</span><span data-only="en">Outcome</span></p>
+      <h2><span data-only="de">Von den Bedürfnissen der Gastgeber zu einem testbaren Dashboard-Konzept</span><span data-only="en">From host needs to a testable dashboard concept</span></h2>
+      <p data-only="de">Das Projekt mündete in ein interaktives High-Fidelity-Dashboard-Konzept, das auf Interviews mit Airbnb-Gastgebern beruht und in zwei Runden Usability-Tests verfeinert wurde.</p>
+      <p data-only="en">The project resulted in a high-fidelity, interactive dashboard concept grounded in interviews with Airbnb hosts and refined through two rounds of usability testing.</p>
+      <p data-only="de">Das Konzept verband Nutzerbedürfnisse mit Datenvisualisierung und gab dem Data-Analytics-Team einen visuellen Rahmen, um seine Daten zu integrieren.</p>
+      <p data-only="en">The concept connected user needs with data visualization and provided the Data Analytics team with a visual framework for integrating their data.</p>
+
+      <dl class="cs-stats">
+        <div><dt>5</dt><dd><span data-only="de">interviewte Airbnb-Gastgeber</span><span data-only="en">Airbnb hosts interviewed</span></dd></div>
+        <div><dt>7</dt><dd><span data-only="de">Usability-Test-Sessions</span><span data-only="en">Usability-testing sessions</span></dd></div>
+        <div><dt>2</dt><dd><span data-only="de">getestete Prototyp-Stufen</span><span data-only="en">Prototype stages tested</span></dd></div>
+        <div><dt>1</dt><dd><span data-only="de">wiederverwendbares Figma-Komponentensystem</span><span data-only="en">Reusable Figma component system</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="cs-col cs-final">
+    <span class="cs-lines" aria-hidden="true"></span>
+    <!-- ================= LEARNINGS ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow">Learnings &amp; Next Steps</p>
+      <h2><span data-only="de">Komplexe Daten verständlicher machen</span><span data-only="en">Making complex data easier to understand</span></h2>
+      <p data-only="de">Dieses Projekt hat mir gezeigt, dass ein visuell ansprechendes Dashboard nur dann nützlich ist, wenn seine Struktur die Fragen widerspiegelt, die Nutzer tatsächlich beantworten wollen.</p>
+      <p data-only="en">This project showed me that a visually engaging dashboard is only useful when its structure reflects the questions users actually want to answer.</p>
+      <p data-only="de">Frühe Tests halfen uns, erwartete Interaktionsmuster zu erkennen, bevor wir in das finale Interface investierten. Der Aufbau des Komponentensystems hat außerdem gezeigt, wie wiederverwendbare UI-Elemente sowohl visuelle Konsistenz als auch schnellere Iterationen ermöglichen.</p>
+      <p data-only="en">Early testing helped us identify expected interaction patterns before investing in the final interface. Building the component system also demonstrated how reusable UI elements can support both visual consistency and faster iteration.</p>
+      <p data-only="de">In einer nächsten Iteration würden wir das Dashboard mit einer größeren Gruppe von Gastgebern evaluieren und prüfen, wie genau sie die Diagramme und Umsatzberechnungen interpretieren. Außerdem würden wir Onboarding-Unterstützung für Nutzer erkunden, die mit datenlastigen Oberflächen weniger vertraut sind.</p>
+      <p data-only="en">In a next iteration, we would evaluate the dashboard with a larger group of hosts and validate how accurately they interpret the charts and earnings calculations. We would also explore onboarding support for users who are less familiar with data-heavy interfaces.</p>
+    </section>
+  </div>
+
+  <!-- ================= NÄCHSTES PROJEKT ================= -->
+  <section class="wrap cs-next">
+    <div class="sec-head">
+      <h2><span data-only="de">nächstes Projekt</span><span data-only="en">next project</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+    <div class="cs-col">
+      <h3 class="cs-next-title"><span data-only="de">Eine App, die an venezolanischen Tankstellen Wartezeit spart</span><span data-only="en">Designing an App to Save Time at Gas Station Queues in Venezuela</span></h3>
+      <a class="btn-view" href="cs-mobile-app.html" data-i18n="cta.view">Ansehen</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="name">SUSANN</div>
+      <div class="role">UX & Product Specialist</div>
+      <a class="small" href="mailto:susann.gebert@gmx.de" data-i18n="footer.mail">Schreib mir eine Mail</a>
+      <div class="social">
+        <a href="https://medium.com/@susann.gebert" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5h3.6l6.4 12.2L17.9 5.5H22v1.2l-1.6 1.5v9.6l1.6 1.5v1.2h-6.4v-1.2l1.6-1.5V9.9l-5 10.1h-.8L6 9.4v7.9l2 2.2v1.2H2v-1.2l2-2.2V8.3L2 6.7z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/susann-gebert-11679b240" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.2 7.3v7.5h2.4v-7.5zm1.2-3.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zm3.1 3.8v7.5h2.4v-3.9c0-1 .2-2 1.5-2s1.3 1.2 1.3 2.1v3.8H19v-4.3c0-2.1-.5-3.7-2.9-3.7-1.2 0-2 .6-2.3 1.2v-1z" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="projects.title">Projekte</h4>
+      <ul class="small">
+        <li><a href="ecomex.html">ecomex Business Academy</a></li>
+        <li><a href="cs-e-commerce.html">E-Commerce Website</a></li>
+        <li><a href="cs-dashboard.html" aria-current="page">Dashboard Airbnb</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BURGER-MENÜ ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <svg class="menu-deco" viewBox="0 0 1280 728" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3">
+      <circle cx="205" cy="200" r="580"/>
+      <circle cx="165" cy="284" r="110"/>
+      <polygon points="1090,442 988,500 1090,558"/>
+      <polygon points="876,622 928,622 902,666"/>
+    </g>
+    <circle cx="218" cy="315" r="20" fill="rgba(255,255,255,.35)"/>
+    <defs>
+      <pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="6" fill="rgba(255,255,255,.35)"/>
+      </pattern>
+    </defs>
+    <rect x="998" y="93" width="288" height="288" fill="url(#dotp)"/>
+    <rect x="0" y="433" width="144" height="236" fill="url(#dotp)"/>
+  </svg>
+  <div class="menu-top">
+    <a class="menu-logo" href="index.html">SUSANN</a>
+    <button class="menu-close" type="button">
+      <span data-i18n="nav.close">Schließen</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 4l32 32M36 4L4 36" stroke="#1D1D1D" stroke-width="3.5"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html" data-i18n="menu.home">Home</a>
+    <a href="all-projects.html" data-i18n="menu.work">Projekte</a>
+    <a href="about.html" data-i18n="menu.about">Über mich</a>
+    <a href="contact.html" data-i18n="menu.contact">Kontakt</a>
+  </nav>
+</div>
+
+<script src="js/i18n.js?v=23"></script>
+<script src="js/main.js?v=23"></script>
+<script src="js/case.js?v=23"></script>
+</body>
+</html>

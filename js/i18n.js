@@ -11,8 +11,8 @@ const TEXT = {
     "p1.title":"Eine E-Commerce-Experience durch Research und Usability-Tests verbessern",
     "p1.desc":"Ein research-basiertes Redesign für Nebulite – mit klarerer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.",
     "p2.desc":"Ich habe das digitale Markenerlebnis von ecomex über Website, Marketing und Kommunikation hinweg weiterentwickelt. Von User Flows und responsiven Seitenkonzepten bis zu Corporate Design, UI-Kits und Kampagnen-Assets habe ich an vielen Touchpoints für ein konsistenteres, nutzerzentriertes Erlebnis gesorgt.",
-    "p3.title":"Airbnb-Umsatzprognose mit integriertem Dashboard für Gastgeber",
-    "p3.desc":"In diesem Projekt ging es um die Gestaltung eines Dashboards. Die Idee entstand interdisziplinär mit Data Analysts aus dem Ironhack Bootcamp – unsere Aufgabe war, die gesammelten Daten zu visualisieren.",
+    "p3.title":"Ein klareres Umsatz-Erlebnis für Airbnb-Gastgeber gestalten",
+    "p3.desc":"Ein integriertes Dashboard-Konzept, mit dem Gastgeber ihre Einnahmen abschätzen, Kosten verstehen und relevante Performance-Daten auf einen Blick abrufen können.",
     "cur.title":"Neugierig?",
     "cur.desc":"Es gibt noch mehr zu entdecken: eine Sammlung digitaler Erlebnisse, kreativer Konzepte und Projekte, die meinen Weg als Designerin geprägt haben.",
     "brand.title":"Visual & Brand Work",
@@ -30,11 +30,12 @@ const TEXT = {
     "about.fashion":"Hier geht’s zu meinem Fashion-Portfolio",
     "about.portrait":"Porträt von Susann Gebert",
     /* Case Studies */
-    "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen",
+    "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen","cs.progress":"Abschnitte der Seite",
     "cs.neb.hero":"Nebulite Collection: leuchtende Taschen aus Glasfasergewebe vor dunklem Hintergrund",
     "cs.neb.quotesPos":"Positive Zitate aus den User Interviews: „a friend has shoes that shine in all kinds of colors, that’s really cool“ und „I have soooo many outfits, almost more than regular clothes. I love to dress up.“",
     "cs.neb.quotesNeg":"Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“",
     "ex.hero":"ecomex Website auf Laptop und Smartphone",
+    "db.hero":"Airbnb Earnings Dashboard auf einem Monitor mit Styleguide",
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
@@ -42,11 +43,11 @@ const TEXT = {
     "hero.intro":"I am Susann, a",
     "hero.desc":"I turn user needs, research and data into meaningful improvements across digital products and customer journeys.",
     "projects.title":"projects",
-    "p1.title":"Improving an e-commerce experience through research and usability testing",
+    "p1.title":"Improving an E-Commerce Experience Through Research and Usability Testing",
     "p1.desc":"A research-led redesign for Nebulite, focused on clearer product discovery, stronger value communication and a more intuitive shopping experience.",
     "p2.desc":"I helped evolve ecomex’s digital brand experience across website, marketing and communication. From user flows and responsive page concepts to corporate design, UI kits and campaign assets, I worked across multiple touchpoints to create a more consistent and user-focused experience.",
-    "p3.title":"Airbnb Earnings Prediction with Integrated Dashboard for Hosts",
-    "p3.desc":"The following project was about designing a dashboard. This idea was interdisciplinary and created with our fellow data analysts from Ironhack Bootcamp as we were tasked to visualize the collected data.",
+    "p3.title":"Designing a Clearer Earnings Experience for Airbnb Hosts",
+    "p3.desc":"An integrated dashboard concept that helps hosts estimate their earnings, understand costs and access relevant performance data at a glance.",
     "cur.title":"Curious?",
     "cur.desc":"There's more to explore. Discover a collection of digital experiences, creative concepts and projects that have shaped my design journey.",
     "brand.title":"Visual & Brand Work",
@@ -64,11 +65,12 @@ const TEXT = {
     "about.fashion":"See my fashion portfolio here",
     "about.portrait":"Portrait of Susann Gebert",
     /* Case studies */
-    "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after",
+    "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after","cs.progress":"Page sections",
     "cs.neb.hero":"Nebulite Collection: glowing fiber-optic bags against a dark background",
     "cs.neb.quotesPos":"Positive quotes from the user interviews: “a friend has shoes that shine in all kinds of colors, that’s really cool” and “I have soooo many outfits, almost more than regular clothes. I love to dress up.”",
     "cs.neb.quotesNeg":"Critical quotes from the user interviews: “slow website loading times and lack of the festival atmosphere” and “product visibility and overview is confusing, too many informations at once”",
     "ex.hero":"ecomex website on laptop and smartphone",
+    "db.hero":"Airbnb earnings dashboard on a monitor with style guide",
   }
 };
 

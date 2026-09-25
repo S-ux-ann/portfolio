@@ -431,6 +431,8 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-darkbox p{font-size:clamp(15px,1.2vw,18px);line-height:1.6;max-width:70ch}
 .cs-darkbox p+p{margin-top:1em}
 .cs-darkbox .cs-ph,.cs-darkbox .cs-img{margin:clamp(16px,2vw,28px) 0 0}
+.cs-darkbox .cs-pair{margin:clamp(20px,2.6vw,40px) 0 0}
+.cs-darkbox .cs-pair>.cs-ph,.cs-darkbox .cs-pair>.cs-img{margin:0}
 
 /* Kleine Überschrift mit gelbem Dreieck ("Ergebnis") */
 .cs-sec .cs-eyebrow{display:flex;align-items:center;gap:10px;font-weight:700;margin-bottom:6px}

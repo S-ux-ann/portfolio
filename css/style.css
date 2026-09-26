@@ -539,9 +539,9 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 
 /* ---------- Bild-Slider über die volle Bildschirmbreite (.cs-gallery) ---------- */
 .cs-gallery{position:relative;width:100vw;margin:clamp(24px,3vw,44px) 0 clamp(24px,3vw,44px) calc((100% - 100vw) / 2)}
-/* Innenabstand so, dass das erste Bild bündig mit der Textspalte beginnt */
-.cs-gtrack{--gpad:max(16px, calc((100% - min(calc(var(--content-w) * var(--text-ratio)), 1000px)) / 2));padding:4px var(--gpad);scroll-padding-inline:var(--gpad);gap:clamp(12px,1.6vw,24px)}
-.cs-gslide{flex:0 0 clamp(260px,36vw,560px);scroll-snap-align:start}
+/* Jedes Bild ist so breit wie die Textspalte und steht mittig – links und rechts schauen die Nachbarbilder hervor */
+.cs-gtrack{padding:4px 0;gap:clamp(12px,1.6vw,24px)}
+.cs-gslide{flex:0 0 min(calc(var(--content-w) * var(--text-ratio)), 1000px);scroll-snap-align:center}
 .cs-gslide figure{margin:0}
 .cs-gslide .cs-ph{margin:0}
 .cs-gslide figcaption{margin-top:10px;font-size:clamp(13px,1vw,15px);line-height:1.45;color:#666}
@@ -550,6 +550,5 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .cs-gnav .cs-arrow{position:static;transform:none}
 .cs-gnav .cs-pager{margin:0}
 @media (max-width:560px){
-  .cs-gtrack{--gpad:5%}
-  .cs-gslide{flex-basis:78%}
+  .cs-gslide{flex-basis:88%}
 }

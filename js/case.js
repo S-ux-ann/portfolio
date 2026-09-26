@@ -1,17 +1,14 @@
 /* =========================================================
-   PROJEKTSEITEN – Karussell, Vorher/Nachher-Vergleich    CASE STUDY – Karussell & Vorher/Nachher-Vergleich Fortschrittsanzeige
+   PROJEKTSEITEN – Karussell, Bild-Slider, Vorher/Nachher-Vergleich & Fortschrittsanzeige
    ========================================================= */
 
-/* ---------- Karussell (Design-Fokus) ---------- */
-document.querySelectorAll(".cs-carousel").forEach(carousel => {
+/* ---------- Karussell mit Karten (z. B. Design-Fokus) ---------- */
+document.querySelectorAll(".cs-carousel:not(.cs-gallery)").forEach(carousel => {
   const track = carousel.querySelector(".cs-track");
   const slides = [...track.children];
   const dots = [...(carousel.querySelector(".cs-pager") || carousel.parentElement.querySelector(".cs-pager") || document.createElement("i")).children];
+  const target = s => s.offsetLeft + s.offsetWidth / 2 - track.clientWidth / 2;
 
-  /* Karten werden mittig ausgerichtet, Bild-Slider (.cs-gallery) linksbündig an der Textspalte */
-  const alignStart = carousel.classList.contains("cs-gallery");
-  const pad = () => parseFloat(getComputedStyle(track).paddingLeft) || 0;
-  const target = s => alignStart ? s.offsetLeft - pad() : s.offsetLeft + s.offsetWidth / 2 - track.clientWidth / 2;
   function current(){
     let best = 0, dist = Infinity;
     slides.forEach((s, i) => {
@@ -32,6 +29,63 @@ document.querySelectorAll(".cs-carousel").forEach(carousel => {
   carousel.querySelector(".cs-arrow-prev").addEventListener("click", () => go(current() - 1));
   carousel.querySelector(".cs-arrow-next").addEventListener("click", () => go(current() + 1));
   track.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+  update();
+});
+
+/* ---------- Bild-Slider über die volle Breite, endlos in beide Richtungen ----------
+   Vor und hinter die echten Bilder kommen unsichtbare Kopien. Landet der Slider auf einer
+   Kopie, springt er ohne Animation zum gleichen echten Bild – so entsteht ein Endlos-Loop. */
+document.querySelectorAll(".cs-gallery").forEach(gallery => {
+  const track = gallery.querySelector(".cs-track");
+  const real = [...track.children];
+  const n = real.length;
+  const copies = () => real.map(s => {
+    const c = s.cloneNode(true);
+    c.classList.add("is-clone");
+    c.setAttribute("aria-hidden", "true");
+    c.inert = true;
+    return c;
+  });
+  track.prepend(...copies());
+  track.append(...copies());
+  const all = [...track.children];            /* Kopien · echte Bilder · Kopien */
+  const dots = [...gallery.querySelector(".cs-pager").children];
+  const center = s => s.offsetLeft + s.offsetWidth / 2 - track.clientWidth / 2;
+
+  function current(){
+    let best = 0, dist = Infinity;
+    all.forEach((s, i) => {
+      const d = Math.abs(center(s) - track.scrollLeft);
+      if (d < dist){ dist = d; best = i; }
+    });
+    return best;
+  }
+  function scrollToSlide(i, smooth){
+    i = Math.max(0, Math.min(all.length - 1, i));
+    track.scrollTo({ left: center(all[i]), behavior: smooth && !reduce ? "smooth" : "auto" });
+  }
+  function update(){
+    const r = current() % n;
+    dots.forEach((d, k) => d.classList.toggle("on", k === r));
+  }
+  /* nach dem Scrollen: von einer Kopie zurück in den echten Bereich springen */
+  function settle(){
+    const i = current();
+    if (i < n) scrollToSlide(i + n, false);
+    else if (i >= 2 * n) scrollToSlide(i - n, false);
+    update();
+  }
+
+  gallery.querySelector(".cs-arrow-prev").addEventListener("click", () => scrollToSlide(current() - 1, true));
+  gallery.querySelector(".cs-arrow-next").addEventListener("click", () => scrollToSlide(current() + 1, true));
+  let timer;
+  track.addEventListener("scroll", () => {
+    requestAnimationFrame(update);
+    clearTimeout(timer);
+    timer = setTimeout(settle, 150);          /* Scrollen ist zur Ruhe gekommen */
+  }, { passive: true });
+  window.addEventListener("resize", () => scrollToSlide(n + current() % n, false));
+  scrollToSlide(n, false);                     /* Start beim ersten echten Bild */
   update();
 });
 

@@ -6,20 +6,23 @@
 document.querySelectorAll(".cs-carousel").forEach(carousel => {
   const track = carousel.querySelector(".cs-track");
   const slides = [...track.children];
-  const dots = [...carousel.parentElement.querySelectorAll(".cs-pager span")];
+  const dots = [...(carousel.querySelector(".cs-pager") || carousel.parentElement.querySelector(".cs-pager") || document.createElement("i")).children];
 
+  /* Karten werden mittig ausgerichtet, Bild-Slider (.cs-gallery) linksbündig an der Textspalte */
+  const alignStart = carousel.classList.contains("cs-gallery");
+  const pad = () => parseFloat(getComputedStyle(track).paddingLeft) || 0;
+  const target = s => alignStart ? s.offsetLeft - pad() : s.offsetLeft + s.offsetWidth / 2 - track.clientWidth / 2;
   function current(){
-    const center = track.scrollLeft + track.clientWidth / 2;
     let best = 0, dist = Infinity;
     slides.forEach((s, i) => {
-      const d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - center);
+      const d = Math.abs(target(s) - track.scrollLeft);
       if (d < dist){ dist = d; best = i; }
     });
     return best;
   }
   function go(i){
     const s = slides[(i + slides.length) % slides.length];
-    track.scrollTo({ left: s.offsetLeft + s.offsetWidth / 2 - track.clientWidth / 2, behavior: reduce ? "auto" : "smooth" });
+    track.scrollTo({ left: target(s), behavior: reduce ? "auto" : "smooth" });
   }
   function update(){
     const i = current();

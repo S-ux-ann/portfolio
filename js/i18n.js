@@ -30,7 +30,7 @@ const TEXT = {
     "about.fashion":"Hier geht’s zu meinem Fashion-Portfolio",
     "about.portrait":"Porträt von Susann Gebert",
     /* Case Studies */
-    "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen","cs.progress":"Abschnitte der Seite","ap.top":"Nach oben",
+    "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen","cs.progress":"Abschnitte der Seite","ap.top":"Nach oben","cs.prevImg":"Vorheriges Bild","cs.nextImg":"Nächstes Bild",
     "cs.neb.hero":"Nebulite Collection: leuchtende Taschen aus Glasfasergewebe vor dunklem Hintergrund",
     "cs.neb.quotesPos":"Positive Zitate aus den User Interviews: „a friend has shoes that shine in all kinds of colors, that’s really cool“ und „I have soooo many outfits, almost more than regular clothes. I love to dress up.“",
     "cs.neb.quotesNeg":"Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“",
@@ -65,7 +65,7 @@ const TEXT = {
     "about.fashion":"See my fashion portfolio here",
     "about.portrait":"Portrait of Susann Gebert",
     /* Case studies */
-    "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after","cs.progress":"Page sections","ap.top":"Back to top",
+    "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after","cs.progress":"Page sections","ap.top":"Back to top","cs.prevImg":"Previous image","cs.nextImg":"Next image",
     "cs.neb.hero":"Nebulite Collection: glowing fiber-optic bags against a dark background",
     "cs.neb.quotesPos":"Positive quotes from the user interviews: “a friend has shoes that shine in all kinds of colors, that’s really cool” and “I have soooo many outfits, almost more than regular clothes. I love to dress up.”",
     "cs.neb.quotesNeg":"Critical quotes from the user interviews: “slow website loading times and lack of the festival atmosphere” and “product visibility and overview is confusing, too many informations at once”",

@@ -503,7 +503,6 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .ap .card .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
 .ap .card .ph small{font-size:.85em;opacity:.75}
 .ap .card .ap-ph-rose{background:#E6D2D5;color:#7D6166}
-.ap .card .ap-ph-sand{background:#EDE3D0;color:#7A6E58}
 
 /* Kennzahlen-Liste in der Karte */
 .card-facts{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:clamp(14px,1.1vw,16px)}

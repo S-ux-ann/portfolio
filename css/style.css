@@ -350,9 +350,6 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-outcome-txt{padding:clamp(18px,2.4vw,36px) clamp(8px,2vw,32px) clamp(8px,1vw,16px)}
 .cs-outcome h2{font-weight:700;font-size:clamp(20px,1.9vw,28px);margin-bottom:10px}
 .cs-outcome .cs-list li::marker{color:var(--bright-yellow)}
-.cs-proto{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:clamp(16px,2vw,28px);font-size:clamp(15px,1.2vw,18px)}
-.cs-pill{display:inline-block;background:var(--bright-yellow);color:var(--light-black);font-weight:700;text-decoration:none;border-radius:999px;padding:.35em 1.1em;transition:transform .2s ease}
-.cs-pill:hover{transform:translateY(-2px)}
 
 /* Finales Konzept */
 .cs-final{position:relative}
@@ -552,3 +549,8 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 @media (max-width:560px){
   .cs-gslide{flex-basis:88%}
 }
+
+/* Link im Fließtext im Stil der Ansehen-Buttons (fett, Balken mit Hover-Animation), z. B. zum Figma-Prototyp */
+.cs-proto-line{margin-top:clamp(20px,2.4vw,36px);font-size:clamp(15px,1.2vw,18px);line-height:1.6}
+.btn-view.is-inline{font-size:inherit;padding:0 2px;vertical-align:baseline}
+.cs-outcome .btn-view,.cs-darkbox .btn-view,.cs-challenge .btn-view{color:var(--bright-yellow)}   /* auf dunklem Grund gelb */

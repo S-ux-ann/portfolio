@@ -31,6 +31,7 @@ const TEXT = {
     "about.portrait":"Porträt von Susann Gebert",
     /* Case Studies */
     "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen","cs.progress":"Abschnitte der Seite","ap.top":"Nach oben","cs.prevImg":"Vorheriges Bild","cs.nextImg":"Nächstes Bild",
+    "ma.logo":"GasolinaToday Designsystem: Logo","ma.typo":"GasolinaToday Designsystem: Typografie mit der Schrift Sen","ma.icons":"GasolinaToday Designsystem: Icon-Set","ma.colors":"GasolinaToday Designsystem: blaugrüne Farbpalette","ma.btnsize":"GasolinaToday Designsystem: Buttons in verschiedenen Größen und Zuständen","ma.btnvar":"GasolinaToday Designsystem: Button-Varianten von hoher bis niedriger Betonung","ma.forms":"GasolinaToday Designsystem: Formularfelder und ihre Interaktionszustände","ma.tile":"GasolinaToday Style Tile",
     "cs.neb.hero":"Nebulite Collection: leuchtende Taschen aus Glasfasergewebe vor dunklem Hintergrund",
     "cs.neb.quotesPos":"Positive Zitate aus den User Interviews: „a friend has shoes that shine in all kinds of colors, that’s really cool“ und „I have soooo many outfits, almost more than regular clothes. I love to dress up.“",
     "cs.neb.quotesNeg":"Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“",
@@ -66,6 +67,7 @@ const TEXT = {
     "about.portrait":"Portrait of Susann Gebert",
     /* Case studies */
     "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after","cs.progress":"Page sections","ap.top":"Back to top","cs.prevImg":"Previous image","cs.nextImg":"Next image",
+    "ma.logo":"GasolinaToday design system: logo","ma.typo":"GasolinaToday design system: typography with the Sen typeface","ma.icons":"GasolinaToday design system: icon set","ma.colors":"GasolinaToday design system: blue-green colour palette","ma.btnsize":"GasolinaToday design system: buttons in different sizes and states","ma.btnvar":"GasolinaToday design system: button variants from high to low emphasis","ma.forms":"GasolinaToday design system: form fields and their interaction states","ma.tile":"GasolinaToday style tile",
     "cs.neb.hero":"Nebulite Collection: glowing fiber-optic bags against a dark background",
     "cs.neb.quotesPos":"Positive quotes from the user interviews: “a friend has shoes that shine in all kinds of colors, that’s really cool” and “I have soooo many outfits, almost more than regular clothes. I love to dress up.”",
     "cs.neb.quotesNeg":"Critical quotes from the user interviews: “slow website loading times and lack of the festival atmosphere” and “product visibility and overview is confusing, too many informations at once”",

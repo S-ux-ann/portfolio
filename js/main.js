@@ -63,24 +63,29 @@ setLang(lang);
 /* ---------- Tab-Titel (Page Visibility API) ----------
    Ist der Tab 4 Sekunden am Stück im Hintergrund, erscheint einmalig "Psst... come back! 👀".
    Kommt die Person früher zurück, wird der Wechsel abgebrochen; bei Rückkehr steht sofort
-   wieder der eigene Titel der jeweiligen Seite im Tab. */
+   wieder der eigene Titel der jeweiligen Seite im Tab.
+   Browser bremsen Timer in Hintergrund-Tabs stark aus – deshalb läuft der 4-Sekunden-Timer
+   in einem kleinen Web Worker (wird kaum gebremst). Ohne Worker-Unterstützung: normaler Timer. */
 const pageTitle = document.title;
 const awayTitle = "Psst... come back! 👀";
-let awayTimer = null;
+const awayDelay = 4000;
+const showAway = () => { if (document.visibilityState === "hidden") document.title = awayTitle; };
 
-function onVisibilityChange(){
-  clearTimeout(awayTimer);
-  awayTimer = null;
-  if (document.visibilityState === "hidden"){
-    awayTimer = setTimeout(() => {
-      document.title = awayTitle;
-      awayTimer = null;
-    }, 4000);
-  } else if (document.title !== pageTitle){
-    document.title = pageTitle;
-  }
-}
-document.addEventListener("visibilitychange", onVisibilityChange);
+let awayWorker = null, awayTimer = null;
+try {
+  const src = "let t; onmessage = e => { clearTimeout(t); if (e.data > 0) t = setTimeout(() => postMessage('away'), e.data); };";
+  awayWorker = new Worker(URL.createObjectURL(new Blob([src], { type: "text/javascript" })));
+  awayWorker.onmessage = showAway;
+} catch (e) { awayWorker = null; }
+
+function startAwayTimer(){ awayWorker ? awayWorker.postMessage(awayDelay) : (awayTimer = setTimeout(showAway, awayDelay)); }
+function stopAwayTimer(){ awayWorker ? awayWorker.postMessage(0) : clearTimeout(awayTimer); awayTimer = null; }
+
+document.addEventListener("visibilitychange", () => {
+  stopAwayTimer();
+  if (document.visibilityState === "hidden") startAwayTimer();
+  else if (document.title !== pageTitle) document.title = pageTitle;
+});
 /* Aufräumen beim Verlassen der Seite; bei Rückkehr über Vor/Zurück wieder den eigenen Titel zeigen */
-window.addEventListener("pagehide", () => { clearTimeout(awayTimer); awayTimer = null; });
+window.addEventListener("pagehide", stopAwayTimer);
 window.addEventListener("pageshow", () => { if (document.title !== pageTitle) document.title = pageTitle; });

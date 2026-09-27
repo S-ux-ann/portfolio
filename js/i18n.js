@@ -37,6 +37,7 @@ const TEXT = {
     "cs.neb.quotesPos":"Positive Zitate aus den User Interviews: „a friend has shoes that shine in all kinds of colors, that’s really cool“ und „I have soooo many outfits, almost more than regular clothes. I love to dress up.“",
     "cs.neb.quotesNeg":"Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“",
     "ex.hero":"ecomex Website auf Laptop und Smartphone",
+    "ex.structure":"Seitenstruktur der ecomex-Website und wiederverwendbare Komponenten","ex.oldnew":"Gegenüberstellung der alten und der neu gestalteten ecomex-Website","ex.flowxd":"Screens des responsiven Bewerbungs-Flows in Adobe XD","ex.flowdev":"Bewerbungs-Flow der ecomex-Website auf Laptop und Smartphones","ex.brand":"ecomex Markenelemente: Logo-Varianten, Typografie, Farben und Icons","ex.graphics":"Wiederverwendbare Grafikelemente und Illustrationen von ecomex","ex.icons":"Icon-System im Einsatz in internen Dokumenten und Präsentationen","ex.marketing":"Ausgewählte Marketing-Touchpoints: Social Media, Messe, Sponsoring, Digital Advertising und Newsletter","ex.dtdevices":"Digiteach-Website auf Monitor, Laptop und Smartphone","ex.dtpages":"Übersicht der Digiteach-Seiten und Logo","ex.workshop":"Arbeitssituation während eines Workshops",
     "db.hero":"Airbnb Earnings Dashboard auf einem Monitor mit Styleguide",
     "nx.hero":"Smartphone mit dem Nexio-App-Icon auf dunklem Hintergrund",
   },
@@ -75,6 +76,7 @@ const TEXT = {
     "cs.neb.quotesPos":"Positive quotes from the user interviews: “a friend has shoes that shine in all kinds of colors, that’s really cool” and “I have soooo many outfits, almost more than regular clothes. I love to dress up.”",
     "cs.neb.quotesNeg":"Critical quotes from the user interviews: “slow website loading times and lack of the festival atmosphere” and “product visibility and overview is confusing, too many informations at once”",
     "ex.hero":"ecomex website on laptop and smartphone",
+    "ex.structure":"Page structure of the ecomex website and reusable components","ex.oldnew":"Comparison of the old and the redesigned ecomex website","ex.flowxd":"Screens of the responsive application flow in Adobe XD","ex.flowdev":"ecomex application flow on laptop and smartphones","ex.brand":"ecomex brand elements: logo variants, typography, colors and icons","ex.graphics":"Reusable ecomex graphic elements and illustrations","ex.icons":"Icon system applied in internal documents and presentations","ex.marketing":"Selected marketing touchpoints: social media, trade fair, sponsoring, digital advertising and newsletter","ex.dtdevices":"Digiteach website on monitor, laptop and smartphone","ex.dtpages":"Overview of the Digiteach pages and logo","ex.workshop":"Working session during a workshop",
     "db.hero":"Airbnb earnings dashboard on a monitor with style guide",
     "nx.hero":"Smartphone showing the Nexio app icon on a dark background",
   }

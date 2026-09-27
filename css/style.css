@@ -559,7 +559,6 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .cs-outcome .btn-view,.cs-darkbox .btn-view,.cs-challenge .btn-view{color:var(--bright-yellow)}   /* auf dunklem Grund gelb */
 
 /* ---------- Nexio & weitere Projektseiten: kleine Ergänzungen ---------- */
-.cs-subtitle{font-weight:700;font-size:clamp(18px,1.7vw,25px);line-height:1.3;margin-top:6px}
 .cs-hero-text>.cs-themes{margin-top:clamp(16px,2vw,28px)}
 /* Bildunterschrift mit kleinem Label und Titel */
 .cs-fig figcaption .cs-fig-label{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a8a8a;margin-bottom:2px}

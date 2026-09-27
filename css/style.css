@@ -572,6 +572,12 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 /* Nummer/Label oben in einer Karte */
 .cs-theme .cs-theme-no{font-size:13px;font-weight:700;letter-spacing:.02em;margin-bottom:6px;opacity:.75}
 .cs-theme p+p{margin-top:.6em}
+/* Text und Bild nebeneinander: Text 60 %, Bild 40 % (Tablet/Handy untereinander) */
+.cs-split{display:grid;grid-template-columns:minmax(0,1fr) 40%;align-items:center;gap:clamp(24px,3.4vw,56px)}   /* Bild genau 40 %, Text bekommt den Rest */
+.cs-split>.cs-ph,.cs-split>.cs-img{margin:0}
+@media (max-width:1024px){
+  .cs-split{grid-template-columns:minmax(0,1fr)}
+}
 /* Drei Textspalten mit kleinem gelbem Dreieck über dem Titel (z. B. Ergebnis-Box) */
 .cs-cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:clamp(28px,3.4vw,52px)}
 .cs-col-tri{display:block;width:clamp(18px,1.6vw,24px);height:clamp(16px,1.4vw,21px);margin-bottom:clamp(10px,1.2vw,16px)}

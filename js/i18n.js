@@ -38,6 +38,7 @@ const TEXT = {
     "cs.neb.quotesNeg":"Kritische Zitate aus den User Interviews: „slow website loading times and lack of the festival atmosphere“ und „product visibility and overview is confusing, too many informations at once“",
     "ex.hero":"ecomex Website auf Laptop und Smartphone",
     "db.hero":"Airbnb Earnings Dashboard auf einem Monitor mit Styleguide",
+    "nx.hero":"Smartphone mit dem Nexio-App-Icon auf dunklem Hintergrund",
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
@@ -75,6 +76,7 @@ const TEXT = {
     "cs.neb.quotesNeg":"Critical quotes from the user interviews: “slow website loading times and lack of the festival atmosphere” and “product visibility and overview is confusing, too many informations at once”",
     "ex.hero":"ecomex website on laptop and smartphone",
     "db.hero":"Airbnb earnings dashboard on a monitor with style guide",
+    "nx.hero":"Smartphone showing the Nexio app icon on a dark background",
   }
 };
 

@@ -59,3 +59,9 @@ closeBtn.addEventListener("click", closeMenu);
 document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("open")) closeMenu(); });
 
 setLang(lang);
+
+/* ---------- Tab-Titel: "Come back", solange der Tab im Hintergrund ist ---------- */
+const pageTitle = document.title;
+document.addEventListener("visibilitychange", () => {
+  document.title = document.hidden ? "Come back" : pageTitle;
+});

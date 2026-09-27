@@ -60,8 +60,27 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.class
 
 setLang(lang);
 
-/* ---------- Tab-Titel: "Come back", solange der Tab im Hintergrund ist ---------- */
+/* ---------- Tab-Titel (Page Visibility API) ----------
+   Ist der Tab 4 Sekunden am Stück im Hintergrund, erscheint einmalig "Psst... come back! 👀".
+   Kommt die Person früher zurück, wird der Wechsel abgebrochen; bei Rückkehr steht sofort
+   wieder der eigene Titel der jeweiligen Seite im Tab. */
 const pageTitle = document.title;
-document.addEventListener("visibilitychange", () => {
-  document.title = document.hidden ? "Come back" : pageTitle;
-});
+const awayTitle = "Psst... come back! 👀";
+let awayTimer = null;
+
+function onVisibilityChange(){
+  clearTimeout(awayTimer);
+  awayTimer = null;
+  if (document.visibilityState === "hidden"){
+    awayTimer = setTimeout(() => {
+      document.title = awayTitle;
+      awayTimer = null;
+    }, 4000);
+  } else if (document.title !== pageTitle){
+    document.title = pageTitle;
+  }
+}
+document.addEventListener("visibilitychange", onVisibilityChange);
+/* Aufräumen beim Verlassen der Seite; bei Rückkehr über Vor/Zurück wieder den eigenen Titel zeigen */
+window.addEventListener("pagehide", () => { clearTimeout(awayTimer); awayTimer = null; });
+window.addEventListener("pageshow", () => { if (document.title !== pageTitle) document.title = pageTitle; });

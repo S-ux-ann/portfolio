@@ -524,7 +524,6 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .ap-top-link:hover .tri-up{transform:translateY(-4px)}
 
 /* ---------- Weitere Bausteine für Projektseiten ---------- */
-.cs-hero-text>.cs-eyebrow{margin-bottom:10px}
 .cs-pair>.cs-fig{margin:0}
 .cs-stats-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .cs-inputs{margin:clamp(24px,3vw,44px) 0}

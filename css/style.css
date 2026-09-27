@@ -572,7 +572,12 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 /* Nummer/Label oben in einer Karte */
 .cs-theme .cs-theme-no{font-size:13px;font-weight:700;letter-spacing:.02em;margin-bottom:6px;opacity:.75}
 .cs-theme p+p{margin-top:.6em}
-.cs-outcome-cards{margin-top:clamp(20px,2.6vw,36px)}
+/* Drei Textspalten mit kleinem gelbem Dreieck über dem Titel (z. B. Ergebnis-Box) */
+.cs-cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:clamp(28px,3.4vw,52px)}
+.cs-col-tri{display:block;width:clamp(18px,1.6vw,24px);height:clamp(16px,1.4vw,21px);margin-bottom:clamp(10px,1.2vw,16px)}
+.cs-cols3 h3{font-weight:700;font-size:clamp(17px,1.5vw,22px);line-height:1.3;margin-bottom:8px}
+.cs-cols3 p{font-size:clamp(14px,1.1vw,17px);line-height:1.55}
+.cs-darkbox .cs-cols3 p+p{margin-top:0}   /* DE/EN-Paare: kein Zusatzabstand */
 /* Review-Karten: untereinander, Beobachtung und Empfehlung nebeneinander */
 .cs-themes.cs-review{grid-template-columns:minmax(0,1fr)}
 .cs-review .cs-theme{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(16px,2.4vw,36px)}
@@ -580,6 +585,7 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .cs-review .cs-theme p+p{margin-top:0}
 @media (max-width:900px){
   .cs-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cs-cols3{grid-template-columns:minmax(0,1fr)}
   .cs-review .cs-theme{grid-template-columns:minmax(0,1fr)}
   .cs-review .cs-theme p+p{margin-top:.6em}
 }

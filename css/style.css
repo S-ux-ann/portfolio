@@ -555,3 +555,29 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .cs-proto-line{margin-top:clamp(20px,2.4vw,36px);font-size:clamp(15px,1.2vw,18px);line-height:1.6}
 .btn-view.is-inline{font-size:inherit;padding:0 2px;vertical-align:baseline}
 .cs-outcome .btn-view,.cs-darkbox .btn-view,.cs-challenge .btn-view{color:var(--bright-yellow)}   /* auf dunklem Grund gelb */
+
+/* ---------- Nexio & weitere Projektseiten: kleine Ergänzungen ---------- */
+.cs-subtitle{font-weight:700;font-size:clamp(18px,1.7vw,25px);line-height:1.3;margin-top:6px}
+.cs-hero-text>.cs-themes{margin-top:clamp(16px,2vw,28px)}
+/* Bildunterschrift mit kleinem Label und Titel */
+.cs-fig figcaption .cs-fig-label{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a8a8a;margin-bottom:2px}
+.cs-fig figcaption strong{display:block;color:var(--light-black);font-size:clamp(14px,1.1vw,16px);margin-bottom:2px}
+.cs-fig-wide{margin:clamp(24px,3vw,44px) 0}
+/* Abfolge in Schritten (in der dunklen Box) */
+.cs-steps{list-style:none;grid-template-columns:repeat(4,minmax(0,1fr))}
+.cs-steps li{display:flex;flex-direction:column;gap:8px;font-size:clamp(14px,1.1vw,17px);line-height:1.4}
+.cs-step-no{font-weight:800;font-size:clamp(32px,3.6vw,52px);line-height:1;color:var(--bright-yellow)}
+/* Nummer/Label oben in einer Karte */
+.cs-theme .cs-theme-no{font-size:13px;font-weight:700;letter-spacing:.02em;margin-bottom:6px;opacity:.75}
+.cs-theme p+p{margin-top:.6em}
+.cs-outcome-cards{margin-top:clamp(20px,2.6vw,36px)}
+/* Review-Karten: untereinander, Beobachtung und Empfehlung nebeneinander */
+.cs-themes.cs-review{grid-template-columns:minmax(0,1fr)}
+.cs-review .cs-theme{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(16px,2.4vw,36px)}
+.cs-review .cs-theme-no,.cs-review h3{grid-column:1/-1}
+.cs-review .cs-theme p+p{margin-top:0}
+@media (max-width:900px){
+  .cs-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cs-review .cs-theme{grid-template-columns:minmax(0,1fr)}
+  .cs-review .cs-theme p+p{margin-top:.6em}
+}

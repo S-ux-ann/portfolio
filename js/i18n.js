@@ -40,6 +40,7 @@ const TEXT = {
     "ex.hero":"ecomex Website auf Laptop und Smartphone",
     "ex.structure":"Seitenstruktur der ecomex-Website und wiederverwendbare Komponenten","ex.oldnew":"Gegenüberstellung der alten und der neu gestalteten ecomex-Website","ex.flowxd":"Screens des responsiven Bewerbungs-Flows in Adobe XD","ex.flowdev":"Bewerbungs-Flow der ecomex-Website auf Laptop und Smartphones","ex.brand":"ecomex Markenelemente: Logo-Varianten, Typografie, Farben und Icons","ex.graphics":"Wiederverwendbare Grafikelemente und Illustrationen von ecomex","ex.icons":"Icon-System im Einsatz in internen Dokumenten und Präsentationen","ex.marketing":"Ausgewählte Marketing-Touchpoints: Social Media, Messe, Sponsoring, Digital Advertising und Newsletter","ex.dtdevices":"Digiteach-Website auf Monitor, Laptop und Smartphone","ex.dtpages":"Übersicht der Digiteach-Seiten und Logo","ex.workshop":"Arbeitssituation während eines Workshops",
     "db.hero":"Airbnb Earnings Dashboard auf einem Monitor mit Styleguide",
+    "db.affinity":"Affinity Diagram mit geclusterten Beobachtungen aus den Interviews","db.crazy8":"Crazy-8s-Skizzen und MoSCoW-Priorisierung der Ideen","db.tile":"Style Tile des Dashboards mit Typografie, Farben und UI-Elementen","db.comp":"Ausschnitt aus dem Figma-Komponentensystem des Dashboards","db.final":"Finales Airbnb-Dashboard auf zwei Laptops",
     "nx.hero":"Smartphone mit dem Nexio-App-Icon auf dunklem Hintergrund",
   },
   en: {
@@ -80,6 +81,7 @@ const TEXT = {
     "ex.hero":"ecomex website on laptop and smartphone",
     "ex.structure":"Page structure of the ecomex website and reusable components","ex.oldnew":"Comparison of the old and the redesigned ecomex website","ex.flowxd":"Screens of the responsive application flow in Adobe XD","ex.flowdev":"ecomex application flow on laptop and smartphones","ex.brand":"ecomex brand elements: logo variants, typography, colors and icons","ex.graphics":"Reusable ecomex graphic elements and illustrations","ex.icons":"Icon system applied in internal documents and presentations","ex.marketing":"Selected marketing touchpoints: social media, trade fair, sponsoring, digital advertising and newsletter","ex.dtdevices":"Digiteach website on monitor, laptop and smartphone","ex.dtpages":"Overview of the Digiteach pages and logo","ex.workshop":"Working session during a workshop",
     "db.hero":"Airbnb earnings dashboard on a monitor with style guide",
+    "db.affinity":"Affinity diagram with clustered observations from the interviews","db.crazy8":"Crazy 8s sketches and MoSCoW prioritization of the ideas","db.tile":"Dashboard style tile with typography, colors and UI elements","db.comp":"Excerpt from the dashboard's Figma component system","db.final":"Final Airbnb dashboard on two laptops",
     "nx.hero":"Smartphone showing the Nexio app icon on a dark background",
   }
 };

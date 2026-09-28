@@ -577,6 +577,9 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 /* Text und Bild nebeneinander: Text 60 %, Bild 40 % (Tablet/Handy untereinander) */
 .cs-split{display:grid;grid-template-columns:minmax(0,1fr) 40%;align-items:center;gap:clamp(24px,3.4vw,56px)}   /* Bild genau 40 %, Text bekommt den Rest */
 .cs-split>.cs-ph,.cs-split>.cs-img{margin:0}
+@media (min-width:1025px){   /* Bild füllt die Höhe der Textspalte (Ränder werden beschnitten) */
+  .cs-split>.cs-img.is-fill{align-self:stretch;height:0;min-height:100%;object-fit:cover}
+}
 @media (max-width:1024px){
   .cs-split{grid-template-columns:minmax(0,1fr)}
 }

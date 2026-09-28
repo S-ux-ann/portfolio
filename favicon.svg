@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><polygon points="2,5 30,5 16,29" fill="#E8E154"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    /* feine dunkle Kontur nur im hellen Modus (helle Tab-Leisten) */
+    polygon{fill:#E8E154;stroke:#1D1D1D;stroke-width:1.6;stroke-linejoin:round}
+    @media (prefers-color-scheme:dark){polygon{stroke:none}}
+  </style>
+  <polygon points="3,6 29,6 16,28"/>
+</svg>

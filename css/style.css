@@ -389,8 +389,10 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 
 /* Ergebnis-Karte erst ab Desktop zweispaltig: Bild links, Text rechts */
 @media (min-width:1025px){
-  .cs-outcome{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(8px,1vw,16px)}
-  .cs-outcome-txt{padding:clamp(12px,1.6vw,24px) clamp(12px,1.8vw,28px)}
+  .cs-outcome{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;gap:clamp(8px,1vw,16px)}
+  .cs-outcome-txt{align-self:center;padding:clamp(12px,1.6vw,24px) clamp(12px,1.8vw,28px)}
+  /* Bild füllt die volle Höhe der Box (bestimmt vom Text) – Abstand zum Rand bleibt überall gleich */
+  .cs-outcome>.cs-img{height:0;min-height:100%;object-fit:cover}
 }
 @media (max-width:1100px){
   .cs-dots{display:none}

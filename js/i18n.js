@@ -45,6 +45,7 @@ const TEXT = {
     "nx.brand":"Nexio Brand Guide: Logo, Schrift, Farben, Verläufe, Bildwelt und grafische Elemente",
     "nx.flow":"User Flow der Nexio-App: Schichtbeginn eines Fahrers mit Entscheidungspunkten und alternativen Wegen",
     "nx.outcome":"Hand hält ein Smartphone mit einem Screen der Nexio-App",
+    "nx.proto":"Verbundene Screens aus dem Figma-Prototyp der Nexio-App: Kraftstoffkosten erfassen und Beleg scannen",
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
@@ -89,6 +90,7 @@ const TEXT = {
     "nx.brand":"Nexio brand guide: logo, typography, colors, gradients, imagery and graphic elements",
     "nx.flow":"Nexio app user flow: a driver starting a shift, with decision points and alternative paths",
     "nx.outcome":"Hand holding a smartphone showing a screen of the Nexio app",
+    "nx.proto":"Connected screens from the Nexio app Figma prototype: logging fuel costs and scanning a receipt",
   }
 };
 

@@ -597,3 +597,6 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
   .cs-review .cs-theme{grid-template-columns:minmax(0,1fr)}
   .cs-review .cs-theme p+p{margin-top:.6em}
 }
+/* Klickbare Karten: Hover auf der Karte löst den Button-Effekt aus */
+.card.is-link{cursor:pointer}
+.card.is-link:hover .btn-view::before{transform:translateY(9px)}

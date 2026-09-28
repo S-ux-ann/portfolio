@@ -89,3 +89,20 @@ document.addEventListener("visibilitychange", () => {
 /* Aufräumen beim Verlassen der Seite; bei Rückkehr über Vor/Zurück wieder den eigenen Titel zeigen */
 window.addEventListener("pagehide", stopAwayTimer);
 window.addEventListener("pageshow", () => { if (document.title !== pageTitle) document.title = pageTitle; });
+
+/* ---------- Projektkarten komplett klickbar ----------
+   Karten mit einem "Ansehen"-Link führen bei Klick irgendwo auf der Karte zu diesem Link.
+   Text markieren bleibt möglich; Strg/Cmd-Klick und Mittelklick öffnen einen neuen Tab. */
+document.querySelectorAll(".card").forEach(card => {
+  const link = card.querySelector("a.btn-view[href]");
+  if (!link) return;
+  card.classList.add("is-link");
+  const open = e => {
+    if (e.target.closest("a, button")) return;
+    if (String(window.getSelection()).trim()) return;
+    if (e.button === 1 || e.ctrlKey || e.metaKey) window.open(link.href, "_blank");
+    else if (e.button === 0) link.click();
+  };
+  card.addEventListener("click", open);
+  card.addEventListener("auxclick", open);
+});

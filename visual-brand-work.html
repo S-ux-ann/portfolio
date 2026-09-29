@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Visual &amp; Brand Work – Susann Gebert</title>
+<meta name="description" content="Visual &amp; Brand Work von Susann Gebert – Editorial Design, Branding, Illustration und Mode.">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon.ico?v=2" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css?v=63">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">SUSANN</a>
+    <div class="meta">
+      <div class="lang" role="group" aria-label="Sprache / Language" data-active="de">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="meta-link" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!--
+  Texte: Jeder Absatz steht zweimal im Code – einmal mit data-only="de", einmal mit data-only="en".
+
+  Bilder: Die grauen Kästen (class="cs-ph") sind Platzhalter mit einer ID (data-placeholder, z. B. VB_HUB_HERO).
+  Zum Ersetzen den ganzen <div class="cs-ph …"> durch
+  <img class="vb-img" src="images/…" width="…" height="…" loading="lazy" alt="…" data-i18n-alt="…">
+  austauschen. Ausnahme: das erste Bild im Kopf (VB_HERO_MAGAZINE) bekommt KEIN loading="lazy".
+-->
+
+<main class="cs vb">
+  <!-- ================= KOPF ================= -->
+  <section class="vb-hero">
+    <div class="cs-hero-head">
+      <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+      <div class="cs-col vb-hero-text">
+        <p class="cs-eyebrow">Visual &amp; Brand Work</p>
+        <h1 class="vb-title"><span data-only="de">Ideen jenseits des Interfaces erkunden.</span><span data-only="en">Exploring ideas beyond the interface.</span></h1>
+        <p class="cs-lead" data-only="de">Eine Auswahl an Arbeiten aus Editorial Design, Branding, Illustration und Mode – das visuelle und kreative Fundament hinter meiner heutigen Arbeit an digitalen Produkten.</p>
+        <p class="cs-lead" data-only="en">A selection of work across editorial design, branding, illustration and fashion — reflecting the visual and creative foundation behind my work in digital products today.</p>
+        <p class="vb-cats"><span data-only="de">Editorial · Branding · Illustration · Mode · Visual Design</span><span data-only="en">Editorial · Branding · Illustration · Fashion · Visual Design</span></p>
+      </div>
+    </div>
+
+    <div class="wrap vb-hero-grid">
+      <div class="cs-ph vb-a" style="aspect-ratio:4/5" data-placeholder="VB_HERO_MAGAZINE">VB_HERO_MAGAZINE · Fashion magazine cover<small>1600 × 2000 · ohne lazy loading</small></div>
+      <div class="cs-ph vb-b" style="aspect-ratio:1/1" data-placeholder="VB_HERO_HUB_DETAIL">VB_HERO_HUB_DETAIL · HUB fashion/material detail<small>1200 × 1200</small></div>
+      <div class="cs-ph vb-c" style="aspect-ratio:4/3" data-placeholder="VB_HERO_CLARINQA">VB_HERO_CLARINQA · Clarinqa branding or packaging<small>1200 × 900</small></div>
+    </div>
+  </section>
+
+  <!-- ================= 01 EDITORIAL & PRINT ================= -->
+  <section class="vb-sec" aria-labelledby="vb-s1">
+    <div class="cs-col vb-sec-head">
+      <p class="cs-eyebrow vb-no">01</p>
+      <h2 id="vb-s1"><span data-only="de">Editorial &amp; Print</span><span data-only="en">Editorial &amp; print</span></h2>
+      <p data-only="de">Visuelles Storytelling war schon immer ein wichtiger Teil meiner Designpraxis. Diese Projekte erkunden das Zusammenspiel von Typografie, Bild, Information und Komposition – in Editorial- und physischen Formaten.</p>
+      <p data-only="en">Visual storytelling has always been an important part of my design practice. These projects explore the relationship between typography, imagery, information and composition across editorial and physical formats.</p>
+    </div>
+
+    <!-- Projekt: Fashion Magazine -->
+    <article class="vb-project">
+      <div class="cs-col vb-project-text">
+        <h3><span data-only="de">Modemagazin</span><span data-only="en">Fashion Magazine</span></h3>
+        <p class="vb-meta">Editorial Design · Art Direction · Layout</p>
+        <p data-only="de">Eine Editorial-Publikation, die Mode, Kultur und urbane Geschichten verbindet. Ich habe die Bildsprache und die Seitenlayouts für unterschiedliche Inhaltsarten entwickelt und dabei ausdrucksstarke Bilder mit einer strukturierten redaktionellen Typografie ausbalanciert.</p>
+        <p data-only="en">An editorial publication combining fashion, culture and urban stories. I developed the visual language and page layouts across different types of content, balancing expressive imagery with structured editorial typography.</p>
+      </div>
+      <div class="wrap vb-gallery">
+        <div class="cs-ph" style="aspect-ratio:16/9" data-placeholder="VB_MAGAZINE_COVER">VB_MAGAZINE_COVER · Fashion magazine cover and back<small>2400 × 1350</small></div>
+        <div class="vb-two">
+          <div class="cs-ph" style="aspect-ratio:4/3" data-placeholder="VB_MAGAZINE_CITY_SPREAD">VB_MAGAZINE_CITY_SPREAD · City/map editorial spread<small>1600 × 1200</small></div>
+          <div class="cs-ph" style="aspect-ratio:4/3" data-placeholder="VB_MAGAZINE_URBAN_SPREAD">VB_MAGAZINE_URBAN_SPREAD · Knopf Paul / urban editorial spread<small>1600 × 1200</small></div>
+        </div>
+        <div class="vb-offset">
+          <div class="cs-ph" style="aspect-ratio:3/2" data-placeholder="VB_MAGAZINE_TREND_SPREAD">VB_MAGAZINE_TREND_SPREAD · Fashion/trend spread with fashion illustration<small>2000 × 1333</small></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Projekt: Exhibition Material -->
+    <article class="vb-project">
+      <div class="cs-col vb-project-text">
+        <h3><span data-only="de">Ausstellungsmaterial</span><span data-only="en">Exhibition Material</span></h3>
+        <p class="vb-meta"><span data-only="de">Grafikdesign · Editorial · Visuelle Kommunikation</span><span data-only="en">Graphic Design · Editorial · Visual Communication</span></p>
+        <p data-only="de">Visuelles Material für einen Ausstellungskontext, das Inhalte in ein stimmiges System über gedruckte und räumliche Touchpoints hinweg übersetzt.</p>
+        <p data-only="en">Visual material developed for an exhibition context, translating content into a coherent system across printed and spatial touchpoints.</p>
+      </div>
+      <div class="wrap vb-gallery">
+        <div class="vb-two is-asym">
+          <div class="cs-ph" style="aspect-ratio:4/3" data-placeholder="VB_EXHIBITION_PRINT">VB_EXHIBITION_PRINT · Printed/exhibition communication material<small>1600 × 1200</small></div>
+          <div class="cs-ph" style="aspect-ratio:4/5" data-placeholder="VB_EXHIBITION_SPACE">VB_EXHIBITION_SPACE · Photographic or spatial application<small>1200 × 1500</small></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= 02 BRAND & PACKAGING ================= -->
+  <section class="vb-sec" aria-labelledby="vb-s2">
+    <div class="cs-col vb-sec-head">
+      <p class="cs-eyebrow vb-no">02</p>
+      <h2 id="vb-s2"><span data-only="de">Marke &amp; Verpackung</span><span data-only="en">Brand &amp; packaging</span></h2>
+    </div>
+
+    <!-- Projekt: Clarinqa -->
+    <article class="vb-project">
+      <div class="cs-col vb-project-text">
+        <h3>Clarinqa</h3>
+        <p class="vb-meta"><span data-only="de">Markenidentität · Verpackung · Produktdesign</span><span data-only="en">Brand Identity · Packaging · Product Design</span></p>
+        <p data-only="de">Eine visuelle Identität, übertragen auf Logo, Verpackung und Produktanwendungen. Das Projekt untersuchte, wie eine konsistente Markensprache grafische Elemente mit physischen Produkten und ihrer Präsentation verbinden kann.</p>
+        <p data-only="en">A visual identity translated across logo, packaging and product applications. The project explored how a consistent brand language can connect graphic elements with physical products and presentation.</p>
+      </div>
+      <div class="wrap vb-gallery">
+        <div class="vb-two">
+          <div class="cs-ph cs-ph-white" style="aspect-ratio:4/5" data-placeholder="VB_CLARINQA_BRAND">VB_CLARINQA_BRAND · Brand/logo application<small>1200 × 1500</small></div>
+          <div class="cs-ph cs-ph-white" style="aspect-ratio:4/5" data-placeholder="VB_CLARINQA_PACKAGING">VB_CLARINQA_PACKAGING · Packaging/product application<small>1200 × 1500</small></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= 03 FASHION, MATERIAL & CONCEPT ================= -->
+  <section class="vb-sec vb-sec-hub" aria-labelledby="vb-s3">
+    <div class="cs-col vb-sec-head">
+      <p class="cs-eyebrow vb-no">03</p>
+      <h2 id="vb-s3"><span data-only="de">Mode, Material &amp; Konzept</span><span data-only="en">Fashion, material &amp; concept</span></h2>
+    </div>
+
+    <!-- Projekt: HUB -->
+    <article class="vb-project">
+      <div class="wrap vb-gallery">
+        <div class="cs-ph cs-ph-dark" style="aspect-ratio:3/2" data-placeholder="VB_HUB_HERO">VB_HUB_HERO · Experimental HUB look – grey hand-knotted/macramé dress<small>2400 × 1600</small></div>
+      </div>
+      <div class="cs-col vb-project-text">
+        <h3>HUB</h3>
+        <p class="vb-meta"><span data-only="de">Modedesign · Konzept · Materialexploration</span><span data-only="en">Fashion Design · Concept · Material Exploration</span></p>
+        <p data-only="de">HUB erkundet die Beziehung zwischen Bewegung, Identität und Handwerk. Inspiriert von nomadischer Kultur und traditionellen Knüpf- und Webtechniken entwickelt sich die Kollektion von reduzierten, tragbaren Silhouetten hin zu experimentelleren Ausdrucksformen von Material und Form.</p>
+        <p data-only="en">HUB explores the relationship between movement, identity and craft. Inspired by nomadic culture and traditional knotting and weaving techniques, the collection develops from refined, wearable silhouettes into more experimental expressions of material and form.</p>
+        <p data-only="de">Das Projekt vereinte Konzeptentwicklung, Materialexperimente, Modeillustration, technische Konstruktion und Art Direction.</p>
+        <p data-only="en">The project brought together concept development, material experimentation, fashion illustration, technical construction and art direction.</p>
+      </div>
+      <div class="wrap vb-gallery">
+        <div class="cs-ph cs-ph-white" style="aspect-ratio:16/9" data-placeholder="VB_HUB_COLLECTION_ILLUSTRATION">VB_HUB_COLLECTION_ILLUSTRATION · Illustration of the full HUB collection, five silhouettes<small>2400 × 1350</small></div>
+        <div class="vb-two is-asym">
+          <div class="cs-ph" style="aspect-ratio:4/5" data-placeholder="VB_HUB_COMMERCIAL_LOOK">VB_HUB_COMMERCIAL_LOOK · Finished commercial look<small>1200 × 1500</small></div>
+          <div class="cs-ph" style="aspect-ratio:1/1" data-placeholder="VB_HUB_MATERIAL_DETAIL">VB_HUB_MATERIAL_DETAIL · Close-up of knitted/knotted material and construction<small>1200 × 1200</small></div>
+        </div>
+        <div class="vb-inset">
+          <div class="cs-ph cs-ph-white" style="aspect-ratio:4/3" data-placeholder="VB_HUB_TECHNICAL_DRAWINGS">VB_HUB_TECHNICAL_DRAWINGS · Technical fashion/construction drawings<small>1200 × 900</small></div>
+        </div>
+        <div class="cs-ph cs-ph-dark" style="aspect-ratio:3/2" data-placeholder="VB_HUB_CLOSING">VB_HUB_CLOSING · Closing editorial photograph, experimental HUB look<small>2400 × 1600</small></div>
+      </div>
+      <div class="cs-col">
+        <dl class="vb-credits">
+          <div><dt>Design</dt><dd>Susann Gebert</dd></div>
+          <div><dt><span data-only="de">Fotografie</span><span data-only="en">Photography</span></dt><dd>Steffi Blume</dd></div>
+          <div><dt>MUAH</dt><dd>Ekaterina Igonina</dd></div>
+          <div><dt>Model</dt><dd>Julia</dd></div>
+        </dl>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= 04 ILLUSTRATION & EXPLORATION ================= -->
+  <section class="vb-sec" aria-labelledby="vb-s4">
+    <div class="cs-col vb-sec-head">
+      <p class="cs-eyebrow vb-no">04</p>
+      <h2 id="vb-s4"><span data-only="de">Illustration &amp; Exploration</span><span data-only="en">Illustration &amp; exploration</span></h2>
+      <p data-only="de">Zeichnen war schon immer Teil davon, wie ich Ideen erkunde. Diese frühen Modestudien zeigen eine analoge Seite meines Prozesses – Experimente mit Proportion, Silhouette, Bewegung und visuellem Ausdruck, bevor ich ins digitale Design gewechselt bin.</p>
+      <p data-only="en">Drawing has always been part of how I explore ideas. These early fashion studies show an analogue side of my process — experimenting with proportion, silhouette, movement and visual expression before moving into digital design.</p>
+    </div>
+    <div class="wrap vb-sketches">
+      <div class="cs-ph cs-ph-white vb-s1" style="aspect-ratio:3/4" data-placeholder="VB_SKETCH_1">VB_SKETCH_1 · Fashion sketch (large)<small>1500 × 2000</small></div>
+      <div class="cs-ph cs-ph-white vb-s2" style="aspect-ratio:3/4" data-placeholder="VB_SKETCH_2">VB_SKETCH_2 · Fashion sketch<small>900 × 1200</small></div>
+      <div class="cs-ph cs-ph-white vb-s3" style="aspect-ratio:3/4" data-placeholder="VB_SKETCH_3">VB_SKETCH_3 · Fashion sketch<small>900 × 1200</small></div>
+      <div class="cs-ph cs-ph-white vb-s4" style="aspect-ratio:1/1" data-placeholder="VB_SKETCH_DETAIL">VB_SKETCH_DETAIL · Cropped sketch detail (optional)<small>1000 × 1000</small></div>
+    </div>
+  </section>
+
+  <!-- ================= NACH OBEN ================= -->
+  <div class="ap-top vb-top">
+    <a class="ap-top-link" href="#top" data-i18n-aria="ap.top" aria-label="Nach oben"><span class="tri-up" aria-hidden="true"></span></a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="name">SUSANN</div>
+      <div class="role">UX & Product Specialist</div>
+      <a class="small" href="mailto:susann.gebert@gmx.de" data-i18n="footer.mail">Schreib mir eine Mail</a>
+      <div class="social">
+        <a href="https://medium.com/@susann.gebert" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5h3.6l6.4 12.2L17.9 5.5H22v1.2l-1.6 1.5v9.6l1.6 1.5v1.2h-6.4v-1.2l1.6-1.5V9.9l-5 10.1h-.8L6 9.4v7.9l2 2.2v1.2H2v-1.2l2-2.2V8.3L2 6.7z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/susann-gebert-11679b240" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.2 7.3v7.5h2.4v-7.5zm1.2-3.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zm3.1 3.8v7.5h2.4v-3.9c0-1 .2-2 1.5-2s1.3 1.2 1.3 2.1v3.8H19v-4.3c0-2.1-.5-3.7-2.9-3.7-1.2 0-2 .6-2.3 1.2v-1z" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="projects.title">Projekte</h4>
+      <ul class="small">
+        <li><a href="ecomex.html">ecomex Business Academy</a></li>
+        <li><a href="cs-e-commerce.html">E-Commerce Website</a></li>
+        <li><a href="cs-dashboard.html">Dashboard Airbnb</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BURGER-MENÜ ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <svg class="menu-deco" viewBox="0 0 1280 728" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3">
+      <circle cx="205" cy="200" r="580"/>
+      <circle cx="165" cy="284" r="110"/>
+      <polygon points="1090,442 988,500 1090,558"/>
+      <polygon points="876,622 928,622 902,666"/>
+    </g>
+    <circle cx="218" cy="315" r="20" fill="rgba(255,255,255,.35)"/>
+    <defs>
+      <pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="6" fill="rgba(255,255,255,.35)"/>
+      </pattern>
+    </defs>
+    <rect x="998" y="93" width="288" height="288" fill="url(#dotp)"/>
+    <rect x="0" y="433" width="144" height="236" fill="url(#dotp)"/>
+  </svg>
+  <div class="menu-top">
+    <a class="menu-logo" href="index.html">SUSANN</a>
+    <button class="menu-close" type="button">
+      <span data-i18n="nav.close">Schließen</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 4l32 32M36 4L4 36" stroke="#1D1D1D" stroke-width="3.5"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html" data-i18n="menu.home">Home</a>
+    <a href="all-projects.html" data-i18n="menu.work">Projekte</a>
+    <a href="about.html" data-i18n="menu.about">Über mich</a>
+    <a href="contact.html" data-i18n="menu.contact">Kontakt</a>
+  </nav>
+</div>
+
+<script src="js/i18n.js?v=63"></script>
+<script src="js/main.js?v=63"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Visual Design – Susann Gebert</title>
+<meta name="description" content="Visual Design von Susann Gebert – Interface-Design, Branding, Print und Illustration.">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon.ico?v=2" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css?v=63">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">SUSANN</a>
+    <div class="meta">
+      <div class="lang" role="group" aria-label="Sprache / Language" data-active="de">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="meta-link" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main class="sp">
+  <!--
+    Bild-Platzhalter: Jeder graue Kasten trägt seine ID (z. B. SAMPLE_WEBSITE_RELAUNCH) im Attribut
+    data-placeholder. Zum Ersetzen den ganzen <div class="ph …"> durch
+    <img class="sp-img" src="images/…" width="…" height="…" loading="lazy" alt="…"> ersetzen.
+  -->
+
+  <!-- ================= KOPF ================= -->
+  <section class="wrap-hero sp-row sp-head">
+    <div class="sp-title">
+      <span class="tri-right" aria-hidden="true"></span>
+      <h1 class="sp-label">samples</h1>
+    </div>
+    <div>
+      <div class="sp-collage">
+        <div class="ph sp-ph-grey" data-placeholder="SAMPLES_HERO_1">SAMPLES_HERO_1 · Laptop &amp; Smartphone</div>
+        <div class="ph sp-ph-white" data-placeholder="SAMPLES_HERO_2">SAMPLES_HERO_2 · Broschüre</div>
+        <div class="ph sp-ph-white" data-placeholder="SAMPLES_HERO_3">SAMPLES_HERO_3 · Produktdesign</div>
+        <div class="ph sp-ph-yellow" data-placeholder="SAMPLES_HERO_4">SAMPLES_HERO_4 · Geräte</div>
+      </div>
+      <p class="sp-intro"><span data-only="de">Eine Auswahl verschiedener Interface- und Grafikdesigns</span><span data-only="en">A selection of different interface and graphic designs</span></p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span data-only="de">Inhalt</span><span data-only="en">content</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <!-- ================= DIGITAL ================= -->
+  <section class="sp-cat">
+    <span class="sp-dots" aria-hidden="true"></span>
+    <div class="wrap-hero sp-row">
+      <h2 class="sp-label">digital</h2>
+      <div class="sp-list">
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_WEBSITE_RELAUNCH">SAMPLE_WEBSITE_RELAUNCH · Laptop, Smartphone &amp; Screens</div>
+          <h3><span data-only="de">Website-Relaunch</span><span data-only="en">Website relaunch</span></h3>
+          <ul class="card-facts sp-meta">
+            <li><a href="https://www.ecomex.de/" target="_blank" rel="noopener">ecomex GmbH &amp; Co. KG</a></li>
+            <li>Adobe Creative Cloud</li>
+          </ul>
+        </article>
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_WEBDESIGN">SAMPLE_WEBDESIGN · Monitor &amp; Laptops</div>
+          <h3>Webdesign</h3>
+          <ul class="card-facts sp-meta">
+            <li><a href="https://digiteach.de/" target="_blank" rel="noopener">digiteach GmbH</a></li>
+            <li>Adobe XD</li>
+          </ul>
+        </article>
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_60_SECOND_APPLICATION">SAMPLE_60_SECOND_APPLICATION · Laptop &amp; Smartphone</div>
+          <h3><span data-only="de">60-Sekunden-Bewerbung – Interface</span><span data-only="en">60-second application – interface</span></h3>
+          <ul class="card-facts sp-meta">
+            <li>ecomex GmbH &amp; Co. KG</li>
+            <li>Adobe XD</li>
+          </ul>
+        </article>
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_ICONS">SAMPLE_ICONS · Icon-Varianten</div>
+          <h3><span data-only="de">Icon-Varianten</span><span data-only="en">Icon variants</span></h3>
+          <ul class="card-facts sp-meta">
+            <li><span data-only="de">Ikonografie</span><span data-only="en">Iconography</span></li>
+            <li>Adobe Illustrator</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRINT ================= -->
+  <section class="sp-cat">
+    <svg class="sp-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-10 60 L80 -10 M-10 95 L100 10" stroke="#E8E154" stroke-width="3" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <div class="wrap-hero sp-row">
+      <h2 class="sp-label">print</h2>
+      <div class="sp-list">
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_CORPORATE_IDENTITY">SAMPLE_CORPORATE_IDENTITY · Flyer &amp; Roll-ups</div>
+          <h3>Corporate Identity / Branding</h3>
+          <ul class="card-facts sp-meta">
+            <li>ecomex GmbH &amp; Co. KG</li>
+            <li>Adobe Creative Cloud</li>
+          </ul>
+        </article>
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_SKETCHES">SAMPLE_SKETCHES · Skizzen</div>
+          <h3><span data-only="de">Skizzen</span><span data-only="en">Sketches</span></h3>
+        </article>
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_EXHIBITION">SAMPLE_EXHIBITION · Ausstellungsmaterial</div>
+          <h3><span data-only="de">Ausstellungsmaterial</span><span data-only="en">Exhibition material</span></h3>
+        </article>
+        <article class="sp-item">
+          <div class="ph" data-placeholder="SAMPLE_PRODUCT_DESIGN">SAMPLE_PRODUCT_DESIGN · Produktdesign &amp; Branding</div>
+          <h3><span data-only="de">Produktdesign &amp; Branding</span><span data-only="en">Product design &amp; branding</span></h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NACH OBEN ================= -->
+  <div class="ap-top">
+    <a class="ap-top-link" href="#top" data-i18n-aria="ap.top" aria-label="Nach oben"><span class="tri-up" aria-hidden="true"></span></a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="name">SUSANN</div>
+      <div class="role">UX & Product Specialist</div>
+      <a class="small" href="mailto:susann.gebert@gmx.de" data-i18n="footer.mail">Schreib mir eine Mail</a>
+      <div class="social">
+        <a href="https://medium.com/@susann.gebert" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5h3.6l6.4 12.2L17.9 5.5H22v1.2l-1.6 1.5v9.6l1.6 1.5v1.2h-6.4v-1.2l1.6-1.5V9.9l-5 10.1h-.8L6 9.4v7.9l2 2.2v1.2H2v-1.2l2-2.2V8.3L2 6.7z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/susann-gebert-11679b240" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.2 7.3v7.5h2.4v-7.5zm1.2-3.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zm3.1 3.8v7.5h2.4v-3.9c0-1 .2-2 1.5-2s1.3 1.2 1.3 2.1v3.8H19v-4.3c0-2.1-.5-3.7-2.9-3.7-1.2 0-2 .6-2.3 1.2v-1z" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="projects.title">Projekte</h4>
+      <ul class="small">
+        <li><a href="ecomex.html">ecomex Business Academy</a></li>
+        <li><a href="cs-e-commerce.html">E-Commerce Website</a></li>
+        <li><a href="cs-dashboard.html">Dashboard Airbnb</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BURGER-MENÜ ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <svg class="menu-deco" viewBox="0 0 1280 728" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3">
+      <circle cx="205" cy="200" r="580"/>
+      <circle cx="165" cy="284" r="110"/>
+      <polygon points="1090,442 988,500 1090,558"/>
+      <polygon points="876,622 928,622 902,666"/>
+    </g>
+    <circle cx="218" cy="315" r="20" fill="rgba(255,255,255,.35)"/>
+    <defs>
+      <pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="6" fill="rgba(255,255,255,.35)"/>
+      </pattern>
+    </defs>
+    <rect x="998" y="93" width="288" height="288" fill="url(#dotp)"/>
+    <rect x="0" y="433" width="144" height="236" fill="url(#dotp)"/>
+  </svg>
+  <div class="menu-top">
+    <a class="menu-logo" href="index.html">SUSANN</a>
+    <button class="menu-close" type="button">
+      <span data-i18n="nav.close">Schließen</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 4l32 32M36 4L4 36" stroke="#1D1D1D" stroke-width="3.5"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html" data-i18n="menu.home">Home</a>
+    <a href="all-projects.html" data-i18n="menu.work">Projekte</a>
+    <a href="about.html" data-i18n="menu.about">Über mich</a>
+    <a href="contact.html" data-i18n="menu.contact">Kontakt</a>
+  </nav>
+</div>
+
+<script src="js/i18n.js?v=63"></script>
+<script src="js/main.js?v=63"></script>
+</body>
+</html>

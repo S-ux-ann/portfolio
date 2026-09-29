@@ -46,6 +46,8 @@ const TEXT = {
     "nx.brand":"Nexio Brand Guide: Logo, Schrift, Farben, Verläufe, Bildwelt und grafische Elemente",
     "nx.flow":"User Flow der Nexio-App: Schichtbeginn eines Fahrers mit Entscheidungspunkten und alternativen Wegen",
     "nx.outcome":"Hand hält ein Smartphone mit einem Screen der Nexio-App",
+    "nx.apps":"Nexio-Markenanwendungen: Website auf einem Laptop, Briefpapier, Fahrzeugbeschriftung und Firmenschild",
+    "nx.review":"Seiten aus dem UX/UI-Feedbackdokument zur Nexio-App mit Screenshots und Empfehlungen",
     "nx.dash":"Frühes Dashboard-Konzept: Figma-Canvas mit verbundenen Flows und Komponenten, daneben ein Tablet mit der Fahrer-Übersicht",
     "nx.proto":"Verbundene Screens aus dem Figma-Prototyp der Nexio-App: Kraftstoffkosten erfassen und Beleg scannen",
   },
@@ -93,6 +95,8 @@ const TEXT = {
     "nx.brand":"Nexio brand guide: logo, typography, colors, gradients, imagery and graphic elements",
     "nx.flow":"Nexio app user flow: a driver starting a shift, with decision points and alternative paths",
     "nx.outcome":"Hand holding a smartphone showing a screen of the Nexio app",
+    "nx.apps":"Nexio brand applications: website on a laptop, letterhead, vehicle branding and company sign",
+    "nx.review":"Pages from the UX/UI feedback document for the Nexio app, with screenshots and recommendations",
     "nx.dash":"Early dashboard concept: Figma canvas with connected flows and components, next to a tablet showing the driver overview",
     "nx.proto":"Connected screens from the Nexio app Figma prototype: logging fuel costs and scanning a receipt",
   }

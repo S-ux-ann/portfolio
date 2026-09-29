@@ -42,6 +42,11 @@ const TEXT = {
     "db.hero":"Airbnb Earnings Dashboard auf einem Monitor mit Styleguide",
     "db.affinity":"Affinity Diagram mit geclusterten Beobachtungen aus den Interviews","db.crazy8":"Crazy-8s-Skizzen und MoSCoW-Priorisierung der Ideen","db.paper":"Test mit dem Papierprototyp: zwei Testpersonen interagieren mit den Papier-Screens","db.tile":"Style Tile des Dashboards mit Typografie, Farben und UI-Elementen","db.comp":"Ausschnitt aus dem Figma-Komponentensystem des Dashboards","db.final":"Finales Airbnb-Dashboard auf zwei Laptops",
     "nx.hero":"Smartphone mit dem Nexio-App-Icon auf dunklem Hintergrund",
+    "nx.brand":"Nexio Brand Guide: Logo, Schrift, Farben, Verläufe, Bildwelt und grafische Elemente",
+    "nx.flow":"User Flow der Nexio-App: Schichtbeginn eines Fahrers mit Entscheidungspunkten und alternativen Wegen",
+    "nx.outcome":"Hand hält ein Smartphone mit einem Screen der Nexio-App",
+    "nx.dash":"Frühes Dashboard-Konzept: Figma-Canvas mit verbundenen Flows und Komponenten, daneben ein Tablet mit der Fahrer-Übersicht",
+    "nx.proto":"Verbundene Screens aus dem Figma-Prototyp der Nexio-App: Kraftstoffkosten erfassen und Beleg scannen",
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
@@ -83,6 +88,11 @@ const TEXT = {
     "db.hero":"Airbnb earnings dashboard on a monitor with style guide",
     "db.affinity":"Affinity diagram with clustered observations from the interviews","db.crazy8":"Crazy 8s sketches and MoSCoW prioritization of the ideas","db.paper":"Paper prototype test: two participants interacting with the paper screens","db.tile":"Dashboard style tile with typography, colors and UI elements","db.comp":"Excerpt from the dashboard's Figma component system","db.final":"Final Airbnb dashboard on two laptops",
     "nx.hero":"Smartphone showing the Nexio app icon on a dark background",
+    "nx.brand":"Nexio brand guide: logo, typography, colors, gradients, imagery and graphic elements",
+    "nx.flow":"Nexio app user flow: a driver starting a shift, with decision points and alternative paths",
+    "nx.outcome":"Hand holding a smartphone showing a screen of the Nexio app",
+    "nx.dash":"Early dashboard concept: Figma canvas with connected flows and components, next to a tablet showing the driver overview",
+    "nx.proto":"Connected screens from the Nexio app Figma prototype: logging fuel costs and scanning a receipt",
   }
 };
 

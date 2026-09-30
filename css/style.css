@@ -65,10 +65,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lang button[aria-pressed="true"]{color:var(--bright-yellow)}
 
 /* ---------- Hero ---------- */
-.hero{display:grid;grid-template-columns:var(--indent) 1fr minmax(0,.9fr);grid-template-areas:"hey text art";align-items:center;padding:clamp(28px,4vw,64px) 0 clamp(20px,3vw,48px)}
-.hey{grid-area:hey;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(14px,1.8vw,28px)}
-.hey-word{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:900;font-size:clamp(64px,12vw,180px);line-height:.78;letter-spacing:-.01em}
-.hero-text{grid-area:text;padding-right:clamp(16px,3vw,48px)}
+/* 1. Spalte = Abstand zwischen Hero-Breite (90 %) und Inhaltsbreite (75 %) → Text bündig mit der Linie unter "Projekte" */
+.hero{display:grid;grid-template-columns:7.5vw 1fr minmax(0,.9fr);grid-template-areas:". text art";align-items:center;padding:clamp(28px,4vw,64px) 0 clamp(20px,3vw,48px)}
+.hero-text{grid-area:text;position:relative;padding-right:clamp(16px,3vw,48px)}
+/* Gelbes Dreieck links vor dem Text, zeigt auf "Ich bin Susann" */
+.hero-tri{position:absolute;right:calc(100% + clamp(10px,1.4vw,20px));top:calc(clamp(26px,4.2vw,60px) * .6);transform:translateY(-50%);width:clamp(28px,4.2vw,60px);height:clamp(32px,4.8vw,69px)}
 .hero-intro{font-weight:300;font-size:clamp(26px,4.2vw,60px);line-height:1.2}
 .hero-role{font-weight:700;font-size:clamp(26px,4.2vw,60px);line-height:1.2;min-height:1.2em;margin-bottom:clamp(18px,2vw,32px)}
 .caret{display:inline-block;width:3px;height:.9em;background:var(--bright-yellow);margin-left:3px;vertical-align:-.08em;animation:blink 1s steps(1) infinite}
@@ -174,7 +175,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    ========================================================= */
 /* Tablet */
 @media (max-width:900px){
-  .hero{grid-template-columns:auto 1fr;grid-template-areas:"hey art" "hey text";column-gap:28px;row-gap:10px}
+  .hero{grid-template-columns:7.5vw 1fr;grid-template-areas:". art" ". text";row-gap:10px}
   .hero-art{max-width:320px;justify-self:end}
   .projects{grid-template-columns:minmax(0,1fr)}
   .card-feature{grid-template-columns:minmax(0,1fr);gap:14px}
@@ -190,11 +191,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .logo{font-size:24px}
   .meta{gap:14px}
   .meta-link{display:none}
-  .hero{grid-template-columns:auto 1fr;grid-template-areas:"hey art" "text text";column-gap:16px;row-gap:24px}
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"art" "text";row-gap:24px}
   .hero-text{padding-right:0}
-  .hey-word{font-size:64px}
   .tri-right{width:34px;height:38px}
-  .hey .tri-right{width:38px;height:34px;clip-path:polygon(0 0,100% 0,50% 100%)}   /* Pfeil zeigt mobil nach unten */
+  .hero-tri{position:static;display:block;transform:none;width:30px;height:26px;margin-bottom:12px;clip-path:polygon(0 0,100% 0,50% 100%)}   /* Handy: kein Platz links → Dreieck über dem Text, zeigt nach unten */
   .hero-art{max-width:200px}
   .hero-role{font-size:26px}
   .hero-intro{font-size:26px}

@@ -23,7 +23,7 @@ const TEXT = {
     "about.head":"Gute Produkte beginnen damit, Menschen zu verstehen.",
     "about.desc":"Mein Weg ins Design führte mich über Grafikdesign, Mode und Branding bis zu digitalen Produkten. Geblieben ist meine Neugier auf Menschen und darauf, wie sie mit den Dingen umgehen, die wir gestalten. Heute bringe ich diese Perspektive in UX- und Produktarbeit ein und verbinde User Insights, Design Thinking und Daten, um digitale Erlebnisse besser zu machen.",
     "cta.view":"Ansehen","cta.explore":"Entdecken","cta.more":"Mehr","cta.about":"Über mich",
-    "footer.mail":"Schreib mir eine Mail",
+    "footer.about":"Über mich","footer.contact":"Kontakt",
     /* About-Seite */
     "about.p1":"Ich bin <b>UX & Product Specialist</b> aus Berlin mit Hintergrund in Grafikdesign, Marketing und digitalem Produktdesign. Mein Weg ins Design begann früh: Inspiriert von der Leidenschaft meines Großvaters für Grafik, startete ich als Grafikdesignerin und erweiterte meinen Fokus später auf Modedesign, Branding und digitale Erlebnisse. Was diese Bereiche für mich verbindet, ist ein echtes <b>Interesse an Menschen</b>: wie sie Produkte wahrnehmen, nutzen und erleben.",
     "about.p2":"Mit der Zeit rückten <b>UX und digitale Produktentwicklung</b> immer stärker in den Mittelpunkt. Heute arbeite ich an der Schnittstelle von <b>User Research, UX-Qualität und Product Insights</b>. Mit qualitativen Beobachtungen, Usability-Tests und Daten finde ich Reibungspunkte, verstehe Nutzerbedürfnisse und übersetze Erkenntnisse in konkrete Verbesserungen entlang der Customer Journey.",
@@ -94,7 +94,7 @@ const TEXT = {
     "about.head":"Designing products starts with understanding people.",
     "about.desc":"My path into design has taken me through graphic design, fashion, branding and digital products. What has stayed constant is my curiosity about people and the way they interact with the things we create. Today, I bring this perspective into UX and product work — combining user insights, design thinking and data to improve digital experiences.",
     "cta.view":"View","cta.explore":"Explore","cta.more":"More","cta.about":"About me",
-    "footer.mail":"Send me an email",
+    "footer.about":"About me","footer.contact":"Contact",
     /* About page */
     "about.p1":"I’m a Berlin-based <b>UX and Product Specialist</b> with a background in graphic design, marketing and digital product design. My path into design started early. Inspired by my grandfather’s passion for graphics, I began my career as a graphic designer before expanding into fashion design, branding and digital experiences. What connects these different fields for me is a genuine <b>interest in people</b>: how they perceive, interact with and experience products.",
     "about.p2":"Over time, my focus shifted increasingly towards <b>UX and digital product development</b>. Today, I work at the intersection of <b>user research, UX quality and product insights</b>. I use qualitative observations, usability testing and data to identify friction, understand user needs and turn insights into concrete improvements along the customer journey.",

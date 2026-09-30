@@ -161,16 +161,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .social svg{width:26px;height:26px;fill:var(--light-black)}
 
 /* ---------- Burger-Menü ---------- */
-.menu{position:fixed;inset:0;z-index:100;background:var(--bright-yellow);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s}
+.menu{position:fixed;inset:0;z-index:100;background:var(--light-black);color:var(--white);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s;overflow-y:auto}
 .menu.open{opacity:1;visibility:visible}
-.menu-deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.menu-deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.35}
 .menu-top{position:relative;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,3vw,76px)}
-.menu-logo{font-weight:900;font-size:clamp(34px,4.4vw,64px);text-decoration:none;line-height:1}
-.menu-close{display:flex;align-items:center;gap:clamp(16px,3vw,60px);font-size:clamp(15px,1.5vw,22px)}
+.menu-logo{font-weight:900;font-size:clamp(34px,4.4vw,64px);text-decoration:none;line-height:1;color:var(--white)}
+.menu-close{display:flex;align-items:center;gap:clamp(16px,3vw,60px);font-size:clamp(15px,1.5vw,22px);color:var(--white)}
 .menu-close svg{width:clamp(26px,3vw,40px);height:clamp(26px,3vw,40px)}
-.menu nav{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(18px,4vh,48px)}
-.menu nav a{font-weight:700;font-size:clamp(40px,6vw,86px);line-height:1;text-decoration:none;text-transform:uppercase}
-.menu nav a:hover{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}
+.menu-close svg path{stroke:currentColor}
+/* Menüpunkte: gelbe Nummer mit Dreieck, Begriff groß in Weiß; 01+02 | 03 | 04+05 */
+.menu-nav{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(12px,3vh,36px);padding:clamp(16px,3vh,40px) clamp(20px,3vw,76px)}
+.menu-row{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(12px,3vh,36px) clamp(28px,5vw,88px)}
+.menu-nav a{display:inline-flex;align-items:flex-start;gap:clamp(8px,.9vw,14px);font-weight:700;font-size:clamp(34px,5.6vw,88px);line-height:1.05;letter-spacing:-.01em;color:var(--white);text-decoration:none;transition:color .2s ease}
+.menu-no{display:inline-flex;align-items:center;gap:6px;margin-top:.3em;font-size:clamp(13px,1.1vw,18px);font-weight:700;letter-spacing:.04em;color:var(--bright-yellow)}
+.menu-no::before{content:"";width:.6em;height:.7em;background:var(--bright-yellow);clip-path:polygon(0 0,100% 50%,0 100%)}
+.menu-nav a:hover,.menu-nav a:focus-visible,.menu-nav a[aria-current="page"]{color:var(--bright-yellow)}
 
 /* =========================================================
    BREAKPOINTS
@@ -188,6 +193,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 /* Phone */
 @media (max-width:560px){
+  .menu-row{flex-direction:column;align-items:center}
+  .menu-nav a{font-size:30px}
   .sec-head.sec-brand{margin-top:50px}
   :root{--indent:0%;--content-w:90%}
   .logo{font-size:24px}

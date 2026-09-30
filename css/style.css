@@ -84,7 +84,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sec-head h2{font-weight:700;font-size:clamp(24px,3.2vw,46px);line-height:1}
 
 /* Abstand "Neugierig?"-Box → "Visual & Brand Work" */
-.sec-head.sec-brand{margin-top:100px}
+.sec-head.sec-brand{margin-top:150px}
 
 /* ---------- Karten ---------- */
 .projects{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap)}
@@ -136,7 +136,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .brand .txt{padding:0}
 
 /* ---------- About ---------- */
-.about{background:var(--light-black);color:var(--white);margin-top:150px}   /* Abstand Visual & Brand Work → About */
+.about{background:var(--light-black);color:var(--white);margin-top:200px}   /* Abstand Visual & Brand Work → About */
 .about .wrap{display:flex;flex-direction:column;gap:clamp(24px,3vw,48px);padding-top:clamp(56px,8vw,120px);padding-bottom:clamp(56px,8vw,120px)}
 .about-box{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:clamp(28px,4vw,64px)}
 .about-mark{padding-block:clamp(44px,7.5vw,110px)}   /* Platz für den Kreis */
@@ -182,6 +182,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    ========================================================= */
 /* Tablet */
 @media (max-width:900px){
+  .sec-head.sec-brand{margin-top:100px}   /* +50px nur auf dem Desktop */
+  .about{margin-top:150px}
   .hero{grid-template-columns:7.5vw 1fr;grid-template-areas:". art" ". text";row-gap:10px}
   .hero-art{max-width:320px;justify-self:end}
   .projects{grid-template-columns:minmax(0,1fr)}

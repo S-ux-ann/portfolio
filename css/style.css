@@ -51,7 +51,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .topbar{position:sticky;top:0;z-index:50;border-bottom:var(--line) solid var(--bright-yellow);background:var(--bg);padding-top:env(safe-area-inset-top,0px);margin-top:calc(-1 * env(safe-area-inset-top,0px))}
 .topbar .wrap{width:auto;padding:0 clamp(16px,3vw,40px);display:flex;align-items:center;justify-content:space-between;height:clamp(60px,5.5vw,80px)}
 .logo{font-weight:900;font-size:clamp(24px,2.8vw,40px);letter-spacing:-.01em;text-decoration:none}
-.meta{display:flex;align-items:center;gap:clamp(16px,2vw,32px)}
+.meta{display:flex;align-items:center;gap:clamp(28px,3vw,48px)}
 .meta-link{font-size:clamp(14px,1.2vw,18px);text-decoration:none}
 .meta-link:hover{text-decoration:underline}
 .burger{width:clamp(28px,2.6vw,38px);height:clamp(22px,2vw,28px);display:flex;flex-direction:column;justify-content:space-between;padding:4px 0}
@@ -191,7 +191,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .sec-head.sec-brand{margin-top:50px}
   :root{--indent:0%;--content-w:90%}
   .logo{font-size:24px}
-  .meta{gap:14px}
+  .meta{gap:22px}
   .meta-link{display:none}
   .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"art" "text";row-gap:24px}
   .hero-text{padding-right:0}

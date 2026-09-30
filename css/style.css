@@ -58,11 +58,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .burger span{display:block;height:3px;background:var(--light-black)}
 
 /* Sprachumschalter */
-.lang{position:relative;display:inline-flex;background:var(--bg);border:1px solid var(--grey);border-radius:999px;padding:3px}
-.lang::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);background:var(--light-black);border-radius:999px;transition:transform .25s ease}
-.lang[data-active="en"]::before{transform:translateX(100%)}
-.lang button{position:relative;z-index:1;width:clamp(36px,3.4vw,48px);height:clamp(24px,2.2vw,32px);font-size:clamp(12px,1.1vw,16px);font-weight:700;border-radius:999px;color:var(--light-black);transition:color .25s ease}
-.lang button[aria-pressed="true"]{color:var(--bright-yellow)}
+.lang{display:inline-flex;gap:clamp(10px,1vw,16px)}
+/* DE / EN als Text wie "Kontakt"; die gewählte Sprache bekommt den orangenen Balken wie die View-Buttons */
+.lang button{position:relative;isolation:isolate;font-size:clamp(14px,1.2vw,18px);font-weight:400;color:var(--light-black);padding:0 3px}
+.lang button::before{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.42em;background:var(--orange);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.lang button[aria-pressed="true"]::before{transform:scaleX(1)}
+.lang button:not([aria-pressed="true"]):hover::before{transform:scaleX(1);opacity:.4}
 
 /* ---------- Hero ---------- */
 /* 1. Spalte = Abstand zwischen Hero-Breite (90 %) und Inhaltsbreite (75 %) → Text bündig mit der Linie unter "Projekte" */

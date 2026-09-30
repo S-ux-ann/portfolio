@@ -164,8 +164,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .menu{position:fixed;inset:0;z-index:100;background:var(--light-black);color:var(--white);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s;overflow-y:auto}
 .menu.open{opacity:1;visibility:visible}
 .menu-deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.35}
-.menu-top{position:relative;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,3vw,76px)}
-.menu-logo{font-weight:900;font-size:clamp(34px,4.4vw,64px);text-decoration:none;line-height:1;color:var(--white)}
+.menu-top{position:relative;display:flex;justify-content:space-between;align-items:center;padding:0 clamp(16px,3vw,40px);height:clamp(60px,5.5vw,80px)}   /* gleiche Höhe & Ränder wie die Topbar → Logo springt nicht */
+.menu-logo{font-weight:900;font-size:clamp(24px,2.8vw,40px);letter-spacing:-.01em;text-decoration:none;line-height:1;color:var(--white)}   /* wie .logo */
 .menu-close{display:flex;align-items:center;gap:clamp(16px,3vw,60px);font-size:clamp(15px,1.5vw,22px);color:var(--white)}
 .menu-close svg{width:clamp(26px,3vw,40px);height:clamp(26px,3vw,40px)}
 .menu-close svg path{stroke:currentColor}
@@ -199,7 +199,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .menu-nav a{font-size:30px}
   .sec-head.sec-brand{margin-top:50px}
   :root{--indent:0%;--content-w:90%}
-  .logo{font-size:24px}
+  .logo,.menu-logo{font-size:24px}
   .meta{gap:22px}
   .meta-link{display:none}
   .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"art" "text";row-gap:24px}

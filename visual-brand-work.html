@@ -8,7 +8,7 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=71">
+<link rel="stylesheet" href="css/style.css?v=72">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
   Bilder: Die grauen Kästen (class="cs-ph") sind Platzhalter mit einer ID (data-placeholder, z. B. VB_HUB_HERO).
   Zum Ersetzen den ganzen <div class="cs-ph …"> durch
   <img class="vb-img" src="images/…" width="…" height="…" loading="lazy" alt="…" data-i18n-alt="…">
-  austauschen. Ausnahme: das erste Bild im Kopf (VB_HERO_MAGAZINE) bekommt KEIN loading="lazy".
+  austauschen. Ausnahme: das große Bild im Kopf (vb-a) bekommt KEIN loading="lazy".
 -->
 
 <main class="cs vb">
@@ -51,11 +51,11 @@
       </div>
     </div>
 
-    <!-- Beim Ersetzen die Klassen vb-a / vb-b / vb-c am <img> behalten (steuern Position & Überlappung) -->
+    <!-- Klassen vb-a / vb-b / vb-c steuern Position & Überlappung: vb-a groß links, vb-c oben rechts, vb-b liegt darüber -->
     <div class="wrap vb-hero-grid">
-      <div class="cs-ph vb-a" style="aspect-ratio:4/5" data-placeholder="VB_HERO_MAGAZINE">VB_HERO_MAGAZINE · Fashion magazine cover<small>1600 × 2000 · ohne lazy loading</small></div>
-      <div class="cs-ph vb-b" style="aspect-ratio:1/1" data-placeholder="VB_HERO_HUB_DETAIL">VB_HERO_HUB_DETAIL · HUB fashion/material detail<small>1200 × 1200</small></div>
-      <div class="cs-ph vb-c" style="aspect-ratio:4/3" data-placeholder="VB_HERO_CLARINGA">VB_HERO_CLARINGA · Claringa branding or packaging<small>1200 × 900</small></div>
+      <img class="vb-img vb-a" src="images/magazine-map.webp" width="1000" height="750" fetchpriority="high" alt="Modemagazin: Doppelseite mit Stadtplan des Kiezes" data-i18n-alt="vb.magMap">
+      <img class="vb-img vb-b" src="images/sketch-four-looks.webp" width="600" height="900" loading="lazy" alt="Farbige Modezeichnungen von vier Looks" data-i18n-alt="vb.skFour">
+      <img class="vb-img vb-c" src="images/claringa-packaging.webp" width="2000" height="1283" loading="lazy" alt="Claringa: Tuben und Fläschchen der Sorten Thymian-Ginger und Coconut-Cacao" data-i18n-alt="vb.clPack">
     </div>
   </section>
 
@@ -258,7 +258,7 @@
   </nav>
 </div>
 
-<script src="js/i18n.js?v=71"></script>
-<script src="js/main.js?v=71"></script>
+<script src="js/i18n.js?v=72"></script>
+<script src="js/main.js?v=72"></script>
 </body>
 </html>

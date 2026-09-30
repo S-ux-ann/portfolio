@@ -24,11 +24,18 @@ function setLang(l){
   });
   const toggle = document.querySelector(".lang");
   toggle.dataset.active = l;
-  toggle.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  toggle.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
   try { localStorage.setItem("lang", l); } catch(e){}
   startTyping();
 }
-document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+/* Sprach-Icon: Klick öffnet die Auswahl DE / EN */
+const langToggle = document.querySelector(".lang-toggle");
+const langMenu = document.getElementById("lang-menu");
+function setLangMenu(open){ langMenu.hidden = !open; langToggle.setAttribute("aria-expanded", open); }
+langToggle.addEventListener("click", () => setLangMenu(langMenu.hidden));
+document.querySelectorAll(".lang [data-lang]").forEach(b => b.addEventListener("click", () => { setLang(b.dataset.lang); setLangMenu(false); langToggle.focus(); }));
+document.addEventListener("click", e => { if (!langMenu.hidden && !e.target.closest(".lang")) setLangMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !langMenu.hidden){ setLangMenu(false); langToggle.focus(); } });
 
 /* ---------- Tipp-Animation ---------- */
 const typedEl = document.getElementById("typed");
@@ -109,3 +116,20 @@ document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("click", open);
   card.addEventListener("auxclick", open);
 });
+
+/* ---------- Abschnitts-Navigation (Visual & Brand Work) ----------
+   Markiert den Abschnitt, der gerade im Blick ist. */
+const tocLinks = [...document.querySelectorAll(".vb-toc a")];
+if (tocLinks.length && "IntersectionObserver" in window){
+  const byId = new Map(tocLinks.map(a => [a.getAttribute("href").slice(1), a]));
+  const secs = tocLinks.map(a => document.getElementById(a.getAttribute("href").slice(1))?.closest("section")).filter(Boolean);
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const id = e.target.querySelector("h2[id]")?.id;
+      tocLinks.forEach(a => a.removeAttribute("aria-current"));
+      if (byId.get(id)) byId.get(id).setAttribute("aria-current", "true");
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  secs.forEach(s => io.observe(s));
+}

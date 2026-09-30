@@ -54,21 +54,27 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .meta{display:flex;align-items:center;gap:clamp(28px,3vw,48px)}
 .meta-link{font-size:clamp(14px,1.2vw,18px);text-decoration:none}
 .meta-link:hover{text-decoration:underline}
+.meta-link.btn-view{color:var(--light-black);align-self:center}   /* "Kontakt" als View-Button */
+.meta-link.btn-view:hover{text-decoration:none}
 .burger{width:clamp(28px,2.6vw,38px);height:clamp(22px,2vw,28px);display:flex;flex-direction:column;justify-content:space-between;padding:4px 0}
 .burger span{display:block;height:3px;background:var(--light-black)}
 
 /* Sprachumschalter */
-.lang{--lang-gap:clamp(14px,1.4vw,22px);display:inline-flex;gap:var(--lang-gap)}
-.lang button:first-child::after{content:"|";position:absolute;left:calc(100% + var(--lang-gap) / 2);transform:translateX(-50%);color:var(--light-black);pointer-events:none}   /* Trennstrich DE | EN */
-/* DE / EN als Text wie "Kontakt"; die gewählte Sprache bekommt den orangenen Balken wie die View-Buttons */
-.lang button{position:relative;isolation:isolate;font-size:clamp(14px,1.2vw,18px);font-weight:400;color:var(--light-black);padding:0 3px}
-.lang button::before{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.42em;background:var(--orange);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-.lang button[aria-pressed="true"]::before{transform:scaleX(1)}
-.lang button:not([aria-pressed="true"]):hover::before{transform:scaleX(1);opacity:.4}
+/* Sprachwahl: Globus-Icon, Klick öffnet DE / EN */
+.lang{position:relative;display:flex}
+.lang-toggle{display:grid;place-items:center;width:clamp(28px,2.4vw,36px);height:clamp(28px,2.4vw,36px);color:var(--light-black);border-radius:50%;transition:background .2s ease}
+.lang-toggle:hover,.lang-toggle[aria-expanded="true"]{background:rgba(29,29,29,.08)}
+.lang-toggle svg{width:78%;height:78%;fill:none;stroke:currentColor;stroke-width:2}   /* ca. 2,25px am Desktop */
+.lang-menu{position:absolute;top:calc(100% + 10px);right:50%;transform:translateX(50%);display:flex;flex-direction:column;gap:2px;background:var(--light-black);border-radius:var(--radius);padding:8px;box-shadow:0 12px 32px rgba(29,29,29,.2);z-index:60}
+.lang-menu[hidden]{display:none}
+.lang-menu button{position:relative;min-width:72px;padding:8px 14px 8px 28px;text-align:left;font-size:clamp(14px,1.1vw,16px);color:var(--white);border-radius:6px}
+.lang-menu button:hover,.lang-menu button:focus-visible{background:rgba(255,255,255,.1)}
+/* gewählte Sprache: gelbes Dreieck davor */
+.lang-menu button[aria-pressed="true"]::before{content:"";position:absolute;left:12px;top:50%;width:.5em;height:.6em;background:var(--bright-yellow);clip-path:polygon(0 0,100% 50%,0 100%);transform:translateY(-50%)}
 
 /* ---------- Hero ---------- */
 /* 1. Spalte = Abstand zwischen Hero-Breite (90 %) und Inhaltsbreite (75 %) → Text bündig mit der Linie unter "Projekte" */
-.hero{display:grid;grid-template-columns:7.5vw minmax(0,1fr) minmax(0,.5fr);grid-template-areas:". text art";align-items:center;padding:clamp(60px,14vw,200px) 0 clamp(20px,3vw,48px)}   /* oben ca. 200px Luft (Desktop) */
+.hero{display:grid;grid-template-columns:7.5vw minmax(0,1fr) minmax(0,.5fr);grid-template-areas:". text art";align-items:center;padding:clamp(60px,6.95vw,100px) 0 clamp(20px,3vw,48px)}   /* oben ca. 100px Luft (Desktop) */
 .hero-text{grid-area:text;align-self:end;position:relative;padding-right:clamp(16px,3vw,48px)}
 /* Gelbes Dreieck links vor dem Text, zeigt auf "Ich bin Susann" */
 .hero-tri{position:absolute;right:calc(100% + clamp(10px,1.4vw,20px));top:calc(clamp(26px,4.2vw,60px) * .6);transform:translateY(-50%);width:clamp(28px,4.2vw,60px);height:clamp(32px,4.8vw,69px)}
@@ -621,13 +627,34 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .vb-img{width:100%;height:auto;border-radius:var(--radius);display:block}
 .vb-hero{padding-top:clamp(40px,5vw,88px)}
 .vb-title{font-weight:700;font-size:clamp(30px,4vw,58px);line-height:1.12;letter-spacing:-.01em;margin-top:clamp(6px,.8vw,12px)}
-.vb-cats{font-size:clamp(13px,1vw,15px);font-weight:600;letter-spacing:.04em;color:#6b6b6b;margin-top:clamp(16px,1.8vw,28px)}
 /* Kopf: großes Cover links, zwei kleinere Bilder rechts versetzt */
+/* Abschnitts-Navigation: schlank, unter dem gelben Dreieck links */
+.vb-toc{position:absolute;left:clamp(16px,3vw,40px);bottom:0;width:calc(20% - clamp(16px,3vw,40px) - 24px)}
+.vb-toc ol{list-style:none;display:flex;flex-direction:column;gap:clamp(8px,.8vw,12px);border-left:2px solid var(--grey);padding-left:clamp(12px,1vw,16px)}
+.vb-toc a{position:relative;display:block;font-size:clamp(13px,1vw,15px);line-height:1.3;color:#6b6b6b;text-decoration:none;transition:color .2s ease}
+.vb-toc a::before{content:"";position:absolute;left:calc(-1 * clamp(12px,1vw,16px) - 2px);top:0;bottom:0;width:2px;background:var(--bright-yellow);transform:scaleY(0);transition:transform .2s ease}
+.vb-toc a:hover,.vb-toc a:focus-visible,.vb-toc a[aria-current="true"]{color:var(--light-black)}
+.vb-toc a:hover::before,.vb-toc a[aria-current="true"]::before{transform:scaleY(1)}
+@media (min-width:1025px) and (max-width:1200px){   /* schmaler Desktop: Navigation etwas kleiner */
+  .vb-toc ol{gap:6px}
+  .vb-toc a{font-size:12px}
+}
+@media (max-width:1024px){   /* kein Platz links → unter dem Intro, als Zeile */
+  .vb-hero .cs-hero-head{display:flex;flex-direction:column}
+  .vb-toc{order:2}
+  .vb-toc{position:static;width:calc(var(--content-w) * var(--text-ratio));margin:clamp(20px,3vw,32px) auto 0}
+  .vb-toc ol{flex-direction:row;flex-wrap:wrap;gap:8px 20px;border-left:0;padding-left:0}
+  .vb-toc a::before{left:0;right:0;top:auto;bottom:-3px;width:auto;height:2px;transform:scaleX(0)}
+  .vb-toc a:hover::before,.vb-toc a[aria-current="true"]::before{transform:scaleX(1)}
+}
+@media (max-width:560px){
+  .vb-toc{width:90%}   /* wie .cs-col auf dem Handy */
+}
 /* Kopf: Cover groß links; Clarinqa oben rechts; HUB-Detail liegt darüber und überlappt Cover und Clarinqa (Tiefeneffekt) */
 .vb-hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--vb-gap);margin-top:clamp(40px,5vw,80px)}
 .vb-hero-grid .vb-a{grid-column:1/9;grid-row:1/4;align-self:start;margin-top:clamp(40px,5vw,88px);position:relative;z-index:1}
 .vb-hero-grid .vb-b{grid-column:8/12;grid-row:1;width:75%;align-self:start;position:relative;z-index:3;box-shadow:0 18px 48px rgba(29,29,29,.22)}
-.vb-hero-grid .vb-c{grid-column:10/13;grid-row:2;width:70%;justify-self:end;align-self:start;margin-top:calc(-1 * clamp(40px,5vw,80px));position:relative;z-index:2;box-shadow:0 12px 32px rgba(29,29,29,.16)}
+.vb-hero-grid .vb-c{grid-column:10/13;grid-row:2;width:70%;justify-self:start;align-self:start;margin-top:calc(-1 * clamp(12px,1.6vw,28px));position:relative;z-index:2;box-shadow:0 12px 32px rgba(29,29,29,.16)}
 
 .vb-sec{padding-top:clamp(96px,11vw,180px)}
 .vb-sec-head h2{font-weight:700;font-size:clamp(26px,3vw,44px);line-height:1.15;margin-bottom:clamp(14px,1.4vw,22px)}

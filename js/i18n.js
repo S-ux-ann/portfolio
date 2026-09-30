@@ -29,7 +29,6 @@ const TEXT = {
     "about.p2":"Mit der Zeit rückten <b>UX und digitale Produktentwicklung</b> immer stärker in den Mittelpunkt. Heute arbeite ich an der Schnittstelle von <b>User Research, UX-Qualität und Product Insights</b>. Mit qualitativen Beobachtungen, Usability-Tests und Daten finde ich Reibungspunkte, verstehe Nutzerbedürfnisse und übersetze Erkenntnisse in konkrete Verbesserungen entlang der Customer Journey.",
     "about.p3":"Mein Design-Hintergrund prägt bis heute meine Arbeitsweise: Ich verbinde analytisches Denken mit einem ausgeprägten Gespür für visuelle Kommunikation, Markenkonsistenz und das Produkterlebnis als Ganzes. Ich schaue gern über einzelne Screens hinaus, um zu verstehen, wie Touchpoints zusammenhängen und wo es Potenzial für Verbesserungen gibt. Meine Herangehensweise ist durchdacht, aufmerksam und anpassungsfähig. Mir sind klare Kommunikation, unterschiedliche Perspektiven und kollaboratives Arbeiten wichtig.",
     "about.p4":"Was mich heute antreibt, ist das Zusammenspiel dieser Perspektiven: <b>Kreativität, Nutzerverständnis, Daten und Product Thinking.</b> Ich lerne ständig dazu und schärfe meinen Blick weiter. Am Ende möchte ich Produkte gestalten, die nicht nur gut aussehen, sondern Sinn ergeben und <b>echte Probleme lösen.</b>",
-    "about.fashion":"Hier geht’s zu meinem Fashion-Portfolio",
     "about.portrait":"Porträt von Susann Gebert",
     /* Case Studies */
     "cs.prev":"Vorherige Karte","cs.next":"Nächste Karte","cs.compare":"Vorher/Nachher vergleichen","cs.progress":"Abschnitte der Seite","ap.top":"Nach oben","cs.prevImg":"Vorheriges Bild","cs.nextImg":"Nächstes Bild",
@@ -100,7 +99,6 @@ const TEXT = {
     "about.p2":"Over time, my focus shifted increasingly towards <b>UX and digital product development</b>. Today, I work at the intersection of <b>user research, UX quality and product insights</b>. I use qualitative observations, usability testing and data to identify friction, understand user needs and turn insights into concrete improvements along the customer journey.",
     "about.p3":"My design background still shapes the way I work, combining analytical thinking with a strong sense for visual communication, brand consistency and the overall product experience. I like looking beyond individual screens to understand how touchpoints connect and where there is room for improvement. My approach is thoughtful, observant and adaptable. I value clear communication, different perspectives and collaborative ways of working.",
     "about.p4":"What motivates me today is bringing these perspectives together: <b>creativity, user understanding, data and product thinking.</b> I’m constantly learning and refining my perspective. Ultimately, I want to create products that not only look good, but make sense and <b>solve real problems.</b>",
-    "about.fashion":"See my fashion portfolio here",
     "about.portrait":"Portrait of Susann Gebert",
     /* Case studies */
     "cs.prev":"Previous card","cs.next":"Next card","cs.compare":"Compare before and after","cs.progress":"Page sections","ap.top":"Back to top","cs.prevImg":"Previous image","cs.nextImg":"Next image",

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About – Susann Gebert</title>
-<meta name="description" content="Susann Gebert – UX & Product Design aus Berlin.">
+<title>Kontakt – Susann Gebert</title>
+<meta name="description" content="Kontakt zu Susann Gebert – UX &amp; Product Specialist.">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -21,7 +21,7 @@
         <button type="button" data-lang="de" aria-pressed="true">DE</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="meta-link" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <a class="meta-link" href="contact.html" data-i18n="nav.contact" aria-current="page">Kontakt</a>
       <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
@@ -29,46 +29,42 @@
   </div>
 </header>
 
-<main class="page-about">
-  <!-- ================= ABOUT-KOPF ================= -->
-  <section class="wrap wrap-hero">
-    <h1 class="ab-head">
-      <span class="ab-word"><span class="ab-sun" aria-hidden="true"></span><span class="ab-a">about</span></span>
-      <span class="ab-me">me</span>
-      <span class="ab-dot" aria-hidden="true"></span>
-      <img class="ab-portrait" src="images/portraet.webp" width="300" height="350" alt="Porträt von Susann Gebert" data-i18n-alt="about.portrait">
-    </h1>
-    <span class="tri-down ab-tri" aria-hidden="true"></span>
+
+<main class="ct">
+  <!-- ================= KOPF ================= -->
+  <section class="ct-head">
+    <span class="ct-circle" aria-hidden="true"></span>
+    <div class="wrap ct-head-inner">
+      <h1><span data-only="de">Kontakt</span><span data-only="en">contact</span></h1>
+      <span class="tri-down ct-tri" aria-hidden="true"></span>
+    </div>
   </section>
 
-  <!-- ================= TEXT ================= -->
-  <section class="wrap wrap-hero ab-body">
-    <div class="ab-row">
-      <div class="ab-aside"><span class="dotgrid" aria-hidden="true"></span></div>
-      <div class="ab-text">
-        <p data-i18n-html="about.p1"></p>
-        <p data-i18n-html="about.p2"></p>
-        <p data-i18n-html="about.p3"></p>
-        <p data-i18n-html="about.p4"></p>
-      </div>
-    </div>
-
-    <!-- ================= EXPERIENCE ================= -->
-    <div class="ab-row ab-exp">
-      <div class="ab-aside"><h2 class="ab-exp-label">experience</h2></div>
-      <div>
-        <ul class="exp-list">
-          <li><b>UX/UI Design - UX Quality &amp; Product Insights</b> | Impleco GmbH - Wohnglueck.de</li>
-          <li><b>UX/UI &amp; Brand Design</b> | Nexio Fleet GmbH</li>
-          <li><b>Graphic/ UI Design</b> | ecomex GmbH &amp; Co. KG</li>
-          <li><b>Shopmanagement</b> | Spirit Yoga GmbH &amp; Co. KG</li>
-          <li><b>Fashion Design</b> | Charlotte Pocher Design &amp; Styling</li>
-        </ul>
-        <a class="exp-more" href="http://susann-gebert.de" target="_blank" rel="noopener" data-i18n="about.fashion">Hier geht’s zu meinem Fashion-Portfolio</a>
-      </div>
-    </div>
+  <!-- ================= FORMULAR =================
+       Kein Server: "Senden" öffnet das E-Mail-Programm mit einer vorausgefüllten Nachricht an susann.gebert@gmx.de -->
+  <section class="wrap ct-body">
+    <p class="ct-label" aria-hidden="true">let's connect</p>
+    <p class="ct-intro"><span data-only="de">Wenn du mehr erfahren oder mit mir in Kontakt treten möchtest, melde dich gern:</span><span data-only="en">If you'd like to know more or get in touch, don't hesitate to connect:</span></p>
+    <form class="ct-form" id="contact-form" novalidate>
+      <label class="ct-field">
+        <span class="sr-only" data-i18n="ct.name">Name</span>
+        <input type="text" name="name" autocomplete="name" required placeholder="Name" data-i18n-placeholder="ct.name">
+      </label>
+      <label class="ct-field">
+        <span class="sr-only" data-i18n="ct.email">E-Mail</span>
+        <input type="email" name="email" autocomplete="email" required placeholder="E-Mail" data-i18n-placeholder="ct.email">
+      </label>
+      <label class="ct-field ct-field-wide">
+        <span class="sr-only" data-i18n="ct.message">Nachricht</span>
+        <textarea name="message" rows="5" required placeholder="Nachricht" data-i18n-placeholder="ct.message"></textarea>
+      </label>
+      <p class="ct-error" role="alert" hidden><span data-only="de">Bitte fülle alle Felder aus und gib eine gültige E-Mail-Adresse an.</span><span data-only="en">Please fill in all fields and enter a valid email address.</span></p>
+      <button class="ct-send" type="submit" data-i18n="ct.send">Senden</button>
+      <p class="ct-note"><span data-only="de">„Senden“ öffnet dein E-Mail-Programm mit der vorausgefüllten Nachricht. Oder schreib mir direkt an</span><span data-only="en">“Send” opens your email app with the message pre-filled. Or write to me directly at</span> <a href="mailto:susann.gebert@gmx.de">susann.gebert@gmx.de</a></p>
+    </form>
   </section>
 </main>
+
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -129,13 +125,14 @@
       <a href="visual-brand-work.html"><span class="menu-no" aria-hidden="true">03</span><span data-i18n="menu.visual">Visual &amp; Brand Work</span></a>
     </div>
     <div class="menu-row">
-      <a href="about.html" aria-current="page"><span class="menu-no" aria-hidden="true">04</span><span data-i18n="menu.about">Über mich</span></a>
-      <a href="contact.html"><span class="menu-no" aria-hidden="true">05</span><span data-i18n="menu.contact">Kontakt</span></a>
+      <a href="about.html"><span class="menu-no" aria-hidden="true">04</span><span data-i18n="menu.about">Über mich</span></a>
+      <a href="contact.html" aria-current="page"><span class="menu-no" aria-hidden="true">05</span><span data-i18n="menu.contact">Kontakt</span></a>
     </div>
   </nav>
 </div>
 
 <script src="js/i18n.js?v=102"></script>
 <script src="js/main.js?v=102"></script>
+<script src="js/contact.js?v=102"></script>
 </body>
 </html>

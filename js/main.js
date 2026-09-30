@@ -16,6 +16,9 @@ function setLang(l){
   document.querySelectorAll("[data-i18n-alt]").forEach(el => {
     const t = TEXT[l][el.dataset.i18nAlt]; if (t) el.alt = t;
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const t = TEXT[l][el.dataset.i18nPlaceholder]; if (t) el.placeholder = t;
+  });
   document.querySelectorAll("[data-i18n-aria]").forEach(el => {
     const t = TEXT[l][el.dataset.i18nAria]; if (t) el.setAttribute("aria-label", t);
   });

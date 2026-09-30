@@ -4,6 +4,7 @@
 const TEXT = {
   de: {
     "nav.contact":"Kontakt","nav.close":"Schließen","nav.open":"Menü öffnen",
+    "ct.name":"Name","ct.email":"E-Mail","ct.message":"Nachricht","ct.send":"Senden",
     "menu.home":"Home","menu.work":"Projekte","menu.visual":"Visual & Brand Work","menu.about":"Über mich","menu.contact":"Kontakt",
     "hero.intro":"Ich bin Susann,",
     "hero.desc":"Ich verwandle Nutzerbedürfnisse, Research und Daten in spürbare Verbesserungen für digitale Produkte und Customer Journeys.",
@@ -74,6 +75,7 @@ const TEXT = {
   },
   en: {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
+    "ct.name":"Name","ct.email":"Email","ct.message":"Message","ct.send":"Send",
     "menu.home":"Home","menu.work":"Projects","menu.visual":"Visual & Brand Work","menu.about":"About","menu.contact":"Contact",
     "hero.intro":"I am Susann, a",
     "hero.desc":"I turn user needs, research and data into meaningful improvements across digital products and customer journeys.",

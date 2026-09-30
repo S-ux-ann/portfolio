@@ -692,3 +692,37 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
   .vb-ex .vb-ex-postcard{grid-column:6/13;grid-row:3;margin-top:calc(-1 * clamp(16px,6vw,40px))}
   .vb-offset,.vb-inset{width:100%;margin:0}
 }
+
+/* ---------- Kontakt (contact.html) ---------- */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ct-head{position:relative;padding:clamp(60px,9vw,140px) 0 clamp(80px,12vw,180px)}   /* unten genug Luft, damit der Kreis nicht an das Formular stößt */
+/* gelber Kreis mit Punkten, links angeschnitten */
+.ct-circle{position:absolute;left:calc(-1 * clamp(60px,8vw,120px));top:clamp(20px,3vw,48px);width:clamp(200px,25vw,380px);aspect-ratio:1;border-radius:50%;background:var(--bright-yellow)}
+.ct-circle::after{content:"";position:absolute;left:clamp(60px,8vw,120px);bottom:12%;width:clamp(100px,11vw,160px);height:clamp(100px,11vw,160px);background:radial-gradient(circle,var(--light-black) 4.5px,transparent 5px) 0 0/25% 25%}
+.ct-head-inner{position:relative;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.ct-head h1{font-weight:700;font-size:clamp(56px,8.5vw,128px);line-height:1;letter-spacing:-.02em}
+.ct-tri{width:clamp(56px,8vw,120px);height:clamp(48px,7vw,104px)}
+/* Formular: gleiche Breite und Ränder wie der übrige Inhalt (.wrap = 75 %) */
+.ct-body{position:relative;padding-bottom:clamp(80px,10vw,160px)}
+.ct-label{position:absolute;right:calc(100% + clamp(16px,2vw,32px));top:0;writing-mode:vertical-rl;transform:rotate(180deg);font-weight:700;font-size:clamp(28px,3.4vw,52px);line-height:1;white-space:nowrap}
+.ct-intro{font-size:clamp(16px,1.4vw,21px);margin-bottom:clamp(20px,2.4vw,32px)}
+.ct-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.2vw,16px)}
+.ct-field-wide,.ct-error,.ct-send,.ct-note{grid-column:1/-1}
+.ct-field input,.ct-field textarea{width:100%;font:inherit;font-size:clamp(15px,1.2vw,18px);color:var(--light-black);background:#EAEAEA;border:2px solid transparent;border-radius:var(--radius);padding:clamp(12px,1.2vw,16px) clamp(14px,1.4vw,20px);transition:border-color .2s ease}
+.ct-field textarea{resize:vertical;min-height:clamp(120px,12vw,180px)}
+.ct-field input::placeholder,.ct-field textarea::placeholder{color:#777;font-weight:600}
+.ct-field input:focus,.ct-field textarea:focus{outline:none;border-color:var(--bright-yellow)}
+.ct-field [aria-invalid="true"]{border-color:var(--orange)}
+.ct-error{font-size:14px;color:#9A4F0B}
+.ct-send{background:var(--light-black);color:var(--white);font-weight:700;font-size:clamp(15px,1.2vw,18px);border-radius:var(--radius);padding:clamp(14px,1.3vw,18px);transition:background .2s ease,color .2s ease}
+.ct-send:hover,.ct-send:focus-visible{background:var(--bright-yellow);color:var(--light-black)}
+.ct-note{font-size:clamp(13px,1vw,15px);color:#6b6b6b;margin-top:4px}
+.ct-note a{color:inherit;text-underline-offset:3px}
+@media (max-width:900px){
+  .ct-label{display:none}
+}
+@media (max-width:560px){
+  .ct-form{grid-template-columns:minmax(0,1fr)}
+  .ct-circle{width:170px;left:-90px;top:16px}
+  .ct-circle::after{display:none}
+}

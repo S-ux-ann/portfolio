@@ -126,7 +126,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .brand{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:clamp(10px,1.2vw,18px)}
 .brand .b-main{grid-row:span 2;aspect-ratio:auto;min-height:clamp(260px,30vw,440px);background:#BDBDBD;color:#666}
 .brand .b-wide{aspect-ratio:2.4/1}
-.brand .b-bottom{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(12px,1.4vw,20px);align-items:start}
+.brand .b-bottom{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(12px,1.4vw,20px);align-items:center}
 .brand .b-small{aspect-ratio:1/1}
 .brand img.pic{height:100%;border-radius:4px;object-fit:cover}   /* Bilder füllen ihre Felder, Ränder werden beschnitten */
 .brand img.b-wide[src*="sketch"]{object-position:center top}   /* Skizzen: Ausschnitt oben */

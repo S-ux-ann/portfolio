@@ -129,7 +129,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .brand .b-bottom{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(12px,1.4vw,20px);align-items:end}
 .brand .b-small{aspect-ratio:1/1}
 .brand img.pic{height:100%;border-radius:4px;object-fit:cover}   /* Bilder füllen ihre Felder, Ränder werden beschnitten */
-.brand img.b-main{object-position:center 30%}
+.brand img.b-wide[src*="sketch"]{object-position:center top}   /* Skizzen: Ausschnitt oben */
 .brand .txt{padding:0}
 
 /* ---------- About ---------- */

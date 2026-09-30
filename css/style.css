@@ -133,7 +133,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .brand .txt{padding:0}
 
 /* ---------- About ---------- */
-.about{background:var(--light-black);color:var(--white);margin-top:clamp(32px,4vw,64px)}
+.about{background:var(--light-black);color:var(--white);margin-top:150px}   /* Abstand Visual & Brand Work → About */
 .about .wrap{display:flex;flex-direction:column;gap:clamp(24px,3vw,48px);padding-top:clamp(56px,8vw,120px);padding-bottom:clamp(56px,8vw,120px)}
 .about-box{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:clamp(28px,4vw,64px)}
 .about-mark{padding-block:clamp(44px,7.5vw,110px)}   /* Platz für den Kreis */

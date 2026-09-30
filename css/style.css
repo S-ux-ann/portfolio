@@ -632,6 +632,7 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .vb-gallery+.cs-col,.vb-gallery+.vb-project-text{margin-top:clamp(36px,4vw,64px)}
 .vb-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--vb-gap);align-items:start}
 .vb-two.is-asym{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end}
+.vb-two.is-asym-rev{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center}
 .vb-offset{width:72%;margin-left:auto}
 .vb-inset{width:60%;margin:clamp(24px,4vw,64px) 0 clamp(24px,4vw,64px) 12%}
 /* HUB: ausdrucksstärkster Abschnitt – mehr Luft zwischen den Bildern */
@@ -660,6 +661,6 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
   .vb-sketches .vb-s4{grid-column:1/2}
 }
 @media (max-width:560px){
-  .vb-two,.vb-two.is-asym{grid-template-columns:minmax(0,1fr)}
+  .vb-two,.vb-two.is-asym,.vb-two.is-asym-rev{grid-template-columns:minmax(0,1fr)}
   .vb-offset,.vb-inset{width:100%;margin:0}
 }

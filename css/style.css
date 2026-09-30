@@ -717,7 +717,11 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 /* Senden: gleicher Button wie "Ansehen" (orangener Balken) */
 .ct-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(16px,2vw,28px);margin-top:clamp(8px,1vw,14px)}
 .ct .btn-view{color:var(--light-black)}
-.ct-note{font-size:clamp(13px,1vw,15px);color:#6b6b6b}
+.ct-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.ct-send:disabled{opacity:.5;cursor:wait}
+.ct-status{grid-column:1/-1;font-size:clamp(14px,1.1vw,16px);min-height:1.5em}
+.ct-status [data-state="success"]{font-weight:700}
+.ct-status a{color:inherit;text-underline-offset:3px}
 /* Weitere Kontaktwege – bewusst zurückhaltend */
 .ct-alt{display:flex;flex-wrap:wrap;gap:16px clamp(40px,6vw,96px);margin-top:clamp(48px,6vw,88px);padding-top:clamp(20px,2vw,28px);border-top:1px solid var(--grey);font-size:clamp(14px,1.1vw,16px)}
 .ct-alt dt{font-weight:700;margin-bottom:2px}

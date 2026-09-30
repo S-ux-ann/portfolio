@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About – Susann Gebert</title>
-<meta name="description" content="Susann Gebert – UX & Product Design aus Berlin.">
+<title>Impressum – Susann Gebert</title>
+<meta name="description" content="Impressum von Susann Gebert.">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -34,46 +34,43 @@
   </div>
 </header>
 
-<main class="page-about">
-  <!-- ================= ABOUT-KOPF ================= -->
-  <section class="wrap wrap-hero">
-    <h1 class="ab-head">
-      <span class="ab-word"><span class="ab-sun" aria-hidden="true"></span><span class="ab-a">about</span></span>
-      <span class="ab-me">me</span>
-      <span class="ab-dot" aria-hidden="true"></span>
-      <img class="ab-portrait" src="images/portraet.webp" width="300" height="350" alt="Porträt von Susann Gebert" data-i18n-alt="about.portrait">
-    </h1>
-    <span class="tri-down ab-tri" aria-hidden="true"></span>
-  </section>
 
-  <!-- ================= TEXT ================= -->
-  <section class="wrap wrap-hero ab-body">
-    <div class="ab-row">
-      <div class="ab-aside"><span class="dotgrid" aria-hidden="true"></span></div>
-      <div class="ab-text">
-        <p data-i18n-html="about.p1"></p>
-        <p data-i18n-html="about.p2"></p>
-        <p data-i18n-html="about.p3"></p>
-        <p data-i18n-html="about.p4"></p>
-      </div>
-    </div>
+<main class="legal">
+  <!--
+    Impressum nach § 5 DDG.
+    Alles in [eckigen Klammern] (class="legal-todo") muss vor dem Livegang durch echte Angaben ersetzt werden.
+  -->
+  <section class="wrap legal-body">
+    <h1><span data-only="de">Impressum</span><span data-only="en">Legal notice</span></h1>
+    <p class="legal-note" data-only="en">The legal notice is required under German law and is therefore provided in German.</p>
 
-    <!-- ================= EXPERIENCE ================= -->
-    <div class="ab-row ab-exp">
-      <div class="ab-aside"></div>
-      <div>
-        <h2 class="ab-exp-title"><span data-only="de">Erfahrung</span><span data-only="en">Experience</span></h2>
-        <ul class="exp-list">
-          <li><b>UX/UI Design - UX Quality &amp; Product Insights</b> | Impleco GmbH - Wohnglueck.de</li>
-          <li><b>UX/UI &amp; Brand Design</b> | Nexio Fleet GmbH</li>
-          <li><b>Graphic/ UI Design</b> | ecomex GmbH &amp; Co. KG</li>
-          <li><b>Shopmanagement</b> | Spirit Yoga GmbH &amp; Co. KG</li>
-          <li><b>Fashion Design</b> | Charlotte Pocher Design &amp; Styling</li>
-        </ul>
-      </div>
-    </div>
+    <h2>Angaben gemäß § 5 DDG</h2>
+    <p>
+      Susann Gebert<br>
+      <span class="legal-todo">[Straße und Hausnummer]</span><br>
+      <span class="legal-todo">[PLZ Ort]</span><br>
+      Deutschland
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <a href="mailto:susann.gebert@gmx.de">susann.gebert@gmx.de</a><br>
+      Telefon: <span class="legal-todo">[Telefonnummer]</span>
+    </p>
+
+    <!-- Nur einfügen, falls vorhanden:
+    <h2>Umsatzsteuer-ID</h2>
+    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [USt-IdNr.]</p>
+    -->
+
+    <h2>Verantwortlich für den Inhalt</h2>
+    <p>Susann Gebert, Anschrift wie oben</p>
+
+    <p class="legal-todo legal-block">[Optional: weitere Hinweise aus dem Impressum-Generator, z. B. Haftung für Inhalte und Links, Urheberrecht]</p>
   </section>
 </main>
+
+
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -82,7 +79,7 @@
       <div class="name">SUSANN</div>
       <div class="role">UX & Product Specialist</div>
       <ul class="small footer-nav">
-        <li><a href="about.html" aria-current="page" data-i18n="footer.about">Über mich</a></li>
+        <li><a href="about.html" data-i18n="footer.about">Über mich</a></li>
         <li><a href="contact.html" data-i18n="footer.contact">Kontakt</a></li>
       </ul>
       <div class="social">
@@ -106,7 +103,7 @@
   </div>
   <div class="wrap footer-legal">
     <span>© 2026 Susann Gebert</span>
-    <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
+    <a href="impressum.html" aria-current="page" data-i18n="footer.imprint">Impressum</a>
     <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
   </div>
 </footer>
@@ -143,7 +140,7 @@
       <a href="visual-brand-work.html"><span class="menu-no" aria-hidden="true">03</span><span data-i18n="menu.visual">Visual &amp; Brand Work</span></a>
     </div>
     <div class="menu-row">
-      <a href="about.html" aria-current="page"><span class="menu-no" aria-hidden="true">04</span><span data-i18n="menu.about">Über mich</span></a>
+      <a href="about.html"><span class="menu-no" aria-hidden="true">04</span><span data-i18n="menu.about">Über mich</span></a>
       <a href="contact.html"><span class="menu-no" aria-hidden="true">05</span><span data-i18n="menu.contact">Kontakt</span></a>
     </div>
   </nav>

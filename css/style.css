@@ -162,6 +162,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer .small{font-size:clamp(14px,1.1vw,16px)}
 .footer ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:clamp(10px,1vw,16px)}
 .footer h4{font-size:clamp(18px,1.6vw,22px);font-weight:700}
+/* Rechtliches: © · Impressum · Datenschutz */
+.footer .footer-legal{display:flex;flex-wrap:wrap;gap:6px clamp(16px,2vw,28px);padding-top:clamp(14px,1.4vw,20px);padding-bottom:clamp(20px,2vw,28px);border-top:1px solid rgba(29,29,29,.2);font-size:clamp(13px,1vw,14px)}
 .social{display:flex;gap:16px;margin-top:clamp(16px,1.8vw,26px)}
 .social a{display:grid;place-items:center;width:30px;height:30px}
 .social svg{width:26px;height:26px;fill:var(--light-black)}
@@ -754,3 +756,15 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
   .ct-circle{width:170px;left:-90px;top:16px}
   .ct-circle::after{display:none}
 }
+
+/* ---------- Impressum & Datenschutz ---------- */
+.legal-body{max-width:760px;padding:clamp(56px,7vw,112px) 0 clamp(80px,10vw,160px)}
+.legal-body h1{font-weight:700;font-size:clamp(36px,4.4vw,64px);line-height:1.1;margin-bottom:clamp(24px,3vw,44px)}
+.legal-body h2{font-weight:700;font-size:clamp(18px,1.5vw,22px);margin:clamp(28px,3vw,44px) 0 8px}
+.legal-body p{font-size:clamp(15px,1.2vw,18px);line-height:1.6}
+.legal-body a{text-underline-offset:3px}
+.legal-note{color:#6b6b6b;font-size:14px}
+.legal-updated{margin-top:clamp(32px,4vw,56px);color:#6b6b6b}
+/* Platzhalter – vor dem Livegang ersetzen */
+.legal-todo{background:#FFF3B0;outline:1px dashed #C9B800;padding:0 4px;border-radius:3px}
+.legal-block{display:block;padding:10px 14px}

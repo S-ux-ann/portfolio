@@ -58,7 +58,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .burger span{display:block;height:3px;background:var(--light-black)}
 
 /* Sprachumschalter */
-.lang{display:inline-flex;gap:clamp(10px,1vw,16px)}
+.lang{--lang-gap:clamp(14px,1.4vw,22px);display:inline-flex;gap:var(--lang-gap)}
+.lang button:first-child::after{content:"|";position:absolute;left:calc(100% + var(--lang-gap) / 2);transform:translateX(-50%);color:var(--light-black);pointer-events:none}   /* Trennstrich DE | EN */
 /* DE / EN als Text wie "Kontakt"; die gewählte Sprache bekommt den orangenen Balken wie die View-Buttons */
 .lang button{position:relative;isolation:isolate;font-size:clamp(14px,1.2vw,18px);font-weight:400;color:var(--light-black);padding:0 3px}
 .lang button::before{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.42em;background:var(--orange);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}

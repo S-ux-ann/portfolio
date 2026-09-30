@@ -74,7 +74,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero-role{font-weight:700;font-size:clamp(26px,4.2vw,60px);line-height:1.2;min-height:1.2em;margin-bottom:clamp(18px,2vw,32px)}
 .caret{display:inline-block;width:3px;height:.9em;background:var(--bright-yellow);margin-left:3px;vertical-align:-.08em;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.hero-desc{font-size:clamp(16px,1.4vw,21px);max-width:44ch}
+.hero-desc{font-size:clamp(16px,1.4vw,21px);max-width:44ch;margin-top:50px}   /* Abstand Tipp-Animation → Text */
 .hero-art{grid-area:art;width:100%;height:auto;max-width:620px;justify-self:end}
 
 /* ---------- Section-Überschriften ---------- */

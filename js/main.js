@@ -116,3 +116,20 @@ document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("click", open);
   card.addEventListener("auxclick", open);
 });
+
+/* ---------- Abschnitts-Navigation (Visual & Brand Work) ----------
+   Markiert den Abschnitt, der gerade im Blick ist. */
+const tocLinks = [...document.querySelectorAll(".vb-toc a")];
+if (tocLinks.length && "IntersectionObserver" in window){
+  const byId = new Map(tocLinks.map(a => [a.getAttribute("href").slice(1), a]));
+  const secs = tocLinks.map(a => document.getElementById(a.getAttribute("href").slice(1))?.closest("section")).filter(Boolean);
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const id = e.target.querySelector("h2[id]")?.id;
+      tocLinks.forEach(a => a.removeAttribute("aria-current"));
+      if (byId.get(id)) byId.get(id).setAttribute("aria-current", "true");
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  secs.forEach(s => io.observe(s));
+}

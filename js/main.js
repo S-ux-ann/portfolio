@@ -24,11 +24,18 @@ function setLang(l){
   });
   const toggle = document.querySelector(".lang");
   toggle.dataset.active = l;
-  toggle.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  toggle.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
   try { localStorage.setItem("lang", l); } catch(e){}
   startTyping();
 }
-document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+/* Sprach-Icon: Klick öffnet die Auswahl DE / EN */
+const langToggle = document.querySelector(".lang-toggle");
+const langMenu = document.getElementById("lang-menu");
+function setLangMenu(open){ langMenu.hidden = !open; langToggle.setAttribute("aria-expanded", open); }
+langToggle.addEventListener("click", () => setLangMenu(langMenu.hidden));
+document.querySelectorAll(".lang [data-lang]").forEach(b => b.addEventListener("click", () => { setLang(b.dataset.lang); setLangMenu(false); langToggle.focus(); }));
+document.addEventListener("click", e => { if (!langMenu.hidden && !e.target.closest(".lang")) setLangMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !langMenu.hidden){ setLangMenu(false); langToggle.focus(); } });
 
 /* ---------- Tipp-Animation ---------- */
 const typedEl = document.getElementById("typed");

@@ -8,7 +8,7 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=117">
+<link rel="stylesheet" href="css/style.css?v=118">
 </head>
 <body>
 
@@ -17,9 +17,14 @@
   <div class="wrap">
     <a class="logo" href="index.html">SUSANN</a>
     <div class="meta">
-      <div class="lang" role="group" aria-label="Sprache / Language" data-active="de">
-        <button type="button" data-lang="de" aria-pressed="true">DE</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <div class="lang" data-active="de">
+        <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Sprache wählen / Choose language">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.7 3.9 5.9 3.9 9.5s-1.3 6.8-3.9 9.5M12 2.5C9.4 5.2 8.1 8.4 8.1 12s1.3 6.8 3.9 9.5"/></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" hidden>
+          <button type="button" data-lang="de" aria-pressed="true">DE</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
       </div>
       <a class="meta-link btn-view" href="contact.html" data-i18n="nav.contact">Kontakt</a>
       <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
@@ -422,8 +427,8 @@
   </nav>
 </div>
 
-<script src="js/i18n.js?v=117"></script>
-<script src="js/main.js?v=117"></script>
-<script src="js/case.js?v=117"></script>
+<script src="js/i18n.js?v=118"></script>
+<script src="js/main.js?v=118"></script>
+<script src="js/case.js?v=118"></script>
 </body>
 </html>

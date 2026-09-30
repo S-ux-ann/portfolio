@@ -51,29 +51,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .topbar{position:sticky;top:0;z-index:50;border-bottom:var(--line) solid var(--bright-yellow);background:var(--bg);padding-top:env(safe-area-inset-top,0px);margin-top:calc(-1 * env(safe-area-inset-top,0px))}
 .topbar .wrap{width:auto;padding:0 clamp(16px,3vw,40px);display:flex;align-items:center;justify-content:space-between;height:clamp(60px,5.5vw,80px)}
 .logo{font-weight:900;font-size:clamp(24px,2.8vw,40px);letter-spacing:-.01em;text-decoration:none}
-.meta{display:flex;align-items:center;gap:clamp(16px,2vw,32px)}
+.meta{display:flex;align-items:center;gap:clamp(28px,3vw,48px)}
 .meta-link{font-size:clamp(14px,1.2vw,18px);text-decoration:none}
 .meta-link:hover{text-decoration:underline}
 .burger{width:clamp(28px,2.6vw,38px);height:clamp(22px,2vw,28px);display:flex;flex-direction:column;justify-content:space-between;padding:4px 0}
 .burger span{display:block;height:3px;background:var(--light-black)}
 
 /* Sprachumschalter */
-.lang{position:relative;display:inline-flex;background:var(--bg);border:1px solid var(--grey);border-radius:999px;padding:3px}
-.lang::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);background:var(--light-black);border-radius:999px;transition:transform .25s ease}
-.lang[data-active="en"]::before{transform:translateX(100%)}
-.lang button{position:relative;z-index:1;width:clamp(36px,3.4vw,48px);height:clamp(24px,2.2vw,32px);font-size:clamp(12px,1.1vw,16px);font-weight:700;border-radius:999px;color:var(--light-black);transition:color .25s ease}
-.lang button[aria-pressed="true"]{color:var(--bright-yellow)}
+.lang{--lang-gap:clamp(14px,1.4vw,22px);display:inline-flex;gap:var(--lang-gap)}
+.lang button:first-child::after{content:"|";position:absolute;left:calc(100% + var(--lang-gap) / 2);transform:translateX(-50%);color:var(--light-black);pointer-events:none}   /* Trennstrich DE | EN */
+/* DE / EN als Text wie "Kontakt"; die gewählte Sprache bekommt den orangenen Balken wie die View-Buttons */
+.lang button{position:relative;isolation:isolate;font-size:clamp(14px,1.2vw,18px);font-weight:400;color:var(--light-black);padding:0 3px}
+.lang button::before{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.42em;background:var(--orange);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.lang button[aria-pressed="true"]::before{transform:scaleX(1)}
+.lang button:not([aria-pressed="true"]):hover::before{transform:scaleX(1);opacity:.4}
 
 /* ---------- Hero ---------- */
-.hero{display:grid;grid-template-columns:var(--indent) 1fr minmax(0,.9fr);grid-template-areas:"hey text art";align-items:center;padding:clamp(28px,4vw,64px) 0 clamp(20px,3vw,48px)}
-.hey{grid-area:hey;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(14px,1.8vw,28px)}
-.hey-word{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:900;font-size:clamp(64px,12vw,180px);line-height:.78;letter-spacing:-.01em}
-.hero-text{grid-area:text;padding-right:clamp(16px,3vw,48px)}
+/* 1. Spalte = Abstand zwischen Hero-Breite (90 %) und Inhaltsbreite (75 %) → Text bündig mit der Linie unter "Projekte" */
+.hero{display:grid;grid-template-columns:7.5vw minmax(0,1fr) minmax(0,.5fr);grid-template-areas:". text art";align-items:center;padding:clamp(60px,14vw,200px) 0 clamp(20px,3vw,48px)}   /* oben ca. 200px Luft (Desktop) */
+.hero-text{grid-area:text;align-self:end;position:relative;padding-right:clamp(16px,3vw,48px)}
+/* Gelbes Dreieck links vor dem Text, zeigt auf "Ich bin Susann" */
+.hero-tri{position:absolute;right:calc(100% + clamp(10px,1.4vw,20px));top:calc(clamp(26px,4.2vw,60px) * .6);transform:translateY(-50%);width:clamp(28px,4.2vw,60px);height:clamp(32px,4.8vw,69px)}
 .hero-intro{font-weight:300;font-size:clamp(26px,4.2vw,60px);line-height:1.2}
 .hero-role{font-weight:700;font-size:clamp(26px,4.2vw,60px);line-height:1.2;min-height:1.2em;margin-bottom:clamp(18px,2vw,32px)}
 .caret{display:inline-block;width:3px;height:.9em;background:var(--bright-yellow);margin-left:3px;vertical-align:-.08em;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.hero-desc{font-size:clamp(16px,1.4vw,21px);max-width:44ch}
+.hero-desc{font-size:clamp(16px,1.4vw,21px);max-width:44ch;margin-top:50px}   /* Abstand Tipp-Animation → Text */
 .hero-art{grid-area:art;width:100%;height:auto;max-width:620px;justify-self:end}
 
 /* ---------- Section-Überschriften ---------- */
@@ -81,7 +84,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sec-head h2{font-weight:700;font-size:clamp(24px,3.2vw,46px);line-height:1}
 
 /* Abstand "Neugierig?"-Box → "Visual & Brand Work" */
-.sec-head.sec-brand{margin-top:100px}
+.sec-head.sec-brand{margin-top:150px}
 
 /* ---------- Karten ---------- */
 .projects{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap)}
@@ -126,12 +129,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .brand{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:clamp(10px,1.2vw,18px)}
 .brand .b-main{grid-row:span 2;aspect-ratio:auto;min-height:clamp(260px,30vw,440px);background:#BDBDBD;color:#666}
 .brand .b-wide{aspect-ratio:2.4/1}
-.brand .b-bottom{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(12px,1.4vw,20px);align-items:end}
+.brand .b-bottom{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(12px,1.4vw,20px);align-items:center}
 .brand .b-small{aspect-ratio:1/1}
+.brand img.pic{height:100%;border-radius:4px;object-fit:cover}   /* Bilder füllen ihre Felder, Ränder werden beschnitten */
+.brand img.b-wide[src*="sketch"]{object-position:center top}   /* Skizzen: Ausschnitt oben */
 .brand .txt{padding:0}
 
 /* ---------- About ---------- */
-.about{background:var(--light-black);color:var(--white);margin-top:clamp(32px,4vw,64px)}
+.about{background:var(--light-black);color:var(--white);margin-top:200px}   /* Abstand Visual & Brand Work → About */
 .about .wrap{display:flex;flex-direction:column;gap:clamp(24px,3vw,48px);padding-top:clamp(56px,8vw,120px);padding-bottom:clamp(56px,8vw,120px)}
 .about-box{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:clamp(28px,4vw,64px)}
 .about-mark{padding-block:clamp(44px,7.5vw,110px)}   /* Platz für den Kreis */
@@ -156,23 +161,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .social svg{width:26px;height:26px;fill:var(--light-black)}
 
 /* ---------- Burger-Menü ---------- */
-.menu{position:fixed;inset:0;z-index:100;background:var(--bright-yellow);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s}
+.menu{position:fixed;inset:0;z-index:100;background:var(--light-black);color:var(--white);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s;overflow-y:auto}
 .menu.open{opacity:1;visibility:visible}
-.menu-deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.menu-top{position:relative;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,3vw,76px)}
-.menu-logo{font-weight:900;font-size:clamp(34px,4.4vw,64px);text-decoration:none;line-height:1}
-.menu-close{display:flex;align-items:center;gap:clamp(16px,3vw,60px);font-size:clamp(15px,1.5vw,22px)}
+.menu-deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.35}
+.menu-top{position:relative;display:flex;justify-content:space-between;align-items:center;padding:0 clamp(16px,3vw,40px);height:clamp(60px,5.5vw,80px)}   /* gleiche Höhe & Ränder wie die Topbar → Logo springt nicht */
+.menu-logo{font-weight:900;font-size:clamp(24px,2.8vw,40px);letter-spacing:-.01em;text-decoration:none;line-height:1;color:var(--white)}   /* wie .logo */
+.menu-close{display:flex;align-items:center;gap:clamp(16px,3vw,60px);font-size:clamp(15px,1.5vw,22px);color:var(--white)}
 .menu-close svg{width:clamp(26px,3vw,40px);height:clamp(26px,3vw,40px)}
-.menu nav{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(18px,4vh,48px)}
-.menu nav a{font-weight:700;font-size:clamp(40px,6vw,86px);line-height:1;text-decoration:none;text-transform:uppercase}
-.menu nav a:hover{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}
+.menu-close svg path{stroke:currentColor}
+/* Menüpunkte: gelbe Nummer mit Dreieck, Begriff groß in Weiß; 01+02 | 03 | 04+05 */
+.menu-nav{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(24px,5.5vh,72px);padding:clamp(16px,3vh,40px) clamp(20px,3vw,76px)}
+.menu-row{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(20px,4vh,56px) clamp(28px,5vw,88px)}
+.menu-nav a{display:inline-flex;align-items:flex-start;gap:clamp(2px,.3vw,6px);font-weight:700;font-size:clamp(34px,5.6vw,88px);line-height:1.05;letter-spacing:-.01em;color:var(--white);text-decoration:none;transition:color .2s ease}
+.menu-no{display:inline-flex;align-items:center;gap:6px;margin-top:.3em;font-size:clamp(13px,1.1vw,18px);font-weight:700;letter-spacing:.04em;color:var(--bright-yellow)}
+.menu-no::before{content:"";width:.6em;height:.7em;background:var(--bright-yellow);clip-path:polygon(0 0,100% 50%,0 100%)}
+.menu-nav a:hover,.menu-nav a:focus-visible,.menu-nav a[aria-current="page"]{color:var(--bright-yellow)}
 
 /* =========================================================
    BREAKPOINTS
    ========================================================= */
 /* Tablet */
 @media (max-width:900px){
-  .hero{grid-template-columns:auto 1fr;grid-template-areas:"hey art" "hey text";column-gap:28px;row-gap:10px}
+  .sec-head.sec-brand{margin-top:100px}   /* +50px nur auf dem Desktop */
+  .about{margin-top:150px}
+  .hero{grid-template-columns:7.5vw 1fr;grid-template-areas:". art" ". text";row-gap:10px}
   .hero-art{max-width:320px;justify-self:end}
   .projects{grid-template-columns:minmax(0,1fr)}
   .card-feature{grid-template-columns:minmax(0,1fr);gap:14px}
@@ -183,16 +195,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 /* Phone */
 @media (max-width:560px){
+  .menu-row{flex-direction:column;align-items:center;gap:clamp(24px,5.5vh,72px)}   /* Handy: gleiche Abstände wie zwischen den Zeilen */
+  .menu-nav a{font-size:30px}
   .sec-head.sec-brand{margin-top:50px}
   :root{--indent:0%;--content-w:90%}
-  .logo{font-size:24px}
-  .meta{gap:14px}
+  .logo,.menu-logo{font-size:24px}
+  .meta{gap:22px}
   .meta-link{display:none}
-  .hero{grid-template-columns:auto 1fr;grid-template-areas:"hey art" "text text";column-gap:16px;row-gap:24px}
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"art" "text";row-gap:24px}
   .hero-text{padding-right:0}
-  .hey-word{font-size:64px}
   .tri-right{width:34px;height:38px}
-  .hey .tri-right{width:38px;height:34px;clip-path:polygon(0 0,100% 0,50% 100%)}   /* Pfeil zeigt mobil nach unten */
+  .hero-tri{position:static;display:block;transform:none;width:30px;height:26px;margin-bottom:12px;clip-path:polygon(0 0,100% 0,50% 100%)}   /* Handy: kein Platz links → Dreieck über dem Text, zeigt nach unten */
   .hero-art{max-width:200px}
   .hero-role{font-size:26px}
   .hero-intro{font-size:26px}
@@ -678,4 +691,47 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
   .vb-ex .vb-ex-cards{grid-column:1/9}
   .vb-ex .vb-ex-postcard{grid-column:6/13;grid-row:3;margin-top:calc(-1 * clamp(16px,6vw,40px))}
   .vb-offset,.vb-inset{width:100%;margin:0}
+}
+
+/* ---------- Kontakt (contact.html) ---------- */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ct-head{position:relative;padding:clamp(60px,9vw,140px) 0 clamp(80px,12vw,180px)}   /* unten genug Luft, damit der Kreis nicht an das Formular stößt */
+/* gelber Kreis mit Punkten, links angeschnitten */
+.ct-circle{position:absolute;left:calc(-1 * clamp(60px,8vw,120px));top:clamp(20px,3vw,48px);width:clamp(200px,25vw,380px);aspect-ratio:1;border-radius:50%;background:var(--bright-yellow)}
+.ct-circle::after{content:"";position:absolute;left:clamp(60px,8vw,120px);bottom:12%;width:clamp(100px,11vw,160px);height:clamp(100px,11vw,160px);background:radial-gradient(circle,var(--light-black) 4.5px,transparent 5px) 0 0/25% 25%}
+.ct-head-inner{position:relative;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.ct-head h1{font-weight:700;font-size:clamp(56px,8.5vw,128px);line-height:1;letter-spacing:-.02em}
+.ct-tri{width:clamp(56px,8vw,120px);height:clamp(48px,7vw,104px)}
+/* Formular: gleiche Breite und Ränder wie der übrige Inhalt (.wrap = 75 %) */
+.ct-body{position:relative;padding-bottom:clamp(80px,10vw,160px)}
+.ct-label{position:absolute;right:calc(100% + clamp(16px,2vw,32px));top:0;writing-mode:vertical-rl;transform:rotate(180deg);font-weight:700;font-size:clamp(28px,3.4vw,52px);line-height:1;white-space:nowrap}
+.ct-intro{font-size:clamp(16px,1.4vw,21px);margin-bottom:clamp(20px,2.4vw,32px)}
+.ct-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.2vw,16px)}
+.ct-field-wide,.ct-error,.ct-actions{grid-column:1/-1}
+.ct-field input,.ct-field textarea{width:100%;font:inherit;font-size:clamp(15px,1.2vw,18px);color:var(--light-black);background:#EAEAEA;border:2px solid transparent;border-radius:var(--radius);padding:clamp(12px,1.2vw,16px) clamp(14px,1.4vw,20px);transition:border-color .2s ease}
+.ct-field textarea{resize:vertical;min-height:clamp(120px,12vw,180px)}
+.ct-field input::placeholder,.ct-field textarea::placeholder{color:#777;font-weight:600}
+.ct-field input:focus,.ct-field textarea:focus{outline:none;border-color:var(--bright-yellow)}
+.ct-field [aria-invalid="true"]{border-color:var(--orange)}
+.ct-error{font-size:14px;color:#9A4F0B}
+/* Senden: gleicher Button wie "Ansehen" (orangener Balken) */
+.ct-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(16px,2vw,28px);margin-top:clamp(8px,1vw,14px)}
+.ct .btn-view{color:var(--light-black)}
+.ct-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.ct-send:disabled{opacity:.5;cursor:wait}
+.ct-status{grid-column:1/-1;font-size:clamp(14px,1.1vw,16px);min-height:1.5em}
+.ct-status [data-state="success"]{font-weight:700}
+.ct-status a{color:inherit;text-underline-offset:3px}
+/* Weitere Kontaktwege – bewusst zurückhaltend */
+.ct-alt{display:flex;flex-wrap:wrap;gap:16px clamp(40px,6vw,96px);margin-top:clamp(48px,6vw,88px);padding-top:clamp(20px,2vw,28px);border-top:1px solid var(--grey);font-size:clamp(14px,1.1vw,16px)}
+.ct-alt dt{font-weight:700;margin-bottom:2px}
+.ct-alt a{color:inherit;text-underline-offset:3px}
+.ct-alt a:hover{text-decoration-color:var(--orange)}
+@media (max-width:900px){
+  .ct-label{display:none}
+}
+@media (max-width:560px){
+  .ct-form{grid-template-columns:minmax(0,1fr)}
+  .ct-circle{width:170px;left:-90px;top:16px}
+  .ct-circle::after{display:none}
 }

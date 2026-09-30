@@ -48,7 +48,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .tri-down{width:clamp(20px,2.5vw,36px);height:clamp(17px,2.2vw,31px);background:var(--bright-yellow);clip-path:polygon(0 0,100% 0,50% 100%);flex:none}
 
 /* ---------- Header / Meta-Navi ---------- */
-.topbar{position:sticky;top:0;z-index:50;border-bottom:var(--line) solid var(--bright-yellow);background:var(--bg);padding-top:env(safe-area-inset-top,0px);margin-top:calc(-1 * env(safe-area-inset-top,0px))}
+.topbar{position:sticky;top:0;z-index:50;border-bottom:var(--line) solid var(--bright-yellow);background:var(--bright-yellow);padding-top:env(safe-area-inset-top,0px);margin-top:calc(-1 * env(safe-area-inset-top,0px))}
 .topbar .wrap{width:auto;padding:0 clamp(16px,3vw,40px);display:flex;align-items:center;justify-content:space-between;height:clamp(60px,5.5vw,80px)}
 .logo{font-weight:900;font-size:clamp(24px,2.8vw,40px);letter-spacing:-.01em;text-decoration:none}
 .meta{display:flex;align-items:center;gap:clamp(28px,3vw,48px)}
@@ -66,7 +66,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* DE / EN als Text wie "Kontakt"; die gewählte Sprache bekommt den orangenen Balken wie die View-Buttons */
 .lang button{position:relative;font-size:clamp(14px,1.2vw,18px);font-weight:400;color:var(--light-black);padding:0}
 /* gewählte Sprache: gelbes Dreieck davor */
-.lang button::before{content:"";position:absolute;right:calc(100% + .3em);top:50%;width:.5em;height:.6em;background:var(--bright-yellow);clip-path:polygon(0 0,100% 50%,0 100%);transform:translateY(-50%) scale(0);transition:transform .2s ease}
+.lang button::before{content:"";position:absolute;right:calc(100% + .3em);top:50%;width:.5em;height:.6em;background:var(--light-black);clip-path:polygon(0 0,100% 50%,0 100%);transform:translateY(-50%) scale(0);transition:transform .2s ease}
 .lang button[aria-pressed="true"]::before{transform:translateY(-50%) scale(1)}
 
 /* ---------- Hero ---------- */

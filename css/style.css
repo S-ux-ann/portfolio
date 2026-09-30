@@ -635,6 +635,8 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .vb-offset{width:72%;margin-left:auto}
 .vb-inset{width:60%;margin:clamp(24px,4vw,64px) 0 clamp(24px,4vw,64px) 12%}
 /* HUB: ausdrucksstärkster Abschnitt – mehr Luft zwischen den Bildern */
+.vb-sec-hub{background:var(--white);padding-bottom:clamp(96px,11vw,180px);margin-top:clamp(96px,11vw,180px)}   /* weiß, damit der weiße Grund der Collagen verschwindet */
+.vb-sec-hub .vb-img{border-radius:0}
 .vb-sec-hub .vb-gallery{--vb-gap:clamp(20px,3vw,48px)}
 .vb-credits{display:grid;grid-template-columns:repeat(4,max-content);gap:6px clamp(20px,3vw,48px);margin-top:clamp(20px,2vw,32px);font-size:clamp(12px,.95vw,14px);color:#6b6b6b}
 .vb-credits dt{font-weight:700;color:var(--light-black)}

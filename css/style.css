@@ -54,17 +54,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .meta{display:flex;align-items:center;gap:clamp(28px,3vw,48px)}
 .meta-link{font-size:clamp(14px,1.2vw,18px);text-decoration:none}
 .meta-link:hover{text-decoration:underline}
+.meta-link.btn-view{color:var(--light-black);align-self:center}   /* "Kontakt" als View-Button */
+.meta-link.btn-view:hover{text-decoration:none}
 .burger{width:clamp(28px,2.6vw,38px);height:clamp(22px,2vw,28px);display:flex;flex-direction:column;justify-content:space-between;padding:4px 0}
 .burger span{display:block;height:3px;background:var(--light-black)}
 
 /* Sprachumschalter */
-.lang{--lang-gap:clamp(14px,1.4vw,22px);display:inline-flex;gap:var(--lang-gap)}
+.lang{--lang-gap:clamp(36px,3.2vw,48px);display:inline-flex;gap:var(--lang-gap)}
 .lang button:first-child::after{content:"|";position:absolute;left:calc(100% + var(--lang-gap) / 2);transform:translateX(-50%);color:var(--light-black);pointer-events:none}   /* Trennstrich DE | EN */
+.lang[data-active="en"] button:first-child::after{left:calc(100% + (var(--lang-gap) - .8em) / 2)}   /* EN aktiv: Strich mittig zwischen DE und dem Dreieck vor EN */
 /* DE / EN als Text wie "Kontakt"; die gewählte Sprache bekommt den orangenen Balken wie die View-Buttons */
-.lang button{position:relative;isolation:isolate;font-size:clamp(14px,1.2vw,18px);font-weight:400;color:var(--light-black);padding:0 3px}
-.lang button::before{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.42em;background:var(--orange);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-.lang button[aria-pressed="true"]::before{transform:scaleX(1)}
-.lang button:not([aria-pressed="true"]):hover::before{transform:scaleX(1);opacity:.4}
+.lang button{position:relative;font-size:clamp(14px,1.2vw,18px);font-weight:400;color:var(--light-black);padding:0}
+/* gewählte Sprache: gelbes Dreieck davor */
+.lang button::before{content:"";position:absolute;right:calc(100% + .3em);top:50%;width:.5em;height:.6em;background:var(--bright-yellow);clip-path:polygon(0 0,100% 50%,0 100%);transform:translateY(-50%) scale(0);transition:transform .2s ease}
+.lang button[aria-pressed="true"]::before{transform:translateY(-50%) scale(1)}
 
 /* ---------- Hero ---------- */
 /* 1. Spalte = Abstand zwischen Hero-Breite (90 %) und Inhaltsbreite (75 %) → Text bündig mit der Linie unter "Projekte" */

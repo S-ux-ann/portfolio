@@ -66,7 +66,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ---------- Hero ---------- */
 /* 1. Spalte = Abstand zwischen Hero-Breite (90 %) und Inhaltsbreite (75 %) → Text bündig mit der Linie unter "Projekte" */
-.hero{display:grid;grid-template-columns:7.5vw 1fr minmax(0,.9fr);grid-template-areas:". text art";align-items:center;padding:clamp(28px,4vw,64px) 0 clamp(20px,3vw,48px)}
+.hero{display:grid;grid-template-columns:7.5vw minmax(0,1fr) minmax(0,.5fr);grid-template-areas:". text art";align-items:center;padding:clamp(28px,4vw,64px) 0 clamp(20px,3vw,48px)}
 .hero-text{grid-area:text;position:relative;padding-right:clamp(16px,3vw,48px)}
 /* Gelbes Dreieck links vor dem Text, zeigt auf "Ich bin Susann" */
 .hero-tri{position:absolute;right:calc(100% + clamp(10px,1.4vw,20px));top:calc(clamp(26px,4.2vw,60px) * .6);transform:translateY(-50%);width:clamp(28px,4.2vw,60px);height:clamp(32px,4.8vw,69px)}

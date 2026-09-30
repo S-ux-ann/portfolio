@@ -654,7 +654,7 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .vb-hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--vb-gap);margin-top:clamp(40px,5vw,80px)}
 .vb-hero-grid .vb-a{grid-column:1/9;grid-row:1/4;align-self:start;margin-top:clamp(40px,5vw,88px);position:relative;z-index:1}
 .vb-hero-grid .vb-b{grid-column:8/12;grid-row:1;width:75%;align-self:start;position:relative;z-index:3;box-shadow:0 18px 48px rgba(29,29,29,.22)}
-.vb-hero-grid .vb-c{grid-column:10/13;grid-row:2;width:70%;justify-self:start;align-self:start;margin-top:calc(-1 * clamp(40px,5vw,80px));position:relative;z-index:2;box-shadow:0 12px 32px rgba(29,29,29,.16)}
+.vb-hero-grid .vb-c{grid-column:10/13;grid-row:2;width:70%;justify-self:start;align-self:start;margin-top:calc(-1 * clamp(12px,1.6vw,28px));position:relative;z-index:2;box-shadow:0 12px 32px rgba(29,29,29,.16)}
 
 .vb-sec{padding-top:clamp(96px,11vw,180px)}
 .vb-sec-head h2{font-weight:700;font-size:clamp(26px,3vw,44px);line-height:1.15;margin-bottom:clamp(14px,1.4vw,22px)}

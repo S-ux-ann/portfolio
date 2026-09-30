@@ -715,11 +715,11 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .ct-field [aria-invalid="true"]{border-color:var(--orange)}
 .ct-error{font-size:14px;color:#9A4F0B}
 /* Senden: gleicher Button wie "Ansehen" (orangener Balken) */
-.ct-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(16px,2vw,28px);margin-top:clamp(8px,1vw,14px)}
+.ct-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px clamp(16px,2vw,28px);margin-top:clamp(8px,1vw,14px)}   /* Senden rechtsbündig */
 .ct .btn-view{color:var(--light-black)}
 .ct-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .ct-send:disabled{opacity:.5;cursor:wait}
-.ct-status{grid-column:1/-1;font-size:clamp(14px,1.1vw,16px);min-height:1.5em}
+.ct-status{grid-column:1/-1;text-align:right;font-size:clamp(14px,1.1vw,16px);min-height:1.5em}
 .ct-status [data-state="success"]{font-weight:700}
 .ct-status a{color:inherit;text-underline-offset:3px}
 /* Weitere Kontaktwege – bewusst zurückhaltend */

@@ -627,7 +627,6 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .vb-img{width:100%;height:auto;border-radius:var(--radius);display:block}
 .vb-hero{padding-top:clamp(40px,5vw,88px)}
 .vb-title{font-weight:700;font-size:clamp(30px,4vw,58px);line-height:1.12;letter-spacing:-.01em;margin-top:clamp(6px,.8vw,12px)}
-.vb-cats{font-size:clamp(13px,1vw,15px);font-weight:600;letter-spacing:.04em;color:#6b6b6b;margin-top:clamp(16px,1.8vw,28px)}
 /* Kopf: großes Cover links, zwei kleinere Bilder rechts versetzt */
 /* Abschnitts-Navigation: schlank, unter dem gelben Dreieck links */
 .vb-toc{position:absolute;left:clamp(16px,3vw,40px);bottom:0;width:calc(20% - clamp(16px,3vw,40px) - 24px)}

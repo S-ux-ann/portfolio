@@ -617,8 +617,8 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 /* Kopf: Cover groß links; Clarinqa oben rechts; HUB-Detail liegt darüber und überlappt Cover und Clarinqa (Tiefeneffekt) */
 .vb-hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--vb-gap);margin-top:clamp(40px,5vw,80px)}
 .vb-hero-grid .vb-a{grid-column:1/9;grid-row:1/4;align-self:start;position:relative;z-index:1}
-.vb-hero-grid .vb-c{grid-column:10/13;grid-row:2;align-self:start;margin-top:calc(-1 * clamp(40px,5vw,80px));position:relative;z-index:2}
-.vb-hero-grid .vb-b{grid-column:7/12;grid-row:1;align-self:start;margin-top:clamp(24px,3vw,56px);position:relative;z-index:3;box-shadow:0 18px 48px rgba(29,29,29,.22)}
+.vb-hero-grid .vb-b{grid-column:7/12;grid-row:1;align-self:start;margin-top:clamp(40px,5vw,96px);position:relative;z-index:2;box-shadow:0 18px 48px rgba(29,29,29,.22)}
+.vb-hero-grid .vb-c{grid-column:10/13;grid-row:2;align-self:start;margin-top:calc(-1 * clamp(48px,6vw,110px));position:relative;z-index:3;box-shadow:0 18px 48px rgba(29,29,29,.25)}
 
 .vb-sec{padding-top:clamp(96px,11vw,180px)}
 .vb-sec-head h2{font-weight:700;font-size:clamp(26px,3vw,44px);line-height:1.15;margin-bottom:clamp(14px,1.4vw,22px)}
@@ -660,9 +660,9 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .vb-sk-blind .vb-sk-m{grid-column:6/13;grid-row:1;margin-top:clamp(40px,7vw,110px);position:relative;z-index:2;box-shadow:0 18px 48px rgba(29,29,29,.2)}
 .vb-top{margin-top:clamp(96px,11vw,180px)}
 @media (max-width:900px){
-  .vb-hero-grid .vb-a{grid-column:1/10;grid-row:1}
-  .vb-hero-grid .vb-c{grid-column:1/6;grid-row:2;margin-top:var(--vb-gap)}
-  .vb-hero-grid .vb-b{grid-column:7/12;grid-row:2;margin-top:calc(-1 * clamp(40px,10vw,90px))}
+  .vb-hero-grid .vb-a{grid-column:1/11;grid-row:1}
+  .vb-hero-grid .vb-b{grid-column:5/13;grid-row:2;margin-top:calc(-1 * clamp(32px,8vw,72px))}
+  .vb-hero-grid .vb-c{grid-column:2/6;grid-row:3;margin-top:calc(-1 * clamp(32px,8vw,72px))}
   .vb-offset{width:85%}
   .vb-inset{width:70%;margin-left:0}
   .vb-credits{grid-template-columns:repeat(2,max-content)}

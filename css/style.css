@@ -764,6 +764,8 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .legal-body p{font-size:clamp(15px,1.2vw,18px);line-height:1.6}
 .legal-body a{text-underline-offset:3px}
 .legal-note{color:#6b6b6b;font-size:14px}
+.legal-body p+p{margin-top:.8em}
+.legal-list{margin:.6em 0 .8em 1.2em;font-size:clamp(15px,1.2vw,18px);line-height:1.6}
 .legal-updated{margin-top:clamp(32px,4vw,56px);color:#6b6b6b}
 /* Platzhalter – vor dem Livegang ersetzen */
 .legal-todo{background:#FFF3B0;outline:1px dashed #C9B800;padding:0 4px;border-radius:3px}

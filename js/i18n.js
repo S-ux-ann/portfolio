@@ -3,6 +3,21 @@
    ========================================================= */
 const TEXT = {
   de: {
+    /* Seitentitel & Meta-Beschreibungen (Google, Open Graph, Twitter Card) */
+    "meta.locale":"de_DE",
+    "meta.image.alt":"Grafik: User Research, Insights, Hypotheses, Solutions und Testing als Kreislauf",
+    "meta.home.title":"Susann Gebert | UX & Product Specialist","meta.home.desc":"Portfolio von Susann Gebert, UX & Product Specialist in Berlin – mit Case Studies zu Research, UX/UI Design, Product Discovery und UX Quality.",
+    "meta.projects.title":"Projekte – Susann Gebert","meta.projects.desc":"Alle Projekte von Susann Gebert – UX/UI-Design, Research und digitale Produkterlebnisse.",
+    "meta.nexio.title":"Nexio Fleet | Markenidentität & UX/UI Design – Susann Gebert","meta.nexio.desc":"Nexio Fleet Case Study: Markenidentität, Product Discovery, Prototyping und UX/UI-Optimierung für eine mobile Fleet-Management-App.",
+    "meta.ecomex.title":"ecomex Business Academy – Susann Gebert","meta.ecomex.desc":"ecomex Business Academy: Weiterentwicklung von Website, Markenidentität und Marketing-Touchpoints – UX/UI-Design, responsives Webdesign und wiederverwendbare Design-Assets.",
+    "meta.ecommerce.title":"Nebulite E-Commerce – Susann Gebert","meta.ecommerce.desc":"Case Study: Ein research-basiertes Redesign für den Onlineshop von Nebulite – mit klarerer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.",
+    "meta.dashboard.title":"Airbnb Earnings Dashboard – Susann Gebert","meta.dashboard.desc":"Case Study: Ein integriertes Dashboard-Konzept, mit dem Airbnb-Gastgeber ihre Einnahmen abschätzen, Kosten verstehen und Performance-Daten auf einen Blick abrufen können.",
+    "meta.mobile.title":"GasolinaToday Mobile App – Susann Gebert","meta.mobile.desc":"Case Study: GasolinaToday – ein App-Konzept, das Autofahrern in Venezuela hilft, verfügbaren Treibstoff zu finden, Warteschlangen einzuschätzen und Fahrten sicherer zu planen.",
+    "meta.visual.title":"Visual & Brand Work – Susann Gebert","meta.visual.desc":"Visual & Brand Work von Susann Gebert – Editorial Design, Branding, Illustration und Mode.",
+    "meta.about.title":"Über mich – Susann Gebert","meta.about.desc":"Über Susann Gebert: UX & Product Specialist in Berlin an der Schnittstelle von User Research, UX-Qualität und Product Insights.",
+    "meta.contact.title":"Kontakt – Susann Gebert","meta.contact.desc":"Kontakt zu Susann Gebert, UX & Product Specialist in Berlin.",
+    "meta.imprint.title":"Impressum – Susann Gebert","meta.imprint.desc":"Impressum von Susann Gebert.",
+    "meta.privacy.title":"Datenschutz – Susann Gebert","meta.privacy.desc":"Datenschutzerklärung von Susann Gebert.",
     "nav.contact":"Kontakt","nav.close":"Schließen","nav.open":"Menü öffnen",
     "ct.name":"Name","ct.email":"E-Mail","ct.message":"Nachricht","ct.send":"Senden",
     "menu.home":"Home","menu.work":"Projekte","menu.visual":"Visual & Brand Work","menu.about":"Über mich","menu.contact":"Kontakt",
@@ -73,6 +88,21 @@ const TEXT = {
     "nx.proto":"Verbundene Screens aus dem Figma-Prototyp der Nexio-App: Kraftstoffkosten erfassen und Beleg scannen",
   },
   en: {
+    /* Seitentitel & Meta-Beschreibungen (Google, Open Graph, Twitter Card) */
+    "meta.locale":"en_US",
+    "meta.image.alt":"Graphic: user research, insights, hypotheses, solutions and testing as a cycle",
+    "meta.home.title":"Susann Gebert | UX & Product Specialist","meta.home.desc":"Portfolio of Susann Gebert, UX & Product Specialist in Berlin, featuring case studies in research, UX/UI design, product discovery and UX quality.",
+    "meta.projects.title":"Projects – Susann Gebert","meta.projects.desc":"All projects by Susann Gebert – UX/UI design, research and digital product experiences.",
+    "meta.nexio.title":"Nexio Fleet | Brand Identity & UX/UI Design – Susann Gebert","meta.nexio.desc":"Nexio Fleet case study covering brand identity, product discovery, interactive prototyping and UX/UI refinement for a fleet management app.",
+    "meta.ecomex.title":"ecomex Business Academy – Susann Gebert","meta.ecomex.desc":"ecomex Business Academy: evolving the website, brand identity and marketing touchpoints – UX/UI design, responsive web design and reusable design assets.",
+    "meta.ecommerce.title":"Nebulite E-Commerce – Susann Gebert","meta.ecommerce.desc":"Case study: a research-based redesign of Nebulite's online shop – with clearer product search, stronger benefit communication and a more intuitive shopping experience.",
+    "meta.dashboard.title":"Airbnb Earnings Dashboard – Susann Gebert","meta.dashboard.desc":"Case study: an integrated dashboard concept that helps Airbnb hosts estimate their earnings, understand costs and see performance data at a glance.",
+    "meta.mobile.title":"GasolinaToday Mobile App – Susann Gebert","meta.mobile.desc":"Case study: GasolinaToday – an app concept that helps drivers in Venezuela find available fuel, estimate queues and plan trips more safely.",
+    "meta.visual.title":"Visual & Brand Work – Susann Gebert","meta.visual.desc":"Visual & brand work by Susann Gebert – editorial design, branding, illustration and fashion.",
+    "meta.about.title":"About – Susann Gebert","meta.about.desc":"About Susann Gebert: UX & Product Specialist in Berlin working at the intersection of user research, UX quality and product insights.",
+    "meta.contact.title":"Contact – Susann Gebert","meta.contact.desc":"Get in touch with Susann Gebert, UX & Product Specialist in Berlin.",
+    "meta.imprint.title":"Legal Notice – Susann Gebert","meta.imprint.desc":"Legal notice of Susann Gebert.",
+    "meta.privacy.title":"Privacy Policy – Susann Gebert","meta.privacy.desc":"Privacy policy of Susann Gebert.",
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
     "ct.name":"Name","ct.email":"Email","ct.message":"Message","ct.send":"Send",
     "menu.home":"Home","menu.work":"Projects","menu.visual":"Visual & Brand Work","menu.about":"About","menu.contact":"Contact",

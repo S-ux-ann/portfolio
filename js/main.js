@@ -22,6 +22,10 @@ function setLang(l){
   document.querySelectorAll("[data-i18n-aria]").forEach(el => {
     const t = TEXT[l][el.dataset.i18nAria]; if (t) el.setAttribute("aria-label", t);
   });
+  /* Meta-Tags im <head> (Beschreibung, Open Graph, Twitter Card) */
+  document.querySelectorAll("[data-i18n-content]").forEach(el => {
+    const t = TEXT[l][el.dataset.i18nContent]; if (t) el.setAttribute("content", t);
+  });
   const toggle = document.querySelector(".lang");
   toggle.dataset.active = l;
   toggle.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
@@ -76,7 +80,7 @@ setLang(lang);
    wieder der eigene Titel der jeweiligen Seite im Tab.
    Browser bremsen Timer in Hintergrund-Tabs stark aus – deshalb läuft der 4-Sekunden-Timer
    in einem kleinen Web Worker (wird kaum gebremst). Ohne Worker-Unterstützung: normaler Timer. */
-const pageTitle = document.title;
+let pageTitle = document.title;   /* wird beim Verlassen des Tabs aktualisiert, falls die Sprache gewechselt wurde */
 const awayTitle = "Psst... come back! 👀";
 const awayDelay = 4000;
 const showAway = () => { if (document.visibilityState === "hidden") document.title = awayTitle; };
@@ -93,7 +97,10 @@ function stopAwayTimer(){ awayWorker ? awayWorker.postMessage(0) : clearTimeout(
 
 document.addEventListener("visibilitychange", () => {
   stopAwayTimer();
-  if (document.visibilityState === "hidden") startAwayTimer();
+  if (document.visibilityState === "hidden"){
+    if (document.title !== awayTitle) pageTitle = document.title;
+    startAwayTimer();
+  }
   else if (document.title !== pageTitle) document.title = pageTitle;
 });
 /* Aufräumen beim Verlassen der Seite; bei Rückkehr über Vor/Zurück wieder den eigenen Titel zeigen */

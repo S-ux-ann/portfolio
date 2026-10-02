@@ -6,10 +6,9 @@ const TEXT = {
     "nav.contact":"Kontakt","nav.close":"Schließen","nav.open":"Menü öffnen",
     "ct.name":"Name","ct.email":"E-Mail","ct.message":"Nachricht","ct.send":"Senden",
     "menu.home":"Home","menu.work":"Projekte","menu.visual":"Visual & Brand Work","menu.about":"Über mich","menu.contact":"Kontakt",
-    "hero.label":"UX & Product Specialist · Berlin",
+    "hero.label":"UX & Product Specialist",
     "hero.h1":"Ich bin Susann, UX & Product Specialist: Creative Problem Solver, UX/UI Designer, User Researcher und Product Thinker.",
     "hero.intro":"Ich bin Susann,",
-    "hero.cta.projects":"Projekte ansehen",
     "hero.desc":"Ich verwandle Nutzerbedürfnisse, Research und Daten in spürbare Verbesserungen für digitale Produkte und Customer Journeys.",
     "projects.title":"Projekte",
     "p1.title":"Eine E-Commerce-Experience durch Research und Usability-Tests verbessern",
@@ -79,10 +78,9 @@ const TEXT = {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
     "ct.name":"Name","ct.email":"Email","ct.message":"Message","ct.send":"Send",
     "menu.home":"Home","menu.work":"Projects","menu.visual":"Visual & Brand Work","menu.about":"About","menu.contact":"Contact",
-    "hero.label":"UX & Product Specialist · Berlin",
+    "hero.label":"UX & Product Specialist",
     "hero.h1":"I am Susann, UX & Product Specialist: Creative Problem Solver, UX/UI Designer, User Researcher and Product Thinker.",
     "hero.intro":"I am Susann,",
-    "hero.cta.projects":"View projects",
     "hero.desc":"I turn user needs, research and data into meaningful improvements across digital products and customer journeys.",
     "projects.title":"projects",
     "p1.title":"Improving an E-Commerce Experience Through Research and Usability Testing",
@@ -150,7 +148,7 @@ const TEXT = {
   }
 };
 
-/* Wechselnde Begriffe im Hero (immer als ganzes Wort) */
+/* Begriffe der Tipp-Animation im Hero */
 const ROLES = {
   de: ["Creative Problem Solver","UX/UI Designer","User Researcher","Product Thinker"],
   en: ["Creative Problem Solver","UX/UI Designer","User Researcher","Product Thinker"]

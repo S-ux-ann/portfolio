@@ -37,9 +37,9 @@ document.querySelectorAll(".lang [data-lang]").forEach(b => b.addEventListener("
 document.addEventListener("click", e => { if (!langMenu.hidden && !e.target.closest(".lang")) setLangMenu(false); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !langMenu.hidden){ setLangMenu(false); langToggle.focus(); } });
 
-/* ---------- Wechselnde Begriffe im Hero ----------
-   Es steht immer ein vollständiger Begriff da (auch schon im HTML, bevor JS läuft).
-   Wechsel per kurzem Ein-/Ausblenden des ganzen Wortes – nie Buchstabe für Buchstabe.
+/* ---------- Tipp-Animation im Hero ----------
+   Beim Laden steht sofort der erste Begriff vollständig da (auch schon im HTML).
+   Danach wird er gelöscht und der nächste Begriff getippt.
    Bei "Bewegung reduzieren" bleibt der erste Begriff stehen. */
 const typedEl = document.getElementById("typed");
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -48,21 +48,18 @@ function startTyping(){
   clearTimeout(timer);
   if (!typedEl) return;
   const words = ROLES[lang];
-  let w = 0;
   typedEl.textContent = words[0];
-  typedEl.classList.remove("is-out");
   if (reduce) return;
-  (function next(){
-    timer = setTimeout(() => {
-      typedEl.classList.add("is-out");
-      timer = setTimeout(() => {
-        w = (w + 1) % words.length;
-        typedEl.textContent = words[w];
-        typedEl.classList.remove("is-out");
-        next();
-      }, 300);
-    }, 2600);
-  })();
+  let w = 0, i = words[0].length, deleting = true;
+  timer = setTimeout(function tick(){
+    const word = words[w];
+    i += deleting ? -1 : 1;
+    typedEl.textContent = word.slice(0, i);
+    let delay = deleting ? 45 : 90;
+    if (!deleting && i === word.length){ deleting = true; delay = 2200; }
+    else if (deleting && i === 0){ deleting = false; w = (w + 1) % words.length; delay = 350; }
+    timer = setTimeout(tick, delay);
+  }, 2200);   /* erster Begriff bleibt erst eine Weile vollständig stehen */
 }
 
 /* ---------- Burger-Menü ---------- */

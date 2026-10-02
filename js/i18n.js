@@ -6,6 +6,8 @@ const TEXT = {
     "nav.contact":"Kontakt","nav.close":"Schließen","nav.open":"Menü öffnen",
     "ct.name":"Name","ct.email":"E-Mail","ct.message":"Nachricht","ct.send":"Senden",
     "menu.home":"Home","menu.work":"Projekte","menu.visual":"Visual & Brand Work","menu.about":"Über mich","menu.contact":"Kontakt",
+    "hero.label":"UX & Product Specialist",
+    "hero.h1":"Ich bin Susann, UX & Product Specialist: Creative Problem Solver, UX/UI Designer, User Researcher und Product Thinker.",
     "hero.intro":"Ich bin Susann,",
     "hero.desc":"Ich verwandle Nutzerbedürfnisse, Research und Daten in spürbare Verbesserungen für digitale Produkte und Customer Journeys.",
     "projects.title":"Projekte",
@@ -14,9 +16,12 @@ const TEXT = {
     "p2.desc":"Ich habe das digitale Markenerlebnis von ecomex über Website, Marketing und Kommunikation hinweg weiterentwickelt. Von User Flows und responsiven Seitenkonzepten bis zu Corporate Design, UI-Kits und Kampagnen-Assets habe ich an vielen Touchpoints für ein konsistenteres, nutzerzentriertes Erlebnis gesorgt.",
     "p3.title":"Ein klareres Umsatz-Erlebnis für Airbnb-Gastgeber gestalten",
     "p4.desc":"Aufbau einer stimmigen Marke und Gestaltung des mobilen Erlebnisses für ein Fleet-Management-Startup – von frühen Produktkonzepten und interaktiven Prototypen bis zur UX/UI-Verfeinerung der veröffentlichten App.",
+    "home.nexio":"Markenidentität und mobiles Produkterlebnis für ein Fleet-Management-Startup – von Discovery und Prototyping bis zur UX-Evaluation der veröffentlichten App.",
+    "home.ecomex":"Weiterentwicklung des digitalen Markenerlebnisses über Website, UI-System und Marketing hinweg – mit klareren User Flows und wiederverwendbaren Design-Bausteinen.",
+    "home.nebulite":"Ein research-basiertes Redesign für Nebulite – mit verständlicherer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.",
     "p3.desc":"Ein integriertes Dashboard-Konzept, mit dem Gastgeber ihre Einnahmen abschätzen, Kosten verstehen und relevante Performance-Daten auf einen Blick abrufen können.",
     "cur.title":"Neugierig?",
-    "cur.desc":"Es gibt noch mehr zu entdecken: eine Sammlung digitaler Erlebnisse, kreativer Konzepte und Projekte, die meinen Weg als Designerin geprägt haben.",
+    "cur.desc":"Weitere digitale Produkte, visuelle Konzepte und Projekte aus meinem Weg als Designerin.",
     "brand.title":"Visual & Brand Work",
     "brand.head":"Visuelles Design ist Teil meiner gestalterischen Grundlage.",
     "brand.desc":"Eine Auswahl aus Editorial, Illustration, Branding und Fashion: als visuelle Basis meiner heutigen Arbeit an digitalen Produkten.",
@@ -76,7 +81,9 @@ const TEXT = {
     "nav.contact":"Contact","nav.close":"Close","nav.open":"Open menu",
     "ct.name":"Name","ct.email":"Email","ct.message":"Message","ct.send":"Send",
     "menu.home":"Home","menu.work":"Projects","menu.visual":"Visual & Brand Work","menu.about":"About","menu.contact":"Contact",
-    "hero.intro":"I am Susann, a",
+    "hero.label":"UX & Product Specialist",
+    "hero.h1":"I am Susann, UX & Product Specialist: Creative Problem Solver, UX/UI Designer, User Researcher and Product Thinker.",
+    "hero.intro":"I am Susann,",
     "hero.desc":"I turn user needs, research and data into meaningful improvements across digital products and customer journeys.",
     "projects.title":"projects",
     "p1.title":"Improving an E-Commerce Experience Through Research and Usability Testing",
@@ -84,9 +91,12 @@ const TEXT = {
     "p2.desc":"I helped evolve ecomex’s digital brand experience across website, marketing and communication. From user flows and responsive page concepts to corporate design, UI kits and campaign assets, I worked across multiple touchpoints to create a more consistent and user-focused experience.",
     "p3.title":"Designing a Clearer Earnings Experience for Airbnb Hosts",
     "p4.desc":"Building a cohesive brand and shaping the mobile experience for a fleet management startup — from early product concepts and interactive prototypes to UX/UI refinement of the launched application.",
+    "home.nexio":"Brand identity and mobile product experience for a fleet management startup – from discovery and prototyping to evaluating and refining the released app’s UX.",
+    "home.ecomex":"Evolving the digital brand experience across the website, UI system and marketing – with clearer user flows and reusable design components.",
+    "home.nebulite":"A research-led redesign for Nebulite – with clearer product discovery, stronger value communication and a more intuitive shopping experience.",
     "p3.desc":"An integrated dashboard concept that helps hosts estimate their earnings, understand costs and access relevant performance data at a glance.",
     "cur.title":"Curious?",
-    "cur.desc":"There's more to explore. Discover a collection of digital experiences, creative concepts and projects that have shaped my design journey.",
+    "cur.desc":"More digital products, visual concepts and projects from my journey as a designer.",
     "brand.title":"Visual & Brand Work",
     "brand.head":"Visual design is part of how I think.",
     "brand.desc":"A selection of editorial, illustration, branding and fashion work: the visual foundation of my work on digital products today.",
@@ -144,8 +154,8 @@ const TEXT = {
   }
 };
 
-/* Wörter der Tipp-Animation */
+/* Begriffe der Tipp-Animation im Hero */
 const ROLES = {
-  de: ["Product Thinker","UX/UI Designer","User Researcher","Creative Problem Solver"],
-  en: ["Product Thinker","UX/UI Designer","User Researcher","Creative Problem Solver"]
+  de: ["Creative Problem Solver","UX/UI Designer","User Researcher","Product Thinker"],
+  en: ["Creative Problem Solver","UX/UI Designer","User Researcher","Product Thinker"]
 };

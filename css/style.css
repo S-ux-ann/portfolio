@@ -611,6 +611,11 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .cs-review .cs-theme{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(16px,2.4vw,36px)}
 .cs-review .cs-theme-no,.cs-review h3{grid-column:1/-1}
 .cs-review .cs-theme p+p{margin-top:0}
+/* Review-Highlights ohne Karten: kein Hintergrund, kleines gelbes Dreieck vor dem Label */
+.cs-themes.cs-review{gap:clamp(28px,3.4vw,48px)}
+.cs-review .cs-theme{background:none;padding:0;border-radius:0}
+.cs-review .cs-theme-no{display:flex;align-items:center;gap:8px;opacity:1}
+.cs-review .cs-theme-no::before{content:"";flex:none;width:9px;height:11px;background:var(--bright-yellow);clip-path:polygon(0 0,100% 50%,0 100%)}
 @media (max-width:900px){
   .cs-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cs-cols3{grid-template-columns:minmax(0,1fr)}

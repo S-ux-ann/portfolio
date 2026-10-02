@@ -77,12 +77,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero{display:grid;grid-template-columns:7.5vw minmax(0,1fr) minmax(0,.5fr);grid-template-areas:". text art";align-items:center;padding:clamp(60px,6.95vw,100px) 0 clamp(20px,3vw,48px)}   /* oben ca. 100px Luft (Desktop) */
 .hero-text{grid-area:text;align-self:end;position:relative;padding-right:clamp(16px,3vw,48px)}
 /* Gelbes Dreieck links vor dem Text, zeigt auf "Ich bin Susann" */
+.hero-h1{position:relative;font-weight:inherit}
+.hero-label{font-size:clamp(13px,1.1vw,16px);font-weight:700;letter-spacing:.04em;margin-bottom:clamp(10px,1.2vw,18px)}
 .hero-tri{position:absolute;right:calc(100% + clamp(10px,1.4vw,20px));top:calc(clamp(26px,4.2vw,60px) * .6);transform:translateY(-50%);width:clamp(28px,4.2vw,60px);height:clamp(32px,4.8vw,69px)}
-.hero-intro{font-weight:300;font-size:clamp(26px,4.2vw,60px);line-height:1.2}
-.hero-role{font-weight:700;font-size:clamp(26px,4.2vw,60px);line-height:1.2;min-height:1.2em;margin-bottom:clamp(18px,2vw,32px)}
+.hero-intro{display:block;font-weight:300;font-size:clamp(26px,4.2vw,60px);line-height:1.2}
+/* feste Höhe + kein Umbruch → kein Layout Shift bei unterschiedlich langen Begriffen */
+.hero-role{display:block;height:1.2em;white-space:nowrap;font-weight:700;font-size:clamp(26px,4.2vw,60px);line-height:1.2}
+.hero-word{display:inline-block;transition:opacity .3s ease,transform .3s ease}
+.hero-word.is-out{opacity:0;transform:translateY(-.15em)}
 .caret{display:inline-block;width:3px;height:.9em;background:var(--bright-yellow);margin-left:3px;vertical-align:-.08em;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.caret{animation:none}.hero-word{transition:none}}
 .hero-desc{font-size:clamp(16px,1.4vw,21px);max-width:44ch;margin-top:50px}   /* Abstand Tipp-Animation → Text */
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px clamp(24px,2.4vw,36px);margin-top:clamp(20px,2.2vw,32px)}
+.hero-cta .btn-view{color:var(--light-black)}
 .hero-art{grid-area:art;width:100%;height:auto;max-width:620px;justify-self:end}
 
 /* ---------- Section-Überschriften ---------- */
@@ -221,6 +229,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .about .wrap{padding-top:40px;padding-bottom:40px}
   .about-box{grid-template-columns:1fr}
   .footer .wrap{grid-template-columns:1fr}
+}
+@media (max-width:380px){   /* sehr schmale Handys: längster Begriff bleibt einzeilig */
+  .hero-role,.hero-intro{font-size:22px}
 }
 
 @media (prefers-reduced-motion:reduce){

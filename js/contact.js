@@ -32,6 +32,7 @@
       form.reset();
       fields.forEach(f => f.removeAttribute("aria-invalid"));
       show("success");
+      if (window.umami) umami.track("Kontaktformular gesendet");   // Besucherstatistik (ohne personenbezogene Daten)
     } catch (err) {
       show("failed");
     } finally {

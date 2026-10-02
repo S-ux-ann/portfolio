@@ -144,3 +144,14 @@ if (tocLinks.length && "IntersectionObserver" in window){
   }, { rootMargin: "-40% 0px -55% 0px" });
   secs.forEach(s => io.observe(s));
 }
+
+/* ---------- Selected Impact: dezentes Einblenden ----------
+   Ohne JS oder bei "Bewegung reduzieren" ist der Bereich sofort vollständig sichtbar. */
+const impact = document.querySelector(".impact");
+if (impact && !reduce && "IntersectionObserver" in window){
+  impact.classList.add("is-anim");
+  const io2 = new IntersectionObserver(entries => {
+    if (entries.some(e => e.isIntersecting)){ impact.classList.add("is-visible"); io2.disconnect(); }
+  }, { threshold: .25 });
+  io2.observe(impact);
+}

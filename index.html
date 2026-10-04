@@ -28,7 +28,7 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=139">
+<link rel="stylesheet" href="css/style.css?v=142">
 <!-- Besucherstatistik: Umami (ohne Cookies), zählt nur auf susanngebert.com -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="f222214b-0634-4848-a78e-f9d0a3985930" data-domains="susanngebert.com"></script>
 </head>
@@ -72,7 +72,34 @@
         <p class="hero-desc" data-i18n="hero.desc">Ich verwandle Nutzerbedürfnisse, Research und Daten in spürbare Verbesserungen für digitale Produkte und Customer Journeys.</p>
       </div>
 
-      <img class="hero-art" src="images/hero.webp" width="719" height="567" alt="Grafik: User Research, Insights, Hypotheses, Solutions und Testing als Kreislauf">
+      <!-- Blindzeichnung: eine durchgehende Linie zeichnet meinen Weg bis zum Porträt (js/hero-draw.js) -->
+      <figure class="hero-art hero-draw" id="hero-draw" data-state="ready">
+        <svg viewBox="0 0 1400 1320" aria-hidden="true" focusable="false">
+          <g class="hd-cam">
+            <path class="hd-line"/>
+            <circle class="hd-pen" r="13"/>
+          </g>
+        </svg>
+        <figcaption>
+          <span class="sr-only"><span data-only="de">Animation: Eine durchgehende Linie zeichnet meinen beruflichen Weg – Grafikdesign, Modedesign, Branding, UX/UI Design, Research &amp; Daten – und endet in einem Porträt von mir.</span><span data-only="en">Animation: a single continuous line draws my career path – graphic design, fashion design, branding, UX/UI design, research &amp; data – and ends in a portrait of me.</span></span>
+          <ol class="hd-steps" aria-hidden="true">
+            <li><span class="hd-no">01</span><span data-only="de">Grafikdesign</span><span data-only="en">Graphic Design</span></li>
+            <li><span class="hd-no">02</span><span data-only="de">Modedesign</span><span data-only="en">Fashion Design</span></li>
+            <li><span class="hd-no">03</span>Branding</li>
+            <li><span class="hd-no">04</span>UX/UI Design</li>
+            <li><span class="hd-no">05</span><span data-only="de">Research &amp; Daten</span><span data-only="en">Research &amp; Data</span></li>
+            <li><span class="hd-no">06</span><span data-only="de">Heute: UX &amp; Product</span><span data-only="en">Today: UX &amp; Product</span></li>
+          </ol>
+        </figcaption>
+        <button class="hd-toggle" type="button">
+          <svg class="hd-i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+          <svg class="hd-i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+          <svg class="hd-i-replay" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></svg>
+          <span class="sr-only hd-l-pause"><span data-only="de">Animation pausieren</span><span data-only="en">Pause animation</span></span>
+          <span class="sr-only hd-l-play"><span data-only="de">Animation abspielen</span><span data-only="en">Play animation</span></span>
+          <span class="sr-only hd-l-replay"><span data-only="de">Animation erneut abspielen</span><span data-only="en">Replay animation</span></span>
+        </button>
+      </figure>
     </div>
   </section>
 
@@ -255,5 +282,6 @@
 
 <script src="js/i18n.js?v=139"></script>
 <script src="js/main.js?v=139"></script>
+<script src="js/hero-draw.js?v=2"></script>
 </body>
 </html>

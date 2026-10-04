@@ -89,6 +89,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @media (prefers-reduced-motion:reduce){.caret{animation:none}}
 .hero-desc{font-size:clamp(16px,1.4vw,21px);max-width:44ch;margin-top:50px}   /* Abstand Tipp-Animation → Text */
 .hero-art{grid-area:art;width:100%;height:auto;max-width:620px;justify-self:end}
+/* Blindzeichnung im Hero (js/hero-draw.js): eine Linie, Kamera fährt mit, Stationen als Label unten links */
+.hero-draw{position:relative;margin:0;aspect-ratio:1400/1320}
+.hero-draw>svg{display:block;width:100%;height:100%;overflow:hidden}
+.hd-line{fill:none;stroke:var(--light-black);stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.hd-pen{fill:var(--bright-yellow);stroke:var(--light-black);stroke-width:4;transition:opacity .4s}
+.hero-draw.is-done .hd-pen{opacity:0}
+.hd-steps{list-style:none;position:absolute;left:0;top:0;height:2.4em;font-size:clamp(12px,1vw,15px)}
+.hd-steps li{position:absolute;left:0;top:0;display:flex;align-items:center;gap:.6em;white-space:nowrap;padding:.45em 1em;border-radius:999px;background:var(--bright-yellow);color:var(--light-black);opacity:0;transform:translateY(-6px);transition:opacity .35s,transform .35s}
+.hd-steps li:nth-child(2){background:var(--light-blue)}
+.hd-steps li:nth-child(3){background:var(--light-black);color:var(--white)}
+.hd-steps li:nth-child(4){background:var(--grey)}
+.hd-steps li:nth-child(5){background:var(--orange)}
+.hd-steps li.is-on{opacity:1;transform:none}
+.hd-no{font-weight:700;font-size:.85em;opacity:.7}
+.hd-toggle{position:absolute;right:0;top:0;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--white);box-shadow:0 0 0 1px var(--grey);opacity:.75;transition:opacity .2s}
+.hd-toggle:hover,.hd-toggle:focus-visible{opacity:1}
+.hd-toggle svg{width:16px;height:16px;fill:none;stroke:var(--light-black);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.hd-toggle .hd-i-play path{fill:var(--light-black)}
+/* je nach Zustand nur das passende Icon + Label */
+.hd-toggle>*{display:none}
+.hero-draw:is([data-state="playing"],[data-state="ready"]) :is(.hd-i-pause,.hd-l-pause),
+.hero-draw[data-state="paused"] :is(.hd-i-play,.hd-l-play),
+.hero-draw[data-state="done"] :is(.hd-i-replay,.hd-l-replay){display:block}
+@media (prefers-reduced-motion:reduce){.hd-toggle{display:none}}
 
 /* ---------- Section-Überschriften ---------- */
 .sec-head{display:flex;justify-content:flex-end;align-items:center;gap:clamp(14px,1.4vw,22px);border-bottom:var(--line) solid var(--bright-yellow);padding:0 calc((100vw - 100%) / 2 + clamp(12px,1.4vw,20px)) clamp(12px,1.2vw,18px) 0;margin:clamp(32px,4vw,64px) calc((100% - 100vw) / 2) clamp(18px,2vw,32px) 0}
@@ -219,7 +243,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .hero-text{padding-right:0}
   .tri-right{width:34px;height:38px}
   .hero-tri{position:static;display:block;transform:none;width:30px;height:26px;margin-bottom:12px;clip-path:polygon(0 0,100% 0,50% 100%)}   /* Handy: kein Platz links → Dreieck über dem Text, zeigt nach unten */
-  .hero-art{max-width:200px}
+  .hero-art{max-width:260px}
   .hero-role{font-size:26px}
   .hero-intro{font-size:26px}
   .sec-head{margin-top:20px}

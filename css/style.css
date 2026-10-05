@@ -307,10 +307,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 .ab-body{padding:clamp(24px,3vw,48px) 0 clamp(80px,9vw,140px)}
 /* Textspalte so breit wie auf den Projektseiten (.cs-col: 80 % der Inhaltsbreite, max. 1000px, zentriert); Punkteraster links daneben */
-.ab-row{position:relative}
+/* --dg = Breite Punkteraster, --dg-gap = Mindestabstand zum Text. Ist links zu wenig Platz (Tablet), wird die Spalte schmaler statt das Raster zu überdecken */
+.ab-row{position:relative;--dg:clamp(60px,5vw,76px);--dg-gap:clamp(24px,2.4vw,36px)}
 .ab-aside{position:absolute;left:0;top:0}
-.ab-row>div:last-child{width:80%;max-width:1000px;margin:0 auto}
-.dotgrid{display:block;width:clamp(60px,5vw,76px);aspect-ratio:3/8;background:radial-gradient(circle,#3C3A2C 38%,transparent 42%) 0 0/33.333% 12.5%}
+.ab-row>div:last-child{width:min(80%,1000px,calc(100% - 2 * (var(--dg) + var(--dg-gap))));margin:0 auto}
+@media (max-width:900px){.ab-row>div:last-child{width:auto;margin:0 0 0 calc(var(--dg) + var(--dg-gap))}}   /* Tablet: Text links neben dem Raster, volle Restbreite */
+.dotgrid{display:block;width:var(--dg,clamp(60px,5vw,76px));aspect-ratio:3/8;background:radial-gradient(circle,#3C3A2C 38%,transparent 42%) 0 0/33.333% 12.5%}
 .ab-text p{font-size:clamp(15px,1.2vw,18px);line-height:1.5;margin-bottom:1.2em}
 .ab-text b,.exp-list b{font-weight:700}
 

@@ -28,7 +28,7 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=142">
+<link rel="stylesheet" href="css/style.css?v=149">
 <!-- Besucherstatistik: Umami (ohne Cookies), zählt nur auf susanngebert.com -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="f222214b-0634-4848-a78e-f9d0a3985930" data-domains="susanngebert.com"></script>
 </head>
@@ -63,42 +63,36 @@
       <div class="hero-text">
         <span class="tri-right hero-tri" aria-hidden="true"></span>
         <p class="hero-label" data-i18n="hero.label">UX &amp; Product Specialist</p>
-        <!-- H1: Screenreader lesen den vollständigen, statischen Satz; die wechselnde Zeile ist rein dekorativ (aria-hidden) -->
         <h1 class="hero-h1">
-          <span class="sr-only" data-i18n="hero.h1">Ich bin Susann, UX &amp; Product Specialist: Creative Problem Solver, UX/UI Designer, User Researcher und Product Thinker.</span>
-          <span class="hero-intro" aria-hidden="true" data-i18n="hero.intro">Ich bin Susann,</span>
-          <span class="hero-role" aria-hidden="true"><span id="typed">Creative Problem Solver</span><span class="caret"></span></span>
+          <span class="hero-intro" data-i18n="hero.intro">Ich bringe Zahlen</span>
+          <span class="hero-role" data-i18n="hero.role">in Bewegung.</span>
         </h1>
-        <p class="hero-desc" data-i18n="hero.desc">Ich verwandle Nutzerbedürfnisse, Research und Daten in spürbare Verbesserungen für digitale Produkte und Customer Journeys.</p>
+        <p class="hero-desc" data-i18n="hero.desc">Ich mache Muster und Reibungspunkte im Nutzerverhalten sichtbar und übersetze sie mit Research und Design in konkrete Verbesserungen für digitale Produkte und Customer Journeys.</p>
       </div>
 
-      <!-- Blindzeichnung: eine durchgehende Linie zeichnet meinen Weg bis zum Porträt (js/hero-draw.js) -->
-      <figure class="hero-art hero-draw" id="hero-draw" data-state="ready">
-        <svg viewBox="0 0 1400 1320" aria-hidden="true" focusable="false">
-          <g class="hd-cam">
-            <path class="hd-line"/>
-            <circle class="hd-pen" r="13"/>
-          </g>
+      <!-- Comic-Porträt (js/hero-toon.js, folgt der Maus) + Linie, die um die Figur läuft und verbindet, was ich mache (js/hero-path.js) -->
+      <figure class="hero-art hero-path" id="hero-path">
+        <svg viewBox="0 0 720 680" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="hp-dots" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="6"/></pattern>
+          </defs>
+          <rect class="hp-dots" x="455" y="330" width="210" height="240" fill="url(#hp-dots)"/>
+          <circle class="hp-sun" cx="320" cy="280" r="215"/>
+          <svg class="hp-toon" data-style="lineClear" x="167" y="101" width="426" height="447" viewBox="0 0 400 420" overflow="visible"></svg>
+          <path class="hp-line"/>
+          <circle class="hp-pen" r="7"/>
         </svg>
         <figcaption>
-          <span class="sr-only"><span data-only="de">Animation: Eine durchgehende Linie zeichnet meinen beruflichen Weg – Grafikdesign, Modedesign, Branding, UX/UI Design, Research &amp; Daten – und endet in einem Porträt von mir.</span><span data-only="en">Animation: a single continuous line draws my career path – graphic design, fashion design, branding, UX/UI design, research &amp; data – and ends in a portrait of me.</span></span>
-          <ol class="hd-steps" aria-hidden="true">
-            <li><span class="hd-no">01</span><span data-only="de">Grafikdesign</span><span data-only="en">Graphic Design</span></li>
-            <li><span class="hd-no">02</span><span data-only="de">Modedesign</span><span data-only="en">Fashion Design</span></li>
-            <li><span class="hd-no">03</span>Branding</li>
-            <li><span class="hd-no">04</span>UX/UI Design</li>
-            <li><span class="hd-no">05</span><span data-only="de">Research &amp; Daten</span><span data-only="en">Research &amp; Data</span></li>
-            <li><span class="hd-no">06</span><span data-only="de">Heute: UX &amp; Product</span><span data-only="en">Today: UX &amp; Product</span></li>
-          </ol>
+          <span class="sr-only"><span data-only="de">Illustriertes Porträt von Susann Gebert. Eine Linie verbindet, was ich mache: Research &amp; Analyse, User Flows &amp; Prototypen, UX-Optimierung.</span><span data-only="en">Illustrated portrait of Susann Gebert. A line connects what I do: research &amp; analysis, user flows &amp; prototypes, UX optimisation.</span></span>
+          <ul class="hp-steps">
+            <li data-angle="165" tabindex="0"><span class="hp-pill"><span data-only="de">Research &amp; Analyse</span><span data-only="en">Research &amp; Analysis</span></span>
+              <span class="hp-tip"><span data-only="de">Interviews, Usability-Tests und Nutzungsdaten machen sichtbar, wo Menschen auf Hürden stoßen.</span><span data-only="en">Interviews, usability tests and usage data reveal where people run into obstacles.</span></span></li>
+            <li data-angle="280" tabindex="0"><span class="hp-pill"><span data-only="de">User Flows &amp; Prototypen</span><span data-only="en">User Flows &amp; Prototypes</span></span>
+              <span class="hp-tip"><span data-only="de">Ich übersetze Erkenntnisse in klare Abläufe und klickbare Prototypen, die sich testen lassen.</span><span data-only="en">I turn insights into clear flows and clickable prototypes that can be tested.</span></span></li>
+            <li data-angle="20" tabindex="0"><span class="hp-pill"><span data-only="de">UX-Optimierung</span><span data-only="en">UX Optimisation</span></span>
+              <span class="hp-tip"><span data-only="de">Ich entwickle gezielte Verbesserungen und prüfe ihre Wirkung mit Feedback und Daten.</span><span data-only="en">I develop targeted improvements and check their impact with feedback and data.</span></span></li>
+          </ul>
         </figcaption>
-        <button class="hd-toggle" type="button">
-          <svg class="hd-i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
-          <svg class="hd-i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
-          <svg class="hd-i-replay" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></svg>
-          <span class="sr-only hd-l-pause"><span data-only="de">Animation pausieren</span><span data-only="en">Pause animation</span></span>
-          <span class="sr-only hd-l-play"><span data-only="de">Animation abspielen</span><span data-only="en">Play animation</span></span>
-          <span class="sr-only hd-l-replay"><span data-only="de">Animation erneut abspielen</span><span data-only="en">Replay animation</span></span>
-        </button>
       </figure>
     </div>
   </section>
@@ -280,8 +274,9 @@
   </nav>
 </div>
 
-<script src="js/i18n.js?v=139"></script>
-<script src="js/main.js?v=139"></script>
-<script src="js/hero-draw.js?v=2"></script>
+<script src="js/i18n.js?v=147"></script>
+<script src="js/main.js?v=146"></script>
+<script src="js/hero-path.js?v=4"></script>
+<script src="js/hero-toon.js?v=7"></script>
 </body>
 </html>

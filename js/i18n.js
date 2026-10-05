@@ -22,9 +22,9 @@ const TEXT = {
     "ct.name":"Name","ct.email":"E-Mail","ct.message":"Nachricht","ct.send":"Senden",
     "menu.home":"Home","menu.work":"Projekte","menu.visual":"Visual & Brand Work","menu.about":"Über mich","menu.contact":"Kontakt",
     "hero.label":"UX & Product Specialist",
-    "hero.h1":"Ich bin Susann, UX & Product Specialist: Creative Problem Solver, UX/UI Designer, User Researcher und Product Thinker.",
-    "hero.intro":"Ich bin Susann,",
-    "hero.desc":"Ich verwandle Nutzerbedürfnisse, Research und Daten in spürbare Verbesserungen für digitale Produkte und Customer Journeys.",
+    "hero.intro":"Ich bringe Zahlen",
+    "hero.role":"in Bewegung.",
+    "hero.desc":"Ich mache Muster und Reibungspunkte im Nutzerverhalten sichtbar und übersetze sie mit Research und Design in konkrete Verbesserungen für digitale Produkte und Customer Journeys.",
     "projects.title":"Projekte",
     "p1.title":"Eine E-Commerce-Experience durch Research und Usability-Tests verbessern",
     "p1.desc":"Ein research-basiertes Redesign für Nebulite – mit klarerer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.",
@@ -112,9 +112,9 @@ const TEXT = {
     "ct.name":"Name","ct.email":"Email","ct.message":"Message","ct.send":"Send",
     "menu.home":"Home","menu.work":"Projects","menu.visual":"Visual & Brand Work","menu.about":"About","menu.contact":"Contact",
     "hero.label":"UX & Product Specialist",
-    "hero.h1":"I am Susann, UX & Product Specialist: Creative Problem Solver, UX/UI Designer, User Researcher and Product Thinker.",
-    "hero.intro":"I am Susann,",
-    "hero.desc":"I turn user needs, research and data into meaningful improvements across digital products and customer journeys.",
+    "hero.intro":"I put numbers",
+    "hero.role":"in motion.",
+    "hero.desc":"I make patterns and friction points in user behaviour visible, and turn them into concrete improvements for digital products and customer journeys through research and design.",
     "projects.title":"projects",
     "p1.title":"Improving an E-Commerce Experience Through Research and Usability Testing",
     "p1.desc":"A research-led redesign for Nebulite, focused on clearer product discovery, stronger value communication and a more intuitive shopping experience.",
@@ -184,8 +184,3 @@ const TEXT = {
   }
 };
 
-/* Begriffe der Tipp-Animation im Hero */
-const ROLES = {
-  de: ["Creative Problem Solver","UX/UI Designer","User Researcher","Product Thinker"],
-  en: ["Creative Problem Solver","UX/UI Designer","User Researcher","Product Thinker"]
-};

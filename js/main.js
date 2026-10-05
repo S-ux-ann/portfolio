@@ -30,7 +30,6 @@ function setLang(l){
   toggle.dataset.active = l;
   toggle.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
   try { localStorage.setItem("lang", l); } catch(e){}
-  startTyping();
 }
 /* Sprach-Icon: Klick öffnet die Auswahl DE / EN */
 const langToggle = document.querySelector(".lang-toggle");
@@ -40,31 +39,6 @@ langToggle.addEventListener("click", () => setLangMenu(langMenu.hidden));
 document.querySelectorAll(".lang [data-lang]").forEach(b => b.addEventListener("click", () => { setLang(b.dataset.lang); setLangMenu(false); langToggle.focus(); }));
 document.addEventListener("click", e => { if (!langMenu.hidden && !e.target.closest(".lang")) setLangMenu(false); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !langMenu.hidden){ setLangMenu(false); langToggle.focus(); } });
-
-/* ---------- Tipp-Animation im Hero ----------
-   Beim Laden steht sofort der erste Begriff vollständig da (auch schon im HTML).
-   Danach wird er gelöscht und der nächste Begriff getippt.
-   Bei "Bewegung reduzieren" bleibt der erste Begriff stehen. */
-const typedEl = document.getElementById("typed");
-const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-let timer;
-function startTyping(){
-  clearTimeout(timer);
-  if (!typedEl) return;
-  const words = ROLES[lang];
-  typedEl.textContent = words[0];
-  if (reduce) return;
-  let w = 0, i = words[0].length, deleting = true;
-  timer = setTimeout(function tick(){
-    const word = words[w];
-    i += deleting ? -1 : 1;
-    typedEl.textContent = word.slice(0, i);
-    let delay = deleting ? 45 : 90;
-    if (!deleting && i === word.length){ deleting = true; delay = 2200; }
-    else if (deleting && i === 0){ deleting = false; w = (w + 1) % words.length; delay = 350; }
-    timer = setTimeout(tick, delay);
-  }, 2200);   /* erster Begriff bleibt erst eine Weile vollständig stehen */
-}
 
 /* ---------- Burger-Menü ---------- */
 const menu = document.getElementById("menu");

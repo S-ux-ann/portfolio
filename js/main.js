@@ -44,11 +44,22 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && !langMenu.
 const menu = document.getElementById("menu");
 const burger = document.querySelector(".burger");
 const closeBtn = document.querySelector(".menu-close");
-function openMenu(){ menu.classList.add("open"); burger.setAttribute("aria-expanded","true"); document.body.style.overflow="hidden"; closeBtn.focus(); }
-function closeMenu(){ menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); document.body.style.overflow=""; burger.focus(); }
+/* Solange das Menü offen ist, ist die Seite dahinter für Tastatur und Screenreader stillgelegt (inert),
+   und Tab / Shift+Tab laufen im Menü im Kreis */
+const behindMenu = () => [...document.body.children].filter(el => el !== menu && el.tagName !== "SCRIPT");
+function openMenu(){ menu.classList.add("open"); burger.setAttribute("aria-expanded","true"); document.body.style.overflow="hidden"; behindMenu().forEach(el => el.inert = true); closeBtn.focus(); }
+function closeMenu(){ menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); document.body.style.overflow=""; behindMenu().forEach(el => el.inert = false); burger.focus(); }
 burger.addEventListener("click", openMenu);
 closeBtn.addEventListener("click", closeMenu);
-document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("open")) closeMenu(); });
+document.addEventListener("keydown", e => {
+  if (!menu.classList.contains("open")) return;
+  if (e.key === "Escape") return closeMenu();
+  if (e.key !== "Tab") return;
+  const items = [...menu.querySelectorAll("a[href], button")];
+  const first = items[0], last = items[items.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
 
 setLang(lang);
 

@@ -121,6 +121,23 @@ layout();
 if ("ResizeObserver" in window) { const ro = new ResizeObserver(layout); ro.observe(fig); items.forEach(li => ro.observe(li.firstElementChild)); }
 items.forEach((li, k) => setTimeout(() => li.classList.add("is-on"), reduce ? 0 : 300 + k * 250));
 fig.classList.add("is-ready");
+/* Buttons: Tippen öffnet/schließt den Hinweistext (Touch-Geräte fokussieren Buttons nicht immer),
+   Esc blendet ihn aus, bis Maus oder Fokus das Label verlassen (WCAG 1.4.13) */
+items.forEach(li => {
+  const btn = li.querySelector("button");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const open = !li.classList.contains("is-open");
+    items.forEach(o => o.classList.remove("is-open"));
+    li.classList.toggle("is-open", open);
+    li.classList.remove("is-dismissed");
+  });
+  li.addEventListener("mouseleave", () => li.classList.remove("is-dismissed"));
+  li.addEventListener("focusout", () => { li.classList.remove("is-dismissed"); li.classList.remove("is-open"); });
+});
+addEventListener("keydown", e => {
+  if (e.key === "Escape") items.forEach(li => { li.classList.add("is-dismissed"); li.classList.remove("is-open"); });
+});
 /* Mitte eines Buttons relativ zur Heatmap-Fläche (0…1) */
 const centerOf = li => {
   const b = box.getBoundingClientRect(), r = li.firstElementChild.getBoundingClientRect();
@@ -143,7 +160,7 @@ const ghostStep = dt => {
     press(li, true);
     if (ghost.wait > (li ? 2.4 : .9)) {
       press(li, false); ghost.wait = 0; ghost.ti = (ghost.ti + 1) % TARGETS.length;
-      if (ghost.ti === 0) { demoSec = 0; demoSpots = 0; }   // neue Runde = neue Beispiel-Session
+      if (ghost.ti === 0) setDemo("done");   // eine Runde, dann bleibt die fertige Heatmap stehen
     }
   } else {
     const v = Math.min(d, dt * .35);   // Geschwindigkeit in Flächenanteilen pro Sekunde
@@ -160,13 +177,32 @@ if (reduce) {
   return;
 }
 
+/* ---------- Demo-Steuerung: playing → paused / done (WCAG 2.2.2: automatische Bewegung anhaltbar) ---------- */
+const toggle = fig.querySelector(".hm-toggle");
+let demo = "playing";
+function setDemo(state) {
+  demo = state;
+  fig.dataset.demo = state;
+  if (state !== "playing") items.forEach(li => press(li, false));
+}
+setDemo("playing");
+if (toggle) toggle.addEventListener("click", () => {
+  mouse = null; lastMove = 0;   // eigene Session beenden, damit die Demo sofort sichtbar ist
+  if (demo === "playing") return setDemo("paused");
+  if (demo === "done") {   // erneut abspielen: frische Session
+    ghost = { x: .75, y: .3, ti: 0, wait: 0 }; demoSec = 0; demoSpots = 0; demoStill = false; heat.fill(0);
+  }
+  setDemo("playing");
+});
+
 let mouse = null, lastMove = 0, session = 0, spots = 0, dwell = { x: 0, y: 0, t: 0, counted: false };
 if (canHover) addEventListener("pointermove", e => {
   if (e.pointerType !== "mouse") return;
   const r = box.getBoundingClientRect();
   const x = e.clientX - r.left, y = e.clientY - r.top;
-  /* nur auf der Fläche (plus etwas Rand) zählt die Maus */
-  mouse = x > -40 && y > -40 && x < W + 40 && y < H + 40 ? [x, y] : null;
+  /* nur auf der Fläche (plus etwas Rand) zählt die Maus – nicht über dem Session-Label mit dem Pause-Knopf */
+  const overHud = e.target instanceof Element && e.target.closest(".hm-hud");
+  mouse = !overHud && x > -40 && y > -40 && x < W + 40 && y < H + 40 ? [x, y] : null;
   if (mouse) lastMove = performance.now();
 });
 addEventListener("pointerdown", e => {   // Tippen / Klicken auf der Fläche: kurzer, kräftiger Wärmeimpuls
@@ -187,24 +223,33 @@ const frame = now => {
     if (Math.hypot(pos[0] - dwell.x, pos[1] - dwell.y) > 30) dwell = { x: pos[0], y: pos[1], t: 0, counted: false };
     else if ((dwell.t += dt) > .7 && !dwell.counted) { dwell.counted = true; spots++; }
     still = dwell.t > .15;
-  } else {
+  } else if (demo === "playing") {
     const g = ghostStep(dt); pos = [g[0], g[1]]; still = g[2];
     demoSec += dt;
     if (still && !demoStill) demoSpots++;
     demoStill = still;
   }
-  const f = dt * 60;   // zeitbasiert, damit es auf 60 Hz und 120 Hz gleich wirkt
-  warm(pos[0], pos[1], (still ? HEAT_STILL : HEAT_MOVE) * f);
-  const dec = Math.pow(DECAY, f);
-  for (let i = 0; i < heat.length; i++) heat[i] *= dec;
-  draw();
+  /* angehalten / fertig: Heatmap bleibt als Standbild stehen (keine Wärme, kein Abkühlen) */
+  if (pos) {
+    const f = dt * 60;   // zeitbasiert, damit es auf 60 Hz und 120 Hz gleich wirkt
+    warm(pos[0], pos[1], (still ? HEAT_STILL : HEAT_MOVE) * f);
+    const dec = Math.pow(DECAY, f);
+    for (let i = 0; i < heat.length; i++) heat[i] *= dec;
+    draw();
+  }
   if (ghostEl) {
-    ghostEl.style.opacity = live ? 0 : 1;
-    ghostEl.style.transform = `translate(${pos[0]}px, ${pos[1]}px)`;
+    ghostEl.style.opacity = live || demo !== "playing" ? 0 : 1;
+    if (pos) ghostEl.style.transform = `translate(${pos[0]}px, ${pos[1]}px)`;
   }
   fig.classList.toggle("is-live", !!live);
   live ? setHud(session, spots) : setHud(demoSec, demoSpots);
-  requestAnimationFrame(frame);
+  if (onScreen()) requestAnimationFrame(frame); else running = false;
 };
+/* Nur rechnen, solange der Hero im Bild ist (spart Akku); beim Zurückscrollen geht es weiter */
+const onScreen = () => { const r = fig.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; };
+let running = true;
+const resume = () => { if (!running && onScreen()) { running = true; prev = performance.now(); requestAnimationFrame(frame); } };
+addEventListener("scroll", resume, { passive: true });
+addEventListener("resize", resume);
 requestAnimationFrame(frame);
 })();

@@ -27,11 +27,13 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=160">
+<link rel="stylesheet" href="css/style.css?v=167">
 <!-- Besucherstatistik: Umami (ohne Cookies), zählt nur auf susanngebert.com -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="f222214b-0634-4848-a78e-f9d0a3985930" data-domains="susanngebert.com"></script>
 </head>
 <body>
+<!-- Tastatur: erster Tab-Stopp, springt direkt zum Inhalt -->
+<a class="skip-link" href="#main"><span data-only="de">Zum Inhalt springen</span><span data-only="en">Skip to content</span></a>
 
 <!-- ================= HEADER ================= -->
 <header class="topbar">
@@ -55,7 +57,7 @@
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <!-- ================= HERO ================= -->
   <section class="wrap wrap-hero">
     <div class="hero">
@@ -76,18 +78,27 @@
           <canvas></canvas>
           <svg class="hm-ghost" viewBox="0 0 20 24"><path d="M2 2l15 11-7 1.2 4 7.6-3 1.6-4-7.6L2 20z"/></svg>
         </div>
-        <p class="hm-hud" aria-hidden="true"><span class="hm-rec"></span>
+        <div class="hm-hud">
+          <span class="hm-hud-text" aria-hidden="true"><span class="hm-rec"></span>
           <span class="hm-live"><span data-only="de">Deine Session · nicht gespeichert</span><span data-only="en">Your session · not stored</span></span><span class="hm-demo"><span data-only="de">Demo-Session</span><span data-only="en">Demo session</span></span>
-          · <span class="hm-time">00:00</span> · <span class="hm-spots">0</span> <span class="hm-word">Hotspots</span></p>
+          · <span class="hm-time">00:00</span> · <span class="hm-spots">0</span> <span class="hm-word">Hotspots</span></span>
+          <!-- Demo anhalten / weiter / erneut abspielen (WCAG 2.2.2) -->
+          <button class="hm-toggle" type="button">
+            <svg class="hm-i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+            <svg class="hm-i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+            <span class="sr-only hm-l-pause"><span data-only="de">Demo anhalten</span><span data-only="en">Pause demo</span></span>
+            <span class="sr-only hm-l-play"><span data-only="de">Demo abspielen</span><span data-only="en">Play demo</span></span>
+          </button>
+        </div>
         <figcaption>
           <span class="sr-only"><span data-only="de">Interaktive Heatmap, die zeigt, wo sich der Mauszeiger aufhält. Darin drei Bereiche, die beschreiben, was ich mache: Research &amp; Analyse, User Flows &amp; Prototypen, UX-Optimierung.</span><span data-only="en">Interactive heatmap showing where the cursor lingers, with three areas describing what I do: research &amp; analysis, user flows &amp; prototypes, UX optimisation.</span></span>
           <ul class="hp-steps">
-            <li data-x=".1" data-y=".22" tabindex="0"><span class="hp-pill"><span data-only="de">Research &amp; Analyse</span><span data-only="en">Research &amp; Analysis</span></span>
-              <span class="hp-tip"><span data-only="de">Interviews, Usability-Tests und Nutzungsdaten machen sichtbar, wo Menschen auf Hürden stoßen.</span><span data-only="en">Interviews, usability tests and usage data reveal where people run into obstacles.</span></span></li>
-            <li data-x=".5" data-y=".48" tabindex="0"><span class="hp-pill"><span data-only="de">User Flows &amp; Prototypen</span><span data-only="en">User Flows &amp; Prototypes</span></span>
-              <span class="hp-tip"><span data-only="de">Ich übersetze Erkenntnisse in klare Abläufe und klickbare Prototypen, die sich testen lassen.</span><span data-only="en">I turn insights into clear flows and clickable prototypes that can be tested.</span></span></li>
-            <li data-x=".24" data-y=".76" tabindex="0"><span class="hp-pill"><span data-only="de">UX-Optimierung</span><span data-only="en">UX Optimisation</span></span>
-              <span class="hp-tip"><span data-only="de">Ich entwickle gezielte Verbesserungen und prüfe ihre Wirkung mit Feedback und Daten.</span><span data-only="en">I develop targeted improvements and check their impact with feedback and data.</span></span></li>
+            <li data-x=".1" data-y=".22"><button type="button" class="hp-pill" aria-describedby="hp-tip-1"><span data-only="de">Research &amp; Analyse</span><span data-only="en">Research &amp; Analysis</span></button>
+              <span class="hp-tip" id="hp-tip-1" role="tooltip"><span data-only="de">Interviews, Usability-Tests und Nutzungsdaten machen sichtbar, wo Menschen auf Hürden stoßen.</span><span data-only="en">Interviews, usability tests and usage data reveal where people run into obstacles.</span></span></li>
+            <li data-x=".5" data-y=".48"><button type="button" class="hp-pill" aria-describedby="hp-tip-2"><span data-only="de">User Flows &amp; Prototypen</span><span data-only="en">User Flows &amp; Prototypes</span></button>
+              <span class="hp-tip" id="hp-tip-2" role="tooltip"><span data-only="de">Ich übersetze Erkenntnisse in klare Abläufe und klickbare Prototypen, die sich testen lassen.</span><span data-only="en">I turn insights into clear flows and clickable prototypes that can be tested.</span></span></li>
+            <li data-x=".24" data-y=".76"><button type="button" class="hp-pill" aria-describedby="hp-tip-3"><span data-only="de">UX-Optimierung</span><span data-only="en">UX Optimisation</span></button>
+              <span class="hp-tip" id="hp-tip-3" role="tooltip"><span data-only="de">Ich entwickle gezielte Verbesserungen und prüfe ihre Wirkung mit Feedback und Daten.</span><span data-only="en">I develop targeted improvements and check their impact with feedback and data.</span></span></li>
           </ul>
         </figcaption>
       </figure>
@@ -217,7 +228,7 @@
       </div>
     </div>
     <div>
-      <h4 data-i18n="projects.title">Projekte</h4>
+      <h2 data-i18n="projects.title">Projekte</h2>
       <ul class="small">
         <li><a href="cs-nexio.html">Nexio Fleet</a></li>
         <li><a href="ecomex.html">ecomex Business Academy</a></li>
@@ -272,7 +283,7 @@
 </div>
 
 <script src="js/i18n.js?v=148"></script>
-<script src="js/main.js?v=146"></script>
-<script src="js/hero-heatmap.js?v=11"></script>
+<script src="js/main.js?v=147"></script>
+<script src="js/hero-heatmap.js?v=15"></script>
 </body>
 </html>

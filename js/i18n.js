@@ -5,7 +5,7 @@ const TEXT = {
   de: {
     /* Seitentitel & Meta-Beschreibungen (Google, Open Graph, Twitter Card) */
     "meta.locale":"de_DE",
-    "meta.image.alt":"Grafik: User Research, Insights, Hypotheses, Solutions und Testing als Kreislauf",
+    "meta.image.alt":"Porträt von Susann Gebert",
     "meta.home.title":"Susann Gebert | UX & Product Specialist","meta.home.desc":"Portfolio von Susann Gebert, UX & Product Specialist in Berlin – mit Case Studies zu Research, UX/UI Design, Product Discovery und UX Quality.",
     "meta.projects.title":"Projekte – Susann Gebert","meta.projects.desc":"Alle Projekte von Susann Gebert – UX/UI-Design, Research und digitale Produkterlebnisse.",
     "meta.nexio.title":"Nexio Fleet | Markenidentität & UX/UI Design – Susann Gebert","meta.nexio.desc":"Nexio Fleet Case Study: Markenidentität, Product Discovery, Prototyping und UX/UI-Optimierung für eine mobile Fleet-Management-App.",
@@ -95,7 +95,7 @@ const TEXT = {
   en: {
     /* Seitentitel & Meta-Beschreibungen (Google, Open Graph, Twitter Card) */
     "meta.locale":"en_US",
-    "meta.image.alt":"Graphic: user research, insights, hypotheses, solutions and testing as a cycle",
+    "meta.image.alt":"Portrait of Susann Gebert",
     "meta.home.title":"Susann Gebert | UX & Product Specialist","meta.home.desc":"Portfolio of Susann Gebert, UX & Product Specialist in Berlin, featuring case studies in research, UX/UI design, product discovery and UX quality.",
     "meta.projects.title":"Projects – Susann Gebert","meta.projects.desc":"All projects by Susann Gebert – UX/UI design, research and digital product experiences.",
     "meta.nexio.title":"Nexio Fleet | Brand Identity & UX/UI Design – Susann Gebert","meta.nexio.desc":"Nexio Fleet case study covering brand identity, product discovery, interactive prototyping and UX/UI refinement for a fleet management app.",

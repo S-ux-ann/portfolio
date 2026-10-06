@@ -321,7 +321,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ab-a{position:relative;font-weight:700;font-size:clamp(64px,11vw,160px);line-height:1;letter-spacing:-.02em}
 .ab-me{display:grid;place-items:center;flex:none;width:clamp(76px,13vw,190px);aspect-ratio:1;border-radius:50%;background:#3C3A2C;color:var(--white);font-weight:500;font-size:clamp(26px,4.4vw,64px);margin-left:clamp(0px,1.5vw,24px);position:relative}
 .ab-dot{flex:none;width:clamp(30px,7vw,104px);aspect-ratio:1;border-radius:50%;background:#6B6A5B;margin-left:clamp(12px,3vw,48px)}
-.ab-portrait{flex:none;width:clamp(96px,18vw,260px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center 20%;margin-left:auto}
+.ab-portrait{flex:none;width:clamp(96px,18vw,260px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center;margin-left:auto}
 .ab-tri{display:block;width:clamp(40px,8vw,118px);height:clamp(34px,7vw,102px);margin:clamp(12px,1.5vw,24px) 0 0}
 
 .ab-body{padding:clamp(24px,3vw,48px) 0 clamp(80px,9vw,140px)}

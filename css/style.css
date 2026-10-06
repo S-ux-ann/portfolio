@@ -112,6 +112,25 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hp-steps li:is(:hover,:focus,.is-peek) .hp-tip{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.hp-steps li,.hp-tip{transition:none}}
 
+/* Live-Heatmap im Hero (js/hero-heatmap.js): runde Punktefläche innerhalb der Linie, Session-Label unten links */
+.hero-path>svg{pointer-events:none}
+.hm{position:absolute;left:19.4%;top:13.2%;width:66.7%;height:70.6%;border-radius:50%;overflow:hidden}
+.hm canvas{display:block;width:100%;height:100%}
+.hm-ghost{position:absolute;left:0;top:0;width:16px;height:19px;margin:-2px 0 0 -2px;fill:var(--light-black);stroke:var(--white);stroke-width:1.5;pointer-events:none;z-index:5;transition:opacity .4s}
+/* Variante ohne Kreis: Raster füllt die ganze Fläche, Labels sind Buttons darin */
+.hero-heat .hm{left:0;top:0;width:100%;height:100%;border-radius:0;overflow:visible;pointer-events:none}   /* left/width setzt js/hero-heatmap.js, damit das Raster hinter die Überschrift reicht */
+.hero-heat .hm-hud{left:auto;right:0}
+.hero:has(.hero-heat) .hero-text{z-index:1}   /* Überschrift liegt über dem Raster */
+.hero-heat .hp-pill{box-shadow:0 2px 0 rgba(29,29,29,.18);transition:box-shadow .2s,transform .15s}
+.hero-heat .hp-steps li.is-pressed .hp-pill{transform:translateY(2px);box-shadow:0 0 0 rgba(29,29,29,.18)}
+.hm-hud{position:absolute;left:0;bottom:2%;display:flex;align-items:center;gap:.45em;padding:.45em .9em;border-radius:999px;background:var(--white);box-shadow:0 0 0 1px var(--grey);font-size:clamp(11px,.95vw,14px);white-space:nowrap;font-variant-numeric:tabular-nums}
+.hm-rec{width:8px;height:8px;border-radius:50%;background:var(--orange);animation:hm-pulse 1.4s ease-in-out infinite}
+@keyframes hm-pulse{50%{opacity:.25}}
+.hm-live{display:none}
+.is-live .hm-live{display:inline}
+.is-live .hm-demo{display:none}
+@media (prefers-reduced-motion:reduce){.hm-rec{animation:none}}
+
 /* Blindzeichnung im Hero (js/hero-draw.js): eine Linie, Kamera fährt mit, Stationen als Label unten links */
 .hero-draw{position:relative;margin:0;aspect-ratio:1400/1320}
 .hero-draw>svg{display:block;width:100%;height:100%;overflow:hidden}

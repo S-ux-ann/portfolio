@@ -113,7 +113,8 @@ main:focus,main:focus-visible{outline:none;box-shadow:none}   /* Sprungziel – 
 /* Hinweistext: klappt unter dem Label auf, auf der rechten Seite rechtsbündig */
 .hp-tip{position:absolute;top:calc(100% + 8px);left:0;width:max-content;max-width:min(240px,60vw);padding:.7em .9em;border-radius:var(--radius);background:var(--light-black);color:var(--white);font-size:.95em;line-height:1.35;white-space:normal;opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity .2s,transform .2s}
 .hp-steps li[data-side="right"] .hp-tip{left:auto;right:0}
-.hp-steps li:is(:hover,:focus-within,.is-peek){z-index:2}
+.hp-steps li[data-v="up"] .hp-tip{top:auto;bottom:calc(100% + 8px);transform:translateY(4px)}
+.hp-steps li:is(:hover,:focus-within,.is-peek,.is-open){z-index:4}   /* offener Hinweistext liegt über dem Session-Label (z-index 3) */
 .hp-steps li:is(:hover,:focus-within,.is-peek,.is-open):not(.is-dismissed) .hp-tip{opacity:1;transform:none}   /* .is-open = angetippt (Touch), .is-dismissed = mit Esc geschlossen */
 @media (prefers-reduced-motion:reduce){.hp-steps li,.hp-tip{transition:none}}
 

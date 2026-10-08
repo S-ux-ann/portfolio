@@ -115,6 +115,7 @@ const layout = () => {
     const left = Math.max(0, Math.min(FW - w, +li.dataset.x * FW));
     li.style.left = left + "px";
     li.dataset.side = left + w / 2 > FW * .45 ? "right" : "left";   // Hinweistext klappt zur Mitte hin auf
+    li.dataset.v = +li.dataset.y > .6 ? "up" : "down";                // untere Labels klappen nach oben auf (nicht über das Session-Label)
   });
 };
 layout();
@@ -150,7 +151,16 @@ const TARGETS = [{ li: 0 }, [.62, .2], { li: 1 }, [.8, .7], { li: 2 }, [.55, .88
 let ghost = { x: .75, y: .3, ti: 0, wait: 0 };
 let demoSec = 0, demoSpots = 0, demoStill = false;   // Zähler der Beispiel-Session
 const targetPos = t => t.li !== undefined && items[t.li] ? centerOf(items[t.li]) : t;
-const press = (li, on) => { if (li) { li.classList.toggle("is-peek", on); li.classList.toggle("is-pressed", on); } };
+/* nur ein Hinweistext zur Zeit: öffnet der Demo-Cursor einen, schließen sich angetippte andere */
+const press = (li, on) => { if (li) {
+  if (on) {
+    items.forEach(o => o !== li && o.classList.remove("is-open"));
+    /* per Maus angeklickter Button behält sonst den Fokus und damit seinen Text – Tastatur-Fokus bleibt unangetastet */
+    const a = document.activeElement;
+    if (a && a.closest(".hp-steps") && !li.contains(a) && !a.matches(":focus-visible")) a.blur();
+  }
+  li.classList.toggle("is-peek", on); li.classList.toggle("is-pressed", on);
+} };
 const ghostStep = dt => {
   const t = TARGETS[ghost.ti], li = t.li !== undefined ? items[t.li] : null;
   const [tx, ty] = targetPos(t);

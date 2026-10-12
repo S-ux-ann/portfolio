@@ -409,6 +409,7 @@ html[lang="de"] [data-only="en"],html[lang="en"] [data-only="de"]{display:none}
 .cs-facts dd{font-size:clamp(14px,1.05vw,16px);line-height:1.5}
 /* Challenge-Box */
 .cs-challenge{background:var(--light-black);color:var(--white);border-radius:var(--radius);padding:clamp(32px,4vw,56px) clamp(32px,7vw,96px);margin-top:clamp(28px,3vw,48px)}   /* Hover: gezeichnete gelbe Linie (data-scribble="hover", js/scribble.js) */
+.cs-review-result{margin-top:clamp(20px,2.4vw,32px);font-weight:700}   /* Ergebnis unter den Review-Punkten (Nexio) */
 .cs-challenge h2{font-weight:700;font-size:clamp(18px,1.7vw,25px);margin-bottom:clamp(12px,1.2vw,18px)}
 .cs-challenge p{font-size:clamp(15px,1.2vw,18px);line-height:1.55}
 .cs-challenge p+p{margin-top:1em}

@@ -27,7 +27,7 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=170">
+<link rel="stylesheet" href="css/style.css?v=193">
 <!-- Besucherstatistik: Umami (ohne Cookies), zählt nur auf susanngebert.com -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="f222214b-0634-4848-a78e-f9d0a3985930" data-domains="susanngebert.com"></script>
 </head>
@@ -66,7 +66,7 @@
         <p class="hero-label" data-i18n="hero.label">UX &amp; Product Specialist</p>
         <h1 class="hero-h1">
           <span class="hero-intro" data-i18n="hero.intro">Ich bringe Zahlen</span>
-          <span class="hero-role" data-i18n="hero.role">in Bewegung.</span>
+          <span class="hero-role" data-i18n-html="hero.role">in <span class="hl">Bewegung</span>.</span>
         </h1>
         <p class="hero-desc" data-i18n="hero.desc">Ich mache Muster und Reibungspunkte im Nutzerverhalten sichtbar und übersetze sie mit Research und Design in konkrete Verbesserungen für digitale Produkte und Customer Journeys.</p>
       </div>
@@ -105,84 +105,147 @@
     </div>
   </section>
 
-  <!-- ================= PROJEKTE ================= -->
+  <!-- ================= PROJEKTE: Karussell (js/scroll-intro.js) =================
+       Ausschnitte aus allen Projekten, gemischt nach Format und Reifegrad (Wireframe, Prototyp, live).
+       Alle Bilder gleich hoch, die Breite folgt dem Format: sm-tall (App), sm-mid, sm-wide (Website, Dashboard).
+       Die Karten kommen versetzt herein und richten sich beim Scrollen in einer Linie aus,
+       danach erscheinen die Pfeile links und rechts der Überschrift. Ganze Karte führt zur Case Study (js/main.js).
+       Videos (videos/*.mp4, ohne Ton) laufen mit Maus beim Hovern, auf Touch-Geräten solange die Karte zu sehen ist; die übrigen Standbilder werden nach und nach durch Loops ersetzt. -->
+  <section class="sm" aria-labelledby="sm-title">
+    <div class="sm-top">
+      <button class="sm-btn sm-prev" type="button"><span class="sr-only"><span data-only="de">Zurück</span><span data-only="en">Back</span></span></button>
+      <h2 class="sm-head" id="sm-title">
+        <span class="si-light"><span data-only="de">Vom Wireframe</span><span data-only="en">From wireframe</span></span>
+        <span class="si-strong"><span data-only="de">bis <span class="hl">live</span></span><span data-only="en">to <span class="hl">live</span></span></span>
+      </h2>
+      <button class="sm-btn sm-next" type="button"><span class="sr-only"><span data-only="de">Weiter</span><span data-only="en">Next</span></span></button>
+    </div>
+    <ul class="sm-track" aria-label="Projekte" data-i18n-aria="more.list">
+      <!-- 1 Nexio: App, hifi -->
+      <li class="sm-tile sm-tall">
+        <img class="sm-pic" src="images/nexio-outcome.jpg" width="1637" height="1125" loading="lazy" style="object-position:53% 50%" alt="Hand hält ein Smartphone mit dem Nexio-Onboarding-Screen „Flottenverwaltung leicht gemacht“" data-i18n-alt="sm.nexioApp">
+        <div class="sm-body">
+          <p class="sm-eyebrow">Mobile App · Hi-Fi</p>
+          <h3>Nexio Fleet</h3>
+          <a class="btn-view" href="cs-nexio.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 2 ecomex: Website-Relaunch, live -->
+      <li class="sm-tile sm-mid">
+        <img class="sm-pic" src="images/ecomex-relaunch.webp" width="1000" height="800" loading="lazy" alt="Neue ecomex-Website auf einem Laptop, daneben die ganze Startseite" data-i18n-alt="sm.ecomexWeb">
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">Website · live</span><span data-only="en">Website · live</span></p>
+          <h3>ecomex</h3>
+          <a class="btn-view" href="ecomex.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 3 Nebulite: Flow Startseite → Produkt (später Video) -->
+      <li class="sm-tile sm-wide">
+        <video class="sm-pic" src="videos/nebulite-flow.mp4" poster="videos/nebulite-flow.webp" width="1280" height="816" muted loop playsinline preload="none" aria-label="Klick durch den neuen Nebulite-Shop: von der Startseite über die Kategorie zur Produktseite" data-i18n-aria="sm.nebuliteFlow"></video>
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">E-Commerce · Flow</span><span data-only="en">E-commerce · flow</span></p>
+          <h3>Nebulite Collection</h3>
+          <a class="btn-view" href="cs-e-commerce.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 4 GasolinaToday: Designsystem -->
+      <li class="sm-tile sm-mid">
+        <img class="sm-pic" src="images/gasolina-style-tile.webp" width="2000" height="1153" loading="lazy" style="object-position:62% 50%" alt="Style Tile des GasolinaToday-Designsystems: Farben, Typografie, Buttons und Navigation" data-i18n-alt="sm.gasolinaDs">
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">Designsystem</span><span data-only="en">Design system</span></p>
+          <h3>GasolinaToday</h3>
+          <a class="btn-view" href="cs-mobile-app.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 5 Nexio: Dashboard, Frühkonzept -->
+      <li class="sm-tile sm-wide">
+        <img class="sm-pic" src="images/nexio-dashboard-concept.webp" width="2000" height="959" loading="lazy" alt="Frühes Dashboard-Konzept für Nexio: Flows im Prototyping-Tool und Fahrer-Ansicht auf einem Tablet" data-i18n-alt="sm.nexioDash">
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">Dashboard · Konzept</span><span data-only="en">Dashboard · concept</span></p>
+          <h3>Nexio Fleet</h3>
+          <a class="btn-view" href="cs-nexio.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 6 Airbnb: Papierprototyp (später Video) -->
+      <li class="sm-tile sm-mid">
+        <video class="sm-pic" src="videos/airbnb-paper.mp4" poster="videos/airbnb-paper.webp" width="1280" height="720" muted loop playsinline preload="none" style="object-position:58% 50%" aria-label="Test mit dem Papierprototyp des Airbnb-Dashboards: eine neue Ansicht wird über das Dashboard gelegt" data-i18n-aria="sm.airbnbPaper"></video>
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">Papierprototyp</span><span data-only="en">Paper prototype</span></p>
+          <h3>Airbnb Earnings</h3>
+          <a class="btn-view" href="cs-dashboard.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 7 ecomex: 60-Sekunden-Bewerbung (Funnel) -->
+      <li class="sm-tile sm-tall">
+        <img class="sm-pic" src="images/ecomex-flow-devices.webp" width="2000" height="899" loading="lazy" style="object-position:81% 50%" alt="Funnel „60-Sekunden-Bewerbung“ auf zwei Smartphones" data-i18n-alt="sm.ecomexFunnel">
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">Funnel · 60 Sekunden</span><span data-only="en">Funnel · 60 seconds</span></p>
+          <h3>ecomex</h3>
+          <a class="btn-view" href="ecomex.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 8 Nebulite: vorher / nachher -->
+      <li class="sm-tile sm-mid">
+        <img class="sm-pic" src="images/nebulite-product-page.webp" width="1498" height="989" loading="lazy" alt="Nebulite-Produktseite vorher und nachher auf je zwei Laptops" data-i18n-alt="sm.nebuliteBA">
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">Vorher · Nachher</span><span data-only="en">Before · after</span></p>
+          <h3>Nebulite Collection</h3>
+          <a class="btn-view" href="cs-e-commerce.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 9 Bewerbungsradar: in Arbeit (Teaser, später Bild und Link ergänzen) -->
+      <li class="sm-tile sm-mid sm-plain">
+        <div class="sm-body">
+          <p class="sm-eyebrow"><span data-only="de">In Arbeit</span><span data-only="en">In progress</span></p>
+          <h3>Bewerbungsradar</h3>
+          <p class="sm-txt"><span data-only="de">Meine eigene App, gerade im Bau. Bald live.</span><span data-only="en">My own app, currently in the making. Live soon.</span></p>
+        </div>
+      </li>
+      <!-- 10 Alle Projekte -->
+      <li class="sm-tile sm-tall sm-plain">
+        <div class="sm-body">
+          <h3 data-i18n="cur.title">Neugierig?</h3>
+          <p class="sm-txt" data-i18n="cur.desc">Weitere digitale Produkte, visuelle Konzepte und Projekte aus meinem Weg als Designerin.</p>
+          <a class="btn-view" href="all-projects.html" data-i18n="cta.explore">Entdecken</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= VISUAL & BRAND ================= -->
   <section class="wrap" id="work-projects">
     <div class="indent">
-      <div class="sec-head">
-        <h2 data-i18n="projects.title">Projekte</h2>
-        <span class="tri-down" aria-hidden="true"></span>
-      </div>
+      <h2 class="sm-head sec-brand-head">
+        <span class="si-light">Visual &amp; Brand</span>
+        <span class="si-strong"><span class="hl">Work</span></span>
+      </h2>
 
-      <div class="projects">
-        <!-- Nexio Fleet -->
-        <article class="card card-dark card-feature">
-          <img class="pic" src="images/nexio-hero.webp?v=1" width="1460" height="678" alt="Smartphone mit dem Nexio-App-Icon auf dunklem Hintergrund" data-i18n-alt="nx.hero">
-          <div class="txt">
-            <div>
-              <h3>Nexio Fleet</h3>
-              <div class="sub">Mobility · Brand &amp; Product Design</div>
-            </div>
-            <p data-i18n="home.nexio">Markenidentität und mobiles Produkterlebnis für ein Fleet-Management-Startup – von Discovery und Prototyping bis zur UX-Evaluation der veröffentlichten App.</p>
-            <a class="btn-view" href="cs-nexio.html" data-i18n="cta.view">Ansehen</a>
-          </div>
-        </article>
-
-        <!-- ecomex -->
-        <article class="card card-grey card-ecomex">
-          <div class="pic-box"><img class="pic" src="images/ecomex.webp" width="1400" height="630" alt="ecomex Website auf Laptop und Smartphone"></div>
-          <div class="txt">
-            <div>
-              <h3>ecomex Business Academy</h3>
-              <div class="sub">Digital Experience · Branding · Web</div>
-            </div>
-            <p data-i18n="home.ecomex">Weiterentwicklung des digitalen Markenerlebnisses über Website, UI-System und Marketing hinweg – mit klareren User Flows und wiederverwendbaren Design-Bausteinen.</p>
-            <a class="btn-view" href="ecomex.html" data-i18n="cta.view">Ansehen</a>
-          </div>
-        </article>
-
-        <!-- Nebulite -->
-        <article class="card card-grey">
-          <div class="pic-box cover"><img class="pic" src="images/nebulite.webp" width="1200" height="800" alt="Nebulite Collection: leuchtende Taschen aus Glasfasergewebe"></div>
-          <div class="txt">
-            <div>
-              <h3>Nebulite Collection</h3>
-              <div class="sub">UX/UI Case Study · E-Commerce</div>
-            </div>
-            <p data-i18n="home.nebulite">Ein research-basiertes Redesign für Nebulite – mit verständlicherer Produktsuche, stärkerer Nutzenkommunikation und einem intuitiveren Einkaufserlebnis.</p>
-            <a class="btn-view" href="cs-e-commerce.html" data-i18n="cta.view">Ansehen</a>
-          </div>
-        </article>
-
-        <!-- Curious -->
-        <article class="card card-dark card-curious">
-          <div class="txt">
-            <h3 data-i18n="cur.title">Neugierig?</h3>
-            <p data-i18n="cur.desc">Weitere digitale Produkte, visuelle Konzepte und Projekte aus meinem Weg als Designerin.</p>
-            <a class="btn-view" href="all-projects.html" data-i18n="cta.explore">Entdecken</a>
-          </div>
-        </article>
-      </div>
-
-      <!-- ================= VISUAL & BRAND ================= -->
-      <div class="sec-head sec-brand">
-        <h2 data-i18n="brand.title">Visual & Brand Work</h2>
-        <span class="tri-down" aria-hidden="true"></span>
-      </div>
-
-      <article class="card card-dark">
-        <div class="brand">
-          <img class="pic b-main" src="images/magazine-hero.webp?v=2" width="2000" height="1355" loading="lazy" alt="Modemagazin „Bergmannkiez“: Cover und aufgeklappte Doppelseite mit Stadtplan" data-i18n-alt="vb.magHero">
-          <img class="pic b-wide" src="images/sketch-four-looks.webp" width="600" height="900" loading="lazy" alt="Farbige Modezeichnungen von vier Looks" data-i18n-alt="vb.skFour">
-          <div class="b-bottom">
-            <img class="pic b-small" src="images/hub-hero.webp" width="1200" height="1723" loading="lazy" alt="HUB: geknüpfte Jacke über einem Holzhocker" data-i18n-alt="vb.hubStool">
-            <div class="txt">
-              <h3 data-i18n="brand.head">Visuelles Design ist Teil meiner gestalterischen Grundlage.</h3>
-              <p data-i18n="brand.desc">Eine Auswahl aus Editorial, Illustration, Branding und Fashion: als visuelle Basis meiner heutigen Arbeit an digitalen Produkten.</p>
-              <a class="btn-view" href="visual-brand-work.html" data-i18n="cta.more">Mehr</a>
-            </div>
-          </div>
+      <!-- Collage wie auf der Seite "Visual & Brand Work": überlappende Bilder, je eines pro Bereich.
+           Beim Hovern/Fokus hebt sich das Bild und die Bezeichnung erscheint (Touch: immer sichtbar). Jedes Bild führt zum passenden Abschnitt. -->
+      <div class="vw">
+        <div class="vc">
+          <a class="vc-i vc-1" href="visual-brand-work.html#vb-s1">
+            <img src="images/magazine-hero.webp?v=2" width="2000" height="1355" loading="lazy" alt="Modemagazin „Bergmannkiez“: Cover und aufgeklappte Doppelseite mit Stadtplan" data-i18n-alt="vb.magHero">
+            <span class="vc-label"><span class="vc-no">01</span><span data-only="de">Editorial &amp; Print</span><span data-only="en">Editorial &amp; print</span></span>
+          </a>
+          <a class="vc-i vc-2" href="visual-brand-work.html#vb-s2">
+            <img src="images/claringa-brand.webp" width="2000" height="1952" loading="lazy" alt="Claringa: Markenauftritt mit Logo, Visitenkarten und Bildwelt">
+            <span class="vc-label"><span class="vc-no">02</span><span data-only="de">Marke &amp; Verpackung</span><span data-only="en">Brand &amp; packaging</span></span>
+          </a>
+          <a class="vc-i vc-3" href="visual-brand-work.html#vb-s3">
+            <img src="images/hub-hero.webp" width="1200" height="1723" loading="lazy" alt="HUB: geknüpfte Jacke über einem Holzhocker" data-i18n-alt="vb.hubStool">
+            <span class="vc-label"><span class="vc-no">03</span><span data-only="de">Mode, Material &amp; Konzept</span><span data-only="en">Fashion, material &amp; concept</span></span>
+          </a>
+          <a class="vc-i vc-4" href="visual-brand-work.html#vb-s4">
+            <img src="images/sketch-four-looks.webp" width="600" height="900" loading="lazy" alt="Farbige Modezeichnungen von vier Looks" data-i18n-alt="vb.skFour">
+            <span class="vc-label"><span class="vc-no">04</span><span data-only="de">Illustration &amp; Exploration</span><span data-only="en">Illustration &amp; exploration</span></span>
+          </a>
         </div>
-      </article>
+        <div class="vw-foot">
+          <p data-i18n="brand.desc">Eine Auswahl aus Editorial, Illustration, Branding und Fashion: als visuelle Basis meiner heutigen Arbeit an digitalen Produkten.</p>
+          <a class="btn-view" href="visual-brand-work.html" data-i18n="cta.more">Mehr</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -282,8 +345,9 @@
   </nav>
 </div>
 
-<script src="js/i18n.js?v=150"></script>
-<script src="js/main.js?v=147"></script>
+<script src="js/i18n.js?v=155"></script>
+<script src="js/main.js?v=151"></script>
 <script src="js/hero-heatmap.js?v=16"></script>
+<script src="js/scroll-intro.js?v=20"></script>
 </body>
 </html>

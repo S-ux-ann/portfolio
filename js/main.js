@@ -99,7 +99,7 @@ window.addEventListener("pageshow", () => { if (document.title !== pageTitle) do
 /* ---------- Projektkarten komplett klickbar ----------
    Karten mit einem "Ansehen"-Link führen bei Klick irgendwo auf der Karte zu diesem Link.
    Text markieren bleibt möglich; Strg/Cmd-Klick und Mittelklick öffnen einen neuen Tab. */
-document.querySelectorAll(".card").forEach(card => {
+document.querySelectorAll(".card, .sm-tile").forEach(card => {
   const link = card.querySelector("a.btn-view[href]");
   if (!link) return;
   card.classList.add("is-link");

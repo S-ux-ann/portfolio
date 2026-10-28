@@ -76,6 +76,74 @@ if (vids.length && !reduce) {
   }
 }
 
+/* Vorher → Nachher als Pixel-Wipe (img mit data-wipe = Vorher-Bild, src = Nachher):
+   Entlang einer Diagonale springen die Bildpixel ins Nachher und danach wieder zurück, endlos, solange die Karte zu sehen ist.
+   Bei "weniger Bewegung" bleibt das Nachher als Standbild. */
+const wipes = document.querySelectorAll(".sm-track img[data-wipe]");
+if (wipes.length && !reduce) {
+  const CELL = 4, FLIP = .07, JITTER = .04, HOLD_BEFORE = 1400, WIPE = 3200, HOLD_AFTER = 3000;
+  const LOOP = 2 * (HOLD_BEFORE + WIPE + HOLD_AFTER);
+  const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+  const load = src => new Promise((ok, fail) => { const i = new Image(); i.onload = () => ok(i); i.onerror = fail; i.src = src; });
+  // Zeitpunkt im Loop → Fortschritt 0 (Vorher) bis 1 (Nachher)
+  const progress = t => {
+    t %= LOOP;
+    if (t < HOLD_BEFORE) return 0;
+    if ((t -= HOLD_BEFORE) < WIPE) return ease(t / WIPE);
+    if ((t -= WIPE) < HOLD_AFTER + HOLD_BEFORE) return 1;
+    if ((t -= HOLD_AFTER + HOLD_BEFORE) < WIPE) return 1 - ease(t / WIPE);
+    return 0;
+  };
+  const setup = async img => {
+    let a, b;
+    try { [a, b] = await Promise.all([load(img.dataset.wipe), load(img.currentSrc || img.src)]); } catch { return; }
+    const cv = document.createElement("canvas");
+    cv.className = "sm-wipe"; cv.setAttribute("aria-hidden", "true");
+    img.after(cv);
+    const ctx = cv.getContext("2d");
+    let W = 0, H = 0, cells = [], ca, cb, raf = 0, start = 0;
+    // object-fit: cover, Ausschnitt mittig
+    const cover = im => { const s = Math.max(W / im.width, H / im.height); return { s, ox: (W - im.width * s) / 2, oy: (H - im.height * s) / 2 }; };
+    const size = () => {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      if (!W || !H) return;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ca = cover(a); cb = cover(b);
+      const cols = Math.ceil(W / CELL), rows = Math.ceil(H / CELL);
+      cells = [];
+      for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++)
+        cells.push({ x: x * CELL, y: y * CELL, n: 2 + Math.floor(Math.random() * 3),
+          t: ((x + .5) / cols * .62 + (y + .5) / rows * .38) * (1 - JITTER - FLIP) + Math.random() * JITTER });
+    };
+    const tile = (im, c, x, y) => ctx.drawImage(im, (x - c.ox) / c.s, (y - c.oy) / c.s, CELL / c.s, CELL / c.s, x, y, CELL, CELL);
+    const draw = p => {
+      // Grundbild ist das, was gerade überwiegt; darauf nur die abweichenden Pixel
+      const base = p < .5 ? a : b, cbase = p < .5 ? ca : cb;
+      ctx.drawImage(base, cbase.ox, cbase.oy, base.width * cbase.s, base.height * cbase.s);
+      for (const c of cells) {
+        const f = (p - c.t) / FLIP;
+        // beim Umspringen n-mal hin und her, ungerade Phasen zeigen das Nachher
+        const after = f >= 1 || (f > 0 && Math.floor(f * c.n * 2) % 2 === 1);
+        if (after && base === a) tile(b, cb, c.x, c.y);
+        else if (!after && base === b) tile(a, ca, c.x, c.y);
+      }
+    };
+    const frame = now => { draw(progress(now - start)); raf = requestAnimationFrame(frame); };
+    const run = on => {
+      cancelAnimationFrame(raf);
+      if (!on) return;
+      if (!cells.length) size();
+      start = performance.now(); raf = requestAnimationFrame(frame);
+    };
+    size(); draw(0);
+    refreshes.push(() => { size(); draw(0); });
+    if ("IntersectionObserver" in window) new IntersectionObserver(([e]) => run(e.isIntersecting), { threshold: .2 }).observe(cv);
+    else run(true);
+  };
+  wipes.forEach(setup);
+}
+
 let queued = false;
 const update = () => { queued = false; updates.forEach(f => f()); };
 const queue = () => { if (!queued){ queued = true; requestAnimationFrame(update); } };

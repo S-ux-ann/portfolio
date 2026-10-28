@@ -77,7 +77,8 @@ if (vids.length && !reduce) {
 }
 
 /* Vorher → Nachher als Pixel-Wipe (img mit data-wipe = Vorher-Bild, src = Nachher):
-   Entlang einer Diagonale springen die Bildpixel ins Nachher und danach wieder zurück, endlos, solange die Karte zu sehen ist.
+   Entlang einer Diagonale springen die Bildpixel ins Nachher und danach wieder zurück, endlos.
+   Wie die Videos: mit Maus nur beim Hovern (oder Tastaturfokus), ohne Maus solange die Karte zu sehen ist.
    Bei "weniger Bewegung" bleibt das Nachher als Standbild. */
 const wipes = document.querySelectorAll(".sm-track img[data-wipe]");
 if (wipes.length && !reduce) {
@@ -101,7 +102,7 @@ if (wipes.length && !reduce) {
     cv.className = "sm-wipe"; cv.setAttribute("aria-hidden", "true");
     img.after(cv);
     const ctx = cv.getContext("2d");
-    let W = 0, H = 0, cells = [], ca, cb, raf = 0, start = 0;
+    let W = 0, H = 0, cells = [], ca, cb, raf = 0, start = 0, elapsed = 0, playing = false;
     // object-fit: cover, Ausschnitt mittig
     const cover = im => { const s = Math.max(W / im.width, H / im.height); return { s, ox: (W - im.width * s) / 2, oy: (H - im.height * s) / 2 }; };
     const size = () => {
@@ -129,17 +130,28 @@ if (wipes.length && !reduce) {
         else if (!after && base === b) tile(a, ca, c.x, c.y);
       }
     };
-    const frame = now => { draw(progress(now - start)); raf = requestAnimationFrame(frame); };
+    const frame = now => { elapsed = now - start; draw(progress(elapsed)); raf = requestAnimationFrame(frame); };
+    // anhalten und an derselben Stelle weiterlaufen lassen (wie pause / play beim Video)
     const run = on => {
+      if (on === playing) return;
+      playing = on;
       cancelAnimationFrame(raf);
       if (!on) return;
       if (!cells.length) size();
-      start = performance.now(); raf = requestAnimationFrame(frame);
+      start = performance.now() - elapsed; raf = requestAnimationFrame(frame);
     };
     size(); draw(0);
-    refreshes.push(() => { size(); draw(0); });
-    if ("IntersectionObserver" in window) new IntersectionObserver(([e]) => run(e.isIntersecting), { threshold: .2 }).observe(cv);
-    else run(true);
+    refreshes.push(() => { size(); draw(progress(elapsed)); });
+    const hover = () => matchMedia("(hover: hover)").matches;
+    const card = img.closest(".sm-tile");
+    card.addEventListener("mouseenter", () => { if (hover()) run(true); });
+    card.addEventListener("mouseleave", () => { if (hover()) run(false); });
+    card.addEventListener("focusin", () => run(true));
+    card.addEventListener("focusout", () => run(false));
+    if ("IntersectionObserver" in window) new IntersectionObserver(([e]) => {
+      if (hover()) { if (!e.isIntersecting) run(false); return; }
+      run(e.isIntersecting);
+    }, { threshold: .2 }).observe(cv);
   };
   wipes.forEach(setup);
 }

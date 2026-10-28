@@ -219,9 +219,7 @@ main:focus,main:focus-visible{outline:none;box-shadow:none}   /* Sprungziel – 
 .sm-body{flex:1;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(18px,2.2vw,32px) clamp(20px,2.4vw,36px)}
 .sm-body h3{font-size:clamp(20px,2vw,30px);font-weight:700;line-height:1.2;hyphens:auto;overflow-wrap:break-word}
 .sm-body .btn-view{margin-top:auto;padding-top:clamp(14px,1.6vw,24px)}
-.sm-plain .sm-body{justify-content:flex-end}
-.sm-plain .sm-body .btn-view{margin-top:clamp(14px,1.6vw,24px);padding-top:0}
-.sm-txt{font-size:clamp(14px,1.2vw,18px);line-height:1.5;max-width:36ch;margin-top:clamp(8px,1vw,14px)}
+.sm-foot{width:var(--content-w);margin-inline:auto}   /* Zeile "Alle Projekte": gleiche Breite wie die Zeile bei Visual & Brand Work (.wrap) */
 .sm-eyebrow{font-size:clamp(12px,1vw,15px);font-weight:700;letter-spacing:.04em;color:var(--bright-yellow);margin-bottom:6px}
 /* Pfeile links und rechts der Überschrift (gelbe Kreise wie im Case-Study-Karussell);
    erscheinen erst, wenn die Karten in einer Linie stehen */
@@ -262,14 +260,11 @@ main:focus,main:focus-visible{outline:none;box-shadow:none}   /* Sprungziel – 
   .vc-4{grid-column:1/8;grid-row:2;margin-top:calc(-1 * clamp(24px,8vw,48px))}
   .vc-label{left:8px;bottom:8px;max-width:calc(100% - 16px);padding:.4em .8em;font-size:12px;border-radius:12px}
 }
-.vw-foot{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px 32px;margin-top:clamp(40px,5vw,80px);padding-top:clamp(16px,1.6vw,24px);border-top:var(--line-sec) solid var(--bright-yellow)}
+.vw-foot{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px 32px;margin-top:clamp(40px,5vw,80px)}
 .vw-foot p{font-size:clamp(15px,1.2vw,18px);line-height:1.5;max-width:52ch}
 .vw-foot .btn-view{color:var(--light-black)}
 /* Touch ohne Hover: Bild klein und fest neben dem Begriff */
 
-/* Balken unter einem Schlüsselwort in großen Überschriften – wie beim Button, aber ohne Bewegung */
-.hl{position:relative;isolation:isolate;padding:0 .08em;margin:0 -.08em}
-.hl::before{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.2em;background:var(--orange);z-index:-1}
 
 /* weniger Bewegung: alles sofort im Endzustand, kein Festhalten beim Scrollen */
 @media (prefers-reduced-motion:reduce){

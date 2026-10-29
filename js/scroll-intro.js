@@ -82,8 +82,8 @@ if (vids.length && !reduce) {
    Bei "weniger Bewegung" bleibt das Nachher als Standbild. */
 const wipes = document.querySelectorAll(".sm-track img[data-wipe]");
 if (wipes.length && !reduce) {
-  const CELL = 4, FLIP = .07, JITTER = .04, HOLD = 2800, WIPE = 3200;
-  const LOOP = 2 * (HOLD + WIPE);
+  const CELL = 4, FLIP = .07, JITTER = .04, HOLD_BEFORE = 2000, HOLD_AFTER = 2800, WIPE = 3200;
+  const LOOP = HOLD_BEFORE + HOLD_AFTER + 2 * WIPE;
   const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
   const load = src => new Promise((ok, fail) => { const i = new Image(); i.onload = () => ok(i); i.onerror = fail; i.src = src; });
   // Zeitpunkt im Loop → Fortschritt 1 (Nachher) bis 0 (Vorher).
@@ -91,8 +91,8 @@ if (wipes.length && !reduce) {
   const progress = t => {
     t %= LOOP;
     if (t < WIPE) return 1 - ease(t / WIPE);
-    if ((t -= WIPE) < HOLD) return 0;
-    if ((t -= HOLD) < WIPE) return ease(t / WIPE);
+    if ((t -= WIPE) < HOLD_BEFORE) return 0;
+    if ((t -= HOLD_BEFORE) < WIPE) return ease(t / WIPE);
     return 1;
   };
   const setup = async img => {

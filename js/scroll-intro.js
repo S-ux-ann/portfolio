@@ -77,23 +77,23 @@ if (vids.length && !reduce) {
 }
 
 /* Vorher → Nachher als Pixel-Wipe (img mit data-wipe = Vorher-Bild, src = Nachher):
-   Entlang einer Diagonale springen die Bildpixel ins Nachher und danach wieder zurück, endlos.
+   In Ruhe steht das Nachher. Entlang einer Diagonale springen die Bildpixel ins Vorher und danach wieder zurück, endlos.
    Wie die Videos: mit Maus nur beim Hovern (oder Tastaturfokus), ohne Maus solange die Karte zu sehen ist.
    Bei "weniger Bewegung" bleibt das Nachher als Standbild. */
 const wipes = document.querySelectorAll(".sm-track img[data-wipe]");
 if (wipes.length && !reduce) {
-  const CELL = 4, FLIP = .07, JITTER = .04, HOLD_BEFORE = 1400, WIPE = 3200, HOLD_AFTER = 3000;
-  const LOOP = 2 * (HOLD_BEFORE + WIPE + HOLD_AFTER);
+  const CELL = 4, FLIP = .07, JITTER = .04, HOLD = 2800, WIPE = 3200;
+  const LOOP = 2 * (HOLD + WIPE);
   const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
   const load = src => new Promise((ok, fail) => { const i = new Image(); i.onload = () => ok(i); i.onerror = fail; i.src = src; });
-  // Zeitpunkt im Loop → Fortschritt 0 (Vorher) bis 1 (Nachher)
+  // Zeitpunkt im Loop → Fortschritt 1 (Nachher) bis 0 (Vorher).
+  // Der Loop beginnt direkt mit dem Wipe ins Vorher, das Stehen auf dem Nachher kommt am Ende.
   const progress = t => {
     t %= LOOP;
-    if (t < HOLD_BEFORE) return 0;
-    if ((t -= HOLD_BEFORE) < WIPE) return ease(t / WIPE);
-    if ((t -= WIPE) < HOLD_AFTER + HOLD_BEFORE) return 1;
-    if ((t -= HOLD_AFTER + HOLD_BEFORE) < WIPE) return 1 - ease(t / WIPE);
-    return 0;
+    if (t < WIPE) return 1 - ease(t / WIPE);
+    if ((t -= WIPE) < HOLD) return 0;
+    if ((t -= HOLD) < WIPE) return ease(t / WIPE);
+    return 1;
   };
   const setup = async img => {
     let a, b;
@@ -140,7 +140,7 @@ if (wipes.length && !reduce) {
       if (!cells.length) size();
       start = performance.now() - elapsed; raf = requestAnimationFrame(frame);
     };
-    size(); draw(0);
+    size(); draw(1);
     refreshes.push(() => { size(); draw(progress(elapsed)); });
     const hover = () => matchMedia("(hover: hover)").matches;
     const card = img.closest(".sm-tile");

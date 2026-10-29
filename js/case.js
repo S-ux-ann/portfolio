@@ -2,6 +2,8 @@
    PROJEKTSEITEN – Karussell, Bild-Slider, Vorher/Nachher-Vergleich & Fortschrittsanzeige
    ========================================================= */
 
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 /* ---------- Karussell mit Karten (z. B. Design-Fokus) ---------- */
 document.querySelectorAll(".cs-carousel:not(.cs-gallery)").forEach(carousel => {
   const track = carousel.querySelector(".cs-track");

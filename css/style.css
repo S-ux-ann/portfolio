@@ -216,6 +216,43 @@ main:focus,main:focus-visible{outline:none;box-shadow:none}   /* Sprungziel – 
 .sm-tile:nth-child(9){--rise:.45;--off:40}
 .sm-tile:nth-child(10){--rise:.7;--off:0}
 .sm-pic{display:block;width:100%;height:var(--ph);object-fit:cover}
+/* Bewerbungsradar-Karte: animierte Ebenen statt Video. Die Bühne hat das Format der Vorlage (1200 × 1500), füllt die Höhe
+   und wird seitlich beschnitten (wie object-fit: cover). Läuft nur mit .is-playing (js/scroll-intro.js), sonst steht das fertige Bild. */
+.rd-anim{position:relative;overflow:hidden;background:#FEF9EC}
+.rd-stage{position:absolute;top:0;left:50%;height:100%;aspect-ratio:1200/1500;transform:translateX(-50%)}
+.rd-stage img{position:absolute;display:block;height:auto}
+.rd-l-bg{inset:0;width:100%;height:100% !important}
+.rd-l{animation:7s infinite paused both}
+.rd-l-lupe{left:0;top:78.133%;width:22.5%;animation:rd-orbit 2.6s linear infinite paused}
+.rd-l-hand{left:60.667%;top:5.2%;width:30.333%;animation:none}
+.rd-l-plane{left:63.917%;top:3.867%;width:24.417%;animation-name:rd-fly;transform-origin:30% 70%}
+.rd-l-b1,.rd-l-b2,.rd-l-b3{animation-name:rd-pop;animation-fill-mode:none;transform-origin:12% 100%}
+.rd-l-b1{left:70%;top:41.333%;width:19.417%}
+.rd-l-b2{left:71.667%;top:57.333%;width:21.333%;animation-delay:.45s}
+.rd-l-b3{left:69.167%;top:73.333%;width:23%;animation-delay:.9s}
+.sm-tile.is-playing .rd-l{animation-play-state:running}
+/* Flieger: startet nach rechts oben aus dem Bild, kommt später klein wieder in die Hand */
+@keyframes rd-fly{
+  0%,8%{transform:none;opacity:1;animation-timing-function:cubic-bezier(.55,0,.85,.45)}
+  40%{transform:translate(170%,-330%) rotate(-10deg) scale(.75);opacity:1}
+  41%,84%{transform:scale(.3);opacity:0;animation-timing-function:cubic-bezier(.2,.9,.3,1.2)}
+  96%,100%{transform:none;opacity:1}
+}
+/* Labels: verschwinden kurz, poppen dann nacheinander (Verzögerung je Label) wieder auf */
+@keyframes rd-pop{
+  0%,5%{transform:scale(1);opacity:1}
+  10%,38%{transform:scale(0);opacity:0}
+  43%{transform:scale(1.15);opacity:1}
+  47%,100%{transform:scale(1);opacity:1}
+}
+/* Lupen-Hand: kleine Kreisbewegung, ohne sich selbst zu drehen */
+@keyframes rd-orbit{
+  from{transform:rotate(0deg) translateX(5%) rotate(0deg)}
+  to{transform:rotate(360deg) translateX(5%) rotate(-360deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  .rd-l{animation:none !important}
+}
 .sm-wipe{position:absolute;top:0;left:0;width:100%;height:var(--ph);pointer-events:none}
 .sm-body{flex:1;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(18px,2.2vw,32px) clamp(20px,2.4vw,36px)}
 .sm-body h3{font-size:clamp(20px,2vw,30px);font-weight:700;line-height:1.2;hyphens:auto;overflow-wrap:break-word}
@@ -989,3 +1026,72 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .nf-text{font-size:clamp(17px,1.5vw,22px);margin-top:clamp(12px,1.4vw,20px)}
 .nf-links{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:clamp(24px,3vw,40px)}
 .nf .btn-view{color:var(--light-black)}
+
+/* ---------- Bewerbungsradar (cs-bewerbungsradar.html) ----------
+   Farben und Sprechblase aus der App: Lavendel, Pfirsich, Tinte; Blase mit Spitze unten links wie das App-Symbol. */
+.cs-radar{--rd-lav:#D3BEFF;--rd-peach:#F8D3B1;--rd-ink:#1B1C20;--rd-lilac:#ECE6F1}
+.rd-status{display:inline-block;margin-bottom:clamp(10px,1vw,16px);padding:.35em .9em;border-radius:0 var(--radius) 0 0;background:var(--rd-lav);font-size:clamp(13px,1vw,15px);font-weight:700}
+.rd-bubble{position:relative;border-radius:0 calc(var(--radius) * 2.4) 0 0}
+.rd-bubble::after{content:"";position:absolute;left:clamp(18px,2vw,30px);top:100%;border-top:16px solid;border-right:16px solid transparent;border-top-color:inherit}
+.rd-lav{background:var(--rd-lav);border-top-color:var(--rd-lav)}
+.rd-peach{background:var(--rd-peach);border-top-color:var(--rd-peach)}
+.rd-ink{background:var(--rd-ink);color:var(--white);border-top-color:var(--rd-ink)}
+.cs-themes.rd-themes{margin-bottom:16px}
+.rd-quote{margin:clamp(20px,2.4vw,36px) 0 calc(clamp(20px,2.4vw,36px) + 16px);padding:clamp(20px,2.4vw,36px)}
+.cs-sec .rd-quote p{font-size:clamp(17px,1.6vw,23px);line-height:1.45}
+.rd-quote footer{margin-top:10px;font-size:clamp(13px,1vw,15px);font-weight:700}
+/* Vergleichstabelle: auf schmalen Bildschirmen seitlich scrollbar */
+.rd-table-box{overflow-x:auto;margin:clamp(20px,2.4vw,36px) 0 0}
+.rd-table{margin:0;min-width:620px}
+.rd-table td{width:auto;text-align:center;font-weight:400}
+.rd-table td:first-child{font-weight:400}
+.rd-table th{white-space:nowrap}
+.rd-table thead th{background:var(--rd-lilac)}
+.rd-table thead th.rd-me{background:var(--rd-lav)}
+.rd-table tbody th{text-align:left;font-weight:700;padding:12px 16px;border-bottom:1px solid var(--grey);background:none;white-space:normal}
+.rd-table td.rd-me{background:color-mix(in srgb,var(--rd-lav) 35%,transparent);font-weight:700}
+.rd-legend{margin-top:10px;font-size:clamp(13px,1vw,15px) !important;color:#666}
+/* Handy-Platzhalter */
+.rd-ph{aspect-ratio:985/1879;margin:0}   /* gleiches Format wie die Handy-Screens */
+.rd-shot{border-radius:var(--radius);box-shadow:0 0 0 1px rgba(27,28,32,.08)}
+.rd-phones>.rd-shot{margin:0}
+.rd-single{margin-top:clamp(20px,2.4vw,36px)}
+.cs-decision.rd-open{background:var(--rd-lilac);border-color:var(--rd-lav)}
+/* Hände */
+.rd-hands{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin-top:clamp(20px,2.4vw,36px)}
+.rd-hands img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;padding:8%;background:var(--white);border-radius:0 calc(var(--radius) * 2.4) 0 0}
+.rd-hands p{margin-top:10px;font-size:clamp(13px,1vw,15px) !important;line-height:1.45;color:#666}
+.rd-hands b{display:block;color:var(--light-black)}
+/* Funktionen-Band in Lila statt Grau */
+.cs-band.rd-band{background:var(--rd-lilac)}
+.cs-band.rd-band .cs-ph{background:#DCD3E6}
+.rd-card{background:var(--white)}
+.rd-tag{display:inline-block;margin-left:.3em;padding:.15em .6em;border-radius:0 calc(var(--radius) * .8) 0 0;background:var(--rd-peach);font-size:.55em;font-weight:700;vertical-align:.3em;white-space:nowrap}
+.rd-icon{display:grid;place-items:center;width:clamp(44px,3.6vw,52px);aspect-ratio:1;margin-bottom:clamp(12px,1.2vw,18px);border-radius:0 calc(var(--radius) * 1.6) 0 0;color:var(--rd-ink)}
+.rd-icon svg{width:56%;height:56%}
+.rd-icon.rd-lav{background:var(--rd-lav)}
+.rd-icon.rd-peach{background:var(--rd-peach)}
+.rd-icon.rd-ink{background:var(--rd-ink);color:#FEF9EC}
+/* Login-Screens bleiben auch auf dem Handy nebeneinander, sonst wird jeder Screen bildschirmhoch */
+.rd-login .cs-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin:0 0 clamp(12px,1.2vw,18px)}
+.rd-login .cs-img{border-radius:var(--radius)}
+/* Kennzahlen als Sprechblasen */
+.rd-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin:clamp(20px,2.4vw,36px) 0 calc(clamp(20px,2.4vw,36px) + 16px)}
+.rd-stats>div{padding:clamp(16px,1.8vw,26px)}
+.rd-stats dt{font-weight:800;font-size:clamp(32px,3.6vw,52px);line-height:1}
+.rd-stats dd{margin-top:8px;font-size:clamp(14px,1.1vw,17px);line-height:1.4}
+.rd-push{max-width:560px}
+.rd-push .cs-img{border-radius:calc(var(--radius) * 2.4)}
+.rd-note{font-size:.85em;opacity:.75}
+.cs-themes.rd-review{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,3vw,48px)}
+.cs-themes.rd-review-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rd-review .cs-theme{grid-template-columns:minmax(0,1fr)}
+.rd-phones,.rd-login{max-width:520px;margin-inline:auto}   /* Handy-Screens mittig */
+.rd-single{max-width:250px}
+@media (max-width:900px){
+  .rd-stats,.cs-themes.rd-review{grid-template-columns:minmax(0,1fr)}
+  .rd-stats{gap:32px}
+}
+@media (max-width:560px){
+  .rd-hands{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}

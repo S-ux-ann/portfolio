@@ -76,6 +76,24 @@ if (vids.length && !reduce) {
   }
 }
 
+/* Animierte Karte (Bewerbungsradar, .rd-anim): wie die Videos – mit Maus beim Hovern, ohne Maus solange sichtbar.
+   Die Animation selbst ist CSS; hier wird nur .is-playing an der Karte gesetzt. */
+const anims = document.querySelectorAll(".sm-track .rd-anim");
+if (anims.length && !reduce) {
+  const hover = () => matchMedia("(hover: hover)").matches;
+  anims.forEach(a => {
+    const tile = a.closest(".sm-tile"), on = v => tile.classList.toggle("is-playing", v);
+    tile.addEventListener("mouseenter", () => { if (hover()) on(true); });
+    tile.addEventListener("mouseleave", () => { if (hover()) on(false); });
+    tile.addEventListener("focusin", () => on(true));
+    tile.addEventListener("focusout", () => on(false));
+    if ("IntersectionObserver" in window) new IntersectionObserver(([e]) => {
+      if (hover()) { if (!e.isIntersecting) on(false); return; }
+      on(e.isIntersecting);
+    }, { threshold: .4 }).observe(a);
+  });
+}
+
 /* Vorher → Nachher als Pixel-Wipe (img mit data-wipe = Vorher-Bild, src = Nachher):
    In Ruhe steht das Nachher. Entlang einer Diagonale springen die Bildpixel ins Vorher und danach wieder zurück, endlos.
    Wie die Videos: mit Maus nur beim Hovern (oder Tastaturfokus), ohne Maus solange die Karte zu sehen ist.

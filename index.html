@@ -27,7 +27,7 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=199">
+<link rel="stylesheet" href="css/style.css?v=207">
 <!-- Besucherstatistik: Umami (ohne Cookies), zählt nur auf susanngebert.com -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="f222214b-0634-4848-a78e-f9d0a3985930" data-domains="susanngebert.com"></script>
 </head>
@@ -139,7 +139,27 @@
           <a class="btn-view" href="ecomex.html" data-i18n="cta.view">Ansehen</a>
         </div>
       </li>
-      <!-- 3 Nebulite: Flow Startseite → Produkt (später Video) -->
+      <!-- 3 Bewerbungsradar: eigene App, live. Animiert (CSS, .rd-anim): Flieger startet, Labels poppen auf, Lupen-Hand kreist.
+           Ebenen liegen exakt übereinander (Positionen in % der 1200 × 1500-Vorlage); läuft wie die Videos nur beim Hovern bzw. solange sichtbar. -->
+      <li class="sm-tile sm-tall">
+        <div class="sm-pic rd-anim" role="img" aria-label="Handy mit dem Reiter „Stellen“ des Bewerbungsradars: ein Papierflieger startet aus einer gezeichneten Hand, nacheinander erscheinen die Sprechblasen Finden, Ordnen, Belegen" data-i18n-aria="sm.radar">
+          <div class="rd-stage">
+            <img class="rd-l-bg" src="images/radar-tile-bg.webp" width="1200" height="1500" loading="lazy" alt="">
+            <img class="rd-l rd-l-lupe" src="images/radar-tile-lupe.webp" width="270" height="317" loading="lazy" alt="">
+            <img class="rd-l rd-l-hand" src="images/radar-tile-hand.webp" width="364" height="364" loading="lazy" alt="">
+            <img class="rd-l rd-l-plane" src="images/radar-tile-plane.webp" width="293" height="161" loading="lazy" alt="">
+            <img class="rd-l rd-l-b1" src="images/radar-tile-b1.webp" width="233" height="110" loading="lazy" alt="">
+            <img class="rd-l rd-l-b2" src="images/radar-tile-b2.webp" width="256" height="110" loading="lazy" alt="">
+            <img class="rd-l rd-l-b3" src="images/radar-tile-b3.webp" width="276" height="110" loading="lazy" alt="">
+          </div>
+        </div>
+        <div class="sm-body">
+          <p class="sm-eyebrow">Bewerbungsradar</p>
+          <h3><span data-only="de">Eigene App, live</span><span data-only="en">Own app, live</span></h3>
+          <a class="btn-view" href="cs-bewerbungsradar.html" data-i18n="cta.view">Ansehen</a>
+        </div>
+      </li>
+      <!-- 4 Nebulite: Flow Startseite → Produkt (später Video) -->
       <li class="sm-tile sm-wide">
         <video class="sm-pic" src="videos/nebulite-flow.mp4" poster="videos/nebulite-flow.webp" width="1280" height="816" muted loop playsinline preload="none" aria-label="Klick durch den neuen Nebulite-Shop: von der Startseite über die Kategorie zur Produktseite" data-i18n-aria="sm.nebuliteFlow"></video>
         <div class="sm-body">
@@ -148,7 +168,7 @@
           <a class="btn-view" href="cs-e-commerce.html" data-i18n="cta.view">Ansehen</a>
         </div>
       </li>
-      <!-- 4 GasolinaToday: Designsystem -->
+      <!-- 5 GasolinaToday: Designsystem -->
       <li class="sm-tile sm-mid">
         <img class="sm-pic" src="images/gasolina-style-tile.webp" width="2000" height="1153" loading="lazy" style="object-position:62% 50%" alt="Style Tile des GasolinaToday-Designsystems: Farben, Typografie, Buttons und Navigation" data-i18n-alt="sm.gasolinaDs">
         <div class="sm-body">
@@ -157,7 +177,7 @@
           <a class="btn-view" href="cs-mobile-app.html" data-i18n="cta.view">Ansehen</a>
         </div>
       </li>
-      <!-- 5 Nexio: Dashboard, Frühkonzept -->
+      <!-- 6 Nexio: Dashboard, Frühkonzept -->
       <li class="sm-tile sm-wide">
         <img class="sm-pic" src="images/nexio-dashboard-canvas.webp" width="1022" height="584" loading="lazy" alt="Frühes Dashboard-Konzept für Nexio: verknüpfte Frames und Flows im Prototyping-Tool" data-i18n-alt="sm.nexioDash">
         <div class="sm-body">
@@ -166,7 +186,7 @@
           <a class="btn-view" href="cs-nexio.html" data-i18n="cta.view">Ansehen</a>
         </div>
       </li>
-      <!-- 6 Airbnb: Papierprototyp (später Video) -->
+      <!-- 7 Airbnb: Papierprototyp (später Video) -->
       <li class="sm-tile sm-mid">
         <video class="sm-pic" src="videos/airbnb-paper.mp4" poster="videos/airbnb-paper.webp" width="1280" height="720" muted loop playsinline preload="none" style="object-position:58% 50%" aria-label="Test mit dem Papierprototyp des Airbnb-Dashboards: eine neue Ansicht wird über das Dashboard gelegt" data-i18n-aria="sm.airbnbPaper"></video>
         <div class="sm-body">
@@ -175,7 +195,7 @@
           <a class="btn-view" href="cs-dashboard.html" data-i18n="cta.view">Ansehen</a>
         </div>
       </li>
-      <!-- 7 ecomex: 60-Sekunden-Bewerbung (Funnel) -->
+      <!-- 8 ecomex: 60-Sekunden-Bewerbung (Funnel) -->
       <li class="sm-tile sm-tall">
         <video class="sm-pic" src="videos/ecomex-funnel.mp4" poster="videos/ecomex-funnel.webp" width="704" height="1590" muted loop playsinline preload="none" style="object-position:50% 66%" aria-label="Klickprototyp der 60-Sekunden-Bewerbung: Eigenschaften wählen, Danke-Seite, Termin buchen" data-i18n-aria="sm.ecomexFunnel"></video>
         <div class="sm-body">
@@ -184,7 +204,7 @@
           <a class="btn-view" href="ecomex.html" data-i18n="cta.view">Ansehen</a>
         </div>
       </li>
-      <!-- 8 Nebulite: vorher / nachher -->
+      <!-- 9 Nebulite: vorher / nachher -->
       <li class="sm-tile sm-mid">
         <img class="sm-pic" src="images/nebulite-product-page.webp" width="1498" height="989" loading="lazy" alt="Nebulite-Produktseite vorher und nachher auf je zwei Laptops" data-i18n-alt="sm.nebuliteBA">
         <div class="sm-body">
@@ -193,7 +213,6 @@
           <a class="btn-view" href="cs-e-commerce.html" data-i18n="cta.view">Ansehen</a>
         </div>
       </li>
-      <!-- Bewerbungsradar kommt hier als letzte Karte dazu, sobald das Projekt live ist -->
     </ul>
     <!-- Weg zu allen Projekten: als Zeile unter der Reihe (wie bei Visual & Brand Work), damit man ihn nicht erst am Ende des Karussells findet -->
     <div class="vw-foot sm-foot">
@@ -283,6 +302,7 @@
     <div>
       <h2 data-i18n="projects.title">Projekte</h2>
       <ul class="small">
+        <li><a href="cs-bewerbungsradar.html">Bewerbungsradar</a></li>
         <li><a href="cs-nexio.html">Nexio Fleet</a></li>
         <li><a href="ecomex.html">ecomex Business Academy</a></li>
         <li><a href="cs-e-commerce.html">Nebulite Collection</a></li>
@@ -335,9 +355,9 @@
   </nav>
 </div>
 
-<script src="js/i18n.js?v=162"></script>
+<script src="js/i18n.js?v=205"></script>
 <script src="js/main.js?v=151"></script>
 <script src="js/hero-heatmap.js?v=16"></script>
-<script src="js/scroll-intro.js?v=24"></script>
+<script src="js/scroll-intro.js?v=25"></script>
 </body>
 </html>

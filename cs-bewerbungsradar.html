@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.radar.title">Bewerbungsradar | Product Design &amp; UX/UI – Susann Gebert</title>
+<meta name="description" content="Bewerbungsradar Case Study: eine Web-App für die Jobsuche in Deutschland – Wettbewerbsanalyse, Positionierung, UX/UI-Design, Illustration und Umsetzung mit KI." data-i18n-content="meta.radar.desc">
+<link rel="canonical" href="https://susanngebert.com/cs-bewerbungsradar.html">
+<!-- Social Sharing: Open Graph & Twitter Card. Die Texte wechseln mit der Sprache (js/i18n.js, "meta.*").
+     Vorschaubild: images/og-image.jpg (Porträt, 1200 × 630 px – das Format, das LinkedIn & Co. erwarten). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Susann Gebert">
+<meta property="og:locale" content="de_DE" data-i18n-content="meta.locale">
+<meta property="og:url" content="https://susanngebert.com/cs-bewerbungsradar.html">
+<meta property="og:title" content="Bewerbungsradar | Product Design &amp; UX/UI – Susann Gebert" data-i18n-content="meta.radar.title">
+<meta property="og:description" content="Bewerbungsradar Case Study: eine Web-App für die Jobsuche in Deutschland – Wettbewerbsanalyse, Positionierung, UX/UI-Design, Illustration und Umsetzung mit KI." data-i18n-content="meta.radar.desc">
+<meta property="og:image" content="https://susanngebert.com/images/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Porträt von Susann Gebert" data-i18n-content="meta.image.alt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bewerbungsradar | Product Design &amp; UX/UI – Susann Gebert" data-i18n-content="meta.radar.title">
+<meta name="twitter:description" content="Bewerbungsradar Case Study: eine Web-App für die Jobsuche in Deutschland – Wettbewerbsanalyse, Positionierung, UX/UI-Design, Illustration und Umsetzung mit KI." data-i18n-content="meta.radar.desc">
+<meta name="twitter:image" content="https://susanngebert.com/images/og-image.jpg">
+<meta name="twitter:image:alt" content="Porträt von Susann Gebert" data-i18n-content="meta.image.alt">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon.ico?v=2" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css?v=207">
+<!-- Besucherstatistik: Umami (ohne Cookies), zählt nur auf susanngebert.com -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="f222214b-0634-4848-a78e-f9d0a3985930" data-domains="susanngebert.com"></script>
+</head>
+<body>
+<!-- Tastatur: erster Tab-Stopp, springt direkt zum Inhalt -->
+<a class="skip-link" href="#main"><span data-only="de">Zum Inhalt springen</span><span data-only="en">Skip to content</span></a>
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="/">SUSANN</a>
+    <div class="meta">
+      <div class="lang" data-active="de">
+        <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Sprache wählen / Choose language">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.7 3.9 5.9 3.9 9.5s-1.3 6.8-3.9 9.5M12 2.5C9.4 5.2 8.1 8.4 8.1 12s1.3 6.8 3.9 9.5"/></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" hidden>
+          <button type="button" data-lang="de" aria-pressed="true">DE</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <a class="meta-link btn-view" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-i18n-aria="nav.open" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!--
+  Texte: Jeder Absatz steht zweimal im Code – einmal mit data-only="de", einmal mit data-only="en".
+  Es wird immer nur die Version der gewählten Sprache angezeigt.
+-->
+
+<main id="main" tabindex="-1" class="cs cs-radar">
+  <!--
+    Bewerbungsradar – Case Study (eigenes Produkt, in Weiterentwicklung).
+    Gestaltungselemente aus der App: lila Sprechblase (.rd-bubble), Lavendel/Pfirsich als Kartenfarben, eigene Hände-Illustrationen.
+    Handy-Screens (.rd-shot) im Format 985 × 1879; Onboarding und Nachweis folgen später.
+  -->
+
+  <!-- ================= 01 HERO ================= -->
+  <section class="cs-hero">
+    <div class="wrap">
+      <img class="cs-img cs-hero-img" src="images/radar-hero.webp?v=1" width="2400" height="773" alt="Bewerbungsradar: lila Sprechblase mit Lupe, Handy mit dem Reiter „Stellen“, gezeichnete Hände mit Lupe und Papierflieger, dazu die Sprechblasen Finden, Ordnen, Belegen" data-i18n-alt="rd.hero">
+    </div>
+
+    <div class="cs-hero-head">
+    <span class="tri-down cs-hero-tri" aria-hidden="true"></span>
+    <div class="wrap cs-hero-text">
+      <p class="rd-status"><span data-only="de">In Arbeit · Stand November 2026</span><span data-only="en">Work in progress · November 2026</span></p>
+      <h1 class="cs-title">
+        <span data-only="de">Bewerbungsradar: Eine App, die die Jobsuche an einem Ort bündelt</span>
+        <span data-only="en">Bewerbungsradar: An app that brings the job search into one place</span>
+      </h1>
+      <p class="cs-lead" data-only="de">Stellen finden, Bewerbungen ordnen, Eigenbemühungen belegen: Aus meiner eigenen Jobsuche ist eine installierbare Web-App entstanden, die ich konzipiert, gestaltet und mit KI-Unterstützung umgesetzt habe.</p>
+      <p class="cs-lead" data-only="en">Find jobs, organise applications, document your job search: my own job hunt turned into an installable web app that I conceived, designed and built with AI support.</p>
+
+      <dl class="cs-facts">
+        <div>
+          <dt><span data-only="de">Rolle</span><span data-only="en">Role</span></dt>
+          <dd><span data-only="de">Konzept, UX/UI, Branding &amp; Illustration, Begleitung der Umsetzung</span><span data-only="en">Concept, UX/UI, branding &amp; illustration, guiding the build</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Projekt</span><span data-only="en">Project</span></dt>
+          <dd><span data-only="de">Eigenes Produkt · seit Oktober 2026</span><span data-only="en">Own product · since October 2026</span></dd>
+        </div>
+        <div>
+          <dt><span data-only="de">Umfang</span><span data-only="en">Scope</span></dt>
+          <dd><span data-only="de">Wettbewerbsanalyse · Product Thinking · UX/UI-Design · Illustration · Testing</span><span data-only="en">Competitor analysis · Product thinking · UX/UI design · Illustration · Testing</span></dd>
+        </div>
+        <div>
+          <dt>Tools</dt>
+          <dd>Figma · Claude Code · React · Supabase · Vercel</dd>
+        </div>
+      </dl>
+
+      <!-- ================= 02 CONTEXT ================= -->
+      <div class="cs-challenge" data-scribble="hover">
+        <p class="cs-eyebrow"><span data-only="de">Der Kontext</span><span data-only="en">The context</span></p>
+        <h2><span data-only="de">Viele Portale, viele Konten, kein Überblick</span><span data-only="en">Many job boards, many accounts, no overview</span></h2>
+        <p data-only="de">Als UX/UI-Designerin auf Jobsuche habe ich meine Bewerbungen in Ordnern, in Figma und in den Jobtrackern von LinkedIn und Indeed verwaltet. Stellen tauchten doppelt auf, der Überblick ging schnell verloren.</p>
+        <p data-only="en">As a UX/UI designer looking for a new role, I managed my applications in folders, in Figma and in the job trackers of LinkedIn and Indeed. Listings showed up twice and I quickly lost track.</p>
+        <p data-only="de">Dazu kommt die Pflicht, der Agentur für Arbeit regelmäßig die eigenen Bemühungen nachzuweisen. Ein Werkzeug, das all das auf Deutsch zusammenführt, gab es nicht. Also habe ich es selbst entwickelt.</p>
+        <p data-only="en">On top of that, job seekers in Germany regularly have to prove their efforts to the employment agency. No tool brought all of this together, in German. So I built one.</p>
+      </div>
+
+      <div class="cs-themes rd-themes">
+        <div class="cs-theme rd-bubble rd-lav">
+          <h3><span data-only="de">Finden</span><span data-only="en">Find</span></h3>
+          <p data-only="de">Passende Stellen kommen jeden Morgen von selbst, mit Begründung, warum sie passen.</p>
+          <p data-only="en">Matching jobs arrive every morning, with a reason why they fit.</p>
+        </div>
+        <div class="cs-theme rd-bubble rd-ink">
+          <h3><span data-only="de">Ordnen</span><span data-only="en">Organise</span></h3>
+          <p data-only="de">Bewerbungen, Status und Unterlagen liegen an einem Ort.</p>
+          <p data-only="en">Applications, status and documents live in one place.</p>
+        </div>
+        <div class="cs-theme rd-bubble rd-peach">
+          <h3><span data-only="de">Belegen</span><span data-only="en">Document</span></h3>
+          <p data-only="de">Der Nachweis für die Agentur für Arbeit entsteht mit einem Klick als PDF.</p>
+          <p data-only="en">The proof for the employment agency is a one-click PDF.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ================= INHALT ================= -->
+  <div class="wrap">
+    <div class="sec-head cs-content-head">
+      <h2><span data-only="de">Inhalt</span><span data-only="en">content</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <!-- ================= 03 IDEE ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Die Idee</span><span data-only="en">The idea</span></p>
+      <h2><span data-only="de">Aus einem Gedanken wird ein Produkt</span><span data-only="en">From a passing thought to a product</span></h2>
+      <p data-only="de">Am Anfang stand ein einfacher Wunsch: alle Bewerbungen festhalten, neue Stellen nach und nach durcharbeiten und auf Knopfdruck zeigen können, was ich im letzten Monat verschickt habe. Aus einem ersten Prototyp ist Schritt für Schritt eine richtige App geworden.</p>
+      <p data-only="en">It started with a simple wish: keep track of every application, work through new listings one by one, and be able to show at the push of a button what I sent last month. Step by step, a first prototype grew into a real app.</p>
+      <blockquote class="rd-bubble rd-lav rd-quote">
+        <p data-only="de">„Am besten so, dass ich ein PDF exportieren kann, falls die Jobagentur fragt, wie viele Bewerbungen ich geschickt habe. Dazu ein Jobradar, der Stellen heraussucht, die wir nach und nach durcharbeiten. Ich glaube, dann habe ich einen besseren Überblick.“</p>
+        <p data-only="en">“Ideally I could export a PDF in case the job agency asks how many applications I’ve sent. Plus a job radar that picks out listings we work through one by one. I think then I’d have a better overview.”</p>
+        <footer><span data-only="de">Meine erste Notiz zum Projekt</span><span data-only="en">My first note on the project</span></footer>
+      </blockquote>
+      <p data-only="de"><b>Zielgruppe:</b> Arbeitssuchende in Deutschland, darunter Menschen mit Nachweispflicht gegenüber der Agentur für Arbeit. Finden und Ordnen ist für alle da, der Nachweis ist ein starkes Extra.</p>
+      <p data-only="en"><b>Audience:</b> job seekers in Germany, including people who have to report their efforts to the employment agency. Finding and organising is for everyone; the proof is a strong extra.</p>
+    </section>
+
+    <!-- ================= 04 WETTBEWERB ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Wettbewerbsanalyse</span><span data-only="en">Competitor analysis</span></p>
+      <h2><span data-only="de">Alle vier Konkurrenten sind für die USA gebaut</span><span data-only="en">All four competitors are built for the US</span></h2>
+      <p data-only="de">Ich habe Huntr, Teal, Simplify und Careerflow nach Funktionen, Preisen, Zielgruppe und Bewertungen verglichen. Keiner sucht täglich nach dem eigenen Profil in deutschen Quellen, und keiner erstellt den Nachweis für die Agentur.</p>
+      <p data-only="en">I compared Huntr, Teal, Simplify and Careerflow on features, pricing, audience and reviews. None of them searches German sources daily based on your profile, and none creates the proof for the employment agency.</p>
+
+      <div class="rd-table-box">
+        <table class="cs-table rd-table">
+          <thead><tr><th scope="col"><span data-only="de">Funktion</span><span data-only="en">Feature</span></th><th scope="col" class="rd-me">Bewerbungsradar</th><th scope="col">Huntr</th><th scope="col">Teal</th><th scope="col">Simplify</th><th scope="col">Careerflow</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span data-only="de">Bewerbungen mit Status</span><span data-only="en">Applications with status</span></th><td class="rd-me">●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+            <tr><th scope="row"><span data-only="de">Tägliche Stellen nach Profil</span><span data-only="en">Daily jobs based on profile</span></th><td class="rd-me">●</td><td>○</td><td>○</td><td>◐ USA</td><td>◐ Beta</td></tr>
+            <tr><th scope="row"><span data-only="de">Deutsche Quellen</span><span data-only="en">German job sources</span></th><td class="rd-me">●</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><th scope="row"><span data-only="de">Nachweis als PDF</span><span data-only="en">Proof of efforts as PDF</span></th><td class="rd-me">●</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><th scope="row"><span data-only="de">Oberfläche auf Deutsch</span><span data-only="en">German interface</span></th><td class="rd-me">●</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="rd-legend"><span data-only="de">● vorhanden · ◐ eingeschränkt · ○ fehlt · Stand Oktober 2026</span><span data-only="en">● available · ◐ limited · ○ missing · as of October 2026</span></p>
+
+      <p data-only="de">Mitgenommen habe ich zwei Dinge: Vorschläge, die zum Profil passen, sind der stärkste Grund, eine App täglich zu öffnen. Und automatisches Bewerben hat die schlechtesten Bewertungen, deutsche Arbeitgeber erwarten ein persönliches Anschreiben. Deshalb hilft die App beim Finden und Ordnen, abgeschickt wird von Hand.</p>
+      <p data-only="en">Two takeaways: suggestions that match your profile are the strongest reason to open an app every day. And auto-applying gets the worst reviews; German employers expect a personal cover letter. So the app helps you find and organise, while sending stays manual.</p>
+      <p class="cs-keyline" data-only="de">Positionierung: der Bewerbungsbegleiter für Deutschland. Er findet jeden Morgen passende Stellen, hält alle Bewerbungen in Ordnung und erstellt den Nachweis mit einem Klick.</p>
+      <p class="cs-keyline" data-only="en">Positioning: the application companion for Germany. It finds matching jobs every morning, keeps every application in order and creates the proof with one click.</p>
+    </section>
+
+    <!-- ================= 05 PROZESS ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Vorgehen</span><span data-only="en">Process</span></p>
+      <h2><span data-only="de">Zwölf Schritte, jeder mit meinem Review</span><span data-only="en">Twelve steps, each one reviewed by me</span></h2>
+      <p data-only="de">Die technische Umsetzung hat Claude Code übernommen, ich habe sie fachlich und gestalterisch geführt. Ich habe das Projekt in zwölf Schritte geteilt, nach jedem Schritt das Ergebnis auf dem Handy geprüft und Feedback gegeben, bevor es weiterging. Früh online zu gehen war bewusst: So konnte ich die App im Alltag meiner eigenen Jobsuche testen.</p>
+      <p data-only="en">Claude Code handled the technical build while I led it on product and design. I split the project into twelve steps, reviewed every result on my phone and gave feedback before moving on. Going live early was deliberate: it let me test the app in my own day-to-day job search.</p>
+
+      <div class="cs-darkbox cs-inputs">
+        <p class="cs-eyebrow"><span data-only="de">Vom Prototyp zur App</span><span data-only="en">From prototype to app</span></p>
+        <ol class="cs-stats cs-steps">
+          <li><span class="cs-step-no" aria-hidden="true">01</span><span><span data-only="de">Fundament: Web-App, Datenbank in Frankfurt, Login ohne Passwort</span><span data-only="en">Foundation: web app, database in Frankfurt, passwordless login</span></span></li>
+          <li><span class="cs-step-no" aria-hidden="true">02</span><span><span data-only="de">Kern: Stellen, Nachweis und Unterlagen</span><span data-only="en">Core: jobs, proof of efforts and documents</span></span></li>
+          <li><span class="cs-step-no" aria-hidden="true">03</span><span><span data-only="de">Live im Alltag: Datenumzug, Onboarding, Suchprofil</span><span data-only="en">Live in daily use: data migration, onboarding, search profile</span></span></li>
+          <li><span class="cs-step-no" aria-hidden="true">04</span><span><span data-only="de">Automatisierung: Jobradar, Analyse, Push</span><span data-only="en">Automation: job radar, analytics, push</span></span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= 06 DESIGN-ITERATION ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Design-Iteration</span><span data-only="en">Design iteration</span></p>
+      <h2><span data-only="de">Die Startseite in mehreren Runden geschärft</span><span data-only="en">Sharpening the home screen over several rounds</span></h2>
+      <p data-only="de">Der Reiter „Stellen“ ist die Startseite und hat die meiste Aufmerksamkeit bekommen. Nach drei Feedback-Runden in der App habe ich den Screen in Figma neu entworfen und Frame für Frame umsetzen lassen. Das Ziel: Auf dem Handy sollen sich Stellen zügig abarbeiten lassen, ohne dass die Bedienung im Weg steht.</p>
+      <p data-only="en">The “Jobs” tab is the home screen and got the most attention. After three feedback rounds in the app, I redesigned the screen in Figma and had it implemented frame by frame. The goal: on a phone, you should be able to work through listings quickly without the interface getting in the way.</p>
+
+      <div class="cs-pair rd-phones">
+        <img class="cs-img rd-shot" src="images/radar-screen-v1.webp?v=2" width="985" height="1879" loading="lazy" alt="Erste Version des Reiters „Stellen“ auf hellem Grund: vier farbige Kacheln mit Zahlen, Suchfeld, Filter-Chips und Karten mit neuen Stellen" data-i18n-alt="rd.v1">
+        <img class="cs-img rd-shot" src="images/radar-screen-stellen.webp?v=3" width="985" height="1879" loading="lazy" alt="Reiter „Stellen“ nach dem Figma-Redesign auf dunklem Grund: große Überschrift, Status-Filter, zwei Kacheln für verschickt und laufend, Suchfeld, Karten mit neuen Stellen und eine Navigationsleiste mit fünf Reitern" data-i18n-alt="rd.stellen">
+      </div>
+      <p data-only="de">Der erste Entwurf hatte drei Reiter: Stellen, Unterlagen und Nachweis. Der Reiter „Analyse“ kam erst im Lauf der Entwicklung dazu. Daran sieht man, wie das Produkt während der Entstehung gewachsen ist: vom Sammeln und Belegen hin zum Auswerten der eigenen Bewerbungen.</p>
+      <p data-only="en">The first draft had three tabs: Jobs, Documents and Proof. The “Analytics” tab was only added later in development. It shows how the product grew while it was being built: from collecting and documenting to analysing your own applications.</p>
+
+      <div class="cs-themes cs-review rd-review rd-review-3">
+        <div class="cs-theme">
+          <p class="cs-theme-no"><span data-only="de">01 · Orientierung</span><span data-only="en">01 · Orientation</span></p>
+          <h3><span data-only="de">Gruppenüberschriften bleiben stehen</span><span data-only="en">Group headings stay pinned</span></h3>
+          <p data-only="de">Die Karten haben ihre Status-Labels verloren. Dafür bleibt die Überschrift („Neu zum Prüfen“, „In Bearbeitung“) beim Scrollen oben stehen, bis die Gruppe endet.</p>
+          <p data-only="en">Cards lost their status labels. Instead, the heading (“New to review”, “In progress”) stays pinned while you scroll until the group ends.</p>
+        </div>
+        <div class="cs-theme">
+          <p class="cs-theme-no"><span data-only="de">02 · Fokus</span><span data-only="en">02 · Focus</span></p>
+          <h3><span data-only="de">Zwei Kacheln statt vier</span><span data-only="en">Two tiles instead of four</span></h3>
+          <p data-only="de">„Verschickt im November“ und „laufend“, als Sprechblasen. Die linke Kachel zählt den laufenden Monat und hilft direkt beim Nachweis.</p>
+          <p data-only="en">“Sent in November” and “active”, shaped as speech bubbles. The left tile counts the current month and feeds straight into the proof of efforts.</p>
+        </div>
+        <div class="cs-theme">
+          <p class="cs-theme-no"><span data-only="de">03 · Tempo</span><span data-only="en">03 · Speed</span></p>
+          <h3><span data-only="de">Wischen statt Tippen</span><span data-only="en">Swipe instead of tap</span></h3>
+          <p data-only="de">Nach rechts wischen markiert eine Stelle als verschickt, nach links verwirft sie. „Neue Stelle“ sitzt als Plus in der Mitte der Navigation und ist von jedem Reiter aus erreichbar.</p>
+          <p data-only="en">Swipe right to mark a job as sent, swipe left to discard it. “New job” sits as a plus in the middle of the navigation, reachable from every tab.</p>
+        </div>
+      </div>
+
+      <div class="cs-decision rd-open">
+        <h3><span data-only="de">Offene Designfrage: Verstehen Nutzer das Wischen?</span><span data-only="en">Open design question: do people get the swipe?</span></h3>
+        <p data-only="de">Das ist noch nicht getestet. Deshalb bleibt der Papierkorb bei „zu prüfen“ vorerst sichtbar. Für die Suchzeile liegen drei Varianten aus Figma bereit, die sich als A/B-Test vergleichen lassen.</p>
+        <p data-only="en">This hasn’t been tested yet, so the bin icon stays visible on “to review” for now. For the search bar, three Figma variants are ready to compare in an A/B test.</p>
+      </div>
+    </section>
+
+    <!-- ================= 07 ILLUSTRATION ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Illustration</span><span data-only="en">Illustration</span></p>
+      <h2><span data-only="de">Hands-on bei der Jobsuche</span><span data-only="en">A hands-on approach to job hunting</span></h2>
+      <p data-only="de">Die Hände habe ich selbst als Vektorgrafiken gezeichnet. Sie sind das verbindende Bildmotiv der App: Hände, die etwas tun, statt Stockfotos oder Icons von der Stange.</p>
+      <p data-only="en">I drew the hands myself as vector graphics. They are the app’s connecting visual motif: hands taking action, instead of stock photos or off-the-shelf icons.</p>
+      <ul class="rd-hands">
+        <li>
+          <img src="images/radar-hand-lupe.svg" width="412" height="450" loading="lazy" alt="Gezeichnete Hand mit Lupe" data-i18n-alt="rd.handLupe">
+          <p><b><span data-only="de">Lupe</span><span data-only="en">Magnifier</span></b><span data-only="de">Wenn noch keine Stellen da sind</span><span data-only="en">When there are no jobs yet</span></p>
+        </li>
+        <li>
+          <img src="images/radar-hand-papierflieger.svg" width="406" height="406" loading="lazy" alt="Gezeichnete Hand mit Papierflieger" data-i18n-alt="rd.handPlane">
+          <p><b><span data-only="de">Papierflieger</span><span data-only="en">Paper plane</span></b><span data-only="de">Im Onboarding und nach dem Verschicken</span><span data-only="en">In onboarding and after sending</span></p>
+        </li>
+        <li>
+          <img src="images/radar-hand-zeigefinger.svg" width="295" height="359" loading="lazy" alt="Gezeichnete zeigende Hand" data-i18n-alt="rd.handPoint">
+          <p><b><span data-only="de">Zeigefinger</span><span data-only="en">Pointing hand</span></b><span data-only="de">Idee: Analyse und Profil-Match</span><span data-only="en">Idea: analytics and profile match</span></p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- ================= 08 FUNKTIONEN (Band) ================= -->
+  <div class="cs-band rd-band">
+    <div class="cs-col">
+      <section class="cs-sec">
+        <p class="cs-eyebrow"><span data-only="de">Die Funktionen</span><span data-only="en">Features</span></p>
+        <h2><span data-only="de">Was die App heute kann</span><span data-only="en">What the app does today</span></h2>
+        <div class="cs-themes cs-themes-2">
+          <div class="cs-theme rd-card">
+            <span class="rd-icon rd-lav" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12.5" rx="1.5"/><path d="M8.5 7.5V5.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5v2"/><path d="M3 13h18"/></svg></span>
+            <h3><span data-only="de">Stellen</span><span data-only="en">Jobs</span></h3>
+            <p data-only="de">Neue Stellen stehen oben, mit einem Satz, warum sie passen. Schnellaktionen führen von „Bewerben“ über „Verschickt“ bis Zusage oder Absage.</p>
+            <p data-only="en">New listings appear at the top with one sentence on why they fit. Quick actions lead from “Apply” to “Sent” through to offer or rejection.</p>
+          </div>
+          <div class="cs-theme rd-card">
+            <span class="rd-icon rd-ink" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V7.5z"/><path d="M14 3v4.5h4.5"/><path d="m9 14 2 2 4-4"/></svg></span>
+            <h3><span data-only="de">Nachweis</span><span data-only="en">Proof of efforts</span></h3>
+            <p data-only="de">Zeitraum wählen, PDF erzeugen: A4 quer, mit allen Angaben, die die Agentur erwartet, und Unterschriftszeile.</p>
+            <p data-only="en">Pick a period, create the PDF: A4 landscape, with everything the agency asks for and a signature line.</p>
+          </div>
+          <div class="cs-theme rd-card">
+            <span class="rd-icon rd-peach" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a1.5 1.5 0 0 1 1.5-1.5h4.5l2 2.5h8.5A1.5 1.5 0 0 1 21 9.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/><circle cx="11.5" cy="14" r="2.5"/><path d="m13.4 15.9 1.8 1.8"/></svg></span>
+            <h3><span data-only="de">Unterlagen &amp; Suchprofil</span><span data-only="en">Documents &amp; search profile</span></h3>
+            <p data-only="de">Lebensläufe und Zeugnisse nach Art und Sprache ablegen, eine Version als „aktuell“ markieren. Das Suchprofil aus dem Onboarding steuert den Jobradar.</p>
+            <p data-only="en">Store CVs and references by type and language and mark one version as “current”. The search profile from onboarding drives the job radar.</p>
+          </div>
+          <div class="cs-theme rd-card">
+            <span class="rd-icon rd-lav" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M7 16.5v-4"/><path d="M12 16.5V7"/><path d="M17 16.5v-7"/></svg></span>
+            <h3><span data-only="de">Analyse</span><span data-only="en">Analytics</span> <span class="rd-tag"><span data-only="de">später dazugekommen</span><span data-only="en">added later</span></span></h3>
+            <p data-only="de">Bewerbungen pro Monat, Weg vom Versand zur Zusage, Absagegründe und eine Liste zum Nachfassen. Prozentwerte erst ab drei Bewerbungen pro Gruppe.</p>
+            <p data-only="en">Applications per month, the path from sending to offer, rejection reasons and a follow-up list. Percentages only from three applications per group.</p>
+          </div>
+        </div>
+
+        <figure class="cs-fig rd-login">
+          <div class="cs-pair rd-phones">
+            <img class="cs-img" src="images/radar-screen-start.webp" width="985" height="2000" loading="lazy" alt="Startscreen der App: Willkommen beim Bewerbungsradar, Feld für die E-Mail-Adresse und Button „Link schicken“" data-i18n-alt="rd.start">
+            <img class="cs-img" src="images/radar-screen-code.webp" width="985" height="2000" loading="lazy" alt="Screen „Post ist unterwegs“: Feld für den Code aus der E-Mail, Button „Anmelden“ und Countdown für einen neuen Code" data-i18n-alt="rd.code">
+          </div>
+          <figcaption>
+            <span class="cs-fig-label"><span data-only="de">Anmeldung</span><span data-only="en">Sign-in</span></span>
+            <strong><span data-only="de">Ohne Passwort: Link und Code per E-Mail</span><span data-only="en">No password: link and code by email</span></strong>
+            <span data-only="de">Der Code ist für die App vom Home-Bildschirm gedacht, weil sich der Link dort im Browser öffnet. Lupe und Papierflieger aus der Illustration begrüßen hier zum ersten Mal.</span><span data-only="en">The code is for the home-screen app, where the link would open in the browser. The magnifier and paper plane from the illustrations make their first appearance here.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="cs-fig">
+          <img class="cs-img" src="images/radar-nachweis-pdf.webp" width="936" height="662" loading="lazy" alt="PDF „Nachweis der Eigenbemühungen“: Kopf mit Name, Kundennummer und Zeitraum, darunter eine Tabelle mit Datum, Arbeitgeber, Stelle, Ort, Bewerbungsweg und Stand" data-i18n-alt="rd.pdf">
+          <figcaption>
+            <span class="cs-fig-label"><span data-only="de">Ergebnis mit einem Klick</span><span data-only="en">One-click result</span></span>
+            <strong><span data-only="de">Der Nachweis als PDF</span><span data-only="en">The proof of efforts as a PDF</span></strong>
+            <span data-only="de">Mit Testdaten und erfundenen Firmen.</span><span data-only="en">Shown with test data and fictional companies.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="cs-fig rd-phones rd-single">
+          <img class="cs-img rd-shot" src="images/radar-screen-analyse.webp?v=2" width="985" height="1879" loading="lazy" alt="Reiter „Analyse“: Balkendiagramm verschickter Bewerbungen pro Monat, Verlauf vom Versand über Interview zur Zusage und Interview-Quote nach Ort" data-i18n-alt="rd.analyse">
+          <figcaption>
+            <span class="cs-fig-label"><span data-only="de">Analyse</span><span data-only="en">Analytics</span></span>
+            <strong><span data-only="de">Aus den eigenen Bewerbungen lernen</span><span data-only="en">Learning from your own applications</span></strong>
+            <span data-only="de">Was rausgeht, was zum Interview führt und was funktioniert.</span><span data-only="en">What goes out, what leads to an interview and what works.</span>
+          </figcaption>
+        </figure>
+      </section>
+    </div>
+  </div>
+
+  <div class="cs-col">
+    <!-- ================= 09 JOBRADAR ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Jobradar &amp; Push</span><span data-only="en">Job radar &amp; push</span></p>
+      <h2><span data-only="de">Jeden Morgen neue Stellen, ohne selbst zu suchen</span><span data-only="en">New jobs every morning, without searching</span></h2>
+      <p data-only="de">Ein täglicher Lauf liest das Suchprofil, fragt die Jobbörse der Bundesagentur für Arbeit ab, ergänzt mit einer Websuche und trägt neue Stellen mit dem Status „zu prüfen“ ein. Dubletten werden übersprungen, bestehende Einträge nie verändert. Findet der Radar etwas, kommt eine Push-Nachricht aufs Handy.</p>
+      <p data-only="en">A daily run reads the search profile, queries the Federal Employment Agency’s job board, adds results from a web search and saves new listings as “to review”. Duplicates are skipped and existing entries are never changed. When the radar finds something, a push notification arrives on the phone.</p>
+
+      <dl class="rd-stats">
+        <div class="rd-bubble rd-lav"><dt>≤ 10</dt><dd><span data-only="de">neue Stellen pro Lauf</span><span data-only="en">new jobs per run</span></dd></div>
+        <div class="rd-bubble rd-ink"><dt>1×</dt><dd><span data-only="de">Lauf pro Tag, im Rhythmus des Suchprofils</span><span data-only="en">run per day, following the profile’s rhythm</span></dd></div>
+        <div class="rd-bubble rd-peach"><dt>6:53</dt><dd><span data-only="de">Uhr: die erste echte Push-Nachricht</span><span data-only="en">a.m.: the first real push notification</span></dd></div>
+      </dl>
+
+      <figure class="cs-fig rd-push">
+        <img class="cs-img" src="images/radar-push.webp" width="1170" height="266" loading="lazy" alt="Push-Mitteilung auf dem iPhone: Jobradar, 1 neue Stelle zum Prüfen, 06:53" data-i18n-alt="rd.push">
+        <figcaption><span data-only="de">Die Push-Mitteilung nach dem Lauf am 2. November.</span><span data-only="en">The push notification after the run on 2 November.</span></figcaption>
+      </figure>
+
+      <div class="cs-decision rd-open">
+        <h3><span data-only="de">Im Aufbau: Job-Alerts aus dem eigenen Postfach</span><span data-only="en">In progress: job alerts from my own inbox</span></h3>
+        <p data-only="de">Für meine eigene Suche baue ich gerade einen Agenten, der die Job-Alerts von Indeed und LinkedIn in meinem Postfach mit auswertet und passende Stellen ebenfalls als „zu prüfen“ einträgt. Das ist ein persönliches Werkzeug für meine Recherche und nicht als Funktion für andere Nutzer der App gedacht.</p>
+        <p data-only="en">For my own search, I’m building an agent that also reads the Indeed and LinkedIn job alerts in my inbox and adds matching listings as “to review”. It’s a personal tool for my own research, not a feature meant for other users of the app.</p>
+      </div>
+    </section>
+
+    <!-- ================= 10 ENTSCHEIDUNGEN ================= -->
+    <section class="cs-sec">
+      <p class="cs-eyebrow"><span data-only="de">Entscheidungen</span><span data-only="en">Decisions</span></p>
+      <h2><span data-only="de">Warum es so gebaut ist</span><span data-only="en">Why it’s built this way</span></h2>
+      <div class="cs-themes cs-review rd-review">
+        <div class="cs-theme">
+          <p class="cs-theme-no"><span data-only="de">Vertrauen</span><span data-only="en">Trust</span></p>
+          <h3><span data-only="de">Daten in Frankfurt, nur eigene Daten sichtbar</span><span data-only="en">Data in Frankfurt, only your own data visible</span></h3>
+          <p data-only="de">Lebenslauf, Zeugnisse und Kundennummer sind sehr persönlich. Hosting in der EU und eine strikte Trennung pro Konto sind deshalb Grundprinzip, nicht Zusatz.</p>
+          <p data-only="en">CVs, references and agency numbers are very personal. EU hosting and strict per-account separation are therefore a core principle, not an add-on.</p>
+        </div>
+        <div class="cs-theme">
+          <p class="cs-theme-no"><span data-only="de">Ehrliche Zahlen</span><span data-only="en">Honest numbers</span></p>
+          <h3><span data-only="de">Auswertung erst ab drei Bewerbungen</span><span data-only="en">Analytics from three applications</span></h3>
+          <p data-only="de">Prozentwerte aus ein oder zwei Fällen führen in die Irre. Auch danach zeigt die App Hinweise, keine Wahrheiten. Absagegründe werden von Anfang an erfasst, damit die Daten sauber sind.</p>
+          <p data-only="en">Percentages from one or two cases are misleading. Even beyond that, the app shows hints rather than facts. Rejection reasons are captured from day one to keep the data clean.</p>
+        </div>
+        <div class="cs-theme">
+          <p class="cs-theme-no"><span data-only="de">Kosten</span><span data-only="en">Cost</span></p>
+          <h3><span data-only="de">Jobradar als geplante KI-Aufgabe</span><span data-only="en">Job radar as a scheduled AI task</span></h3>
+          <p data-only="de">Statt einer eigenen KI-Schnittstelle läuft der Radar über eine geplante Aufgabe und schreibt direkt in die Datenbank. Das spart laufende Kosten, solange die App nur wenige Nutzer hat.</p>
+          <p data-only="en">Instead of a dedicated AI integration, the radar runs as a scheduled task that writes straight to the database. That avoids running costs while the app has few users.</p>
+        </div>
+        <div class="cs-theme">
+          <p class="cs-theme-no"><span data-only="de">Gelernt im Betrieb</span><span data-only="en">Learned in production</span></p>
+          <h3><span data-only="de">Die erste Push-Nachricht kam nicht an</span><span data-only="en">The first push notification never arrived</span></h3>
+          <p data-only="de">Die Benachrichtigung wurde ausgelöst, bevor die neuen Stellen gespeichert waren. Seit sie danach gesendet wird, kommt sie zuverlässig an.</p>
+          <p data-only="en">The notification fired before the new listings were saved. Since it’s sent afterwards, it arrives reliably.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= 11 STAND & AUSBLICK ================= -->
+  <section class="wrap cs-outcome-wrap">
+    <div class="cs-darkbox">
+      <div class="cs-split">
+        <div>
+          <p class="cs-eyebrow"><span data-only="de">Stand &amp; Ausblick</span><span data-only="en">Status &amp; next steps</span></p>
+          <h2><span data-only="de">Eine App, die ich jeden Tag selbst nutze</span><span data-only="en">An app I use every day myself</span></h2>
+          <p data-only="de">In kurzer Zeit ist aus einer Idee eine installierbare App geworden, die meine eigene Jobsuche trägt: Stellen kommen morgens von selbst, Bewerbungen sind an einem Ort, und der Nachweis für die Agentur ist ein Klick.</p>
+          <p data-only="en">In a short time, an idea became an installable app that carries my own job search: listings arrive by themselves each morning, applications live in one place, and the proof for the agency is one click away.</p>
+          <p data-only="de">Das Projekt zeigt, wie ich als Designerin ein Produkt von der Idee bis live führe: mit klarer Positionierung, kurzen Feedback-Schleifen und KI als Werkzeug für die Umsetzung. Der nächste Schritt sind Tests mit anderen Arbeitssuchenden.</p>
+          <p data-only="en">The project shows how I lead a product from idea to launch as a designer: with clear positioning, short feedback loops and AI as a tool for the build. The next step is testing with other job seekers.</p>
+          <p class="cs-proto-line"><a class="btn-view is-inline" href="https://bewerbungsradar.vercel.app" target="_blank" rel="noopener"><span data-only="de">Zur Live-App</span><span data-only="en">Open the live app</span></a> <span class="rd-note"><span data-only="de">(Anmeldung per E-Mail)</span><span data-only="en">(sign-in via email)</span></span></p>
+        </div>
+        <img class="cs-img is-fill" src="images/radar-tile.webp" width="1200" height="1500" loading="lazy" alt="Handy mit dem Reiter „Stellen“ des Bewerbungsradars, umgeben von der lila Sprechblase, gezeichneten Händen und den Sprechblasen Finden, Ordnen, Belegen" data-i18n-alt="rd.tile">
+      </div>
+
+      <div class="cs-cols3">
+        <div>
+          <span class="tri-down cs-col-tri" aria-hidden="true"></span>
+          <h3><span data-only="de">Mit Nutzern testen</span><span data-only="en">Test with users</span></h3>
+          <p data-only="de">Gespräche und Tests mit anderen Arbeitssuchenden, inklusive Wisch-Geste und Suchvarianten.</p>
+          <p data-only="en">Interviews and tests with other job seekers, including the swipe gesture and search variants.</p>
+        </div>
+        <div>
+          <span class="tri-down cs-col-tri" aria-hidden="true"></span>
+          <h3><span data-only="de">Design-Feinschliff</span><span data-only="en">Design polish</span></h3>
+          <p data-only="de">Die übrigen Reiter nach meinen Figma-Entwürfen anpassen und die Illustrationen einbauen.</p>
+          <p data-only="en">Bring the remaining tabs in line with my Figma designs and add the illustrations.</p>
+        </div>
+        <div>
+          <span class="tri-down cs-col-tri" aria-hidden="true"></span>
+          <h3><span data-only="de">Mehr Quellen</span><span data-only="en">More sources</span></h3>
+          <p data-only="de">Weitere Jobbörsen anbinden und Interviewtermine als Kalendereintrag exportieren.</p>
+          <p data-only="en">Connect more job boards and export interview dates to the calendar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NÄCHSTES PROJEKT ================= -->
+  <section class="wrap cs-next">
+    <div class="sec-head">
+      <h2><span data-only="de">nächstes Projekt</span><span data-only="en">next project</span></h2>
+      <span class="tri-down" aria-hidden="true"></span>
+    </div>
+    <div class="cs-col">
+      <h3 class="cs-next-title"><span data-only="de">Nexio Fleet: Von der Markenidentität zum digitalen Produkterlebnis</span><span data-only="en">Nexio Fleet: From Brand Identity to Digital Product Experience</span></h3>
+      <a class="btn-view" href="cs-bewerbungsradar.html" data-i18n="cta.view">Ansehen</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="name">SUSANN</div>
+      <div class="role" data-i18n="hero.label">UX/UI &amp; Product Designerin</div>
+      <ul class="small footer-nav">
+        <li><a href="about.html" data-i18n="footer.about">Über mich</a></li>
+        <li><a href="contact.html" data-i18n="footer.contact">Kontakt</a></li>
+      </ul>
+      <div class="social">
+        <a href="https://medium.com/@susann.gebert" target="_blank" rel="noopener" data-umami-event="Medium-Klick" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5h3.6l6.4 12.2L17.9 5.5H22v1.2l-1.6 1.5v9.6l1.6 1.5v1.2h-6.4v-1.2l1.6-1.5V9.9l-5 10.1h-.8L6 9.4v7.9l2 2.2v1.2H2v-1.2l2-2.2V8.3L2 6.7z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/susann-gebert-11679b240" target="_blank" rel="noopener" data-umami-event="LinkedIn-Klick" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.2 7.3v7.5h2.4v-7.5zm1.2-3.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zm3.1 3.8v7.5h2.4v-3.9c0-1 .2-2 1.5-2s1.3 1.2 1.3 2.1v3.8H19v-4.3c0-2.1-.5-3.7-2.9-3.7-1.2 0-2 .6-2.3 1.2v-1z" fill-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h2 data-i18n="projects.title">Projekte</h2>
+      <ul class="small">
+        <li><a href="cs-nexio.html" aria-current="page">Nexio Fleet</a></li>
+        <li><a href="ecomex.html">ecomex Business Academy</a></li>
+        <li><a href="cs-e-commerce.html">Nebulite Collection</a></li>
+        <li><a href="visual-brand-work.html">Visual &amp; Brand Work</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <span>© 2026 Susann Gebert</span>
+    <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
+    <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+  </div>
+</footer>
+
+<!-- ================= BURGER-MENÜ ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <svg class="menu-deco" viewBox="0 0 1280 728" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3">
+      <circle cx="205" cy="200" r="580"/>
+      <circle cx="165" cy="284" r="110"/>
+      <polygon points="876,622 928,622 902,666"/>
+    </g>
+    <circle cx="218" cy="315" r="20" fill="rgba(255,255,255,.35)"/>
+    <defs>
+      <pattern id="dotp" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="6" fill="rgba(255,255,255,.35)"/>
+      </pattern>
+    </defs>
+    <rect x="0" y="433" width="144" height="236" fill="url(#dotp)"/>
+  </svg>
+  <div class="menu-top">
+    <a class="menu-logo" href="/">SUSANN</a>
+    <button class="menu-close" type="button">
+      <span data-i18n="nav.close">Schließen</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 4l32 32M36 4L4 36" stroke="#1D1D1D" stroke-width="3.5"/></svg>
+    </button>
+  </div>
+  <nav class="menu-nav">
+    <div class="menu-row">
+      <a href="/"><span class="menu-no" aria-hidden="true">01</span><span data-i18n="menu.home">Home</span></a>
+      <a href="all-projects.html"><span class="menu-no" aria-hidden="true">02</span><span data-i18n="menu.work">Projekte</span></a>
+    </div>
+    <div class="menu-row">
+      <a href="visual-brand-work.html"><span class="menu-no" aria-hidden="true">03</span><span data-i18n="menu.visual">Visual &amp; Brand Work</span></a>
+    </div>
+    <div class="menu-row">
+      <a href="about.html"><span class="menu-no" aria-hidden="true">04</span><span data-i18n="menu.about">Über mich</span></a>
+      <a href="contact.html"><span class="menu-no" aria-hidden="true">05</span><span data-i18n="menu.contact">Kontakt</span></a>
+    </div>
+  </nav>
+</div>
+
+<script src="js/i18n.js?v=205"></script>
+<script src="js/main.js?v=147"></script>
+<script src="js/case.js?v=140"></script>
+<script src="js/scribble.js?v=3"></script>
+</body>
+</html>

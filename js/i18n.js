@@ -109,6 +109,7 @@ const TEXT = {
     "rd.push":"Push-Mitteilung auf dem iPhone: Jobradar, 1 neue Stelle zum Prüfen, 06:53",
     "rd.v1":"Erste Version des Reiters „Stellen“ auf hellem Grund: vier farbige Kacheln mit Zahlen, Suchfeld, Filter-Chips und Karten mit neuen Stellen",
     "rd.stellen":"Reiter „Stellen“ nach dem Figma-Redesign auf dunklem Grund: große Überschrift, Status-Filter, zwei Kacheln für verschickt und laufend, Suchfeld, Karten mit neuen Stellen und eine Navigationsleiste mit fünf Reitern",
+    "rd.heroScreen":"Reiter „Stellen“ der App: Status-Filter, Kacheln für verschickt und laufend, Suchfeld und Karten mit neuen Stellen",
     "rd.analyse":"Reiter „Analyse“: Balkendiagramm verschickter Bewerbungen pro Monat, Verlauf vom Versand über Interview zur Zusage und Interview-Quote nach Ort",
     "rd.start":"Startscreen der App: Willkommen beim Bewerbungsradar, Feld für die E-Mail-Adresse und Button „Link schicken“","rd.code":"Screen „Post ist unterwegs“: Feld für den Code aus der E-Mail, Button „Anmelden“ und Countdown für einen neuen Code",
   },
@@ -219,6 +220,7 @@ const TEXT = {
     "rd.push":"Push notification on an iPhone: Job radar, 1 new job to review, 06:53",
     "rd.v1":"First version of the “Jobs” tab on a light background: four coloured number tiles, a search field, filter chips and cards with new listings",
     "rd.stellen":"The “Jobs” tab after the Figma redesign on a dark background: large heading, status filters, two tiles for sent and ongoing, a search field, cards with new listings and a navigation bar with five tabs",
+    "rd.heroScreen":"The app’s “Jobs” tab: status filters, tiles for sent and ongoing, search field and cards with new listings",
     "rd.analyse":"“Analytics” tab: bar chart of applications sent per month, the path from sending to interview to offer, and interview rate by location",
     "rd.start":"App start screen: Welcome to Bewerbungsradar, an email field and a “Send link” button","rd.code":"“Post is on its way” screen: field for the code from the email, a “Sign in” button and a countdown for a new code",
   }

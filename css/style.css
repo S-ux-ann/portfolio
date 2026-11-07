@@ -1087,9 +1087,9 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .cs-themes.rd-review-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .rd-review .cs-theme{grid-template-columns:minmax(0,1fr)}
 .rd-phones,.rd-login{max-width:520px;margin-inline:auto}   /* Handy-Screens mittig */
-/* Kurzüberblick im Hero: Problem, Beitrag, Stand + echter Screen */
-.rd-glance{display:grid;grid-template-columns:minmax(0,1fr) clamp(170px,15vw,210px);gap:clamp(20px,3vw,48px);align-items:center;margin-top:clamp(24px,2.6vw,40px);padding:clamp(18px,2vw,32px);background:var(--rd-lilac);border-radius:0 calc(var(--radius) * 2.4) 0 0}
-.rd-glance-list{display:grid;gap:clamp(14px,1.4vw,22px)}
+/* Kurzüberblick im Hero: Problem, Beitrag, Stand */
+.rd-glance{margin-top:clamp(24px,2.6vw,40px);padding:clamp(18px,2vw,32px);background:var(--rd-lilac);border-radius:0 calc(var(--radius) * 2.4) 0 0}
+.rd-glance-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,32px)}
 .rd-glance-list dt{font-weight:700;font-size:clamp(15px,1.2vw,18px);margin-bottom:4px}
 .rd-glance-list dd{font-size:clamp(15px,1.15vw,17px);line-height:1.5}
 /* Wer hat was gemacht */
@@ -1108,8 +1108,7 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
   .rd-roles{grid-template-columns:minmax(0,1fr);gap:32px}
 }
 @media (max-width:700px){
-  .rd-glance{grid-template-columns:minmax(0,1fr)}
-  .rd-glance .rd-shot{width:min(220px,70%);margin-inline:auto}
+  .rd-glance-list{grid-template-columns:minmax(0,1fr)}
 }
 .rd-single{max-width:250px}
 @media (max-width:900px){

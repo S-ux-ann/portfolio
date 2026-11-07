@@ -1087,6 +1087,29 @@ ol.cs-list li::marker{font-weight:700;color:var(--light-black)}
 .cs-themes.rd-review-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .rd-review .cs-theme{grid-template-columns:minmax(0,1fr)}
 .rd-phones,.rd-login{max-width:520px;margin-inline:auto}   /* Handy-Screens mittig */
+/* Kurzüberblick im Hero: Problem, Beitrag, Stand */
+.rd-glance{margin-top:clamp(24px,2.6vw,40px);padding:clamp(18px,2vw,32px);background:var(--rd-lilac);border-radius:0 calc(var(--radius) * 2.4) 0 0}
+.rd-glance-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,32px)}
+.rd-glance-list dt{font-weight:700;font-size:clamp(15px,1.2vw,18px);margin-bottom:4px}
+.rd-glance-list dd{font-size:clamp(15px,1.15vw,17px);line-height:1.5}
+/* Wer hat was gemacht */
+.rd-roles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,1.6vw,24px);margin:clamp(20px,2.4vw,36px) 0 calc(clamp(20px,2.4vw,36px) + 16px)}
+.rd-role{padding:clamp(18px,2vw,30px)}
+.rd-white{background:var(--white);border-top-color:var(--white);box-shadow:0 0 0 1px rgba(27,28,32,.08)}
+.rd-role h3{font-weight:700;font-size:clamp(18px,1.7vw,25px);margin-bottom:10px}
+.rd-role ul{list-style:none;display:grid;gap:8px}
+.rd-role li{position:relative;padding-left:18px;font-size:clamp(15px,1.15vw,17px);line-height:1.45}
+.rd-role li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;border-radius:50%;background:var(--rd-ink)}
+/* Einordnung der Kennzahlen und Status-Labels */
+.rd-kind{display:block;margin-top:10px;font-size:.82em;font-weight:700;opacity:.75}
+.rd-tag{color:var(--rd-ink)}
+.rd-tag-live{background:var(--rd-lav)}
+@media (max-width:900px){
+  .rd-roles{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:700px){
+  .rd-glance-list{grid-template-columns:minmax(0,1fr)}
+}
 .rd-single{max-width:250px}
 @media (max-width:900px){
   .rd-stats,.cs-themes.rd-review{grid-template-columns:minmax(0,1fr)}

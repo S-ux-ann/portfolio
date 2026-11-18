@@ -5,6 +5,12 @@
       "name": "site",
       "url": "http://localhost:8000",
       "port": 8000
+    },
+    {
+      "name": "folie",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd /private/tmp/claude-501/-Users-susa--claude-spares-spare-LoarLD/8820a6db-caec-4864-b867-706bfe0ddb06/scratchpad && exec python3 -m http.server 8765"],
+      "port": 8765
     }
   ]
 }
